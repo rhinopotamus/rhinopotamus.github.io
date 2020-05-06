@@ -41,9 +41,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 <!-- <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr-FR"> -->
 
-    <xi:include href="./cov-bookinfo.xml" /> <!-- ISBN, website, other metadata -->
+    <xi:include href="./var-bookinfo.xml" /> <!-- ISBN, website, other metadata -->
 
-    <book xml:id="cov-book">
+    <book xml:id="var-book">
         <title>Calculus of Variations</title>
 
         <!-- <xi:include href="./frontmatter.xml" />                  Title Page, Preface, etc. -->
@@ -52,6 +52,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <!-- In "bookinfo.xml" set to "structural" for maximum effect -->
 
         <xi:include href="./typical.xml" />
+        <xi:include href="./shortest.xml" />
 
     </book>
 

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<chapter xml:id="shortest" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<title>Shortest Distances</title>
+
+  <section xml:id="sec-shortest-arc">
+    <title>The shortest arc joining two points</title>
+
+    <p> Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems. </p>
+
+    <!-- TODO: Update reference-->
+    <p>Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen on page 6 of the preceding chapter, may be written in the form
+    <men xml:id="eqn-shortest">
+      I=\int_{x_1}^{x_2} f(y')\,dx
+    </men>
+    if we use the notation <m>f(y')=\sqrt{1+(y')^2}</m>, and the arcs <m>y=y(x)\,\,(x_1\leq x\leq x_2)</m> whose lengths are to be compared with each other will always be understood to be continuous and to consist of a finite number of arcs on each of which the tangent turns continuously, as indicated in <xref ref="fig-piecewise-smooth"/>.</p> 
+
+    <figure xml:id="fig-piecewise-smooth">
+      <image source="images/fig-piecewise-smooth.png" >
+        <description>A piecewise-smooth arc connecting points 1 and 2.</description>
+      </image>
+    </figure>
+    
+    <p>Analytically this means that on the interval <m>x_1\leq x\leq x_2</m> the function <m>y(x)</m> is continuous and that the interval can be subdivided into parts on each of which <m>y(x)</m> has a continuous derivative. Let us agree to call such functions <term>admissible functions</term> and the arcs which they define <term>admissible arcs</term>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral <m>I</m> a minimum. </p>
+
+  </section>
+
+  <section xml:id="sec-first-necessary">
+    <title>A first necessary condition</title>
+    
+    <p>Let it be granted that a particular admissible arc <m>E_{12}</m> with the equation
+    <me>
+      y=y(x)\quad (x_1\leq x\leq x_2)
+    </me>
+    furnishes the solution of our problem, and let us then seek to find the properties which distinguish it from the other admissible arcs joining points 1 and 2. If we select arbitrarily an admissible function <m>\eta(x)</m> satisfying the conditions <m>\eta(x_1) = \eta(x_2) = 0</m>, the equation 
+    <men xml:id="eqn-variation">
+      y=y(x)+a \eta(x)\quad (x_1\leq x\leq x_2),
+    </men>
+
+    <aside>
+      <title>Variations</title>
+      <p>
+        Admissible curves of the form given in <xref ref="eqn-variation"/> are called by other authors <term>variations</term> -- hence, the "calculus of variations". Think of them as starting with <m>y(x)</m> and "wiggling" it by <m>\eta(x)</m>. Then you can "scale up" the amount of wiggle by multiplying <m>\eta(x)</m> by some constant <m>a</m>. We insist that <m>\eta(x_1) = \eta(x_2) = 0</m> so that the starting and ending points don't get wiggled away from where they're supposed to be. 
+      </p>
+    </aside>
+
+    involving the arbitrary constant <m>a</m>, represents a one-parameter family of curves which includes the arc <m>E_{12}</m> for the special value <m>a=0</m>, and all of the curves of the family pass through the end-points 1 and 2 of <m>E_{12}</m>.
+    The value of the integral <m>I</m> taken along an arc of the family depends upon the value of <m>a</m> and may be represented by the symbol
+    <men xml:id="eqn-iofa">
+      I(a)=\int_{x_1}^{x_2} f(y'+a \eta')\, dx.
+    </men>
+    Along the initial arc <m>E_{12}</m> the integral has the value <m>I(0)</m>, and if this is to be a minimum when compared with the values of the integral along all other admissible arcs joining 1 with 2 it must in particular be a minimum when compared with the values <m>I(a)</m> along the arcs of the family <xref ref="eqn-variation"/>.  Hence according to the criterion for a minimum of a function given on page 4 of the last chapter we must have <m>I'(0) = 0</m>.
+    </p>
+
+    <p>
+    It should perhaps be emphasized here that the method of the calculus of variations, as it has been developed in the past, consists essentially of three parts; first, the deduction of necessary conditions which characterize a minimizing arc; second, the proof that these conditions, or others obtained from them by slight modifications, are sufficient to insure the minimum sought; and third, the search for an arc which satisfies the sufficient conditions. For the deduction of necessary conditions the value of the integral <m>I</m> along the minimizing arc can be compared with its values along any special admissible arcs which may be convenient for the purposes of the proof in question, for example along those of the family <xref ref="eqn-variation"/> described above, but the sufficiency proofs must be made with respect to all admissible arcs joining the points 1 and 2. The third part of the problem, the determination of an arc satisfying the sufficient conditions, is frequently the most difficult of all, and is the part for which fewest methods of a general character are known. For shortest-distance problems fortunately this determination is usually easy.
+    </p>
+
+    <p>
+      By differentiating the expression <xref ref="eqn-iofa"/> with respect to <m>a</m> and then setting <m>a=0</m> the value of <m>I'(0)</m> is readily seen to be 
+      <men xml:id="eqn-iprime0">
+        I'(0) = \int_{x_1}^{x_2} f_{y'} \eta'\,dx,
+      </men>
+      <aside> Use the chain rule. </aside>
+      where for convenience we use the notation <m>f_{y'}</m> for the derivative of the integrand <m>f(y')</m> with respect to <m>y'</m>. It will always be understood that the argument in <m>f</m> and its derivatives is the function <m>y'(x)</m> belonging to the arc <m>E_{12}</m> unless some other is expressly indicated, as is done, for example, in the formula <xref ref="eqn-iofa"/>.
+    </p>
+
+    <p>
+      What now are the conclusions which can be drawn from the necessity of the condition <m>I'(0)=0</m>? The answer to this question is to be found in the lemma of the following section which will be frequently applied in later chapters as well as in the solution of the shortest-distance problems to which this chapter is devoted.
+    </p>
+  </section>
+
+<section xml:id="sec-fundamental-lemma">
+  <title>A fundamental lemma</title>
+  
+</section>
+
+<section xml:id="sec-straight-line">
+  <title>Proof that the straight line is shortest</title>
+  
+</section>
+
+<section xml:id="sec-auxiliary-formulas">
+  <title>Two important auxiliary formulas</title>
+  
+</section>
+  
+<section xml:id="sec-field">
+  <title>The notion of a field and a second sufficiency proof</title>
+  
+</section>
+
+<section xml:id="sec-shortest-curve">
+  <title>The shortest arc joining a point to a curve</title>
+  
+</section>
+
+<section xml:id="sec-shortest-ellipse">
+  <title>The shortest arc joining a point to an ellipse</title>
+
+</section>
+
+<section xml:id="sec-two-curves">
+  <title>The shortest arc joining two curves</title>
+  
+</section>
+</chapter>

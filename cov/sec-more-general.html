@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-06T17:54:17-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Var A more general problem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="var-book.html"><span class="title">Calculus of Variations</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-brachistochrone.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="typical.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-other-problems.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-brachistochrone.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="typical.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-other-problems.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="typical.html" data-scroll="typical"><span class="codenumber">1</span> <span class="title">Typical Problems of the Calculus of Variations</span></a><ul>
+<li><a href="sec-invention-of-calculus.html" data-scroll="sec-invention-of-calculus">The invention of the calculus</a></li>
+<li><a href="sec-maxima-and-minima.html" data-scroll="sec-maxima-and-minima">Maxima and minima</a></li>
+<li><a href="sec-two-problems.html" data-scroll="sec-two-problems">Two problems of the calculus of variations which may be simply formulated</a></li>
+<li><a href="sec-problem-newton.html" data-scroll="sec-problem-newton">The problem of Newton</a></li>
+<li><a href="sec-brachistochrone.html" data-scroll="sec-brachistochrone">The brachistochrone problem</a></li>
+<li><a href="sec-more-general.html" data-scroll="sec-more-general" class="active">A more general problem</a></li>
+<li><a href="sec-other-problems.html" data-scroll="sec-other-problems">Other problems of the calculus of variations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="shortest.html" data-scroll="shortest"><span class="codenumber">2</span> <span class="title">Shortest Distances</span></a><ul>
+<li><a href="sec-shortest-arc.html" data-scroll="sec-shortest-arc">The shortest arc joining two points</a></li>
+<li><a href="sec-first-necessary.html" data-scroll="sec-first-necessary">A first necessary condition</a></li>
+<li><a href="sec-fundamental-lemma.html" data-scroll="sec-fundamental-lemma">A fundamental lemma</a></li>
+<li><a href="sec-straight-line.html" data-scroll="sec-straight-line">Proof that the straight line is shortest</a></li>
+<li><a href="sec-auxiliary-formulas.html" data-scroll="sec-auxiliary-formulas">Two important auxiliary formulas</a></li>
+<li><a href="sec-field.html" data-scroll="sec-field">The notion of a field and a second sufficiency proof</a></li>
+<li><a href="sec-shortest-curve.html" data-scroll="sec-shortest-curve">The shortest arc joining a point to a curve</a></li>
+<li><a href="sec-shortest-ellipse.html" data-scroll="sec-shortest-ellipse">The shortest arc joining a point to an ellipse</a></li>
+<li><a href="sec-two-curves.html" data-scroll="sec-two-curves">The shortest arc joining two curves</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-more-general"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">A more general problem</span>
+</h2>
+<a href="sec-more-general.html" class="permalink">¶</a><p id="p-21">With the exception of the integral in Newton's problem those which have been mentioned in the preceding sections all have the form</p>
+<div class="displaymath">
+\begin{equation}
+I=\int_{x_{1}}^{x_{2}} n(x, y) \sqrt{1+(y')^2}\, dx\, ,\label{eqn-gen-form1}\tag{1.6.1}
+\end{equation}
+</div>
+<p data-braille="continuation">and we might propose to ourselves to find among the curves \(y=y(x)\) joining two given points one which minimizes this integral \(I\text{.}\) This problem also has a physical interpretation. For suppose that in a plane transparent medium the velocity of light varies from point to point, and that at an arbitrary point \((x, y)\) it has the value \(v(x, y)\text{.}\) The index of refraction at that point has by definition the value \(n(x, y) = \frac{c}{v(x,y)}\text{,}\) where \(c\) is a constant, and the time \(dt\) taken by a disturbance to travel along an arc of length \(ds\) through the point \((x, y)\) with the velocity \(v(x, y)\) is approximately</p>
+<div class="displaymath">
+\begin{equation*}
+dt=\frac{ds}{v(x, y)}=\frac{1}{c} n(x, y) \sqrt{1+(y')^2}\,dx\, .
+\end{equation*}
+</div>
+<p data-braille="continuation">We see readily by an integration that the integral \(I\) is proportional to the time taken by a disturbance to traverse the arc \(y=y(x)\) joining the two given points 1 and 2. Now it has been verified physically that the path of a ray of light in a medium in which the velocity of light varies from point to point is always one on which the time-integral \(I\) is, for short arcs at least, a minimum, so that our problem of minimizing \(I\) is that of determining the paths of rays of light in a plane medium whose variable index of refraction is \(n(x, y)\text{.}\)</p>
+<p id="p-22">John Bernoulli noted that the time of descent of a particle down a curve \(y=y(x)\text{,}\) and the time of passage of a ray along the same curve in a medium with the index of refraction \(n(x,y)=\frac{c}{\sqrt{y-a}}\text{,}\) are, except for a constant factor, given by the same integral <a class="xref" data-knowl="./knowl/eqn-gen-form1.html" title="Equation 1.6.1">(1.6.1)</a> with this index substituted. He knew furthermore that when a ray of light passes from one medium to another the sines of the angles of incidence and refraction at the bounding surface are proportional to the indices of refraction in the two media, and by thinking of his medium as made up of very thin horizontal layers with different indices he was able to deduce the form of the curve of quickest descent.</p>
+<p id="p-23">The integral <a class="xref" data-knowl="./knowl/eqn-gen-form1.html" title="Equation 1.6.1">(1.6.1)</a> still does not include that of Newton's problem as a special case, though it is general enough to so include most of the classical special problems of the calculus of variations in the plane. It will be quite as easy for us, however, to consider an integral of the form</p>
+<div class="displaymath">
+\begin{equation}
+I=\int_{x_{1}}^{x_{2}} f\left(x, y, y^{\prime}\right)\,dx\, ,\label{eqn-gen-form}\tag{1.6.2}
+\end{equation}
+</div>
+<p data-braille="continuation">having an integrand which is an arbitrary function of the three variables \(x, y, y'\text{,}\) as we shall do in Chapter V. Among all the arcs \(y=y(x)\) joining two given points 1 and 2 we shall seek one which minimizes the integral <a class="xref" data-knowl="./knowl/eqn-gen-form.html" title="Equation 1.6.2">(1.6.2)</a>, This is a problem of sufficient generality to include all of those hitherto stated as special cases.</p></section></div></main>
+</div>
+</body>
+</html>

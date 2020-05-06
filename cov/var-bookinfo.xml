@@ -35,7 +35,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <covers front="images/cover.jpg"/>
 
     <!-- Prefix to enhance Sage notebook contents -->
-    <initialism>CoV</initialism>
+    <initialism>Var</initialism>
 
     <!-- Math-related macros from "macros.tex" in previous LaTeX version -->
     <!-- \notdivide replaces \notmid to avoid conflict with tikz - TWJ 5/6/2010 -->
