@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<chapter xml:id="typical" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<title>Typical Problems of the Calculus of Variations</title>
+
+  <section xml:id="section-invention-of-calculus">
+    <title>The invention of the calculus</title>
+
+      <p>When the student of mathematics pauses to look back upon the achievements of mathematicians of the past he must be impressed with the fact that the seventeenth century was a most impor tant epoch in the development of modern mathematical analysis, since to the mathematicians of that period we owe the invention of the differential and integral calculus. At first the calculus theory, if indeed at that time it could be called such, consisted of isolated and some what crude methods of solving special problems. In the domain of what we now call the integral calculus, for example, an Italian mathematician named Cavalieri (1598-1647) devised early in the seventeenth century a summation process, called the method of indivisibles, by means of which he was able to calculate correctly many areas and volumes. His justification of his device was so incomplete logically, however, that even in those relatively uncritical times his contemporaries were doubtful and dissatisfied. Somewhat later two French mathematicians, Roberval (1602-75) and Pascal (1623-62), and the Englishman Wallis (1616-1703), improved the method and made it more like the summation processes of the integral calculus of today. In the case of the differential calculus we find that before the final quarter of the seventeenth century Descartes (1596-1650), Roberval, and Fermat (1601-65) in France, and Barrow (1630-77) in England, all had methods of constructing tangents to curves which were pointing the way toward the solution of the fundamental problem of the differential calculus as we formulate it today, namely, that of determining the slope of the tangent at a point of a curve. </p>
+
+      <p>At this important stage there appeared upon the scene two men of extraordinary mathematical insight, Newton (1642-1727) in England, and Leibniz (1646-1716) in Germany, who from two somewhat different standpoints carried forward the theory and applications of the calculus with great strides. It is a mistake, though we often find it an easy convenience, to regard these two great thinkers as having invented the calculus out of a clear sky. Newton was in fact a close student of the work of Wallis, and a pupil of Barrow whom he succeeded as professor of mathematics at Cambridge, while we know that Leibniz visited Paris and London early in his career and that he there became acquainted with the most advanced mathematics of his day. No one could successfully contest the fact, however, that these two men were the most able spokesmen and investigators of the seventeenth-century school of mathematicians to which we owe the gradual evolution of the calculus. </p>
+
+      <p>In spite of the great abilities of Newton and Leibniz the underlying principles of the calculus as exposed by them seem to us from our modern viewpoint, as indeed to their contemporaries and immediate successors, some what vague and confusing. The difficulty lies in the lack of clearness at that early time, and for more than a century thereafter, in the conceptions of infinitesimals and limits upon which the calculus rests, a difficulty which has been overcome only by the systematic study of the theory of limits inaugurated by Cauchy (1789-1857) and continued by Weierstrass (1815-97), Riemann (1826-66), and many others. </p>
+
+  </section>
+
+  <section xml:id="section-maxima-and-minima">
+    <title>Maxima and minima</title>
+
+    <p>Among the earliest problems which attracted the attention of students of the calculus were those which require the determination of a maximum or a minimum. Fermat had devised as early as 1629 a procedure applicable to such problems, depending upon principles which in essence, though not in notation, were those of the modern differential calculus. Somewhat nearer to the type of reasoning now in common use are the methods which Newton and Leibniz applied to the determination of maxima and minima, methods which are also characteristic of their two conceptions of the fundamental principles of the differential calculus. Newton argued, in a paper written in 1671 but first published in 1736, that a variable is increasing when its rate of change is positive, and decreasing when its rate is negative, so that at a maximum or a minimum the rate must be zero. Leibniz, on the other hand, in a paper which he published in 1684, conceived the problem geometrically. At a maximum or a minimum point of a curve the tangent must be horizontal and the slope of the tangent zero.</p>
+
+    <p>At the present time we know well that from a purely analytical standpoint these two methods are identical. The derivative <men xml:id="eq-diffq">f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}</men> of a function <m>f(x)</m> represents both the rate of change of <m>f(x)</m> with respect to <m>x</m> and the slope of the tangent at a point on the graph of <m>f(x)</m>.
+    For in the first place the fraction in the second member of <xref ref="eq-diffq" /> is the average rate of change of <m>f(x)</m> with respect to <m>x</m> on the interval from <m>x</m> to <m>x + \Delta x</m>, and its limit as the interval is shortened is therefore rightly called the rate of change of <m>f(x)</m> at the initial value <m>x</m> of the interval.
+    In the second place this same quotient is the slope of the secant <m>PQ</m> in <xref ref="fig-1-1" />, and its limit is the slope of the tangent at <m>P</m>. Thus by the reasoning of either Newton or Leibnitz we know that the maxima and minima of <m>f(x)</m> occur at the values of <m>x</m> where the derivative <m>f'(x)</m> is zero.
+    </p>
+
+    <figure xml:id="fig-1-1">
+      <image source="images/fig-1-1.png" />
+    </figure>
+
+    <p>It was not easy for the seventeenth-century mathe matician to deduce this simple criterion that the derivative <m>f'(x)</m> must vanish at a maximum or a minimum of <m>f(x)</m>. He was immersed in the study of special problems rather than general theories, and had no well-established limiting processes or calculus notations to assist him. It was still more difficult for him to advance one step farther to the realization of the significance of the second derivative <m>f''(x)</m> in distinguishing between maximum and minimum values. Leibniz in his paper of 1684 was the first to give the criterion. In present-day parlance we say that <m>f'(a) = 0, \, f''(a) \geq 0</m> are necessary conditions for the value <m>f(a)</m> to be a minimum, while the conditions <m>f'(a) = 0, \, f''(a) \gt 0</m> are sufficient to insure a minimum. For a maximum the inequality signs must be changed in sense.</p>
+
+    <p>It will be noted that the conditions just stated as necessary for a minimum are not identical with those which are sufficient. We shall see in Chapter V that a similar undesirable and much more baffling discrepancy occurs in the calculus of variations. For the simple problem of minimizing a function <m>f(x)</m> the doubtful intermediate case when <m>f'(a)</m> and <m>f''(a)</m> are both zero was discussed by Maclaurin (1698-1746) who showed how higher derivatives may be used to obtain criteria which are both necessary and sufficient. For the calculus of variations the corresponding problem offers great difficulty and has never been completely solved.</p>
+
+
+  </section>
+
+  <section xml:id="section-two-problems">
+    <title>Two problems of the calculus of variations which may be simply formulated</title>
+
+    <p>When one realizes the difficulty with which the late seventeenth-century school of mathematicians established the first fundamental principles of the calculus and their applications to such elementary problems in maxima and minima as the one which has just been described, it is remarkable that they should have conceived or attempted to solve with their relatively crude analytical machinery the far more difficult maximum and minimum problems of the calculus of variations which were at first proposed. It is an interesting fact that these early problems were not by any means the least complicated ones of the calculus of variations, and we shall do well therefore to introduce ourselves to the subject by looking first at two others which are easier to describe to one who has not already amused himself by browsing in this domain of mathematics.</p>
+
+    <p>The simplest of all the problems of the calculus of variations is doubtless that of determining the shortest arc joining two given points. The co-ordinates of these points will always be denoted by <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m> and we may designate the points themselves when convenient simply by the numerals 1 and 2. If the equation of an arc is taken in the form
+    <me>y=y(x) \quad (x_1\leq x \leq x_2)</me>
+    then the conditions that it shall pass through the two given points are
+    <men xml:id="eq-cond">y(x_1)=y_1, \quad y(x_2) = y_2,</men>
+    and we know from the calculus that the length of the arc is given by the integral
+    <me>I=\int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx, </me>
+    where in the evaluation of the integral <m>y'</m> is to be replaced by the derivative <m>y'(x)</m> of the function <m>y(x)</m> defining the arc. There is an infinity of curves <m>y = y(x)</m> joining the points 1 and 2. The problem of finding the shortest one is equivalent analytically to that of finding in the class of functions <m>y(x)</m> satisfying the conditions <xref ref="eq-cond" /> one which makes the integral <m>I</m> a minimum.
+    </p>
+
+    <p>In the more elementary minimum problem of Section 2 above a function <m>f(x)</m> is given and a value <m>x = a</m> is sought for which the corresponding value <m>f(a)</m> is a minimum. In the shortest-distance problem the integral <m>I</m> takes the place of <m>f(x)</m>, and instead of a value <m>x = a</m> making <m>f(a)</m> a minimum we seek to find an arc <m>E_{12}</m> joining the points 1 and 2 which shall minimize <m>I</m>. The analogy between the two problems is more perspicuous if we think of the length <m>I</m> as a function <m>I(E_{12})</m> whose value is uniquely determined when the arc <m>E_{12}</m> is given, just as <m>f(x)</m> in the former case was a function of the variable <m>x</m>.</p>
+
+    <p>There is a second problem of the calculus of variations, of a geometrical-mechanical type, which the principles of the calculus readily enable us to express also in analytic form. When a wire circle is dipped in a soap solution and withdrawn, a circular disk of soap film bounded by the circle is formed. If a second smaller circle is made to touch this disk and then moved away the two circles will be joined by a surface of film which is a surface of revolution in the particular case when the circles are parallel and have their centers on the same axis perpendicular to their planes. The form of this surface is shown in Figure 2. It is provable by the principles of mechanics, as one may readily surmise intuitively from the elastic properties of a soap film, that the surface of revolution so formed must be one of minimum area, and the problem of determining the shape of the film is equivalent therefore to that of determining such a minimum surface of revolution passing through two circles whose relative positions are supposed to be given as indicated in the figure.</p>
+
+    <figure xml:id="fig-1-2">
+      <image source="images/fig-1-2.png" />
+    </figure>
+
+    <p>In order to phrase this problem analytically let the common axis of the two circles be taken as the <m>x</m>-axis, and let the points where the circles intersect an <m>xy</m>-plane through that axis be 1 and 2. If the meridian curve of the surface in the <m>xy</m>-plane has an equation <m>y=y(x)</m> then the calculus formula for the area of the surface is <m>2\pi</m> times the value of the integral <me>
+      I=\int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx. 
+    </me>
+    The problem of determining the form of the soap film surface between the two circles is analytically that of finding in the class of arcs <m>y=y(x)</m> whose ends are at the points 1 and 2 one which minimizes the last-written integral <m>I</m>. 
+    </p>
+
+  </section>
+
+  <section xml:id="section-problem-newton">
+    <title>The problem of Newton</title>
+
+    <p>It was remarked above that the earliest problems of the calculus of variations were not by any means the simplest. In his Principia (1686) Newton states without proof certain conditions which must be satisfied by a surface of revolution which is so formed that it will encounter a minimum resistance when moved in the direction of its axis through a resisting medium. A particular case of the problem of finding such a surface is the well-known one of determining the form of a projectile which for a specified initial velocity will give the longest range. In practical ballistics it turns out that one of the most difficult parts of the investigation of this question lies in the experimental determination of the retardation law for bodies moving in the air at high rates of speed. Newton assumed a relatively simple law of resistance for bodies moving in a resisting medium which does not agree well with our experience with bodies moving in the air, but on the basis of which he was able to find a condition characterizing the meridian curves of the surfaces of revolution which encounter minimum resistance. From a letter written by Newton to Professor David Gregory, probably in 1694, Bolza has reconstructed in most interesting fashion the arguments which Newton used in attaining his results.</p>
+
+    <p>It is sufficient for the purposes of this introductory chapter to say that when the surface is generated by rotating about the <m>x</m>-axis an arc with an equation of the form <m>y = y(x)</m> the resistance experienced by the surface when moved in the direction of the <m>x</m>-axis will, except for a constant factor, be</p>
+  </section>
+
+  <section xml:id="section-brachistochrone">
+    <title>The brachistochrone problem</title>
+  </section>
+
+  <section xml:id="section-more-general">
+    <title>A more general problem</title>
+  </section>
+
+  <section xml:id="section-other-problems">
+    <title>Other problems of the calculus of variations</title>
+  </section>
+
+</chapter>
