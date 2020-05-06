@@ -30,10 +30,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <!-- entire front matter section with more headings   -->
     <author-biographies length="short" />
 
-    <brandlogo url="http://abstract.pugetsound.edu" source="images/cover_aata_2014.png" />
+    <brandlogo source="images/cover.jpg" />
 
-    <covers front="images/original-front-cover-aata.pdf"
-            back="images/plain-back-cover-aata.pdf"/>
+    <covers front="images/cover.jpg"/>
 
     <!-- Prefix to enhance Sage notebook contents -->
     <initialism>CoV</initialism>

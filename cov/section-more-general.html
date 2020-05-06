@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-06T13:36:05-06:00    *-->
+<!--*    on 2020-05-06T16:17:22-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -70,7 +70,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="cov-book.html"><span class="title">Calculus of Variations</span></a></h1>
 <p class="byline"></p>
 </div>
@@ -99,7 +99,27 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-more-general"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">A more general problem</span>
 </h2>
-<a href="section-more-general.html" class="permalink">¶</a></section></div></main>
+<a href="section-more-general.html" class="permalink">¶</a><p id="p-21">With the exception of the integral in Newton's problem those which have been mentioned in the preceding sections all have the form</p>
+<div class="displaymath">
+\begin{equation}
+I=\int_{x_{1}}^{x_{2}} n(x, y) \sqrt{1+(y')^2}\, dx\, ,\label{eqn-gen-form1}\tag{1.6.1}
+\end{equation}
+</div>
+<p data-braille="continuation">and we might propose to ourselves to find among the curves \(y=y(x)\) joining two given points one which minimizes this integral \(I\text{.}\) This problem also has a physical interpretation. For suppose that in a plane transparent medium the velocity of light varies from point to point, and that at an arbitrary point \((x, y)\) it has the value \(v(x, y)\text{.}\) The index of refraction at that point has by definition the value \(n(x, y) = \frac{c}{v(x,y)}\text{,}\) where \(c\) is a constant, and the time \(dt\) taken by a disturbance to travel along an arc of length \(ds\) through the point \((x, y)\) with the velocity \(v(x, y)\) is approximately</p>
+<div class="displaymath">
+\begin{equation*}
+dt=\frac{ds}{v(x, y)}=\frac{1}{c} n(x, y) \sqrt{1+(y')^2}\,dx\, .
+\end{equation*}
+</div>
+<p data-braille="continuation">We see readily by an integration that the integral \(I\) is proportional to the time taken by a disturbance to traverse the arc \(y=y(x)\) joining the two given points 1 and 2. Now it has been verified physically that the path of a ray of light in a medium in which the velocity of light varies from point to point is always one on which the time-integral \(I\) is, for short arcs at least, a minimum, so that our problem of minimizing \(I\) is that of determining the paths of rays of light in a plane medium whose variable index of refraction is \(n(x, y)\text{.}\)</p>
+<p id="p-22">John Bernoulli noted that the time of descent of a particle down a curve \(y=y(x)\text{,}\) and the time of passage of a ray along the same curve in a medium with the index of refraction \(n(x,y)=\frac{c}{\sqrt{y-\alpha}}\text{,}\) are, except for a constant factor, given by the same integral <a class="xref" data-knowl="./knowl/eqn-gen-form1.html" title="Equation 1.6.1">(1.6.1)</a> with this index substituted. He knew furthermore that when a ray of light passes from one medium to another the sines of the angles of incidence and refraction at the bounding surface are proportional to the indices of refraction in the two media, and by thinking of his medium as made up of very thin horizontal layers with different indices he was able to deduce the form of the curve of quickest descent.</p>
+<p id="p-23">The integral <a class="xref" data-knowl="./knowl/eqn-gen-form1.html" title="Equation 1.6.1">(1.6.1)</a> still does not include that of Newton's problem as a special case, though it is general enough to so include most of the classical special problems of the calculus of variations in the plane. It will be quite as easy for us, however, to consider an integral of the form</p>
+<div class="displaymath">
+\begin{equation}
+I=\int_{x_{1}}^{x_{2}} f\left(x, y, y^{\prime}\right)\,dx\, ,\label{eqn-gen-form}\tag{1.6.2}
+\end{equation}
+</div>
+<p data-braille="continuation">having an integrand which is an arbitrary function of the three variables \(x, y, y'\text{,}\) as we shall do in Chapter V. Among all the arcs \(y=y(x)\) joining two given points 1 and 2 we shall seek one which minimizes the integral <a class="xref" data-knowl="./knowl/eqn-gen-form.html" title="Equation 1.6.2">(1.6.2)</a>, This is a problem of sufficient generality to include all of those hitherto stated as special cases.</p></section></div></main>
 </div>
 </body>
 </html>
