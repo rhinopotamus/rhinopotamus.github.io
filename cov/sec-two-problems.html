@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-07T12:32:37-06:00    *-->
+<!--*    on 2020-05-07T15:14:17-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -158,7 +158,14 @@ L_{\textrm{slice}} = \sqrt{1+\left(\frac{\Delta y}{\Delta x}\right)^2} \Delta x.
 <p data-braille="continuation">In the limit, \(\frac{\Delta y}{\Delta x}\) becomes \(y'(x)\text{,}\) so this is equivalent to \(\sqrt{1+\left(y'(x)\right)^2} \Delta x\text{.}\)</p>
 </div></div>
 </li>
-<li id="li-7"><p id="p-19">We've sliced, we've approximated, and now it's time to <em class="emphasis">integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let \(n\to\infty\) to obtain an expression for the actual arc length of the wiggly function. <em class="emphasis">Be sure to involve \(x_1\) and \(x_2\text{!}\)</em></p></li>
+<li id="li-7">
+<p id="p-19">We've sliced, we've approximated, and now it's time to <em class="emphasis">integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let \(n\to\infty\) to obtain an expression for the actual arc length of the wiggly function. <em class="emphasis">Be sure to involve \(x_1\) and \(x_2\text{!}\)</em></p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="displaymath">
+\begin{equation*}
+I = \int_{x_1}^{x_2} \sqrt{1+\left(y'(x)\right)^2}\,dx.
+\end{equation*}
+</div></div></div>
+</li>
 </ol></article><p id="p-20">In the more elementary minimum problem of <a href="sec-maxima-and-minima.html" class="internal" title="Section 1.2: Maxima and minima">Section 1.2</a> a function \(f(x)\) is given and a value \(x = a\) is sought for which the corresponding value \(f(a)\) is a minimum. In the shortest-distance problem the integral \(I\) takes the place of \(f(x)\text{,}\) and instead of a value \(x = a\) making \(f(a)\) a minimum we seek to find an arc \(E_{12}\) joining the points 1 and 2 which shall minimize \(I\text{.}\) The analogy between the two problems is more perspicuous if we think of the length \(I\) as a function \(I(E_{12})\) whose value is uniquely determined when the arc \(E_{12}\) is given, just as \(f(x)\) in the former case was a function of the variable \(x\text{.}\)</p>
 <p id="p-21">There is a second problem of the calculus of variations, of a geometrical-mechanical type, which the principles of the calculus readily enable us to express also in analytic form. When a wire circle is dipped in a soap solution and withdrawn, a circular disk of soap film bounded by the circle is formed. If a second smaller circle is made to touch this disk and then moved away the two circles will be joined by a surface of film which is a surface of revolution in the particular case when the circles are parallel and have their centers on the same axis perpendicular to their planes. The form of this surface is shown in Figure 2. It is provable by the principles of mechanics, as one may readily surmise intuitively from the elastic properties of a soap film, that the surface of revolution so formed must be one of minimum area, and the problem of determining the shape of the film is equivalent therefore to that of determining such a minimum surface of revolution passing through two circles whose relative positions are supposed to be given as indicated in the figure.</p>
 <figure class="figure figure-like" id="fig-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/fig-1-2.png" style="width: 100%; height: auto;" alt=""></div>

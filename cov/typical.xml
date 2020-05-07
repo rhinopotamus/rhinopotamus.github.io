@@ -132,6 +132,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
               We've sliced, we've approximated, and now it's time to <em>integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let <m>n\to\infty</m> to obtain an expression for the actual arc length of the wiggly function. <em>Be sure to involve <m>x_1</m> and <m>x_2</m>!</em>
             </p>
+            <solution>
+              <me>
+                I = \int_{x_1}^{x_2} \sqrt{1+\left(y'(x)\right)^2}\,dx.
+              </me>
+            </solution>
           </li>
         </ol>
       </p>

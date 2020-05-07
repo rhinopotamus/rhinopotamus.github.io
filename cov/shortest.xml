@@ -50,6 +50,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     
     <p>Analytically this means that on the interval <m>x_1\leq x\leq x_2</m> the function <m>y(x)</m> is continuous and that the interval can be subdivided into parts on each of which <m>y(x)</m> has a continuous derivative. Let us agree to call such functions <term>admissible functions</term> and the arcs which they define <term>admissible arcs</term>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral <m>I</m> a minimum. </p>
 
+    <remark xml:id="remark-admissible">
+      <title>Admissible arcs</title>
+      <p>
+        Other authors often refer to this condition as being <term>piecewise differentiable</term> or <term>piecewise smooth</term>: while an admissible function is allowed to have cusps where it isn't differentiable, you can chop it up into a number of <em>pieces</em> on which it is indeed differentiable.
+      </p>
+    
+    </remark>
+
   </section>
 
   <section xml:id="sec-first-necessary">
@@ -64,14 +72,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       y=y(x)+a \eta(x)\quad (x_1\leq x\leq x_2),
     </men>
 
-    <aside>
-      <title>Variations</title>
-      <p>
-        Admissible curves of the form given in <xref ref="eqn-variation"/> are called by other authors <term>variations</term> -- hence, the "calculus of variations". Think of them as starting with <m>y(x)</m> and "wiggling" it by <m>\eta(x)</m>. Then you can "scale up" the amount of wiggle by multiplying <m>\eta(x)</m> by some constant <m>a</m>. We insist that <m>\eta(x_1) = \eta(x_2) = 0</m> so that the starting and ending points don't get wiggled away from where they're supposed to be. 
-      </p>
-    </aside>
-
     involving the arbitrary constant <m>a</m>, represents a one-parameter family of curves which includes the arc <m>E_{12}</m> for the special value <m>a=0</m>, and all of the curves of the family pass through the end-points 1 and 2 of <m>E_{12}</m>.
+    </p>
+
+    <remark xml:id="remark-var-wiggle">
+      <title>Variations and wiggles</title>
+      <p>
+        Admissible curves of the form given in <xref ref="eqn-variation"/> are called by other authors <term>variations</term> -- hence, the "calculus of variations". Think of them as starting with <m>y(x)</m> and "wiggling" it by <m>\eta(x)</m>. So, I'm going to define a <term>wiggle</term> as an admissible function <m>\eta(x)</m> that satisfies the conditions <m>\eta(x_1) = \eta(x_2) = 0</m>.
+      </p>
+      <p>
+        We insist that <m>\eta(x_1) = \eta(x_2) = 0</m> so that the starting and ending points don't get wiggled away from where they're supposed to be, so that a variation is some other admissible arc joining points 1 and 2. You can "scale up" the amount of wiggle by multiplying <m>\eta(x)</m> by some constant <m>a</m>; note in particular that when <m>a=0</m>, there's zero wiggle, and so the variation <m>y(x)+a \eta(x)</m> is just the original function <m>y(x)</m>.
+      </p>
+      
+    </remark>
+
+    <p>
     The value of the integral <m>I</m> taken along an arc of the family depends upon the value of <m>a</m> and may be represented by the symbol
     <men xml:id="eqn-iofa">
       I(a)=\int_{x_1}^{x_2} f(y'+a \eta')\, dx.
@@ -173,11 +188,109 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <section xml:id="sec-fundamental-lemma">
   <title>A fundamental lemma</title>
   
+  <p>
+     In the integrand of the integral <xref ref="eqn-iprime0"/> the coefficient of <m>\eta'</m> is really a function of <m>x</m>, since the derivative <m>f_{y'}</m> contains as its argument the slope <m>y'(x)</m> of the arc <m>E_{12}</m>, and we may denote this coefficient by <m>M(x)</m>. It should be noted that the function <m>M(x)</m> is continuous except possibly at the values of <m>x</m> defining the corners of the arc <m>E_{12}</m> where the slope <m>y'(x)</m> changes abruptly. At those points of the curve it has two values, one corresponding to the backward and one to the forward slope. The lemma which we wish to prove is then as follows:
+  </p>
+  <lemma xml:id="lemma-fundamental">
+    <title>The Fundamental Lemma</title>
+    <statement>
+      <p>
+        Let <m>M(x)</m> be a function of the kind described above, continuous on the interval <m>x_1\leq x \leq x_2</m>, or else such that the interval can be subdivided into a finite number of parts on each of which <m>M(x)</m> is continuous. If the integral
+        <me>
+          \int_{x_1}^{x_2} M(x)\eta'(x)\,dx
+        </me>
+        vanishes for every admissible function <m>\eta(x)</m> such that <m>\eta(x_1)=\eta(x_2)=0</m>, then <m>M(x)</m> is necessarily a constant.
+      </p>
+    </statement>
+  </lemma>
+  <remark xml:id="remark-fun-lemma">
+    I want to restate this lemma just slightly so it's clearer what it's saying. Suppose that:
+    <ul>
+      <li>
+        <p>
+          <m>M(x)</m> is a piecewise-continuous function
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\eta(x)</m> is a wiggle
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\displaystyle \int_{x_1}^{x_2} M(x)\eta'(x)\,dx = 0</m>, <em>no matter which wiggle <m>\eta(x)</m> you choose!</em>
+        </p>
+      </li>
+    </ul>
+    Then we get to conclude that <m>M(x)</m> is in fact a constant function.
+  </remark>
+  <activity>
+    Before we see the proof itself, let's build up to it by working through some of the trickier parts.
+    <ol>
+      <li>
+        <p>
+          Suppose <m>C</m> is just some constant, and remember that <m>\eta(x)</m> is supposed to be a wiggle in the sense of <xref ref="remark-var-wiggle"/>. Compute <m>\int_{x_1}^{x_2} C\cdot\eta'\,dx.</m>
+        </p>
+        <solution>
+          <me>
+            \int_{x_1}^{x_2} C\cdot\eta'\,dx = C \cdot \eta(x) \large\vert_{x_1}^{x_2} = C \cdot (\eta(x_2) - \eta(x_1)) = C\cdot(0-0) = 0.
+          </me>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>\displaystyle \eta^*(x) = \left(\int_{x_1}^x M(t)\,dt\right) - C\cdot(x-x_1)</m>. As you may suspect since I used the letter <m>\eta</m>, I'd really like it if <m>\eta^*(x)</m> was a wiggle. Compute <m>\eta^*(x_1)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Is there a value of <m>C</m> (which is supposed to be a constant) such that <m>\eta^*(x_2)=0</m>? (Hint: <m>\int_{x_1}^{x_2} M(t)\,dt</m> is just some area or other.)
+        </p>
+      </li>
+      <li>
+        <p>
+          Compute the derivative of this particular wiggle <m>\eta^*(x)</m>. (You'll need the fundamental theorem of calculus.)
+        </p>
+      </li>
+      <li>
+        <p>
+          Finally, and changing gears a little, think of some function <m>f(x)</m>. What can you tell me about <m>\int_a^b \left[f(x)\right]^2\,dx</m>? Is it positive or negative? Can it ever be zero?
+        </p>
+      </li>
+    </ol>
+  </activity>
+  <p>
+    To see that this is so we note first that the vanishing of the integral of the lemma implies also the equation 
+    <men xml:id="eqn-5">
+      \int_{x_1}^{x_2} \left[M(x)-C\right]\eta'(x)\,dx = 0
+    </men>
+    for every constant <m>C</m>, since all the functions <m>\eta(x)</m> to be considered have <m>\eta(x_1)=\eta(x_2)=0</m>. The particular function <m>\eta(x)</m> defined by the equation 
+    <men xml:id="eqn-6">
+      \eta(x) = \int_{x_1}^x M(x)\,dx - C\cdot(x-x_1)
+    </men>
+    evidently has the value zero at <m>x=x_1</m> and it will vanish again at <m>x=x_2</m> if, as we shall suppose, <m>C</m> is the constant value satisfying the condition 
+    <me>
+      0=\int_{x_1}^{x_2} M(x)\,dx - C\cdot(x_2-x_1).
+    </me>
+    The function <m>\eta(x)</m> defined by <xref ref="eqn-6"/> with this value of <m>C</m> inserted is now one of those which must satisfy <xref ref="eqn-5"/>. Its derivative is <m>\eta'(x)=M(x)-C</m> except at points where <m>M(x)</m> is discontinuous, since the derivative of an integral with respect to its upper limit is the value of the integrand at that limit whenever the integrand is continuous at the limit. For the special function <m>\eta(x)</m>, therefore, <xref ref="eqn-5"/> takes the form 
+    <me>
+      \int_{x_1}^{x_2} \left[M(x)-C\right]^2\,dx =0
+    </me>
+    and our lemma is an immediate consequence since this equation can be true only if <m>M(x) \equiv C</m>.
+  </p>
+
+  
 </section>
 
 <section xml:id="sec-straight-line">
   <title>Proof that the straight line is shortest</title>
-  
+  <p>
+    In the equation <m>y=y(x)+a\eta(x)</m> of the family of curves passing through the points 1 and 2 the function <m>\eta(x)</m> was entirely arbitrary except for the restrictions that it should be admissible and satisfy the relations <m>\eta(x_1)=\eta(x_2)=0</m>, and we have seen that the expression <xref ref="eqn-iprime0"/> for <m>I'(0)</m> must vanish for every such family. The lemma of the preceding section is therefore applicable and it tells us that along the minimizing arc <m>E_{12}</m> an equation
+    <me>
+      f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{1+y^{\prime 2}}}=C
+    </me>
+    must hold, where <m>C</m> is a constant. If we solve this equation for <m>y'</m> we see that <m>y'</m> is also a constant along <m>E_{12}</m> and that the only possible minimizing arc is therefore a single straight-line segment without corners joining the point 1 with the point 2.
+  </p>
 </section>
 
 <section xml:id="sec-auxiliary-formulas">
