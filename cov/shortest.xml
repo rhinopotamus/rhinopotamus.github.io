@@ -286,16 +286,141 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
   <title>Proof that the straight line is shortest</title>
   <p>
     In the equation <m>y=y(x)+a\eta(x)</m> of the family of curves passing through the points 1 and 2 the function <m>\eta(x)</m> was entirely arbitrary except for the restrictions that it should be admissible and satisfy the relations <m>\eta(x_1)=\eta(x_2)=0</m>, and we have seen that the expression <xref ref="eqn-iprime0"/> for <m>I'(0)</m> must vanish for every such family. The lemma of the preceding section is therefore applicable and it tells us that along the minimizing arc <m>E_{12}</m> an equation
+    <aside>
+      Take the derivative of the arc length formula <m>\sqrt{1+(y')^2}</m> with respect to <m>y'</m>. 
+    </aside>
     <me>
-      f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{1+y^{\prime 2}}}=C
+      f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{1+\left(y'\right)^2}}=C
     </me>
     must hold, where <m>C</m> is a constant. If we solve this equation for <m>y'</m> we see that <m>y'</m> is also a constant along <m>E_{12}</m> and that the only possible minimizing arc is therefore a single straight-line segment without corners joining the point 1 with the point 2.
+  </p>
+
+  <p>
+    The property just deduced for the shortest arc has so far only been proved to be necessary for a minimum. We have not yet demonstrated conclusively that the straight-line segment <m>E_{12}</m> joining 1 and 2 is actually shorter than every other admissible arc joining these points. In order to actually establish this fact let us now use <m>\eta(x)</m>
+     to denote the increment which must be added to the ordinate <fn>This is an old-school word for <m>y</m>-value. </fn> of <m>E_{12}</m> at the value <m>x</m> in order to get the ordinate of an arbitrarily selected admissible arc <m>C_{12}</m> joining 1 with 2, so that the equation of <m>C_{12}</m> will be
+     <aside>
+      In other words, <m>\eta(x)</m> is the wiggle between <m>E_{12}</m> and <m>C_{12}</m>.
+    </aside>
+    <me>
+      y=y(x)+\eta(x) \quad (x_1\leq x \leq x_2).
+    </me>
+    <!-- Write a thing about Taylor's formula with Lagrange's remainder. -->
+    The difference between the lengths of <m>C_{12}</m> and <m>E_{12}</m> can now be expressed with the help of Taylor's formula in the form
+    <md>
+      <mrow> I\left(C_{12}\right)-I\left(E_{12}\right) \amp= \int_{x_{1}}^{x_{1}}\left\{f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right\}\, dx </mrow>
+      <mrow>  \amp=\int_{x_{1}}^{x_{2}} f_{y^{\prime}} \eta^{\prime} d x+\frac{1}{2} \int_{x_{1}}^{x_{2}} f_{y^{\prime} y^{\prime}}\left(y^{\prime}+\theta \eta^{\prime}\right) (\eta')^2\, dx </mrow>
+    </md>
+    where <m>I(C_{12})</m> and <m>I(E_{12})</m> are the values of the integral <m>I</m> along the two arcs; <m>f_{y'y'}</m> is the second derivative of the function <m>f</m> with respect to <m>y'</m>; and <m>\theta</m> is the value between 0 and 1 introduced by Taylor's formula. The next to last integral vanishes since <m>f_{y'}</m> is a constant along <m>E_{12}</m> and since the difference <m>\eta(x)</m> of the ordinates of two arcs <m>C_{12}</m> and <m>E_{12}</m> with the same end-points must vanish at <m>x_1</m> and <m>x_2</m>. Furthermore the last integral is never negative since the second derivative 
+    <me>f_{y'y'} = \frac{1}{\left(1+\left(y'\right)^2\right)^{3/2}}</me> 
+    is always positive. We see therefore that <m>I(C_{12})-I(E_{12})</m> is greater than zero unless <m>\eta'(x)</m> vanishes identically, in which case ri(x) itself would have everywhere the constant value zero which it has at <m>x_1</m> and <m>x_2</m>, and <m>C_{12}</m> would coincide with <m>E_{12}</m>.
+  </p>
+
+  <p>
+    <em>It has been proved therefore that the shortest arc from the point 1 to the point 2 is necessarily the straight-line segment joining those points, and that this segment is actually shorter than every other admissible arc with the same endpoints.</em>
+  </p>
+
+  <remark> 
+    <p>
+      Here's the logic of what we just did: first we showed that if we had a minimizing arc <m>E_{12}</m>, then it was <em>necessary</em> for <m>E_{12}</m> to be a straight line -- that is, "if minimizing arc, then straight line." 
+    </p>
+    <p>
+      Then we showed that if <m>C_{12}</m> was any other admissible arc (which we can think of as some variation of <m>E_{12}</m>), then it was definitely longer than <m>E_{12}</m>, unless the wiggle was 0. That is, we showed "if straight line, then minimizing arc."
+    </p>
+  </remark>
+
+  <p>
+    One should notice the rôle which the positive sign of the derivative <m>f_{y'y'}</m> has played in the determination of the minimum property. If the sign of this derivative had been negative the difference <m>I(C_{12})-I(E_{12})</m> would have been negative and <m>I(E_{12})</m> would have been a maximum instead of a minimum. This is an analogue of the criterion mentioned in <xref ref="sec-maxima-and-minima"/> for the simpler theory of maxima and minima of functions of a single variable. 
   </p>
 </section>
 
 <section xml:id="sec-auxiliary-formulas">
   <title>Two important auxiliary formulas</title>
+  <p>
+    The type of proof used in the preceding section to show that the straight line joining 1 with 2 is shorter than every other admissible arc joining those two points is a very special one, not applicable in general to problems of the calculus of variations whose integrals <m>I</m> have integrands containing one or both of the variables <m>x</m> and <m>y</m> as well as <m>y'</m>. It will be well worth while, therefore, to consider a second form of proof which will extend somewhat the results already found for the problem of finding the shortest distance between two points, and which will be applicable not only to the problems of shortest distances considered in this chapter but also to those which we shall study later.
+  </p>
+
+  <figure xml:id="fig-E34">
+    <image xml:id="img-E34" source="images/fig-E34.png">
+    </image>
+  </figure>
+
+  <p>
+    We shall need first of all two special cases of more general formulas which are frequently applied in succeeding pages. Let <m>E_{34}</m> be a straight-line segment of variable length which moves so that its end-points describe simultaneously the two curves <m>C</m> and <m>D</m> shown in <xref ref="fig-E34"/>, and let the equations of these curves in parametric form be
+    <md>
+      <mrow> (C) \quad x \amp=x_3(t), y=y_3(t), </mrow>
+      <mrow> (D) \quad x \amp=x_4(t), y=y_4(t). </mrow>
+    </md>
+    The length
+    <me> I=\sqrt{\left(x_{4}-x_{3}\right)^{2}+\left(y_{4}-y_{3}\right)^{2}} </me> 
+    of the segment <m>E_{34}</m> has the <url href="https://activecalculus.org/multi/S-10-4-Linearization.html">differential </url>
+    <me>dI=\frac{\left(x_{4}-x_{3}\right)\left(d x_{4}-d x_{3}\right)+\left(y_{4}-y_{3}\right)\left(d y_{4}-d y_{3}\right)}{\sqrt{\left(x_{4}-x_{3}\right)^{2}+\left(y_{4}-y_{3}\right)^{2}}}
+    </me>
+    When the notation
+    <me>
+      p=\frac{y_4-y_3}{x_4-x_3}
+    </me>
+    is used to denote the slope of the line <m>E_{34}</m> this result may be expressed in the more convenient formula of the following theorem:
+  </p>
   
+  <theorem>
+    <statement>
+      <p>
+         If a straight-line segment <m>E_{34}</m> moves so that its end-points 3 and 4 describe simultaneously two curves <m>C</m> and <m>D</m>, as shown in <xref ref="fig-E34"/>, then the length <m>I</m> of <m>E_{34}</m> has the differential
+         <men xml:id="eqn-dI">
+           dI\left(E_{34}\right)=\left.\frac{dx+p\,dy}{\sqrt{1+p^{2}}}\right|^4_{3}
+         </men>
+         where the vertical bar indicates that the value of the preceding expression at the point 3 is to be subtracted from its value at the point 4. In this formula the differentials <m>dx, dy</m> at the points 3 and 4 are those belonging to <m>C</m> and <m>D</m>, while <m>p</m> is the slope of the segment <m>E_{34}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We shall need frequently to integrate the expression in the second member of <xref ref="eqn-dI"/> along curves such as <m>C</m> and <m>D</m>. This is evidently justifiable along <m>C</m>, for example, since the slope 
+    <m>
+      p=(y_4-y_3)/(x_4-x_3)
+    </m> 
+    is a function of <m>t</m> and since the differentials <m>dx, dy</m> can be calculated in terms of <m>t</m> and <m>dt</m> from the equations of <m>C</m>, so that the expression takes the form of a function of <m>t</m> multiplied by <m>dt</m>. The integral <m>I^*</m> defined by the formula
+    <me>
+      I^* = \int \frac{dx+p\,dy}{\sqrt{1+p^{2}}}
+    </me>
+    will also be well defined along an arbitrary curve <m>C</m> when <m>p</m> is a function of <m>x</m> and <m>y</m>, provided that we agree to calculate the value of <m>I^*</m> by substituting for <m>x, y, dx, dy</m> the expressions for these variables in terms of <m>t</m> and <m>dt</m> obtained from the parametric equations of <m>C</m>.
+  </p>
+
+  <p>
+    Let <m>t_3</m> and <m>t_5</m> be two parameter values which define points 3 and 5 on <m>C</m>, and which at the same time define two corresponding points 4 and 6 on <m>D</m>, as in <xref ref="fig-E34"/>. If we integrate the formula <xref ref="eqn-dI"/> with respect to <m>t</m> from <m>t_3</m> to <m>t_5</m> and use the notation <m>I^*</m> just introduced for the integral of its second member, we find as a further result:
+  </p>
+  
+  <theorem>
+    <statement>
+      <p>
+        The difference of the lengths <m>I(E_{34})</m> and <m>I(E_{56})</m> of the moving segment in two positions <m>E_{34}</m> and <m>E_{56}</m> is given by the formula 
+        <men xml:id="eqn-8">
+          I(E_{56}) - I(E_{34}) = I^*(D_{46}) - I^*(C_{35}).
+        </men>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    This and the formula <xref ref="eqn-dI"/> are the two important ones for which we have been seeking. It is evident that they will still hold in even simpler form when one of the curves <m>C</m> or <m>D</m> degenerates into a point, since along such a degenerate curve the differentials <m>dx</m> and <m>dy</m> are zero. 
+  </p>  
+  
+  <p>
+    The integrand of the integral <m>I^*</m> has a simple geometrical interpretation at the points of the curve <m>C</m> along which it is taken. At the point <m>(x, y) </m>of the curve <m>C</m> in <xref ref="fig-E34"/>, for example, the angles between the <m>x</m>-axis and the tangents to <m>C</m> and <m>E</m> have, respectively, the cosines and sines
+    <me>
+      \frac{x^{\prime}}{\sqrt{(x')^2 + (y')^2}}, \frac{y^{\prime}}{\sqrt{(x')^2 + (y')^2}} ; \quad \frac{1}{\sqrt{1+p^{2}}}, \quad \frac{p}{\sqrt{1+p^{2}}}
+    </me>
+    Since the angle <m>\theta</m> between these tangents, and the element of length <m>ds</m> on <m>C</m>, are defined by the equations
+    <men xml:id="eqn-9">
+      \cos \theta=\frac{x^{\prime}+p y^{\prime}}{\sqrt{\left(1+p^{2}\right)\left((x')^2 + (y')^2\right)}}, \quad ds=\sqrt{(x')^2 + (y')^2}\, dt
+    </men>
+    it follows that the integral <m>I^*</m> can also be expressed in the convenient form
+    <men xml:id="eqn-10">
+      I^{*}=\int \frac{d x+p]\,d y}{\sqrt{1+p^{2}}}=\int \cos \theta\, ds
+    </men>
+    
+    
+  </p>
 </section>
   
 <section xml:id="sec-field">
