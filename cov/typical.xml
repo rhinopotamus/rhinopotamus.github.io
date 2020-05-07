@@ -76,7 +76,69 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     where in the evaluation of the integral <m>y'</m> is to be replaced by the derivative <m>y'(x)</m> of the function <m>y(x)</m> defining the arc. There is an infinity of curves <m>y = y(x)</m> joining the points 1 and 2. The problem of finding the shortest one is equivalent analytically to that of finding in the class of functions <m>y(x)</m> satisfying the conditions <xref ref="eq-cond" /> one which makes the integral <m>I</m> a minimum.
     </p>
 
-    <p>In the more elementary minimum problem of Section 2 above a function <m>f(x)</m> is given and a value <m>x = a</m> is sought for which the corresponding value <m>f(a)</m> is a minimum. In the shortest-distance problem the integral <m>I</m> takes the place of <m>f(x)</m>, and instead of a value <m>x = a</m> making <m>f(a)</m> a minimum we seek to find an arc <m>E_{12}</m> joining the points 1 and 2 which shall minimize <m>I</m>. The analogy between the two problems is more perspicuous if we think of the length <m>I</m> as a function <m>I(E_{12})</m> whose value is uniquely determined when the arc <m>E_{12}</m> is given, just as <m>f(x)</m> in the former case was a function of the variable <m>x</m>.</p>
+    <activity> 
+      <p>
+        Where on earth did that integral come from? Let's figure it out, because it's a good example of the <term>slice-approximate-integrate paradigm</term> that guides a lot of the integrals we'll be writing down in this course.
+        <ol>
+          <li>
+            <p>
+              Draw yourself a reasonably wiggly function <m>y=y(x)</m> whose length you'd like to calculate. Label the beginning point <m>(x_1, y(x_1))</m>, and label the ending point <m>(x_2, y(x_2))</m>. Draw a few other points on the function at regularly-spaced intervals. 
+            </p>
+          </li>
+          <li>
+            <p>
+              It's easy to calculate the length of a straight line, so let's <em>slice</em> the wiggly function into a bunch of pieces and <em>approximate</em> each piece by a straight line. Connect the points you drew in step 1 with straight line segments, and convince yourself that the line segments are a reasonably good wrong answer to the length of the corresponding wiggly piece.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw a zoomed-in picture of just one line segment. Pretend that this is the hypotenuse of a right triangle with horizontal and vertical legs. Label each leg as either <m>\Delta x</m> or <m>\Delta y</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the Pythagorean theorem to calculate the length of the line segment, which we'll call <m>L_{\textrm{slice}}.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              So that our expression can be the summand in a Riemann sum, we'd really like it to be of the form (stuff)<m>\cdot\Delta x</m>. It's not in that form yet, so to get closer, multiply <m>L_{\textrm{slice}}</m> by <m>\frac{\Delta x}{\Delta x}</m>. This is legit because it doesn't change the value of <m>L_{\textrm{slice}}.</m> Explain why not.
+            </p>
+            <solution>
+              <p>
+                <m>\frac{\Delta x}{\Delta x}</m> is just a <m>1</m> with a cheap disguise on, and multiplying by <m>1</m> doesn't change anything at all. Multiplying by a fancy <m>1</m> (as well as adding a fancy <m>0</m>) is a favorite trick of mathematicians.
+                <image xml:id="img-1-groucho" source="images/disguised-1.png">
+                  <description>A 1 with a cheap disguise on.</description>
+                </image> 
+              </p>
+            </solution>
+          </li>
+
+          <li>
+            <p>
+              Factor the <m>\Delta x</m> in the denominator into the square root, distribute, and simplify. What happens as <m>n\to\infty</m>, or, in other words, as <m>\Delta x \to 0?</m>
+            </p>
+            <solution>
+            <p>
+              <me>
+                L_{\textrm{slice}} = \sqrt{1+\left(\frac{\Delta y}{\Delta x}\right)^2} \Delta x.
+              </me>
+              In the limit, <m>\frac{\Delta y}{\Delta x}</m> becomes <m>y'(x)</m>, so this is equivalent to <m>\sqrt{1+\left(y'(x)\right)^2} \Delta x</m>.
+            </p>
+            </solution>
+          </li>
+
+          <li>
+            <p>
+              We've sliced, we've approximated, and now it's time to <em>integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let <m>n\to\infty</m> to obtain an expression for the actual arc length of the wiggly function. <em>Be sure to involve <m>x_1</m> and <m>x_2</m>!</em>
+            </p>
+          </li>
+        </ol>
+      </p>
+      
+    </activity>
+
+    <p>In the more elementary minimum problem of <xref ref="sec-maxima-and-minima"/> a function <m>f(x)</m> is given and a value <m>x = a</m> is sought for which the corresponding value <m>f(a)</m> is a minimum. In the shortest-distance problem the integral <m>I</m> takes the place of <m>f(x)</m>, and instead of a value <m>x = a</m> making <m>f(a)</m> a minimum we seek to find an arc <m>E_{12}</m> joining the points 1 and 2 which shall minimize <m>I</m>. The analogy between the two problems is more perspicuous if we think of the length <m>I</m> as a function <m>I(E_{12})</m> whose value is uniquely determined when the arc <m>E_{12}</m> is given, just as <m>f(x)</m> in the former case was a function of the variable <m>x</m>.</p>
 
     <p>There is a second problem of the calculus of variations, of a geometrical-mechanical type, which the principles of the calculus readily enable us to express also in analytic form. When a wire circle is dipped in a soap solution and withdrawn, a circular disk of soap film bounded by the circle is formed. If a second smaller circle is made to touch this disk and then moved away the two circles will be joined by a surface of film which is a surface of revolution in the particular case when the circles are parallel and have their centers on the same axis perpendicular to their planes. The form of this surface is shown in Figure 2. It is provable by the principles of mechanics, as one may readily surmise intuitively from the elastic properties of a soap film, that the surface of revolution so formed must be one of minimum area, and the problem of determining the shape of the film is equivalent therefore to that of determining such a minimum surface of revolution passing through two circles whose relative positions are supposed to be given as indicated in the figure.</p>
 

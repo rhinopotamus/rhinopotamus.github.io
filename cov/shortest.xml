@@ -83,12 +83,85 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     It should perhaps be emphasized here that the method of the calculus of variations, as it has been developed in the past, consists essentially of three parts; first, the deduction of necessary conditions which characterize a minimizing arc; second, the proof that these conditions, or others obtained from them by slight modifications, are sufficient to insure the minimum sought; and third, the search for an arc which satisfies the sufficient conditions. For the deduction of necessary conditions the value of the integral <m>I</m> along the minimizing arc can be compared with its values along any special admissible arcs which may be convenient for the purposes of the proof in question, for example along those of the family <xref ref="eqn-variation"/> described above, but the sufficiency proofs must be made with respect to all admissible arcs joining the points 1 and 2. The third part of the problem, the determination of an arc satisfying the sufficient conditions, is frequently the most difficult of all, and is the part for which fewest methods of a general character are known. For shortest-distance problems fortunately this determination is usually easy.
     </p>
 
+    <activity xml:id="act-diff-under-int">
+      <p>
+        This next result is a doozy, and it uses an important technique with which you're probably not especially familiar: <term>differentiation under the integral sign</term>
+        <fn>For more on this, see <url href="https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf">this interesting article</url> and its references.</fn>. Here's a little activity to walk you through what's going on here.
+        <ol>
+          <li>
+            <p>
+              Convince yourself that <m>I(a)</m> as given in <xref ref="eqn-iofa"/> is indeed a function of <m>a</m>, and thus it's reasonable for us to compute <m>\frac{dI}{da}</m>. Also, convince yourself that <m>y'+a\eta'</m> is a function of both <m>x</m> and <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Here's where "differentiation under the integral sign" comes in: according to something called Leibniz's rule, as long as our functions are "nice enough" (which they are), 
+              <me>
+                \frac{d}{da} \int_{x_1}^{x_2} F(x, a)\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} F(x,a)\, dx.
+              </me>
+              Apply Leibniz's rule to write down an expression for <m>\frac{dI}{da}</m> in <xref ref="eqn-iofa"/>.
+            </p>
+            <solution>
+              <me>
+                \frac{d}{da} \int_{x_1}^{x_2} f(y'+a\eta')\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} f(y'+a\eta')\, dx.
+              </me>
+            </solution>
+          </li>
+          <li>
+            <p>
+              We're going to need the chain rule to deal with the integrand on the RHS. In particular, it'll be helpful for us to think about the chain rule in Leibniz notation (he's just popping up all over today!):
+              <me>
+                \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u} \cdot \frac{\partial u}{\partial a}.
+              </me>
+              Explain why this version of the chain rule is equivalent to the usual understanding: "first take the derivative of the outside stuff, leaving the inside stuff alone, then multiply by the derivative of the inside stuff."
+            </p>
+          </li>
+          <li>
+            <p>
+              What's something good you can label as <m>u</m> in your expression for <m>\frac{dI}{da}</m>? What's <m>\frac{\partial u}{\partial a}</m>, and so what's <m>\frac{\partial f}{\partial a}</m>?
+            </p>
+            <solution>
+            <p>
+              <m>u</m> should be the inside stuff, <m>u=y'+a\eta'</m>. Therefore, 
+                <me>
+                  \frac{\partial u}{\partial a} = \eta' \textrm{,  so  } \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\cdot \eta'.
+                </me>
+            </p>
+            </solution>
+          </li>
+          <li>
+            <p>
+              We mostly care about <m>I(a)</m> when <m>a=0</m> -- that is, when there's zero variation on the original curve <m>y(x)</m>. If <m>a=0</m>, then what's <m>u</m>? Use this to rewrite your integrand <m>\frac{\partial f}{\partial a}</m>.
+            </p>
+            <solution>
+              <p>
+                If <m>a=0</m>, then <m>u = y'+0\cdot\eta' = y'</m>. Therefore, we can rewrite our integrand to remove the convenience variable <m>u</m> that we kinda don't care about anyway:
+                <me>
+                  \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\cdot \eta' = \frac{\partial f}{\partial y'}\cdot \eta'.
+                </me>
+              </p>
+            </solution>
+          </li>
+          <li>
+            <p>
+              Conclude by writing down a final expression for <m>I'(0)</m>.
+            </p>
+            <solution>
+              <me>
+                I'(0) = \int_{x_1}^{x_2} \frac{\partial}{\partial y'}f(y') \cdot \eta'\, dx.
+              </me>
+              
+            </solution>
+          </li>
+        </ol>
+      </p>
+    </activity>
+
     <p>
       By differentiating the expression <xref ref="eqn-iofa"/> with respect to <m>a</m> and then setting <m>a=0</m> the value of <m>I'(0)</m> is readily seen to be 
       <men xml:id="eqn-iprime0">
         I'(0) = \int_{x_1}^{x_2} f_{y'} \eta'\,dx,
       </men>
-      <aside> Use the chain rule. </aside>
       where for convenience we use the notation <m>f_{y'}</m> for the derivative of the integrand <m>f(y')</m> with respect to <m>y'</m>. It will always be understood that the argument in <m>f</m> and its derivatives is the function <m>y'(x)</m> belonging to the arc <m>E_{12}</m> unless some other is expressly indicated, as is done, for example, in the formula <xref ref="eqn-iofa"/>.
     </p>
 
