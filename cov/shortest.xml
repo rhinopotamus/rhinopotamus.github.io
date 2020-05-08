@@ -304,7 +304,75 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <me>
       y=y(x)+\eta(x) \quad (x_1\leq x \leq x_2).
     </me>
-    <!-- Write a thing about Taylor's formula with Lagrange's remainder. -->
+  </p>
+  <activity xml:id="activity-taylor">
+    Okay, so the book is about to invoke some pretty deep results from <url href="https://activecalculus.org/single/sec-8-5-taylor.html">Taylor series</url>, and doesn't do much to explain them. Here's some stuff to help you figure out what's going on.
+    <ol>
+      <li>
+        <p>
+          Write down the first few terms of the Taylor series expansion for a generic function <m>f(x)</m> centered at <m>x=a</m>. What's <m>a</m>? What's <m>x</m>?
+        </p>
+        <solution>
+          <me>
+            f(x)=f(a) + f'(a)(x-a) + \frac{1}{2} f''(a) (x-a)^2 + \frac{1}{3!} f^{(3)}(a) (x-a)^3 + \ldots
+          </me>
+          <p>
+            In this expansion, <m>a</m> is some fixed value in the domain. Usually it's some "easy point" where we know a lot of information about <m>f</m> and its derivatives. For instance, if our function was <m>f(x)=\sqrt{x}</m>, some examples of "easy points" might be 36, 81, or 121. 
+          </p>
+          <p>
+            <m>x</m>, on the other hand, is some honestly variable value in the domain. Usually it's some value close to <m>a</m>, but it's "harder" than <m>a</m>. Returning to the example of the function <m>f(x)=\sqrt{x}</m>, we might use the "easy point" <m>a=36</m> to help us figure out the value of the function at the harder point <m>x=38</m>.
+          </p>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Consider the difference between the lengths of <m>C_{12}</m> and <m>E_{12}</m>:
+          <me>
+            I\left(C_{12}\right)-I\left(E_{12}\right) = \int_{x_{1}}^{x_{1}}\left[f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right]\, dx
+          </me>
+          In this expression, we have <m>f(y')</m> and <m>f(y'+\eta')</m> running around. Which of these do you think might be like <m>f(x)</m> and which of these do you think might be like <m>f(a)</m> in the Taylor setup?
+        </p>
+        <solution>
+          <p>
+            I think <m>y'</m> is going to be like <m>a</m>, because it's the "easy point" that we already know something about, and <m>y'+\eta'</m> is going to be the "nearby point" that's "harder."
+          </p>
+        </solution>
+      </li>
+      <li>
+        <p>
+          You might be familiar with the idea of the <url href="https://activecalculus.org/single/sec-8-5-taylor.html#tmd">Lagrange error bound</url>, which describes how big the error in using the <m>n</m>th Taylor polynomial to calculate <m>f(x)</m> might be. There's a <url href="https://en.wikipedia.org/wiki/Taylor%27s_theorem#Explicit_formulas_for_the_remainder">slightly different version of this same idea</url> which gives a more exact value of the remainder (ie. the error):
+          <me>
+            R_n(x)=\frac{1}{(n+1)!} f^{(n+1)}(\xi) (x-a)^{n+1}
+          </me>
+          for some value <m>\xi</m> between <m>x</m> and <m>a</m>. 
+        </p>
+        <p>
+          We're going to use this in the case where <m>n=1</m> -- that is, we're interested in the remainder after approximating <m>f</m> with just its linear approximation. Write out the formula above in the case where <m>n=1</m>.
+        </p>
+        <solution>
+          <me>
+            R_1(x)=\frac{1}{2} f''(\xi) (x-a)^2.
+          </me>
+        </solution>
+      </li>
+      <li>
+        <p>
+          In this formula for <m>R_1(x)</m>, substitute in what you decided for <m>x</m> and <m>a</m> in step 2. Simplify a little.
+        </p>
+        <solution>
+          <me>
+            R_1(y'+\eta') = \frac{1}{2} f''(\xi) [(y'+\eta')-y']^2 = \frac{1}{2} f''(\xi) (\eta')^2.
+          </me>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Now we just have to think hard about <m>\xi</m>, which is supposed to be somewhere between <m>x</m> and <m>a</m>. In our case, that's somewhere between <m>y'+\eta'</m> and <m>y'</m>. The book is about to say that <m>\xi = y'+\theta\cdot\eta'</m>, where <m>\theta</m> is some number between 0 and 1. Why does this make sense?
+        </p>
+      </li>
+    </ol>
+  </activity>
+  <p>
     The difference between the lengths of <m>C_{12}</m> and <m>E_{12}</m> can now be expressed with the help of Taylor's formula in the form
     <md>
       <mrow> I\left(C_{12}\right)-I\left(E_{12}\right) \amp= \int_{x_{1}}^{x_{1}}\left\{f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right\}\, dx </mrow>
@@ -402,7 +470,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
   </theorem>
 
   <p>
-    This and the formula <xref ref="eqn-dI"/> are the two important ones for which we have been seeking. It is evident that they will still hold in even simpler form when one of the curves <m>C</m> or <m>D</m> degenerates into a point, since along such a degenerate curve the differentials <m>dx</m> and <m>dy</m> are zero. 
+    This and the formula <xref ref="eqn-dI"/> are the two important ones for which we have been seeking. It is evident that they will still hold in even si mpler form when one of the curves <m>C</m> or <m>D</m> degenerates into a point, since along such a degenerate curve the differentials <m>dx</m> and <m>dy</m> are zero. 
   </p>  
   
   <p>
@@ -416,7 +484,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </men>
     it follows that the integral <m>I^*</m> can also be expressed in the convenient form
     <men xml:id="eqn-10">
-      I^{*}=\int \frac{d x+p]\,d y}{\sqrt{1+p^{2}}}=\int \cos \theta\, ds
+      I^{*}=\int \frac{d x+p\,d y}{\sqrt{1+p^{2}}}=\int \cos \theta\, ds
     </men>
     
     
