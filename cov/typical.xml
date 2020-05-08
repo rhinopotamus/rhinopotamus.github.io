@@ -76,9 +76,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     where in the evaluation of the integral <m>y'</m> is to be replaced by the derivative <m>y'(x)</m> of the function <m>y(x)</m> defining the arc. There is an infinity of curves <m>y = y(x)</m> joining the points 1 and 2. The problem of finding the shortest one is equivalent analytically to that of finding in the class of functions <m>y(x)</m> satisfying the conditions <xref ref="eq-cond" /> one which makes the integral <m>I</m> a minimum.
     </p>
 
+    <remark xml:id="remark-functional">
+      <p>
+        The value of the integral given above clearly depends on what function <m>y(x)</m> you choose, but will give you a unique output for any function you input. It's thus an example of a <term>functional</term> -- that is, a function whose inputs are functions and whose outputs are numbers. Many authors insist on writing functionals with brackets instead of parentheses around their arguments, so you might commonly see someone write something like
+        <me>
+          I[y] = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx.
+        </me>
+         Broadly speaking, the calculus of variations is all about finding the maxima and/or minima of functionals.
+      </p>
+    </remark>
+
     <activity> 
       <p>
-        Where on earth did that integral come from? Let's figure it out, because it's a good example of the <term>slice-approximate-integrate paradigm</term> that guides a lot of the integrals we'll be writing down in this course.
+        Where on earth did that integral come from? Let's figure it out, because it's a good example of the <term>slice-approximate-integrate paradigm</term> that guides a lot of the integrals we'll be writing down in this course, and this integral in particular is one that will come up a lot for us.
         <ol>
           <li>
             <p>
@@ -236,9 +246,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       \int_{t_1}^{t_2} \sqrt{(x')^2+(y')%2}\, dt
     </me>
     a fixed value <m>l</m>, and maximizing the area integral
+    <aside>
+      The fact that this integral gives the area is a consequence of Green's theorem.
+    </aside>
     <me>
       \frac{1}{2}\int_{t_1}^{t_2} (xy' - x'y)\, dt.
     </me>
+    
     The problems of the calculus of variations for which one or more integrals are to be given fixed values, while another is to be made a minimum or maximum, are called, after this one, isoperimetric problems. The problem proposed by James Bernoulli in 1697 was the earliest isoperimetric problem after that of the ancient Greeks.
     </p>
 

@@ -53,6 +53,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <xi:include href="./typical.xml" />
         <xi:include href="./shortest.xml" />
+        <xi:include href="./brachistochrone.xml" />
 
     </book>
 

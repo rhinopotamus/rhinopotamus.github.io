@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-07T18:09:03-06:00    *-->
+<!--*    on 2020-05-08T17:17:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -109,12 +109,70 @@ MathJax.Hub.Config({
 <li><a href="sec-two-curves.html" data-scroll="sec-two-curves">The shortest arc joining two curves</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
+<li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
+<li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-field"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">The notion of a field and a second sufficiency proof</span>
 </h2>
-<a href="sec-field.html" class="permalink">¶</a></section></div></main>
+<a href="sec-field.html" class="permalink">¶</a><p id="p-109">We have seen in <a href="sec-shortest-arc.html" class="internal" title="Section 2.1: The shortest arc joining two points">Section 2.1</a> that necessary conditions on the shortest arc may be deduced by comparing it with other admissible arcs of special types, but that a particular line can be proved to be actually the shortest only by comparing it with all of the admissible arcs joining the same two end-points. The sufficiency proof of this section is valid not only for the arcs which we have named admissible but also for arcs with equations in the parametric form</p>
+<div class="displaymath">
+\begin{equation}
+x=(t),\quad y=y(t) \quad (t_3 \leq t \leq t_5).\label{eqn-11}\tag{2.6.1}
+\end{equation}
+</div>
+<p data-braille="continuation">We suppose always that the functions \(x(t)\) and \(y(t)\) are continuous, and that the interval \([t_3, t_5]\) can be subdivided into one or more parts on each of which \(x(t)\) and \(y(t)\) have continuous derivatives such that \((x')^2+(y')^2 \neq 0\text{.}\) The curve represented is then continuous and has a continuously turning tangent except possibly at a finite number of corners. A much larger variety of curves can be represented by such parametric equations than by an equation of the form \(y=y(x)\) because the parametric representation lays no restriction upon the slope of the curve or the number of points of the curve which may lie upon a single ordinate, while for an admissible arc \(y=y(x)\) the slope must always be finite and the number of points on each ordinate at most one.</p>
+<article class="remark remark-like" id="remark-6"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span>
+</h6>
+<p id="p-110">What's going on here is we're broadening our class of admissible arcs to include not just the graphs of <em class="emphasis">functions</em> of the form \(y=y(x)\text{,}\) which must in particular pass the vertical line test, but also parametrically-defined curves. (You might know these as "space curves" or "<a class="external" href="https://activecalculus.org/multi/S-9-6-Vector-Valued-Functions.html" target="_blank">vector-valued functions</a>.") We're still going to insist that they are piecewise smooth in the sense of <a class="xref" data-knowl="./knowl/remark-admissible.html" title="Remark 2.1.2: Admissible arcs">Remark 2.1.2</a> from earlier.</p>
+<p id="p-111">The condition that \((x')^2+(y')^2 \neq 0\) just says that the tangent vector is never zero. That is, if a point is traversing the curve according to the equations given, it never just <em class="emphasis">stops</em> along the way. This isn't much of a concession; given any graph you'd want to draw, you can always find a way to parameterize it so that the point never has to stop.</p></article><p id="p-112">The mathematician who first made satisfactory sufficiency proofs in the calculus of variations was <a class="external" href="https://en.wikipedia.org/wiki/Karl_Weierstrass" target="_blank">Weierstrass</a>, and the ingenious device which he used in his proofs is called a field. <aside class="aside aside-like" id="aside-4">This is definitely not the same kind of field we study in abstract algebra.</aside> For the problems which we are considering in this chapter a field \(F\) is a region of the \(xy\)-plane with which there is associated a one-parameter family of straight-line segments all of which intersect a fixed curve \(D\text{,}\) and which have the further property that through each point \((x, y)\) of \(F\) there passes one and but one of the segments. The curve \(D\) may be either inside the field, or outside as illustrated in <a class="xref" data-knowl="./knowl/fig-5.html" title="Figure 2.5.1">Figure 2.5.1</a>, and as a special case it may degenerate into a single fixed point.</p>
+<article class="activity project-like" id="activity-6"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Explore this definition.</span>
+</h6>
+<p id="p-113">Whenever you encounter a new definition in a math textbook, it's a good idea to dig in and explore. Here are some questions that will be helpful in your exploration. Not every question applies to every situation, and there are certainly other questions you might consider asking.</p>
+<ol class="decimal">
+<li id="li-36"><p id="p-114">What are the important parts of this definition?</p></li>
+<li id="li-37"><p id="p-115">Can you draw a picture or diagram to help you understand this definition?</p></li>
+<li id="li-38"><p id="p-116">What's an example of something that satisfies this definition? What's a non-example? (The next paragraph will be helpful, but try to think of other examples besides those given in the book.)</p></li>
+<li id="li-39"><p id="p-117">If you're lucky enough to be reading a definition where some examples are immediately given, explore these examples. Draw pictures of the examples, and understand why they are examples. (Same deal for non-examples, if any.)</p></li>
+</ol></article><p id="p-118">The whole plane is a field when covered by a system of parallel lines, the curve \(D\) being in this case any straight line or curve which intersects all of the parallels. The plane with the exception of a single point 0 is a field when covered by the rays through 0, and 0 is a degenerate curve \(D\text{.}\) The tangents to a circle do not cover a field since through each point outside of the circle there pass two tangents, and through a point inside the circle there is none. If, however, we cut off half of each tangent at its contact point with the circle, leaving only a one-parameter family of half-rays all pointing in the same direction around the circle, then the exterior of the circle is a field simply covered by the family of half-rays.</p>
+<p id="p-119">At every point \((x, y)\) of a field \(F\) the straight line of the field has a slope \(p(x, y)\text{,}\) the function so defined being called the slope-function of the field. The integral \(I^*\) (from equation <a class="xref" data-knowl="./knowl/eqn-i-star.html" title="Equation 2.5.2">(2.5.2)</a>) with this slope-function in place of \(p\) in its integrand has a definite value along every arc \(C_{35}\) in the field having equations of the form <a class="xref" data-knowl="./knowl/eqn-11.html" title="Equation 2.6.1">(2.6.1)</a>, as we have seen on page 25. We can prove with the help of the formulas of the last section that the integral \(I^*\) associated in this way with a field has the two following useful properties: <article class="theorem theorem-like" id="thm-i-star-field"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
+</h6>
+<ul id="p-120" class="disc">
+<li id="li-40"><p id="p-121">The values of \(I^*\) are the same along all curves \(C_{35}\) in the field F having the same end-points 3 and 5.</p></li>
+<li id="li-41"><p id="p-122">Furthermore along each segment of one of the straight lines of the field the value of \(I^*\) is equal to the length of the segment.</p></li>
+</ul></article></p>
+<p id="p-123">To prove the first of these statements we may consider the curve \(C_{35}\) shown in the field of \(F\) of <a class="xref" data-knowl="./knowl/fig-5.html" title="Figure 2.5.1">Figure 2.5.1</a>. Through every point \((x, y)\) of this curve there passes, by hypothesis, a straight line of the field \(F\) intersecting \(D\text{,}\) and the formula <a class="xref" data-knowl="./knowl/eqn-8.html" title="Equation 2.5.3">(2.5.3)</a>, applied to the one-parameter family of straight-line segments so determined by the points of \(C_{35}\text{,}\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+I^{*}\left(C_{35}\right)=I^{*}\left(D_{46}\right)-I\left(E_{56}\right)+I\left(E_{34}\right).
+\end{equation*}
+</div>
+<p data-braille="continuation">The values of the terms on the right are completely determined when the points 3 and 5 in the field are given, and are entirely independent of the form of the curve \(C_{35}\) joining these two points. This shows that the value \(I^*(C_{35})\) is the same for all arcs \(C_{35}\) in the field joining the same two end-points, as stated in the theorem.</p>
+<p id="p-124">The second property of the theorem follows from the fact that along a straight-line segment of the field the differentials \(dx\) and \(dy\) satisfy the equation \(dy=p\,dx\text{,}\) and the integrand of \(I^*\) reduces therefore to \(\sqrt{1+p^2}\,dx\) which is the integrand of the length integral.</p>
+<p id="p-125">We now have the mechanism necessary for the sufficiency proof which was the objective of this section. We wish to show that a straight-line segment \(E_{12}\) joining a pair of points 1 and 2 is shorter than every other arc joining these points. For that purpose let us consider the field formed by covering the whole \(xy\)-plane by the lines parallel to \(E_{12}\text{.}\) When \(C_{12}\) is an arc joining 1 with 2 in this field and defined by equations in the parametric form <a class="xref" data-knowl="./knowl/eqn-11.html" title="Equation 2.6.1">(2.6.1)</a> the properties just deduced for the integral \(I*\) give</p>
+<div class="displaymath">
+\begin{equation*}
+I\left(E_{12}\right)=I^{*}\left(E_{12}\right)=I^{*}\left(C_{12}\right)=\int_{s_{1}}^{s_2} \cos \theta\, ds,
+\end{equation*}
+</div>
+<article class="activity project-like" id="activity-7"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
+</h6>Explain to yourself, from left to right, why each of these equalities holds.</article><p id="p-126">and the difference between the values of \(I\) along \(C_{12}\) and \(E_{12}\) is therefore</p>
+<div class="displaymath">
+\begin{equation*}
+I\left(C_{12}\right)-I\left(E_{12}\right)=\int_{s_{1}}^{s_{2}}(1-\cos \theta) \, ds \geq 0.
+\end{equation*}
+</div>
+<p data-braille="continuation">The equality sign can hold only if \(C_{12}\) coincides with \(E_{12}\text{.}\) For when the integral in the last equation is zero we must have \(\cos\theta = 1\) at every point of \(C_{12}\text{,}\) from which it follows that \(C_{12}\) is tangent at every point to a straight line of the field and satisfies the equation \(dy = p\, dx\text{.}\) Such a differential equation can have but one solution through the initial point 1 and that solution is \(E_{12}\text{.}\) We have proved therefore that the length \(I(C_{12})\) of \(C_{12}\) is always greater than that of \(E_{12}\) unless \(C_{12}\) is coincident with \(E_{12}\text{.}\)</p>
+<p id="p-127">We may emphasize again here that the sufficiency proof just given is considerably more inclusive than that of <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>, since it clearly shows that a straight line joining the points 1 and 2 is not only shorter than all other admissible arcs \(y=y(x)\) joining these points but also shorter than every other curve with the same end-points defined by equations in the parametric form <a class="xref" data-knowl="./knowl/eqn-11.html" title="Equation 2.6.1">(2.6.1)</a>.</p></section></div></main>
 </div>
 </body>
 </html>

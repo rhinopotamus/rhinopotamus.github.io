@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-07T18:09:03-06:00    *-->
+<!--*    on 2020-05-08T17:17:58-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -109,13 +109,19 @@ MathJax.Hub.Config({
 <li><a href="sec-two-curves.html" data-scroll="sec-two-curves">The shortest arc joining two curves</a></li>
 </ul>
 </li>
+<li class="link">
+<a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
+<li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
+<li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
+</ul>
+</li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-shortest-arc"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">The shortest arc joining two points</span>
 </h2>
-<a href="sec-shortest-arc.html" class="permalink">¶</a><p id="p-38">Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems.</p>
-<p id="p-39">Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen on page 6 of the preceding chapter, may be written in the form</p>
+<a href="sec-shortest-arc.html" class="permalink">¶</a><p id="p-39">Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems.</p>
+<p id="p-40">Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen on page 6 of the preceding chapter, may be written in the form</p>
 <div class="displaymath">
 \begin{equation}
 I=\int_{x_1}^{x_2} f(y')\,dx\label{eqn-shortest}\tag{2.1.1}
@@ -123,11 +129,11 @@ I=\int_{x_1}^{x_2} f(y')\,dx\label{eqn-shortest}\tag{2.1.1}
 </div>
 <p data-braille="continuation">if we use the notation \(f(y')=\sqrt{1+(y')^2}\text{,}\) and the arcs \(y=y(x)\,\,(x_1\leq x\leq x_2)\) whose lengths are to be compared with each other will always be understood to be continuous and to consist of a finite number of arcs on each of which the tangent turns continuously, as indicated in <a class="xref" data-knowl="./knowl/fig-piecewise-smooth.html" title="Figure 2.1.1">Figure 2.1.1</a>.</p>
 <figure class="figure figure-like" id="fig-piecewise-smooth"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/fig-piecewise-smooth.png" style="width: 100%; height: auto;" alt="A piecewise-smooth arc connecting points 1 and 2."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-40">Analytically this means that on the interval \(x_1\leq x\leq x_2\) the function \(y(x)\) is continuous and that the interval can be subdivided into parts on each of which \(y(x)\) has a continuous derivative. Let us agree to call such functions <dfn class="terminology">admissible functions</dfn> and the arcs which they define <dfn class="terminology">admissible arcs</dfn>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral \(I\) a minimum.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-41">Analytically this means that on the interval \(x_1\leq x\leq x_2\) the function \(y(x)\) is continuous and that the interval can be subdivided into parts on each of which \(y(x)\) has a continuous derivative. Let us agree to call such functions <dfn class="terminology">admissible functions</dfn> and the arcs which they define <dfn class="terminology">admissible arcs</dfn>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral \(I\) a minimum.</p>
 <article class="remark remark-like" id="remark-admissible"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Admissible arcs.</span>
 </h6>
-<p id="p-41">Other authors often refer to this condition as being <dfn class="terminology">piecewise differentiable</dfn> or <dfn class="terminology">piecewise smooth</dfn>: while an admissible function is allowed to have cusps where it isn't differentiable, you can chop it up into a number of <em class="emphasis">pieces</em> on which it is indeed differentiable.</p></article></section></div></main>
+<p id="p-42">Other authors often refer to this condition as being <dfn class="terminology">piecewise differentiable</dfn> or <dfn class="terminology">piecewise smooth</dfn>: while an admissible function is allowed to have cusps where it isn't differentiable, you can chop it up into a number of <em class="emphasis">pieces</em> on which it is indeed differentiable.</p></article></section></div></main>
 </div>
 </body>
 </html>
