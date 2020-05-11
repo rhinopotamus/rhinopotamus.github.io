@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-08T17:17:59-06:00    *-->
+<!--*    on 2020-05-11T14:15:38-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen on page 6 of the preceding chapter, may be written in the form</p>
+<p>With the exception of the integral in Newton's problem those which have been mentioned in the preceding sections all have the form</p>
 <div class="displaymath">
 \begin{equation}
-I=\int_{x_1}^{x_2} f(y')\,dx\tag{2.1.1}
+I=\int_{x_{1}}^{x_{2}} n(x, y) \sqrt{1+(y')^2}\, dx\, ,\tag{1.6.1}
 \end{equation}
 </div>
-<p data-braille="continuation">if we use the notation \(f(y')=\sqrt{1+(y')^2}\text{,}\) and the arcs \(y=y(x)\,\,(x_1\leq x\leq x_2)\) whose lengths are to be compared with each other will always be understood to be continuous and to consist of a finite number of arcs on each of which the tangent turns continuously, as indicated in <a class="xref" data-knowl="./knowl/fig-piecewise-smooth.html" title="Figure 2.1.1">Figure 2.1.1</a>.</p>
-<span class="incontext"><a href="sec-shortest-arc.html#p-40">in-context</a></span>
+<p data-braille="continuation">and we might propose to ourselves to find among the curves \(y=y(x)\) joining two given points one which minimizes this integral \(I\text{.}\) This problem also has a physical interpretation. For suppose that in a plane transparent medium the velocity of light varies from point to point, and that at an arbitrary point \((x, y)\) it has the value \(v(x, y)\text{.}\) The index of refraction at that point has by definition the value \(n(x, y) = \frac{c}{v(x,y)}\text{,}\) where \(c\) is a constant, and the time \(dt\) taken by a disturbance to travel along an arc of length \(ds\) through the point \((x, y)\) with the velocity \(v(x, y)\) is approximately</p>
+<div class="displaymath">
+\begin{equation*}
+dt=\frac{ds}{v(x, y)}=\frac{1}{c} n(x, y) \sqrt{1+(y')^2}\,dx\, .
+\end{equation*}
+</div>
+<p data-braille="continuation">We see readily by an integration that the integral \(I\) is proportional to the time taken by a disturbance to traverse the arc \(y=y(x)\) joining the two given points 1 and 2. Now it has been verified physically that the path of a ray of light in a medium in which the velocity of light varies from point to point is always one on which the time-integral \(I\) is, for short arcs at least, a minimum, so that our problem of minimizing \(I\) is that of determining the paths of rays of light in a plane medium whose variable index of refraction is \(n(x, y)\text{.}\)</p>
+<span class="incontext"><a href="sec-more-general.html#p-40">in-context</a></span>
 </body>
 </html>

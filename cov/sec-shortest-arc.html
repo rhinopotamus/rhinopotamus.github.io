@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-08T17:17:58-06:00    *-->
+<!--*    on 2020-05-11T14:15:36-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -113,6 +113,7 @@ MathJax.Hub.Config({
 <a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
 <li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
 <li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
+<li><a href="sec-first-necessary-3.html" data-scroll="sec-first-necessary-3">A first necessary condition</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -120,20 +121,25 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-shortest-arc"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">The shortest arc joining two points</span>
 </h2>
-<a href="sec-shortest-arc.html" class="permalink">¶</a><p id="p-39">Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems.</p>
-<p id="p-40">Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen on page 6 of the preceding chapter, may be written in the form</p>
+<a href="sec-shortest-arc.html" class="permalink">¶</a><p id="p-47">Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems.</p>
+<p id="p-48">Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen in <a href="sec-two-problems.html" class="internal" title="Section 1.3: Two problems of the calculus of variations which may be simply formulated">Section 1.3</a>, may be written in the form</p>
 <div class="displaymath">
 \begin{equation}
 I=\int_{x_1}^{x_2} f(y')\,dx\label{eqn-shortest}\tag{2.1.1}
 \end{equation}
 </div>
 <p data-braille="continuation">if we use the notation \(f(y')=\sqrt{1+(y')^2}\text{,}\) and the arcs \(y=y(x)\,\,(x_1\leq x\leq x_2)\) whose lengths are to be compared with each other will always be understood to be continuous and to consist of a finite number of arcs on each of which the tangent turns continuously, as indicated in <a class="xref" data-knowl="./knowl/fig-piecewise-smooth.html" title="Figure 2.1.1">Figure 2.1.1</a>.</p>
-<figure class="figure figure-like" id="fig-piecewise-smooth"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/fig-piecewise-smooth.png" style="width: 100%; height: auto;" alt="A piecewise-smooth arc connecting points 1 and 2."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-41">Analytically this means that on the interval \(x_1\leq x\leq x_2\) the function \(y(x)\) is continuous and that the interval can be subdivided into parts on each of which \(y(x)\) has a continuous derivative. Let us agree to call such functions <dfn class="terminology">admissible functions</dfn> and the arcs which they define <dfn class="terminology">admissible arcs</dfn>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral \(I\) a minimum.</p>
-<article class="remark remark-like" id="remark-admissible"><h6 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Admissible arcs.</span>
+<figure class="figure figure-like" id="fig-piecewise-smooth"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/fig-piecewise-smooth.png" style="width: 100%; height: auto;" alt="A piecewise-differentiable arc connecting points 1 and 2."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-49">Analytically this means that on the interval \(x_1\leq x\leq x_2\) the function \(y(x)\) is continuous and that the interval can be subdivided into parts on each of which \(y(x)\) has a continuous derivative. Let us agree to call such functions <dfn class="terminology">admissible functions</dfn> and the arcs which they define <dfn class="terminology">admissible arcs</dfn>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral \(I\) a minimum.</p>
+<article class="activity project-like" id="activity-admissible"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Admissible arcs, smoothness, and classes of functions.</span>
 </h6>
-<p id="p-42">Other authors often refer to this condition as being <dfn class="terminology">piecewise differentiable</dfn> or <dfn class="terminology">piecewise smooth</dfn>: while an admissible function is allowed to have cusps where it isn't differentiable, you can chop it up into a number of <em class="emphasis">pieces</em> on which it is indeed differentiable.</p></article></section></div></main>
+<p id="p-50">The idea of <dfn class="terminology">smoothness</dfn> is one that comes up a lot in analysis. We can categorize functions into several different <dfn class="terminology">differentiability classes</dfn> based on how many continuous derivatives they have over some domain.</p>
+<ol class="decimal">
+<li id="li-12"><p id="p-51">The first two classes are called \(C^0\) and \(C^1\text{.}\) \(C^0\) consists of all the <em class="emphasis">continuous</em> functions, and \(C^1\) is the class of <em class="emphasis">differentiable</em> functions whose derivative is continuous. Give an example of a function in \(C^0\) that isn't in \(C^1\text{.}\)</p></li>
+<li id="li-13"><p id="p-52">You may have noticed that in the definition of admissible functions above, we're allowing some cusps, as long as the function is <em class="emphasis">mostly</em> differentiable. This condition is more commonly referred to as being <dfn class="terminology">piecewise differentiable</dfn> or <dfn class="terminology">piecewise \(C^1\)</dfn>. Give an example of a function that's <em class="emphasis">not</em> in \(C^1\text{,}\) but <em class="emphasis">is</em> piecewise \(C^1\text{.}\)</p></li>
+<li id="li-14"><p id="p-53">The very nicest functions (and, tbh, most of the ones we care about in everyday life) have infintely many derivatives. These are called <em class="emphasis">smooth</em> functions, and they belong to the class \(C^\infty\text{.}\) Give three examples of functions in \(C^\infty\text{.}\)</p></li>
+</ol></article></section></div></main>
 </div>
 </body>
 </html>

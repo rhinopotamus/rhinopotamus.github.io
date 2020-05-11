@@ -1,30 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!--********************************************************************
-Copyright 2015 Robert A. Beezer
-
-This file is part of MathBook XML.
-
-MathBook XML is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 or version 3 of the
-License (at your option).
-
-MathBook XML is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
-*********************************************************************-->
-<!-- This file was originally part of the book     -->
-<!-- (as copied on 2015/07/12)                     -->
-<!--                                               -->
-<!--   Abstract Algebra: Theory and Applications   -->
-<!--                                               -->
-<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
-
 <chapter xml:id="shortest" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 
@@ -35,8 +10,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <p> Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems. </p>
 
-    <!-- TODO: Update reference-->
-    <p>Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen on page 6 of the preceding chapter, may be written in the form
+    <p>Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen in <xref ref="sec-two-problems"/>, may be written in the form
     <men xml:id="eqn-shortest">
       I=\int_{x_1}^{x_2} f(y')\,dx
     </men>
@@ -44,19 +18,36 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <figure xml:id="fig-piecewise-smooth">
       <image source="images/fig-piecewise-smooth.png" >
-        <description>A piecewise-smooth arc connecting points 1 and 2.</description>
+        <description>A piecewise-differentiable arc connecting points 1 and 2.</description>
       </image>
     </figure>
     
     <p>Analytically this means that on the interval <m>x_1\leq x\leq x_2</m> the function <m>y(x)</m> is continuous and that the interval can be subdivided into parts on each of which <m>y(x)</m> has a continuous derivative. Let us agree to call such functions <term>admissible functions</term> and the arcs which they define <term>admissible arcs</term>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral <m>I</m> a minimum. </p>
 
-    <remark xml:id="remark-admissible">
-      <title>Admissible arcs</title>
+    <activity xml:id="activity-admissible">
+      <title>Admissible arcs, smoothness, and classes of functions</title>
       <p>
-        Other authors often refer to this condition as being <term>piecewise differentiable</term> or <term>piecewise smooth</term>: while an admissible function is allowed to have cusps where it isn't differentiable, you can chop it up into a number of <em>pieces</em> on which it is indeed differentiable.
+        The idea of <term>smoothness</term> is one that comes up a lot in analysis. We can categorize functions into several different <term>differentiability classes</term> based on how many continuous derivatives they have over some domain.
+        <ol>
+          <li>
+            <p>
+              The first two classes are called <m>C^0</m> and <m>C^1</m>. <m>C^0</m> consists of all the <em>continuous</em> functions, and <m>C^1</m> is the class of <em>differentiable</em> functions whose derivative is continuous. Give an example of a function in <m>C^0</m> that isn't in <m>C^1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              You may have noticed that in the definition of admissible functions above, we're allowing some cusps, as long as the function is <em>mostly</em> differentiable. This condition is more commonly referred to as being <term>piecewise differentiable</term> or <term>piecewise <m>C^1</m></term>. Give an example of a function that's <em>not</em> in <m>C^1</m>, but <em>is</em> piecewise <m>C^1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The very nicest functions (and, tbh, most of the ones we care about in everyday life) have infintely many derivatives. These are called <em>smooth</em> functions, and they belong to the class <m>C^\infty</m>. Give three examples of functions in <m>C^\infty</m>.
+            </p>
+          </li>
+        </ol>
       </p>
     
-    </remark>
+    </activity>
 
   </section>
 
@@ -221,7 +212,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <ul>
       <li>
         <p>
-          <m>M(x)</m> is a piecewise-continuous function
+          <m>M(x)</m> is a piecewise-differentiable function
         </p>
       </li>
       <li>
@@ -444,7 +435,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <em>It has been proved therefore that the shortest arc from the point 1 to the point 2 is necessarily the straight-line segment joining those points, and that this segment is actually shorter than every other admissible arc with the same endpoints.</em>
   </p>
 
-  <remark xml:id="remark-necessary-sufficient"> 
+  <remark xml:id="remark-necessary-sufficient-2"> 
     <title>Necessary and sufficient conditions</title>
     <p>
       Here's the logic of what we just did: first we showed that if we had a minimizing arc <m>E_{12}</m>, then it was <em>necessary</em> for <m>E_{12}</m> to be a straight line -- that is, "if minimizing arc, then straight line." 
@@ -453,35 +444,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       Then we showed that if <m>C_{12}</m> was any other admissible arc (which we can think of as some variation of <m>E_{12}</m>), then it was definitely longer than <m>E_{12}</m>, unless the variation was 0. That is, we showed "if straight line, then minimizing arc" -- if we want <m>E_{12}</m> to be a minimizing arc, then it is <em>sufficient</em> for <m>E_{12}</m> to be a straight line.
     </p>
     <p>
-      The words "necessary" and "sufficient" are used a lot in mathematics. The statement "<m>P</m> is sufficient for <m>Q</m>" means "if <m>P</m> then <m>Q</m>", or <m>P \to Q</m>. The statement "<m>P</m> is necessary for <m>Q</m>" means "if <m>Q</m> then <m>P</m>", or <m>Q\to P</m>. If <m>P</m> is both necessary and sufficient for <m>Q</m>, then you're living in if-and-only-if land: that is, <m>P</m> and <m>Q</m> are logically equivalent, or <m>P\leftrightarrow Q</m>.
-    </p>
-    <p>
-      Here's an example that will help you think about this: Let's consider the relationship between squares and rectangles. 
-      <ul>
-        <li>
-          <p>
-            If we knew a shape was a square, we would definitely know it was a rectangle -- that is, "the shape is a square" is enough information to let you conclude that "the shape is a rectangle". So, "square" is <em>sufficient</em> for "rectangle". 
-          </p>
-        </li>
-        <li>
-          <p>
-            If we knew the shape was a rectangle, we couldn't a priori be sure that it was a square, because there are rectangles that aren't squares. So, "rectangle" is <em>not</em> sufficient for "square".
-          </p>
-        </li>
-        <li>
-          <p>
-            However, if the shape <em>wasn't</em> a rectangle, then it definitely wouldn't be a square. Therefore, "rectangle" is <em>necessary</em> for "square".
-          </p>
-        </li>
-        <li>
-          <p>
-            But the opposite isn't true. If the shape wasn't a square, it might still be a rectangle. (It might also be a triangle or a hexagon or whatever, of course.) So "square" is <em>not</em> necessary for "rectangle".
-          </p>
-        </li>
-      </ul>
-    </p>
-    <p>
-      Don't be worried if you have to think hard about this every time you see these words. I do too; I had to think really carefully while writing this whole remark. :)
+      For a little reminder about all of this "necessary" and "sufficient" business, please reference the earlier discussion in <xref ref="remark-necessary-sufficient"/>.
     </p>
   </remark>
 
@@ -589,7 +552,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </men>
     We suppose always that the functions <m>x(t)</m> and <m>y(t)</m> are continuous, and that the interval <m>[t_3, t_5]</m> can be subdivided into one or more parts on each of which <m>x(t)</m> and <m>y(t)</m> have continuous derivatives such that <m>(x')^2+(y')^2 \neq 0</m>. The curve represented is then continuous and has a continuously turning tangent except possibly at a finite number of corners. A much larger variety of curves can be represented by such parametric equations than by an equation of the form <m>y=y(x)</m> because the parametric representation lays no restriction upon the slope of the curve or the number of points of the curve which may lie upon a single ordinate, while for an admissible arc <m>y=y(x)</m> the slope must always be finite and the number of points on each ordinate at most one.
   </p>
-  <remark> <p>What's going on here is we're broadening our class of admissible arcs to include not just the graphs of <em>functions</em> of the form <m>y=y(x)</m>, which must in particular pass the vertical line test, but also parametrically-defined curves. (You might know these as "space curves" or "<url href="https://activecalculus.org/multi/S-9-6-Vector-Valued-Functions.html">vector-valued functions</url>.") We're still going to insist that they are piecewise smooth in the sense of <xref ref="remark-admissible"/> from earlier.</p>
+  <remark> <p>What's going on here is we're broadening our class of admissible arcs to include not just the graphs of <em>functions</em> of the form <m>y=y(x)</m>, which must in particular pass the vertical line test, but also parametrically-defined curves. (You might know these as "space curves" or "<url href="https://activecalculus.org/multi/S-9-6-Vector-Valued-Functions.html">vector-valued functions</url>.") We're still going to insist that they are piecewise smooth in the sense of <xref ref="activity-admissible"/> from earlier.</p>
   <p>
     The condition that <m>(x')^2+(y')^2 \neq 0</m> just says that the tangent vector is never zero. That is, if a point is traversing the curve according to the equations given, it never just <em>stops</em> along the way. This isn't much of a concession; given any graph you'd want to draw, you can always find a way to parameterize it so that the point never has to stop.
   </p>

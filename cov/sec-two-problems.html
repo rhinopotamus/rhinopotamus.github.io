@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-08T17:17:58-06:00    *-->
+<!--*    on 2020-05-11T14:15:36-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -113,6 +113,7 @@ MathJax.Hub.Config({
 <a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
 <li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
 <li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
+<li><a href="sec-first-necessary-3.html" data-scroll="sec-first-necessary-3">A first necessary condition</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -120,8 +121,8 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-two-problems"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Two problems of the calculus of variations which may be simply formulated</span>
 </h2>
-<a href="sec-two-problems.html" class="permalink">¶</a><p id="p-8">When one realizes the difficulty with which the late seventeenth-century school of mathematicians established the first fundamental principles of the calculus and their applications to such elementary problems in maxima and minima as the one which has just been described, it is remarkable that they should have conceived or attempted to solve with their relatively crude analytical machinery the far more difficult maximum and minimum problems of the calculus of variations which were at first proposed. It is an interesting fact that these early problems were not by any means the least complicated ones of the calculus of variations, and we shall do well therefore to introduce ourselves to the subject by looking first at two others which are easier to describe to one who has not already amused himself by browsing in this domain of mathematics.</p>
-<p id="p-9">The simplest of all the problems of the calculus of variations is doubtless that of determining the shortest arc joining two given points. The co-ordinates of these points will always be denoted by \((x_1, y_1)\) and \((x_2, y_2)\) and we may designate the points themselves when convenient simply by the numerals 1 and 2. If the equation of an arc is taken in the form</p>
+<a href="sec-two-problems.html" class="permalink">¶</a><p id="p-15">When one realizes the difficulty with which the late seventeenth-century school of mathematicians established the first fundamental principles of the calculus and their applications to such elementary problems in maxima and minima as the one which has just been described, it is remarkable that they should have conceived or attempted to solve with their relatively crude analytical machinery the far more difficult maximum and minimum problems of the calculus of variations which were at first proposed. It is an interesting fact that these early problems were not by any means the least complicated ones of the calculus of variations, and we shall do well therefore to introduce ourselves to the subject by looking first at two others which are easier to describe to one who has not already amused himself by browsing in this domain of mathematics.</p>
+<p id="p-16">The simplest of all the problems of the calculus of variations is doubtless that of determining the shortest arc joining two given points. The co-ordinates of these points will always be denoted by \((x_1, y_1)\) and \((x_2, y_2)\) and we may designate the points themselves when convenient simply by the numerals 1 and 2. If the equation of an arc is taken in the form</p>
 <div class="displaymath">
 \begin{equation*}
 y=y(x) \quad (x_1\leq x \leq x_2)
@@ -143,29 +144,35 @@ I=\int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx,
 <article class="remark remark-like" id="remark-functional"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-10">The value of the integral given above clearly depends on what function \(y(x)\) you choose, but will give you a unique output for any function you input. It's thus an example of a <dfn class="terminology">functional</dfn> -- that is, a function whose inputs are functions and whose outputs are numbers. Many authors insist on writing functionals with brackets instead of parentheses around their arguments, so you might commonly see someone write something like</p>
+<p id="p-17">The value of the integral given above clearly depends on what function \(y(x)\) you choose, but will give you a unique output for any function you input. It's thus an example of a <dfn class="terminology">functional</dfn> -- that is, a function whose inputs are functions and whose outputs are numbers. Using the notation introduced in <a class="xref" data-knowl="./knowl/activity-admissible.html" title="Activity 2.1.1: Admissible arcs, smoothness, and classes of functions">Activity 2.1.1</a>, we might write that a functional is a function from a class of functions to the real numbers:</p>
+<div class="displaymath">
+\begin{equation*}
+I:C^1\to\mathbb{R}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Many authors insist on writing functionals with brackets instead of parentheses around their arguments, so you might commonly see someone write something like</p>
 <div class="displaymath">
 \begin{equation*}
 I[y] = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx.
 \end{equation*}
 </div>
-<p data-braille="continuation">Broadly speaking, the calculus of variations is all about finding the maxima and/or minima of functionals.</p></article><article class="activity project-like" id="activity-1"><h6 class="heading">
+<p data-braille="continuation">Broadly speaking, the calculus of variations is all about finding the maxima and/or minima of functionals.</p></article><article class="activity project-like" id="activity-arclength"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-11">Where on earth did that integral come from? Let's figure it out, because it's a good example of the <dfn class="terminology">slice-approximate-integrate paradigm</dfn> that guides a lot of the integrals we'll be writing down in this course, and this integral in particular is one that will come up a lot for us.</p>
+<p id="p-18">Where on earth did that integral come from? Let's figure it out, because it's a good example of the <dfn class="terminology">slice-approximate-integrate paradigm</dfn> that guides a lot of the integrals we'll be writing down in this course, and this integral in particular is one that will come up a lot for us.</p>
 <ol class="decimal">
-<li id="li-1"><p id="p-12">Draw yourself a reasonably wiggly function \(y=y(x)\) whose length you'd like to calculate. Label the beginning point \((x_1, y(x_1))\text{,}\) and label the ending point \((x_2, y(x_2))\text{.}\) Draw a few other points on the function at regularly-spaced intervals.</p></li>
-<li id="li-2"><p id="p-13">It's easy to calculate the length of a straight line, so let's <em class="emphasis">slice</em> the wiggly function into a bunch of pieces and <em class="emphasis">approximate</em> each piece by a straight line. Connect the points you drew in step 1 with straight line segments, and convince yourself that the line segments are a reasonably good wrong answer to the length of the corresponding wiggly piece.</p></li>
-<li id="li-3"><p id="p-14">Draw a zoomed-in picture of just one line segment. Pretend that this is the hypotenuse of a right triangle with horizontal and vertical legs. Label each leg as either \(\Delta x\) or \(\Delta y\text{.}\)</p></li>
-<li id="li-4"><p id="p-15">Use the Pythagorean theorem to calculate the length of the line segment, which we'll call \(L_{\textrm{slice}}.\)</p></li>
-<li id="li-5">
-<p id="p-16">So that our expression can be the summand in a Riemann sum, we'd really like it to be of the form (stuff)\(\cdot\Delta x\text{.}\) It's not in that form yet, so to get closer, multiply \(L_{\textrm{slice}}\) by \(\frac{\Delta x}{\Delta x}\text{.}\) This is legit because it doesn't change the value of \(L_{\textrm{slice}}.\) Explain why not.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-17">\(\frac{\Delta x}{\Delta x}\) is just a \(1\) with a cheap disguise on, and multiplying by \(1\) doesn't change anything at all. Multiplying by a fancy \(1\) (as well as adding a fancy \(0\)) is a favorite trick of mathematicians. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/disguised-1.png" style="width: 100%; height: auto;" alt="A 1 with a cheap disguise on."></div></p></div></div>
+<li id="li-5"><p id="p-19">Draw yourself a reasonably wiggly function \(y=y(x)\) whose length you'd like to calculate. Label the beginning point \((x_1, y(x_1))\text{,}\) and label the ending point \((x_2, y(x_2))\text{.}\) Draw a few other points on the function at regularly-spaced intervals.</p></li>
+<li id="li-6"><p id="p-20">It's easy to calculate the length of a straight line, so let's <em class="emphasis">slice</em> the wiggly function into a bunch of pieces and <em class="emphasis">approximate</em> each piece by a straight line. Connect the points you drew in step 1 with straight line segments, and convince yourself that the line segments are a reasonably good wrong answer to the length of the corresponding wiggly piece.</p></li>
+<li id="li-7"><p id="p-21">Draw a zoomed-in picture of just one line segment. Pretend that this is the hypotenuse of a right triangle with horizontal and vertical legs. Label each leg as either \(\Delta x\) or \(\Delta y\text{.}\)</p></li>
+<li id="li-8"><p id="p-22">Use the Pythagorean theorem to calculate the length of the line segment, which we'll call \(L_{\textrm{slice}}.\)</p></li>
+<li id="li-9">
+<p id="p-23">So that our expression can be the summand in a Riemann sum, we'd really like it to be of the form (stuff)\(\cdot\Delta x\text{.}\) It's not in that form yet, so to get closer, multiply \(L_{\textrm{slice}}\) by \(\frac{\Delta x}{\Delta x}\text{.}\) This is legit because it doesn't change the value of \(L_{\textrm{slice}}.\) Explain why not.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-24">\(\frac{\Delta x}{\Delta x}\) is just a \(1\) with a cheap disguise on, and multiplying by \(1\) doesn't change anything at all. Multiplying by a fancy \(1\) (as well as adding a fancy \(0\)) is a favorite trick of mathematicians. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/disguised-1.png" style="width: 100%; height: auto;" alt="A 1 with a cheap disguise on."></div></p></div></div>
 </li>
-<li id="li-6">
-<p id="p-18">Factor the \(\Delta x\) in the denominator into the square root, distribute, and simplify. What happens as \(n\to\infty\text{,}\) or, in other words, as \(\Delta x \to 0?\)</p>
+<li id="li-10">
+<p id="p-25">Factor the \(\Delta x\) in the denominator into the square root, distribute, and simplify. What happens as \(n\to\infty\text{,}\) or, in other words, as \(\Delta x \to 0?\)</p>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<div class="displaymath" id="p-19">
+<div class="displaymath" id="p-26">
 \begin{equation*}
 L_{\textrm{slice}} = \sqrt{1+\left(\frac{\Delta y}{\Delta x}\right)^2} \Delta x.
 \end{equation*}
@@ -173,24 +180,28 @@ L_{\textrm{slice}} = \sqrt{1+\left(\frac{\Delta y}{\Delta x}\right)^2} \Delta x.
 <p data-braille="continuation">In the limit, \(\frac{\Delta y}{\Delta x}\) becomes \(y'(x)\text{,}\) so this is equivalent to \(\sqrt{1+\left(y'(x)\right)^2} \Delta x\text{.}\)</p>
 </div></div>
 </li>
-<li id="li-7">
-<p id="p-20">We've sliced, we've approximated, and now it's time to <em class="emphasis">integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let \(n\to\infty\) to obtain an expression for the actual arc length of the wiggly function. <em class="emphasis">Be sure to involve \(x_1\) and \(x_2\text{!}\)</em></p>
+<li id="li-11">
+<p id="p-27">We've sliced, we've approximated, and now it's time to <em class="emphasis">integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let \(n\to\infty\) to obtain an expression for the actual arc length of the wiggly function. <em class="emphasis">Be sure to involve \(x_1\) and \(x_2\text{!}\)</em></p>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="displaymath">
 \begin{equation*}
 I = \int_{x_1}^{x_2} \sqrt{1+\left(y'(x)\right)^2}\,dx.
 \end{equation*}
 </div></div></div>
 </li>
-</ol></article><p id="p-21">In the more elementary minimum problem of <a href="sec-maxima-and-minima.html" class="internal" title="Section 1.2: Maxima and minima">Section 1.2</a> a function \(f(x)\) is given and a value \(x = a\) is sought for which the corresponding value \(f(a)\) is a minimum. In the shortest-distance problem the integral \(I\) takes the place of \(f(x)\text{,}\) and instead of a value \(x = a\) making \(f(a)\) a minimum we seek to find an arc \(E_{12}\) joining the points 1 and 2 which shall minimize \(I\text{.}\) The analogy between the two problems is more perspicuous if we think of the length \(I\) as a function \(I(E_{12})\) whose value is uniquely determined when the arc \(E_{12}\) is given, just as \(f(x)\) in the former case was a function of the variable \(x\text{.}\)</p>
-<p id="p-22">There is a second problem of the calculus of variations, of a geometrical-mechanical type, which the principles of the calculus readily enable us to express also in analytic form. When a wire circle is dipped in a soap solution and withdrawn, a circular disk of soap film bounded by the circle is formed. If a second smaller circle is made to touch this disk and then moved away the two circles will be joined by a surface of film which is a surface of revolution in the particular case when the circles are parallel and have their centers on the same axis perpendicular to their planes. The form of this surface is shown in Figure 2. It is provable by the principles of mechanics, as one may readily surmise intuitively from the elastic properties of a soap film, that the surface of revolution so formed must be one of minimum area, and the problem of determining the shape of the film is equivalent therefore to that of determining such a minimum surface of revolution passing through two circles whose relative positions are supposed to be given as indicated in the figure.</p>
+</ol></article><p id="p-28">In the more elementary minimum problem of <a href="sec-maxima-and-minima.html" class="internal" title="Section 1.2: Maxima and minima">Section 1.2</a> a function \(f(x)\) is given and a value \(x = a\) is sought for which the corresponding value \(f(a)\) is a minimum. In the shortest-distance problem the integral \(I\) takes the place of \(f(x)\text{,}\) and instead of a value \(x = a\) making \(f(a)\) a minimum we seek to find an arc \(E_{12}\) joining the points 1 and 2 which shall minimize \(I\text{.}\) The analogy between the two problems is more perspicuous if we think of the length \(I\) as a function \(I(E_{12})\) whose value is uniquely determined when the arc \(E_{12}\) is given, just as \(f(x)\) in the former case was a function of the variable \(x\text{.}\)</p>
+<p id="p-29">There is a second problem of the calculus of variations, of a geometrical-mechanical type, which the principles of the calculus readily enable us to express also in analytic form. When a wire circle is dipped in a soap solution and withdrawn, a circular disk of soap film bounded by the circle is formed. If a second smaller circle is made to touch this disk and then moved away the two circles will be joined by a surface of film which is a surface of revolution in the particular case when the circles are parallel and have their centers on the same axis perpendicular to their planes. The form of this surface is shown in Figure 2. It is provable by the principles of mechanics, as one may readily surmise intuitively from the elastic properties of a soap film, that the surface of revolution so formed must be one of minimum area, and the problem of determining the shape of the film is equivalent therefore to that of determining such a minimum surface of revolution passing through two circles whose relative positions are supposed to be given as indicated in the figure.</p>
 <figure class="figure figure-like" id="fig-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/fig-1-2.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-23">In order to phrase this problem analytically let the common axis of the two circles be taken as the \(x\)-axis, and let the points where the circles intersect an \(xy\)-plane through that axis be 1 and 2. If the meridian curve of the surface in the \(xy\)-plane has an equation \(y=y(x)\) then the calculus formula for the area of the surface is \(2\pi\) times the value of the integral</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-30">In order to phrase this problem analytically let the common axis of the two circles be taken as the \(x\)-axis, and let the points where the circles intersect an \(xy\)-plane through that axis be 1 and 2. If the meridian curve of the surface in the \(xy\)-plane has an equation \(y=y(x)\) then the calculus formula for the area of the surface is \(2\pi\) times the value of the integral</p>
 <div class="displaymath">
 \begin{equation*}
 I=\int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx. 
 \end{equation*}
 </div>
-<p data-braille="continuation">The problem of determining the form of the soap film surface between the two circles is analytically that of finding in the class of arcs \(y=y(x)\) whose ends are at the points 1 and 2 one which minimizes the last-written integral \(I\text{.}\)</p></section></div></main>
+<p data-braille="continuation">The problem of determining the form of the soap film surface between the two circles is analytically that of finding in the class of arcs \(y=y(x)\) whose ends are at the points 1 and 2 one which minimizes the last-written integral \(I\text{.}\)</p>
+<article class="activity project-like" id="activity-soap-film"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-31">Explain why the integral above is correct. I suggest a similar slice-approximate-integrate approach as we took in <a class="xref" data-knowl="./knowl/activity-arclength.html" title="Activity 1.3.1">Activity 1.3.1</a>.</p></article></section></div></main>
 </div>
 </body>
 </html>

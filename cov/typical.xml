@@ -57,6 +57,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <p>It was not easy for the seventeenth-century mathe matician to deduce this simple criterion that the derivative <m>f'(x)</m> must vanish at a maximum or a minimum of <m>f(x)</m>. He was immersed in the study of special problems rather than general theories, and had no well-established limiting processes or calculus notations to assist him. It was still more difficult for him to advance one step farther to the realization of the significance of the second derivative <m>f''(x)</m> in distinguishing between maximum and minimum values. Leibniz in his paper of 1684 was the first to give the criterion. In present-day parlance we say that <m>f'(a) = 0, \, f''(a) \geq 0</m> are necessary conditions for the value <m>f(a)</m> to be a minimum, while the conditions <m>f'(a) = 0, \, f''(a) \gt 0</m> are sufficient to insure a minimum. For a maximum the inequality signs must be changed in sense.</p>
 
+    <remark xml:id="remark-necessary-sufficient">
+      <p>
+        The words "necessary" and "sufficient" are used a lot in mathematics, though they are perhaps a little old-fashioned. The statement "<m>P</m> is sufficient for <m>Q</m>" means "if <m>P</m> then <m>Q</m>", or <m>P \to Q</m>. The statement "<m>P</m> is necessary for <m>Q</m>" means "if <m>Q</m> then <m>P</m>", or <m>Q\to P</m>. If <m>P</m> is both necessary and sufficient for <m>Q</m>, then you're living in if-and-only-if land: that is, <m>P</m> and <m>Q</m> are logically equivalent, or <m>P\leftrightarrow Q</m>.
+      </p>
+      <p>
+        Here's an example that will help you think about this: Let's consider the relationship between squares and rectangles. 
+        <ul>
+          <li>
+            <p>
+              If we knew a shape was a square, we would definitely know it was a rectangle -- that is, "the shape is a square" is enough information to let you conclude that "the shape is a rectangle". So, "square" is <em>sufficient</em> for "rectangle". 
+            </p>
+          </li>
+          <li>
+            <p>
+              If we knew the shape was a rectangle, we couldn't a priori be sure that it was a square, because there are rectangles that aren't squares. So, "rectangle" is <em>not</em> sufficient for "square".
+            </p>
+          </li>
+          <li>
+            <p>
+              However, if the shape <em>wasn't</em> a rectangle, then it definitely wouldn't be a square. Therefore, "rectangle" is <em>necessary</em> for "square".
+            </p>
+          </li>
+          <li>
+            <p>
+              But the opposite isn't true. If the shape wasn't a square, it might still be a rectangle. (It might also be a triangle or a hexagon or whatever, of course.) So "square" is <em>not</em> necessary for "rectangle".
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Don't be worried if you have to think hard about this every time you see these words. I do too; I had to think really carefully while writing this whole remark. :)
+      </p>
+    </remark>
+
     <p>It will be noted that the conditions just stated as necessary for a minimum are not identical with those which are sufficient. We shall see in Chapter V that a similar undesirable and much more baffling discrepancy occurs in the calculus of variations. For the simple problem of minimizing a function <m>f(x)</m> the doubtful intermediate case when <m>f'(a)</m> and <m>f''(a)</m> are both zero was discussed by Maclaurin (1698-1746) who showed how higher derivatives may be used to obtain criteria which are both necessary and sufficient. For the calculus of variations the corresponding problem offers great difficulty and has never been completely solved.</p>
 
 
@@ -78,7 +112,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <remark xml:id="remark-functional">
       <p>
-        The value of the integral given above clearly depends on what function <m>y(x)</m> you choose, but will give you a unique output for any function you input. It's thus an example of a <term>functional</term> -- that is, a function whose inputs are functions and whose outputs are numbers. Many authors insist on writing functionals with brackets instead of parentheses around their arguments, so you might commonly see someone write something like
+        The value of the integral given above clearly depends on what function <m>y(x)</m> you choose, but will give you a unique output for any function you input. It's thus an example of a <term>functional</term> -- that is, a function whose inputs are functions and whose outputs are numbers. Using the notation introduced in <xref ref="activity-admissible"/>, we might write that a functional is a function from a class of functions to the real numbers:
+        <me>
+          I:C^1\to\mathbb{R}.
+        </me>
+        Many authors insist on writing functionals with brackets instead of parentheses around their arguments, so you might commonly see someone write something like
         <me>
           I[y] = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx.
         </me>
@@ -86,7 +124,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       </p>
     </remark>
 
-    <activity> 
+    <activity xml:id="activity-arclength"> 
       <p>
         Where on earth did that integral come from? Let's figure it out, because it's a good example of the <term>slice-approximate-integrate paradigm</term> that guides a lot of the integrals we'll be writing down in this course, and this integral in particular is one that will come up a lot for us.
         <ol>
@@ -166,6 +204,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </me>
     The problem of determining the form of the soap film surface between the two circles is analytically that of finding in the class of arcs <m>y=y(x)</m> whose ends are at the points 1 and 2 one which minimizes the last-written integral <m>I</m>. 
     </p>
+    <activity xml:id="activity-soap-film">
+      <p>
+        Explain why the integral above is correct. I suggest a similar slice-approximate-integrate approach as we took in <xref ref="activity-arclength"/>.
+      </p>
+    </activity>
 
   </section>
 
@@ -193,15 +236,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <p>The problem of the brachistochrone (<foreign xml:lang="el">βραχιστος</foreign> (brachistos) = shortest, <foreign xml:lang="el">χρονος </foreign> (chronos) = time) is that of determining a path down which a particle will fall from one given point to another in the shortest time. Let the <m>y</m>-axis for convenience be taken vertically downward, as in <xref ref="fig-brachistochrone"/>, the two fixed points being 1 and 2. The initial velocity <m>v_1</m> at the point 1 is supposed to be given. In Chapter III we shall see that for a curve defined by an equation of the form <m>y=y(x)</m> the time of descent from 1 to 2 is <m>\frac{1}{\sqrt{2g}}</m> times the value of the integral 
     <me>
-      I=\int_{x_{1}}^{x_{1}} \sqrt{\frac{1+(y')^2}{y-a}}\,dx\, ,
+      I=\int_{x_{1}}^{x_{1}} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\, ,
     </me>
-     where <m>g</m> is the gravitational constant and <m>a</m> has the constant value <m>a = y_1-\frac{v_1^2}{2g}</m>. The problem of the brachistochrone is then to find among the curves <m>y=y(x)</m> which pass through two points 1 and 2 one which minimizes the integral <m>I</m>. </p>
+     where <m>g</m> is the gravitational constant and <m>\alpha</m> has the constant value <m>\alpha = y_1-\frac{v_1^2}{2g}</m>. The problem of the brachistochrone is then to find among the curves <m>y=y(x)</m> which pass through two points 1 and 2 one which minimizes the integral <m>I</m>. </p>
 
-     <p>The only discussions of the problem which were published in full in response to John Bernoulli's invitation were those of the Bernoulli brothers themselves,3 in May, 1697, and they are in many respects characteristic of their authors. John's paper is to this day most elegant and satisfactory reading. He saw that the curve of quickest descent is identical with the path of a ray of light in a medium with a suitably selected variable index of refraction, and a known property of such paths enabled him to attain very quickly and easily a solution. His method can be applied, however, to only a restricted class of similar questions. The solution of James was more laborious, and to us much less attractive, since it was couched in the language of the relatively clumsy geometrical analysis which preceded the invention of the calculus and which was commonly used for some time thereafter. But his method was a more general one than that of his younger brother and was the first step in a long series of researches which has led to the theory of the calculus of variations as we know it today.</p>
+     <p>The only discussions of the problem which were published in full in response to John Bernoulli's invitation were those of the Bernoulli brothers themselves, in May, 1697, and they are in many respects characteristic of their authors. John's paper is to this day most elegant and satisfactory reading. He saw that the curve of quickest descent is identical with the path of a ray of light in a medium with a suitably selected variable index of refraction, and a known property of such paths enabled him to attain very quickly and easily a solution. His method can be applied, however, to only a restricted class of similar questions. The solution of James was more laborious, and to us much less attractive, since it was couched in the language of the relatively clumsy geometrical analysis which preceded the invention of the calculus and which was commonly used for some time thereafter. But his method was a more general one than that of his younger brother and was the first step in a long series of researches which has led to the theory of the calculus of variations as we know it today.</p>
 
      <p>At the close of his paper James invited mathematicians in general to consider a much more difficult problem of the calculus of variations which he had devised, and he offered to John in particular a money prize of fifty ducats for a satisfactory solution. As it turned out, however, the ducats were saved, for although John claimed to have done so he did not as a matter of fact succeed in his attacks upon the problem, and after a rather bitter discussion which dragged on for a number of years James finally published his own solution in 1701. The two papers of 1697 and 1701 of James Bernoulli were the starting-point for the researches of Euler (1707-83), a native of Basle and pupil of John Bernoulli, one of the greatest of the world's mathematicians. It is to Euler that we owe the first important result in the modern theory of the calculus of variations, as we shall see in later chapters.</p>
 
-     <p>It is fair to say that the theory of the calculus of variations had its beginning in the interesting brachistochrone problem of John Bernoulli. One should not infer from this remark that no problems of the calculus of variations were known earlier, for we have seen already that Newton had proposed such a problem and described a characteristic property of its solution. Furthermore the brachistochrone problem itself was more or less definitely in the mind of Galileo (1564-1642) in 1630 and 16384 when he compared the time of fall of a particle along an arc of a vertical circle with those along polygons inscribed in the arc. He seems to conclude that the time of descent on a circular arc is shorter than the times on all other paths joining its endpoints, but his proof does not justify this result. Nowadays we know that the solution curve is neither a circle nor a straight line but a cycloid, as will be proved in Chapter III. A still older problem of the calculus of variations is the isoperimetric problem of the ancient Greeks described in Section 7 below. None of these, however, could rightly be regarded as the starting-point of the theory of the calculus of variations, for in the early references to them there were no indications of other problems of similar type, or of methods of solution possessing generality of application.</p>
+     <p>It is fair to say that the theory of the calculus of variations had its beginning in the interesting brachistochrone problem of John Bernoulli. One should not infer from this remark that no problems of the calculus of variations were known earlier, for we have seen already that Newton had proposed such a problem and described a characteristic property of its solution. Furthermore the brachistochrone problem itself was more or less definitely in the mind of Galileo (1564-1642) in 1630 and 1638 when he compared the time of fall of a particle along an arc of a vertical circle with those along polygons inscribed in the arc. He seems to conclude that the time of descent on a circular arc is shorter than the times on all other paths joining its endpoints, but his proof does not justify this result. Nowadays we know that the solution curve is neither a circle nor a straight line but a cycloid, as will be proved in Chapter III. A still older problem of the calculus of variations is the isoperimetric problem of the ancient Greeks described in <xref ref="sec-other-problems"/> below. None of these, however, could rightly be regarded as the starting-point of the theory of the calculus of variations, for in the early references to them there were no indications of other problems of similar type, or of methods of solution possessing generality of application.</p>
   </section>
 
   <section xml:id="sec-more-general">
@@ -243,7 +286,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </me>
     but not otherwise intersecting itself, giving the length integral
     <me>
-      \int_{t_1}^{t_2} \sqrt{(x')^2+(y')%2}\, dt
+      \int_{t_1}^{t_2} \sqrt{(x')^2+(y')^2}\, dt
     </me>
     a fixed value <m>l</m>, and maximizing the area integral
     <aside>
