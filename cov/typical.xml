@@ -199,8 +199,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       <image source="images/fig-1-2.png" />
     </figure>
 
-    <p>In order to phrase this problem analytically let the common axis of the two circles be taken as the <m>x</m>-axis, and let the points where the circles intersect an <m>xy</m>-plane through that axis be 1 and 2. If the meridian curve of the surface in the <m>xy</m>-plane has an equation <m>y=y(x)</m> then the calculus formula for the area of the surface is <m>2\pi</m> times the value of the integral <me>
-      I=\int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx. 
+    <p>In order to phrase this problem analytically let the common axis of the two circles be taken as the <m>x</m>-axis, and let the points where the circles intersect an <m>xy</m>-plane through that axis be 1 and 2. If the meridian curve of the surface in the <m>xy</m>-plane has an equation <m>y=y(x)</m> then the calculus formula for the area of the surface is <m>2\pi</m> times the value of the integral 
+    <aside>
+      Kudos to Jordan Contreras for spotting a typo in this equation; the <m>y</m> outside the radical was missing.
+    </aside>
+    <me>
+      I=\int_{x_1}^{x_2} y \sqrt{1+(y')^2}\,dx. 
     </me>
     The problem of determining the form of the soap film surface between the two circles is analytically that of finding in the class of arcs <m>y=y(x)</m> whose ends are at the points 1 and 2 one which minimizes the last-written integral <m>I</m>. 
     </p>
