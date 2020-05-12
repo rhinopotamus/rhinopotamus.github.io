@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T09:43:13-06:00    *-->
+<!--*    on 2020-05-12T12:55:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,12 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In our study of the shortest-distance problems in the last chapter the arcs to be considered were taken in the form \(y=y(x) (x_1 \leq x \leq x_2)\) with \(y(x)\) continuous on the interval \(x_1 \leq x \leq x_2\text{,}\) and the interval could furthermore be subdivided into parts on each of which the derivative \(y'(x)\) is continuous. An <em class="emphasis">admissible arc</em> for the brachistochrone problem will always be understood to have these properties besides the additional one that it lies entirely in the half-plane \(y\gt a\text{.}\) For an admissible function, however, we retain always the definition given in <a href="sec-shortest-arc.html" class="internal" title="Section 2.1: The shortest arc joining two points">Section 2.1</a>. Our problem is then to find among the admissible arcs joining the points 1 and 2, one which minimizes the integral \(I\text{.}\)</p>
+<p>The time \(T\) required by a particle starting with the initial velocity \(v_1\) to fall from a point 1 to a point 2 along a curve is given by the integrals</p>
+<div class="displaymath">
+\begin{equation}
+T = \frac{1}{\sqrt{2g}}\int_o^l \frac{ds}{\sqrt{y-\alpha}}=\frac{1}{\sqrt{2g}} \int_{x_1}^{x_2} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\tag{3.2.4}
+\end{equation}
+</div>
 <span class="incontext"><a href="sec-analytic-formulation.html#p-162">in-context</a></span>
 </body>
 </html>

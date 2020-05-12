@@ -27,7 +27,7 @@
     <activity xml:id="activity-admissible">
       <title>Admissible arcs, smoothness, and classes of functions</title>
       <p>
-        The idea of <term>smoothness</term> is one that comes up a lot in analysis. We can categorize functions into several different <term>differentiability classes</term> based on how many continuous derivatives they have over some domain.
+        The idea of <em>smoothness</em>, which generalizes differentiability, is one that comes up a lot in analysis. We can categorize functions into several different <em>differentiability classes</em> based on how many continuous derivatives they have over some domain.
         <ol>
           <li>
             <p>
@@ -36,7 +36,7 @@
           </li>
           <li>
             <p>
-              You may have noticed that in the definition of admissible functions above, we're allowing some cusps, as long as the function is <em>mostly</em> differentiable. This condition is more commonly referred to as being <term>piecewise differentiable</term> or <term>piecewise <m>C^1</m></term>. Give an example of a function that's <em>not</em> in <m>C^1</m>, but <em>is</em> piecewise <m>C^1</m>.
+              You may have noticed that in the definition of admissible functions above, we're allowing some cusps, as long as the function is <em>mostly</em> differentiable. This condition is more commonly referred to as being <em>piecewise differentiable</em> or <em>piecewise <m>C^1</m></em>. Give an example of a function that's <em>not</em> in <m>C^1</m>, but <em>is</em> piecewise <m>C^1</m>.
             </p>
           </li>
           <li>
@@ -150,7 +150,7 @@
           </li>
           <li>
             <p>
-              We mostly care about <m>I(a)</m> when <m>a=0</m> -- that is, when there's zero variation on the original curve <m>y(x)</m>. If <m>a=0</m>, then what's <m>u</m>? Use this to rewrite your integrand <m>\frac{\partial f}{\partial a}</m>.
+              We mostly care about <m>I(a)</m> and <m>I'(a)</m> when <m>a=0</m> -- that is, when there's zero variation on the original curve <m>y(x)</m>. If <m>a=0</m>, then what's <m>u</m>? Use this to rewrite your integrand <m>\frac{\partial f}{\partial a}</m>.
             </p>
             <solution>
               <p>

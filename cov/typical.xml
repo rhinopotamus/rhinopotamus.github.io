@@ -55,7 +55,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       <image source="images/fig-1-1.png" />
     </figure>
 
-    <p>It was not easy for the seventeenth-century mathe matician to deduce this simple criterion that the derivative <m>f'(x)</m> must vanish at a maximum or a minimum of <m>f(x)</m>. He was immersed in the study of special problems rather than general theories, and had no well-established limiting processes or calculus notations to assist him. It was still more difficult for him to advance one step farther to the realization of the significance of the second derivative <m>f''(x)</m> in distinguishing between maximum and minimum values. Leibniz in his paper of 1684 was the first to give the criterion. In present-day parlance we say that <m>f'(a) = 0, \, f''(a) \geq 0</m> are necessary conditions for the value <m>f(a)</m> to be a minimum, while the conditions <m>f'(a) = 0, \, f''(a) \gt 0</m> are sufficient to insure a minimum. For a maximum the inequality signs must be changed in sense.</p>
+    <p>It was not easy for the seventeenth-century mathematician to deduce this simple criterion that the derivative <m>f'(x)</m> must vanish at a maximum or a minimum of <m>f(x)</m>. He was immersed in the study of special problems rather than general theories, and had no well-established limiting processes or calculus notations to assist him. It was still more difficult for him to advance one step farther to the realization of the significance of the second derivative <m>f''(x)</m> in distinguishing between maximum and minimum values. Leibniz in his paper of 1684 was the first to give the criterion. In present-day parlance we say that <m>f'(a) = 0, \, f''(a) \geq 0</m> are necessary conditions for the value <m>f(a)</m> to be a minimum, while the conditions <m>f'(a) = 0, \, f''(a) \gt 0</m> are sufficient to insure a minimum. For a maximum the inequality signs must be changed in sense.</p>
 
     <remark xml:id="remark-necessary-sufficient">
       <p>
@@ -90,6 +90,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Don't be worried if you have to think hard about this every time you see these words. I do too; I had to think really carefully while writing this whole remark. :)
       </p>
     </remark>
+
+    <activity xml:id="activity-necessary-sufficient">
+      <p>
+        As the book is about to say, for the problem of determining a minimum of a function, "it will be noted that the conditions just stated as necessary for a minimum are not identical with those which are sufficient."
+        <ol>
+          <li>
+            <p>
+              What's the difference between the necessary condition and the sufficient condition? I claim that one condition is "stronger" in some sense; which is it?
+            </p>
+          </li>
+          <li>
+            <p>
+              If the conditions <m>f'(a) = 0, \, f''(a) \geq 0</m> are, as claimed, necessary but not sufficient for <m>f(a)</m> to be a minimum, then there must be some function where those conditions hold but you don't have a minimum. Give me an example of such a function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Write a sentence or two explaining why the necessary condition isn't sufficient, and how we have to "strengthen" it a little to get a sufficient condition.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
 
     <p>It will be noted that the conditions just stated as necessary for a minimum are not identical with those which are sufficient. We shall see in Chapter V that a similar undesirable and much more baffling discrepancy occurs in the calculus of variations. For the simple problem of minimizing a function <m>f(x)</m> the doubtful intermediate case when <m>f'(a)</m> and <m>f''(a)</m> are both zero was discussed by Maclaurin (1698-1746) who showed how higher derivatives may be used to obtain criteria which are both necessary and sufficient. For the calculus of variations the corresponding problem offers great difficulty and has never been completely solved.</p>
 

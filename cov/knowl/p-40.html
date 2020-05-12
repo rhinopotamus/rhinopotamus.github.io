@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T09:43:10-06:00    *-->
+<!--*    on 2020-05-12T12:55:35-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>With the exception of the integral in Newton's problem those which have been mentioned in the preceding sections all have the form</p>
-<div class="displaymath">
-\begin{equation}
-I=\int_{x_{1}}^{x_{2}} n(x, y) \sqrt{1+(y')^2}\, dx\, ,\tag{1.6.1}
-\end{equation}
-</div>
-<p data-braille="continuation">and we might propose to ourselves to find among the curves \(y=y(x)\) joining two given points one which minimizes this integral \(I\text{.}\) This problem also has a physical interpretation. For suppose that in a plane transparent medium the velocity of light varies from point to point, and that at an arbitrary point \((x, y)\) it has the value \(v(x, y)\text{.}\) The index of refraction at that point has by definition the value \(n(x, y) = \frac{c}{v(x,y)}\text{,}\) where \(c\) is a constant, and the time \(dt\) taken by a disturbance to travel along an arc of length \(ds\) through the point \((x, y)\) with the velocity \(v(x, y)\) is approximately</p>
+<p>The problem of the brachistochrone (<i class="foreign" lang="el">βραχιστος</i> (brachistos) = shortest, <i class="foreign" lang="el">χρονος</i> (chronos) = time) is that of determining a path down which a particle will fall from one given point to another in the shortest time. Let the \(y\)-axis for convenience be taken vertically downward, as in <a class="xref" data-knowl="./knowl/fig-brachistochrone.html" title="Figure 1.5.1">Figure 1.5.1</a>, the two fixed points being 1 and 2. The initial velocity \(v_1\) at the point 1 is supposed to be given. In Chapter III we shall see that for a curve defined by an equation of the form \(y=y(x)\) the time of descent from 1 to 2 is \(\frac{1}{\sqrt{2g}}\) times the value of the integral</p>
 <div class="displaymath">
 \begin{equation*}
-dt=\frac{ds}{v(x, y)}=\frac{1}{c} n(x, y) \sqrt{1+(y')^2}\,dx\, .
+I=\int_{x_{1}}^{x_{1}} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\, ,
 \end{equation*}
 </div>
-<p data-braille="continuation">We see readily by an integration that the integral \(I\) is proportional to the time taken by a disturbance to traverse the arc \(y=y(x)\) joining the two given points 1 and 2. Now it has been verified physically that the path of a ray of light in a medium in which the velocity of light varies from point to point is always one on which the time-integral \(I\) is, for short arcs at least, a minimum, so that our problem of minimizing \(I\) is that of determining the paths of rays of light in a plane medium whose variable index of refraction is \(n(x, y)\text{.}\)</p>
-<span class="incontext"><a href="sec-more-general.html#p-40">in-context</a></span>
+<p data-braille="continuation">where \(g\) is the gravitational constant and \(\alpha\) has the constant value \(\alpha = y_1-\frac{v_1^2}{2g}\text{.}\) The problem of the brachistochrone is then to find among the curves \(y=y(x)\) which pass through two points 1 and 2 one which minimizes the integral \(I\text{.}\)</p>
+<span class="incontext"><a href="sec-brachistochrone.html#p-40">in-context</a></span>
 </body>
 </html>

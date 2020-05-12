@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-12T09:43:09-06:00    *-->
+<!--*    on 2020-05-12T12:55:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -121,7 +121,7 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-first-necessary-3"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">A first necessary condition</span>
 </h2>
-<a href="sec-first-necessary-3.html" class="permalink">¶</a><p id="p-163">As in our study of the problems of determining shortest distances let us suppose that a particular admissible arc \(E_{12}\) with the equation</p>
+<a href="sec-first-necessary-3.html" class="permalink">¶</a><p id="p-167">As in our study of the problems of determining shortest distances let us suppose that a particular admissible arc \(E_{12}\) with the equation</p>
 <div class="displaymath">
 \begin{equation*}
 y=y(x)\quad (x_1 \leq x \leq x_2)
@@ -134,7 +134,7 @@ y=y(x)+a\eta(x)\quad (x_1 \leq x \leq x_2)\label{eqn-3-6}\tag{3.3.1}
 \end{equation}
 </div>
 <p data-braille="continuation">contains \(E_{12}\) for the parameter value \(a=0\text{,}\) and for small values of \(a\) consists entirely of admissible arcs passing through the points 1 and 2. We must not let \(a\) be too large, as otherwise the corresponding curve of the family might lie partly above the line \(y = \alpha\text{.}\)</p>
-<p id="p-164">Among the values</p>
+<p id="p-168">Among the values</p>
 <div class="displaymath">
 \begin{equation}
 I(a)=\int_{x_{1}}^{x_{2}} f\left(y+a\eta, y^{\prime}+a \eta^{\prime}\right)\, d x\label{eqn-3-7}\tag{3.3.2}
@@ -147,28 +147,28 @@ I'(0)=\int_{x_1}^{x_2} \left[ f_y \eta + f_{y'} \eta' \right]\,dx,\label{eqn-3-8
 \end{equation}
 </div>
 <p data-braille="continuation">where \(f_y\) and \(f_{y'}\) are the partial derivatives of \(f(y, y')\) with the arguments \(y, y'\) belonging to the minimizing arc \(E_{12}\text{.}\)</p>
-<article class="activity project-like" id="activity-13"><h6 class="heading">
+<article class="activity project-like" id="activity-14"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-165">There's two ways to achieve the next important result. The book suggests one way, and I'll suggest another. The subscripts here are going to get a little hairy, so I suggest rewriting <a class="xref" data-knowl="./knowl/eqn-3-8.html" title="Equation 3.3.3">(3.3.3)</a>in Leibniz notation:</p>
+<p id="p-169">There's two ways to achieve the next important result. The book suggests one way, and I'll suggest another. The subscripts here are going to get a little hairy, so I suggest rewriting <a class="xref" data-knowl="./knowl/eqn-3-8.html" title="Equation 3.3.3">(3.3.3)</a>in Leibniz notation:</p>
 <div class="displaymath">
 \begin{equation*}
 I'(0)=\int_{x_1}^{x_2} \left[ \frac{\partial f}{\partial y} \eta + \frac{\partial f}{\partial y'} \eta' \right]\,dx
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-55">
-<p id="p-166">Rewrite <a class="xref" data-knowl="./knowl/eqn-3-8.html" title="Equation 3.3.3">(3.3.3)</a> as the sum of two integrals. The second one, involving \(\eta'\text{,}\) is a natural candidate for integration by parts. Do that, then combine the two integrals again; you should now be able to factor out an \(\eta\text{.}\)</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="displaymath" id="p-167">
+<li id="li-58">
+<p id="p-170">Rewrite <a class="xref" data-knowl="./knowl/eqn-3-8.html" title="Equation 3.3.3">(3.3.3)</a> as the sum of two integrals. The second one, involving \(\eta'\text{,}\) is a natural candidate for integration by parts. Do that, then combine the two integrals again; you should now be able to factor out an \(\eta\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><div class="displaymath" id="p-171">
 \begin{equation*}
 I'(0) = \int_{x_1}^{x_2} \left[\frac{\partial f}{\partial y} - \frac{d}{dx}\frac{\partial f}{\partial y'}\right] \eta \, dx
 \end{equation*}
 </div></div></div>
 </li>
-<li id="li-56"><p id="p-168">We know \(I'(0) =0\text{,}\) no matter which variation \(\eta\) you choose, so that means we can invoke the corollary to <a class="xref" data-knowl="./knowl/lemma-fundamental.html" title="Lemma 2.3.1: The Fundamental Lemma">Lemma 2.3.1</a> that we proved in <a class="xref" data-knowl="./knowl/activity-fun-lemma2.html" title="Activity 2.3.2">Activity 2.3.2</a>. What can you conclude?</p></li>
-<li id="li-57"><p id="p-169">Another way you could rewrite \(I'(0)\) is by messing with the first integral. Pretend it's not a definite integral for a hot second, and just use integration by parts to come up with an antiderivative. (Hint: Let \(u = \eta\text{,}\) and write down some reasonable thing for the antiderivative of \(dv\text{,}\) even though you don't know exactly what it is.)</p></li>
-<li id="li-58"><p id="p-170">Take the thing you found for the first integral and differentiate it <em class="emphasis">with respect to</em> \(x\text{.}\)</p></li>
-</ol></article><p id="p-171">If we make use of the easily derived formula</p>
+<li id="li-59"><p id="p-172">We know \(I'(0) =0\text{,}\) no matter which variation \(\eta\) you choose, so that means we can invoke the corollary to <a class="xref" data-knowl="./knowl/lemma-fundamental.html" title="Lemma 2.3.1: The Fundamental Lemma">Lemma 2.3.1</a> that we proved in <a class="xref" data-knowl="./knowl/activity-fun-lemma2.html" title="Activity 2.3.2">Activity 2.3.2</a>. What can you conclude?</p></li>
+<li id="li-60"><p id="p-173">Another way you could rewrite \(I'(0)\) is by messing with the first integral. Pretend it's not a definite integral for a hot second, and just use integration by parts to come up with an antiderivative. (Hint: Let \(u = \eta\text{,}\) and write down some reasonable thing for the antiderivative of \(dv\text{,}\) even though you don't know exactly what it is.)</p></li>
+<li id="li-61"><p id="p-174">Take the thing you found for the first integral and differentiate it <em class="emphasis">with respect to</em> \(x\text{.}\)</p></li>
+</ol></article><p id="p-175">If we make use of the easily derived formula</p>
 <div class="displaymath">
 \begin{equation*}
 \eta f_{y}=\frac{d}{dx}\left(\eta \int_{x_{1}}^{x} f_{y} \, dx\right)-\eta^{\prime} \int_{x_{1}}^{x} f_{y}\,dx
@@ -184,7 +184,7 @@ I^{\prime}(0)=\int_{x_{1}}^{x_{2}}\left\{f_{y^{\prime}}-\int_{x_{1}}^{x} f_{y} d
 <article class="theorem theorem-like" id="thm-euler"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-172">For every minimizing arc \(E_{12}\) there must exist a constant \(c\) such that the equation</p>
+<p id="p-176">For every minimizing arc \(E_{12}\) there must exist a constant \(c\) such that the equation</p>
 <div class="displaymath">
 \begin{equation}
 f_{y'}=\int_{x_1}^x f_y\, dx + c\label{eqn-3-9}\tag{3.3.4}
@@ -195,12 +195,12 @@ f_{y'}=\int_{x_1}^x f_y\, dx + c\label{eqn-3-9}\tag{3.3.4}
 \begin{equation}
 \frac{d}{dx} f_{y'} = f_y.\label{eqn-3-10}\tag{3.3.5}
 \end{equation}
-</div></article><p id="p-173">The last equation may be readily deduced from equation <a class="xref" data-knowl="./knowl/eqn-3-9.html" title="Equation 3.3.4">(3.3.4)</a> by differentiation, since on a sub-arc of \(E_{12}\) where the tangent turns continuously the function \(f_y\) is continuous and the integral in <a class="xref" data-knowl="./knowl/eqn-3-9.html" title="Equation 3.3.4">(3.3.4)</a> has the derivative \(f_y\text{.}\)</p>
-<p id="p-174">The equation <a class="xref" data-knowl="./knowl/eqn-3-10.html" title="Equation 3.3.5">(3.3.5)</a> is the famous differential equation deduced by Euler in 1744 and called after him Euler's differential equation. Its solutions have been named <dfn class="terminology">extremals</dfn> because they are the only curves which can give the integral \(I\) a maximum or a minimum, i.e., an extreme value. We shall in the following pages apply the term extremal only to those solutions \(y(x)\) which have continuously turning tangents and continuous second derivatives \(y''(x)\text{.}\) <aside class="aside aside-like" id="aside-7">In more modern language, we're going to insist that \(y(x)\) is a function of class \(C^2\text{.}\)</aside></p>
+</div></article><p id="p-177">The last equation may be readily deduced from equation <a class="xref" data-knowl="./knowl/eqn-3-9.html" title="Equation 3.3.4">(3.3.4)</a> by differentiation, since on a sub-arc of \(E_{12}\) where the tangent turns continuously the function \(f_y\) is continuous and the integral in <a class="xref" data-knowl="./knowl/eqn-3-9.html" title="Equation 3.3.4">(3.3.4)</a> has the derivative \(f_y\text{.}\)</p>
+<p id="p-178">The equation <a class="xref" data-knowl="./knowl/eqn-3-10.html" title="Equation 3.3.5">(3.3.5)</a> is the famous differential equation deduced by Euler in 1744 and called after him Euler's differential equation. Its solutions have been named <dfn class="terminology">extremals</dfn> because they are the only curves which can give the integral \(I\) a maximum or a minimum, i.e., an extreme value. We shall in the following pages apply the term extremal only to those solutions \(y(x)\) which have continuously turning tangents and continuous second derivatives \(y''(x)\text{.}\) <aside class="aside aside-like" id="aside-7">In more modern language, we're going to insist that \(y(x)\) is a function of class \(C^2\text{.}\)</aside></p>
 <article class="remark remark-like" id="remark-euler"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-175">Most authors write Euler's equation, also sometimes called the Euler-Lagrange equation, in a slightly different form:</p>
+<p id="p-179">Most authors write Euler's equation, also sometimes called the Euler-Lagrange equation, in a slightly different form:</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0.
@@ -215,7 +215,7 @@ I = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx
 <p data-braille="continuation">so that \(f(x,y,y') = \sqrt{1+(y')^2}\text{.}\)</p></article><article class="activity project-like" id="activity-euler-arclength"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-176">Apply Euler's equation to the arc length integrand to see that you do indeed reach the same conclusion we reached by other means in <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>.</p></article></section></div></main>
+<p id="p-180">Apply Euler's equation to the arc length integrand to see that you do indeed reach the same conclusion we reached by other means in <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>.</p></article></section></div></main>
 </div>
 </body>
 </html>
