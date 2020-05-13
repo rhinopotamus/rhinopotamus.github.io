@@ -95,7 +95,7 @@
     <men xml:id="eqn-iofa">
       I(a)=\int_{x_1}^{x_2} f(y'+a \eta')\, dx.
     </men>
-    Along the initial arc <m>E_{12}</m> the integral has the value <m>I(0)</m>, and if this is to be a minimum when compared with the values of the integral along all other admissible arcs joining 1 with 2 it must in particular be a minimum when compared with the values <m>I(a)</m> along the arcs of the family <xref ref="eqn-variation"/>.  Hence according to the criterion for a minimum of a function given on page 4 of the last chapter we must have <m>I'(0) = 0</m>.
+    Along the initial arc <m>E_{12}</m> the integral has the value <m>I(0)</m>, and if this is to be a minimum when compared with the values of the integral along all other admissible arcs joining 1 with 2 it must in particular be a minimum when compared with the values <m>I(a)</m> along the arcs of the family <xref ref="eqn-variation"/>.  Hence according to the criterion for a minimum of a function given in <xref ref="sec-maxima-and-minima"/> we must have <m>I'(0) = 0</m>.
     </p>
 
     <p>
