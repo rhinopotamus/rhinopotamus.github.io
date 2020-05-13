@@ -263,7 +263,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <p>The problem of the brachistochrone (<foreign xml:lang="el">βραχιστος</foreign> (brachistos) = shortest, <foreign xml:lang="el">χρονος </foreign> (chronos) = time) is that of determining a path down which a particle will fall from one given point to another in the shortest time. Let the <m>y</m>-axis for convenience be taken vertically downward, as in <xref ref="fig-brachistochrone"/>, the two fixed points being 1 and 2. The initial velocity <m>v_1</m> at the point 1 is supposed to be given. In Chapter III we shall see that for a curve defined by an equation of the form <m>y=y(x)</m> the time of descent from 1 to 2 is <m>\frac{1}{\sqrt{2g}}</m> times the value of the integral 
     <me>
-      I=\int_{x_{1}}^{x_{1}} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\, ,
+      I=\int_{x_{1}}^{x_{2}} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\, ,
     </me>
      where <m>g</m> is the gravitational constant and <m>\alpha</m> has the constant value <m>\alpha = y_1-\frac{v_1^2}{2g}</m>. The problem of the brachistochrone is then to find among the curves <m>y=y(x)</m> which pass through two points 1 and 2 one which minimizes the integral <m>I</m>. </p>
 
