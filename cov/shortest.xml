@@ -208,6 +208,7 @@
     </statement>
   </lemma>
   <remark xml:id="remark-fun-lemma">
+    <p>
     I want to restate this lemma just slightly so it's clearer what it's saying. Suppose that:
     <ul>
       <li>
@@ -227,6 +228,10 @@
       </li>
     </ul>
     Then we get to conclude that <m>M(x)</m> is in fact a constant function.
+    </p>
+    <p>
+      Just for one more layer of emphasis here: <alert>IF!!!!!</alert> the three things in bullets, <alert>THEN!!!!</alert> <m>M(x)</m> is constant.
+    </p>
   </remark>
   <activity xml:id="activity-fun-proof">
     Before we see the proof itself, let's build up to it by working through some of the trickier parts.
@@ -428,7 +433,7 @@
     </md>
     where <m>I(C_{12})</m> and <m>I(E_{12})</m> are the values of the integral <m>I</m> along the two arcs; <m>f_{y'y'}</m> is the second derivative of the function <m>f</m> with respect to <m>y'</m>; and <m>\theta</m> is the value between 0 and 1 introduced by Taylor's formula. The next to last integral vanishes since <m>f_{y'}</m> is a constant along <m>E_{12}</m> and since the difference <m>\eta(x)</m> of the ordinates of two arcs <m>C_{12}</m> and <m>E_{12}</m> with the same end-points must vanish at <m>x_1</m> and <m>x_2</m>. Furthermore the last integral is never negative since the second derivative 
     <me>f_{y'y'} = \frac{1}{\left(1+\left(y'\right)^2\right)^{3/2}}</me> 
-    is always positive. We see therefore that <m>I(C_{12})-I(E_{12})</m> is greater than zero unless <m>\eta'(x)</m> vanishes identically, in which case ri(x) itself would have everywhere the constant value zero which it has at <m>x_1</m> and <m>x_2</m>, and <m>C_{12}</m> would coincide with <m>E_{12}</m>.
+    is always positive. We see therefore that <m>I(C_{12})-I(E_{12})</m> is greater than zero unless <m>\eta'(x)</m> vanishes identically, in which case <m>\eta'(x)</m> itself would have everywhere the constant value zero which it has at <m>x_1</m> and <m>x_2</m>, and <m>C_{12}</m> would coincide with <m>E_{12}</m>.
   </p>
 
   <p>

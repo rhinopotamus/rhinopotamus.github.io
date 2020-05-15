@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T16:51:25-06:00    *-->
+<!--*    on 2020-05-15T11:17:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>In our study of the shortest-distance problems in the last chapter the arcs to be considered were taken in the form \(y=y(x) (x_1 \leq x \leq x_2)\) with \(y(x)\) continuous on the interval \(x_1 \leq x \leq x_2\text{,}\) and the interval could furthermore be subdivided into parts on each of which the derivative \(y'(x)\) is continuous. An <em class="emphasis">admissible arc</em> for the brachistochrone problem will always be understood to have these properties besides the additional one that it lies entirely in the half-plane \(y\gt a\text{.}\) For an admissible function, however, we retain always the definition given in <a href="sec-shortest-arc.html" class="internal" title="Section 2.1: The shortest arc joining two points">Section 2.1</a>. Our problem is then to find among the admissible arcs joining the points 1 and 2, one which minimizes the integral \(I\text{.}\)</p>
+<p>It is clear that an arc which minimizes one of the integrals <a class="xref" data-knowl="./knowl/eqn-3-4.html" title="Equation 3.2.4">(3.2.4)</a> expressing \(T\) will also minimize that integral when the factor \(\frac{1}{\sqrt{2g}}\) is omitted, and vice versa. Let us therefore use the notations</p>
+<div class="displaymath">
+\begin{equation}
+I=\int_{x_{2}}^{x_{3}} f\left(y, y^{\prime}\right) dx, \quad f\left(y, y^{\prime}\right)=\sqrt{\frac{1+(y')^2}{y-\alpha}}\tag{3.2.5}
+\end{equation}
+</div>
+<p data-braille="continuation">for our integral which we seek to minimize and its integrand. Since the value of the function \(f(y, y')\) is infinite when \(y = \alpha\) and imaginary when \(y\lt \alpha\) we must confine our curves to the portion of the plane which lies below the line \(y=\alpha\) in <a class="xref" data-knowl="./knowl/fig-12.html" title="Figure 3.2.1">Figure 3.2.1</a>. This is not really a restriction of the problem since the equation \(v^2=\left(\frac{ds}{dt}\right)^2 = 2g(y-\alpha)\) deduced above shows that a particle started on a curve with the velocity \(v_1\) at the point 1 will always come to rest if it reaches the altitude \(y=\alpha\) on the curve, and it can never rise above that altitude. For the present we shall restrict our curves to lie in the half-plane \(y\gt \alpha\text{.}\) In a later section of this chapter we shall see what happens when curves are permitted which have points in common with the line \(y=\alpha\text{.}\)</p>
 <span class="incontext"><a href="sec-analytic-formulation.html#p-166">in-context</a></span>
 </body>
 </html>

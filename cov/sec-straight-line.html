@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T16:51:21-06:00    *-->
+<!--*    on 2020-05-15T11:17:34-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -114,6 +114,7 @@ MathJax.Hub.Config({
 <li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
 <li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
 <li><a href="sec-first-necessary-3.html" data-scroll="sec-first-necessary-3">A first necessary condition</a></li>
+<li><a href="sec-application-brachistochrone.html" data-scroll="sec-application-brachistochrone">Application to the brachistochrone problem</a></li>
 </ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
@@ -121,14 +122,14 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-straight-line"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Proof that the straight line is shortest</span>
 </h2>
-<a href="sec-straight-line.html" class="permalink">¶</a><p id="p-93">In the equation \(y=y(x)+a\eta(x)\) of the family of curves passing through the points 1 and 2 the function \(\eta(x)\) was entirely arbitrary except for the restrictions that it should be admissible and satisfy the relations \(\eta(x_1)=\eta(x_2)=0\text{,}\) and we have seen that the expression <a class="xref" data-knowl="./knowl/eqn-iprime0.html" title="Equation 2.2.3">(2.2.3)</a> for \(I'(0)\) must vanish for every such family. The lemma of the preceding section is therefore applicable and it tells us that along the minimizing arc \(E_{12}\) an equation <aside class="aside aside-like" id="aside-3">Take the derivative of the arc length formula \(\sqrt{1+(y')^2}\) with respect to \(y'\text{.}\)</aside></p>
+<a href="sec-straight-line.html" class="permalink">¶</a><p id="p-95">In the equation \(y=y(x)+a\eta(x)\) of the family of curves passing through the points 1 and 2 the function \(\eta(x)\) was entirely arbitrary except for the restrictions that it should be admissible and satisfy the relations \(\eta(x_1)=\eta(x_2)=0\text{,}\) and we have seen that the expression <a class="xref" data-knowl="./knowl/eqn-iprime0.html" title="Equation 2.2.3">(2.2.3)</a> for \(I'(0)\) must vanish for every such family. The lemma of the preceding section is therefore applicable and it tells us that along the minimizing arc \(E_{12}\) an equation <aside class="aside aside-like" id="aside-3">Take the derivative of the arc length formula \(\sqrt{1+(y')^2}\) with respect to \(y'\text{.}\)</aside></p>
 <div class="displaymath">
 \begin{equation*}
 f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{1+\left(y'\right)^2}}=C
 \end{equation*}
 </div>
 <p data-braille="continuation">must hold, where \(C\) is a constant. If we solve this equation for \(y'\) we see that \(y'\) is also a constant along \(E_{12}\) and that the only possible minimizing arc is therefore a single straight-line segment without corners joining the point 1 with the point 2.</p>
-<p id="p-94">The property just deduced for the shortest arc has so far only been proved to be necessary for a minimum. We have not yet demonstrated conclusively that the straight-line segment \(E_{12}\) joining 1 and 2 is actually shorter than every other admissible arc joining these points. In order to actually establish this fact let us now use \(\eta(x)\) to denote the increment which must be added to the ordinate <a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> of \(E_{12}\) at the value \(x\) in order to get the ordinate of an arbitrarily selected admissible arc \(C_{12}\) joining 1 with 2, so that the equation of \(C_{12}\) will be <aside class="aside aside-like" id="aside-4">In other words, \(C_{12}\) is a wiggle of \(E_{12}\text{,}\) and \(\eta(x)\) is the variation between \(E_{12}\) and \(C_{12}\text{.}\)</aside></p>
+<p id="p-96">The property just deduced for the shortest arc has so far only been proved to be necessary for a minimum. We have not yet demonstrated conclusively that the straight-line segment \(E_{12}\) joining 1 and 2 is actually shorter than every other admissible arc joining these points. In order to actually establish this fact let us now use \(\eta(x)\) to denote the increment which must be added to the ordinate <a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> of \(E_{12}\) at the value \(x\) in order to get the ordinate of an arbitrarily selected admissible arc \(C_{12}\) joining 1 with 2, so that the equation of \(C_{12}\) will be <aside class="aside aside-like" id="aside-4">In other words, \(C_{12}\) is a wiggle of \(E_{12}\text{,}\) and \(\eta(x)\) is the variation between \(E_{12}\) and \(C_{12}\text{.}\)</aside></p>
 <div class="displaymath">
 \begin{equation*}
 y=y(x)+\eta(x) \quad (x_1\leq x \leq x_2).
@@ -139,36 +140,36 @@ y=y(x)+\eta(x) \quad (x_1\leq x \leq x_2).
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h6>Okay, so the book is about to invoke some pretty deep results from <a class="external" href="https://activecalculus.org/single/sec-8-5-taylor.html" target="_blank">Taylor series</a>, and doesn't do much to explain them. Here's some stuff to help you figure out what's going on. <ol class="decimal">
 <li id="li-37">
-<p id="p-95">Write down the first few terms of the Taylor series expansion for a generic function \(f(x)\) centered at \(x=a\text{.}\) What's \(a\text{?}\) What's \(x\text{?}\)</p>
+<p id="p-97">Write down the first few terms of the Taylor series expansion for a generic function \(f(x)\) centered at \(x=a\text{.}\) What's \(a\text{?}\) What's \(x\text{?}\)</p>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
 <div class="displaymath">
 \begin{equation*}
 f(x)=f(a) + f'(a)(x-a) + \frac{1}{2} f''(a) (x-a)^2 + \frac{1}{3!} f^{(3)}(a) (x-a)^3 + \ldots
 \end{equation*}
 </div>
-<p id="p-96">In this expansion, \(a\) is some fixed value in the domain. Usually it's some "easy point" where we know a lot of information about \(f\) and its derivatives. For instance, if our function was \(f(x)=\sqrt{x}\text{,}\) some examples of "easy points" might be 36, 81, or 121.</p>
-<p id="p-97">\(x\text{,}\) on the other hand, is some honestly variable value in the domain. Usually it's some value close to \(a\text{,}\) but it's "harder" than \(a\text{.}\) Returning to the example of the function \(f(x)=\sqrt{x}\text{,}\) we might use the "easy point" \(a=36\) to help us figure out the value of the function at the harder point \(x=38\text{.}\)</p>
+<p id="p-98">In this expansion, \(a\) is some fixed value in the domain. Usually it's some "easy point" where we know a lot of information about \(f\) and its derivatives. For instance, if our function was \(f(x)=\sqrt{x}\text{,}\) some examples of "easy points" might be 36, 81, or 121.</p>
+<p id="p-99">\(x\text{,}\) on the other hand, is some honestly variable value in the domain. Usually it's some value close to \(a\text{,}\) but it's "harder" than \(a\text{.}\) Returning to the example of the function \(f(x)=\sqrt{x}\text{,}\) we might use the "easy point" \(a=36\) to help us figure out the value of the function at the harder point \(x=38\text{.}\)</p>
 </div></div>
 </li>
 <li id="li-38">
-<p id="p-98">Consider the difference between the lengths of \(C_{12}\) and \(E_{12}\text{:}\)</p>
+<p id="p-100">Consider the difference between the lengths of \(C_{12}\) and \(E_{12}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 I\left(C_{12}\right)-I\left(E_{12}\right) = \int_{x_{1}}^{x_{1}}\left[f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right]\, dx
 \end{equation*}
 </div>
 <p data-braille="continuation">In this expression, we have \(f(y')\) and \(f(y'+\eta')\) running around. Which of these do you think might be like \(f(x)\) and which of these do you think might be like \(f(a)\) in the Taylor setup?</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><p id="p-99">I think \(y'\) is going to be like \(a\text{,}\) because it's the "easy point" that we already know something about, and \(y'+\eta'\) is going to be the "nearby point" that's "harder."</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><p id="p-101">I think \(y'\) is going to be like \(a\text{,}\) because it's the "easy point" that we already know something about, and \(y'+\eta'\) is going to be the "nearby point" that's "harder."</p></div></div>
 </li>
 <li id="li-39">
-<p id="p-100">You might be familiar with the idea of the <a class="external" href="https://activecalculus.org/single/sec-8-5-taylor.html#tmd" target="_blank">Lagrange error bound</a>, which describes how big the error in using the \(n\)th Taylor polynomial to calculate \(f(x)\) might be. There's a <a class="external" href="https://en.wikipedia.org/wiki/Taylor%27s_theorem#Explicit_formulas_for_the_remainder" target="_blank">slightly different version of this same idea</a> which gives a more exact value of the remainder (ie. the error):</p>
+<p id="p-102">You might be familiar with the idea of the <a class="external" href="https://activecalculus.org/single/sec-8-5-taylor.html#tmd" target="_blank">Lagrange error bound</a>, which describes how big the error in using the \(n\)th Taylor polynomial to calculate \(f(x)\) might be. There's a <a class="external" href="https://en.wikipedia.org/wiki/Taylor%27s_theorem#Explicit_formulas_for_the_remainder" target="_blank">slightly different version of this same idea</a> which gives a more exact value of the remainder (ie. the error):</p>
 <div class="displaymath">
 \begin{equation*}
 R_n(x)=\frac{1}{(n+1)!} f^{(n+1)}(\xi) (x-a)^{n+1}
 \end{equation*}
 </div>
 <p data-braille="continuation">for some value \(\xi\) between \(x\) and \(a\text{.}\)</p>
-<p id="p-101">We're going to use this in the case where \(n=1\) -- that is, we're interested in the remainder after approximating \(f\) with just its linear approximation. Write out the formula above in the case where \(n=1\text{.}\)</p>
+<p id="p-103">We're going to use this in the case where \(n=1\) -- that is, we're interested in the remainder after approximating \(f\) with just its linear approximation. Write out the formula above in the case where \(n=1\text{.}\)</p>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><div class="displaymath">
 \begin{equation*}
 R_1(x)=\frac{1}{2} f''(\xi) (x-a)^2.
@@ -176,15 +177,15 @@ R_1(x)=\frac{1}{2} f''(\xi) (x-a)^2.
 </div></div></div>
 </li>
 <li id="li-40">
-<p id="p-102">In this formula for \(R_1(x)\text{,}\) substitute in what you decided for \(x\) and \(a\) in step 2. Simplify a little.</p>
+<p id="p-104">In this formula for \(R_1(x)\text{,}\) substitute in what you decided for \(x\) and \(a\) in step 2. Simplify a little.</p>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="displaymath">
 \begin{equation*}
 R_1(y'+\eta') = \frac{1}{2} f''(\xi) [(y'+\eta')-y']^2 = \frac{1}{2} f''(\xi) (\eta')^2.
 \end{equation*}
 </div></div></div>
 </li>
-<li id="li-41"><p id="p-103">Now we just have to think hard about \(\xi\text{,}\) which is supposed to be somewhere between \(x\) and \(a\text{.}\) In our case, that's somewhere between \(y'+\eta'\) and \(y'\text{.}\) The book is about to say that \(\xi = y'+\theta\cdot\eta'\text{,}\) where \(\theta\) is some number between 0 and 1. Why does this make sense?</p></li>
-</ol></article><p id="p-104">The difference between the lengths of \(C_{12}\) and \(E_{12}\) can now be expressed with the help of Taylor's formula in the form</p>
+<li id="li-41"><p id="p-105">Now we just have to think hard about \(\xi\text{,}\) which is supposed to be somewhere between \(x\) and \(a\text{.}\) In our case, that's somewhere between \(y'+\eta'\) and \(y'\text{.}\) The book is about to say that \(\xi = y'+\theta\cdot\eta'\text{,}\) where \(\theta\) is some number between 0 and 1. Why does this make sense?</p></li>
+</ol></article><p id="p-106">The difference between the lengths of \(C_{12}\) and \(E_{12}\) can now be expressed with the help of Taylor's formula in the form</p>
 <div class="displaymath">
 \begin{align*}
 I\left(C_{12}\right)-I\left(E_{12}\right) \amp= \int_{x_{1}}^{x_{1}}\left\{f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right\}\, dx \\
@@ -197,14 +198,14 @@ I\left(C_{12}\right)-I\left(E_{12}\right) \amp= \int_{x_{1}}^{x_{1}}\left\{f\lef
 f_{y'y'} = \frac{1}{\left(1+\left(y'\right)^2\right)^{3/2}}
 \end{equation*}
 </div>
-<p data-braille="continuation">is always positive. We see therefore that \(I(C_{12})-I(E_{12})\) is greater than zero unless \(\eta'(x)\) vanishes identically, in which case ri(x) itself would have everywhere the constant value zero which it has at \(x_1\) and \(x_2\text{,}\) and \(C_{12}\) would coincide with \(E_{12}\text{.}\)</p>
-<p id="p-105"><em class="emphasis">It has been proved therefore that the shortest arc from the point 1 to the point 2 is necessarily the straight-line segment joining those points, and that this segment is actually shorter than every other admissible arc with the same endpoints.</em></p>
+<p data-braille="continuation">is always positive. We see therefore that \(I(C_{12})-I(E_{12})\) is greater than zero unless \(\eta'(x)\) vanishes identically, in which case \(\eta'(x)\) itself would have everywhere the constant value zero which it has at \(x_1\) and \(x_2\text{,}\) and \(C_{12}\) would coincide with \(E_{12}\text{.}\)</p>
+<p id="p-107"><em class="emphasis">It has been proved therefore that the shortest arc from the point 1 to the point 2 is necessarily the straight-line segment joining those points, and that this segment is actually shorter than every other admissible arc with the same endpoints.</em></p>
 <article class="remark remark-like" id="remark-necessary-sufficient-2"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Necessary and sufficient conditions.</span>
 </h6>
-<p id="p-106">Here's the logic of what we just did: first we showed that if we had a minimizing arc \(E_{12}\text{,}\) then it was <em class="emphasis">necessary</em> for \(E_{12}\) to be a straight line -- that is, "if minimizing arc, then straight line."</p>
-<p id="p-107">Then we showed that if \(C_{12}\) was any other admissible arc (which we can think of as some variation of \(E_{12}\)), then it was definitely longer than \(E_{12}\text{,}\) unless the variation was 0. That is, we showed "if straight line, then minimizing arc" -- if we want \(E_{12}\) to be a minimizing arc, then it is <em class="emphasis">sufficient</em> for \(E_{12}\) to be a straight line.</p>
-<p id="p-108">For a little reminder about all of this "necessary" and "sufficient" business, please reference the earlier discussion in <a class="xref" data-knowl="./knowl/remark-necessary-sufficient.html" title="Remark 1.2.2">Remark 1.2.2</a>.</p></article><p id="p-109">One should notice the rôle which the positive sign of the derivative \(f_{y'y'}\) has played in the determination of the minimum property. If the sign of this derivative had been negative the difference \(I(C_{12})-I(E_{12})\) would have been negative and \(I(E_{12})\) would have been a maximum instead of a minimum. This is an analogue of the criterion mentioned in <a href="sec-maxima-and-minima.html" class="internal" title="Section 1.2: Maxima and minima">Section 1.2</a> for the simpler theory of maxima and minima of functions of a single variable.</p></section></div></main>
+<p id="p-108">Here's the logic of what we just did: first we showed that if we had a minimizing arc \(E_{12}\text{,}\) then it was <em class="emphasis">necessary</em> for \(E_{12}\) to be a straight line -- that is, "if minimizing arc, then straight line."</p>
+<p id="p-109">Then we showed that if \(C_{12}\) was any other admissible arc (which we can think of as some variation of \(E_{12}\)), then it was definitely longer than \(E_{12}\text{,}\) unless the variation was 0. That is, we showed "if straight line, then minimizing arc" -- if we want \(E_{12}\) to be a minimizing arc, then it is <em class="emphasis">sufficient</em> for \(E_{12}\) to be a straight line.</p>
+<p id="p-110">For a little reminder about all of this "necessary" and "sufficient" business, please reference the earlier discussion in <a class="xref" data-knowl="./knowl/remark-necessary-sufficient.html" title="Remark 1.2.2">Remark 1.2.2</a>.</p></article><p id="p-111">One should notice the rôle which the positive sign of the derivative \(f_{y'y'}\) has played in the determination of the minimum property. If the sign of this derivative had been negative the difference \(I(C_{12})-I(E_{12})\) would have been negative and \(I(E_{12})\) would have been a maximum instead of a minimum. This is an analogue of the criterion mentioned in <a href="sec-maxima-and-minima.html" class="internal" title="Section 1.2: Maxima and minima">Section 1.2</a> for the simpler theory of maxima and minima of functions of a single variable.</p></section></div></main>
 </div>
 </body>
 </html>

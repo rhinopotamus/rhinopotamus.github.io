@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T16:51:25-06:00    *-->
+<!--*    on 2020-05-15T11:17:38-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,30 +13,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For me, these equations are hard to read in the subscript notation. Here they are in Leibniz notation instead, with some more parentheses added for clarity.</p>
+<p>We have not so far made any assumption concerning the existence of a second derivative \(y''(x)\) along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <a class="xref" data-knowl="./knowl/eqn-3-10.html" title="Equation 3.3.5">(3.3.5)</a> and obtain</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{d}{dx} \left( \frac{\partial f}{\partial y'}\right) - \frac{\partial f}{\partial y} = 
-\left[\frac{\partial}{\partial y } \left(\frac{\partial f}{\partial y'}\right) y' + 
-\frac{\partial}{\partial y'} \left(\frac{\partial f}{\partial y'}\right) y'' \right] - \frac{\partial f}{\partial y} = 0 
+\frac{d}{d x} f_{y^{\prime}}-f_{y}=f_{y^{\prime} y} y^{\prime}+f_{y^{\prime} y^{\prime}} y^{\prime \prime}-f_{y}=0
 \end{equation*}
 </div>
-<p data-braille="continuation">Here's the second one:</p>
+<p data-braille="continuation">from which it follows that along a minimizing arc with a second derivative \(y''(x)\) we have</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{d}{dx} \left( f - y' \frac{\partial f}{\partial y'}\right) = 
-y'\left[\frac{\partial f}{\partial y} - \frac{\partial}{\partial y }\left(\frac{\partial f}{\partial y'}\right) y'
-- \frac{\partial}{\partial y'}\left(\frac{\partial f}{\partial y'}\right) y''
-\right] = 0
+\frac{d}{d x}\left(f-y^{\prime} f_{y^{\prime}}\right)=y^{\prime}\left(f_{y}-f_{y^{\prime} y} y^{\prime}-f_{y^{\prime} y^{\prime}} y^{\prime \prime}\right)=0
 \end{equation*}
 </div>
-<p data-braille="continuation">And since the only thing whose derivative is zero is a constant function,</p>
+<p data-braille="continuation">and hence also</p>
 <div class="displaymath">
-\begin{equation*}
-f - y' \frac{\partial f}{\partial y'} = \text{constant.}
-\end{equation*}
+\begin{equation}
+f - y'f_{y'} = \text{constant.}\tag{3.3.6}
+\end{equation}
 </div>
-<p data-braille="continuation"><em class="alert">Note well</em> that these equations only work when \(x\) doesn't appear in the integrand of the functional -- that is, when the integrand is of the form \(f(y, y')\text{.}\)</p>
 <span class="incontext"><a href="sec-first-necessary-3.html#p-182">in-context</a></span>
 </body>
 </html>

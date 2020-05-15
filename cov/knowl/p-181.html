@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-13T16:51:25-06:00    *-->
+<!--*    on 2020-05-15T11:17:38-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,24 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We have not so far made any assumption concerning the existence of a second derivative \(y''(x)\) along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <a class="xref" data-knowl="./knowl/eqn-3-10.html" title="Equation 3.3.5">(3.3.5)</a> and obtain</p>
+<p>Most authors write Euler's equation, also sometimes called the Euler-Lagrange equation, in a slightly different form. Assuming that \(y \in C^2\) (that is, \(y''(x)\) is continuous):</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{d}{d x} f_{y^{\prime}}-f_{y}=f_{y^{\prime} y} y^{\prime}+f_{y^{\prime} y^{\prime}} y^{\prime \prime}-f_{y}=0
+\frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0.
 \end{equation*}
 </div>
-<p data-braille="continuation">from which it follows that along a minimizing arc with a second derivative \(y''(x)\) we have</p>
+<p data-braille="continuation"><em class="alert">Note well</em> that the function \(f\) in this differential equation is in fact the integrand of whatever functional we're currently looking at (see the very general form <a class="xref" data-knowl="./knowl/eqn-gen-form.html" title="Equation 1.6.2">(1.6.2)</a> from <a href="sec-more-general.html" class="internal" title="Section 1.6: A more general problem">Section 1.6</a>). For instance, in the arc length problem, the functional is</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{d}{d x}\left(f-y^{\prime} f_{y^{\prime}}\right)=y^{\prime}\left(f_{y}-f_{y^{\prime} y} y^{\prime}-f_{y^{\prime} y^{\prime}} y^{\prime \prime}\right)=0
+I = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx
 \end{equation*}
 </div>
-<p data-braille="continuation">and hence also</p>
-<div class="displaymath">
-\begin{equation}
-f - y'f_{y'} = \text{constant.}\tag{3.3.6}
-\end{equation}
-</div>
+<p data-braille="continuation">so that \(f(x,y,y') = \sqrt{1+(y')^2}\text{.}\)</p>
 <span class="incontext"><a href="sec-first-necessary-3.html#p-181">in-context</a></span>
 </body>
 </html>

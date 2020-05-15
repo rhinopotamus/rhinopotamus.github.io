@@ -320,7 +320,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </p>
     <remark xml:id="remark-euler">
       <p>
-        Most authors write Euler's equation, also sometimes called the Euler-Lagrange equation, in a slightly different form:
+        Most authors write Euler's equation, also sometimes called the Euler-Lagrange equation, in a slightly different form. Assuming that <m>y \in C^2</m> (that is, <m>y''(x)</m> is continuous):
         <me>
           \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0.
         </me>
@@ -330,12 +330,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </me>
         so that <m>f(x,y,y') = \sqrt{1+(y')^2}</m>.
       </p>
-    </remark>
-    <activity xml:id="activity-euler-arclength">
-      <p>
-        Apply Euler's equation to the arc length integrand to see that you do indeed reach the same conclusion we reached by other means in <xref ref="sec-straight-line"/>.
-      </p>
-    </activity>
+    </remark>    
 
     <p>
       We have not so far made any assumption concerning the existence of a second derivative <m>y''(x)</m> along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <xref ref="eqn-3-10"/> and obtain
@@ -371,16 +366,93 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <me>
           f - y' \frac{\partial f}{\partial y'} = \text{constant.}
         </me>
-        <alert>Note well</alert> that these equations only work when <m>x</m> doesn't appear in the integrand of the functional -- that is, when the integrand is of the form <m>f(y, y')</m>.
+        The last equation here is called the <term>Beltrami identity</term>; it's a special case of the Euler-Lagrange equation. <alert>Note well</alert> that these equations only work when <m>x</m> doesn't appear in the integrand of the functional -- that is, when the integrand is of the form <m>f(y, y')</m>.
       </p>
     </remark>
 
     <p>
-      The reasoning by means of which equation (11) has been derived is valid not only for the particular integrand function
+      The reasoning by means of which equation <xref ref="eqn-3-11"/> has been derived is valid not only for the particular integrand function
       <me>
         f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
       </me>
-      of the brachistochrone problem but also for an arbitrary function <m>f(y, y')</m> of the two variables <m>y</m> and <m>y'</m> which with its derivatives has suitable continuity properties. One can further verify readily that the proofs of equations <xref ref="eqn-3-9"/> and <xref ref="eqn-3-10"/> hold without alteration not only for this case but also for the still more general integral <m>I</m> to be studied in Chapter V for which the integrand is assumed to be a function <m>f(x, y, y')</m> of the three variables <m>x, y, y'</m>. It is evident, therefore, that the results of this section have great generality and that they may be applied to a wide variety of problems in the calculus of variations. One should note that equation <xref ref="eqn-3-11"/> cannot be expected to hold when <m>x</m> occurs in the integrand function, since in the differentiations made to obtain it the function <m>f</m> was supposed to contain only the variables <m>y</m> and <m>y'</m>.
+      of the brachistochrone problem but also for an arbitrary function <m>f(y, y')</m> of the two variables <m>y</m> and <m>y'</m> which with its derivatives has suitable continuity properties. One can further verify readily that the proofs of equations <xref ref="eqn-3-9"/> and <xref ref="eqn-3-10"/> hold without alteration not only for this case but also for the still more general integral <m>I</m> to be studied in Chapter V for which the integrand is assumed to be a function <m>f(x, y, y')</m> of the three variables <m>x, y, y'</m>. It is evident, therefore, that the results of this section have great generality and that they may be applied to a wide variety of problems in the calculus of variations. <alert>One should note that</alert> equation <xref ref="eqn-3-11"/> cannot be expected to hold when <m>x</m> occurs in the integrand function, since in the differentiations made to obtain it the function <m>f</m> was supposed to contain only the variables <m>y</m> and <m>y'</m>.
+    </p>
+
+    <activity xml:id="activity-beltrami-arclength">
+      <p>
+        The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length.
+        <ol>
+          <li>
+            <p>
+              Apply Euler's equation <m>\displaystyle \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0</m> to the arc length integrand <m>f(y, y') = \sqrt{1+(y')^2}</m>:
+              <ol>
+                <li>
+                  <p>
+                    Compute <m>\dfrac{\partial f}{\partial y}</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Compute <m>\dfrac{\partial f}{\partial y'}</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Compute <m>\dfrac{d}{dx}\left(\dfrac{\partial f}{\partial y'}\right)</m>. (Yikes!)
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Combine the pieces approriately.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <p>
+              Now try the Beltrami identity <m>f-y'\frac{\partial f}{\partial y'} = c</m>. You've already computed all the pieces you need.
+            </p>
+          </li>
+        </ol>
+        Apply Euler's equation to the arc length integrand to see that you do indeed reach the same differential equation we reached by other means in <xref ref="sec-straight-line"/>.
+      </p>
+    </activity>
+
+    <activity xml:id="activity-euler-brachistochrone">
+      <p>
+        Assuming <m>y\in C^2</m> (which is true for reasons we'll get to in the next section), we can apply the Beltrami identity <xref ref="eqn-3-11"/> to the brachistochrone problem, since <m>x</m> doesn't appear in the integrand.<fn>We could also apply the Euler formula directly but it gets real messy, so we may as well use our nicer version. Try it out if you don't believe me; the issue is that <m>\frac{d}{dx}\left(\frac{\partial f}{\partial y'}\right)</m> has like three different terms in it.</fn>
+        <ol>
+          <li>
+            <p>
+              Write down <m>f(y, y')</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Compute <m>\dfrac{\partial f}{\partial y'}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. 
+            </p>
+            <solution>
+              <me>
+                \sqrt{\frac{1+(y')^2}{y-\alpha}} - y'\cdot \left[\frac{y'}{\sqrt{y-\alpha}\sqrt{1+(y')^2}}\right] = c
+              </me>
+              
+            </solution>
+          </li>
+        </ol>
+      </p>
+    </activity>
+  </section>
+
+  <section xml:id="sec-application-brachistochrone">
+    <title>Application to the brachistochrone problem</title>
+    <p>
+      For the special case of the brachistochrone problem the integrand <m>f(y, y')</m> and its partial derivatives are readily found to be
     </p>
   </section>
 </chapter>
