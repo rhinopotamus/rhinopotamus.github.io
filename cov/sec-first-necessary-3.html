@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-15T11:17:34-06:00    *-->
+<!--*    on 2020-05-16T12:33:54-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -267,7 +267,7 @@ f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
 <article class="activity project-like" id="activity-beltrami-arclength"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-185">The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length.</p>
+<p id="p-185">The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length, which we considered using other methods in <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>.</p>
 <ol class="decimal">
 <li id="li-62">
 <p id="p-186">Apply Euler's equation \(\displaystyle \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0\) to the arc length integrand \(f(y, y') = \sqrt{1+(y')^2}\text{:}\)</p>
@@ -275,12 +275,11 @@ f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
 <li id="li-63"><p id="p-187">Compute \(\dfrac{\partial f}{\partial y}\text{.}\)</p></li>
 <li id="li-64"><p id="p-188">Compute \(\dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
 <li id="li-65"><p id="p-189">Compute \(\dfrac{d}{dx}\left(\dfrac{\partial f}{\partial y'}\right)\text{.}\) (Yikes!)</p></li>
-<li id="li-66"><p id="p-190">Combine the pieces approriately.</p></li>
+<li id="li-66"><p id="p-190">Combine the pieces appropriately.</p></li>
 </ol>
 </li>
 <li id="li-67"><p id="p-191">Now try the Beltrami identity \(f-y'\frac{\partial f}{\partial y'} = c\text{.}\) You've already computed all the pieces you need.</p></li>
-</ol>
-<p data-braille="continuation">Apply Euler's equation to the arc length integrand to see that you do indeed reach the same differential equation we reached by other means in <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>.</p></article><article class="activity project-like" id="activity-euler-brachistochrone"><h6 class="heading">
+</ol></article><article class="activity project-like" id="activity-euler-brachistochrone"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h6>
 <p id="p-192">Assuming \(y\in C^2\) (which is true for reasons we'll get to in the next section), we can apply the Beltrami identity <a class="xref" data-knowl="./knowl/eqn-3-11.html" title="Equation 3.3.6">(3.3.6)</a> to the brachistochrone problem, since \(x\) doesn't appear in the integrand.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a></p>
@@ -288,12 +287,20 @@ f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
 <li id="li-68"><p id="p-193">Write down \(f(y, y')\text{.}\)</p></li>
 <li id="li-69"><p id="p-194">Compute \(\dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
 <li id="li-70">
-<p id="p-195">Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><div class="displaymath">
+<p id="p-195">Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. (If you get a common denominator, you can simplify a little.)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like">
+<div class="displaymath" id="p-196">
 \begin{equation*}
 \sqrt{\frac{1+(y')^2}{y-\alpha}} - y'\cdot \left[\frac{y'}{\sqrt{y-\alpha}\sqrt{1+(y')^2}}\right] = c
 \end{equation*}
-</div></div></div>
+</div>
+<p data-braille="continuation">After getting a common denominator, this can be simplified to</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\sqrt{y-\alpha}\sqrt{1+(y')^2}} = c.
+\end{equation*}
+</div>
+</div></div>
 </li>
 </ol>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">We could also apply the Euler formula directly but it gets real messy, so we may as well use our nicer version. Try it out if you don't believe me; the issue is that \(\frac{d}{dx}\left(\frac{\partial f}{\partial y'}\right)\) has like three different terms in it.</div></div></article></section></div></main>

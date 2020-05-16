@@ -380,7 +380,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <activity xml:id="activity-beltrami-arclength">
       <p>
-        The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length.
+        The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length, which we considered using other methods in <xref ref="sec-straight-line"/>.
         <ol>
           <li>
             <p>
@@ -403,7 +403,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </li>
                 <li>
                   <p>
-                    Combine the pieces approriately.
+                    Combine the pieces appropriately.
                   </p>
                 </li>
               </ol>
@@ -415,7 +415,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </p>
           </li>
         </ol>
-        Apply Euler's equation to the arc length integrand to see that you do indeed reach the same differential equation we reached by other means in <xref ref="sec-straight-line"/>.
       </p>
     </activity>
 
@@ -435,13 +434,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
           </li>
           <li>
             <p>
-              Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. 
+              Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. (If you get a common denominator, you can simplify a little.)
             </p>
             <solution>
-              <me>
-                \sqrt{\frac{1+(y')^2}{y-\alpha}} - y'\cdot \left[\frac{y'}{\sqrt{y-\alpha}\sqrt{1+(y')^2}}\right] = c
-              </me>
-              
+              <p>
+                <me>
+                  \sqrt{\frac{1+(y')^2}{y-\alpha}} - y'\cdot \left[\frac{y'}{\sqrt{y-\alpha}\sqrt{1+(y')^2}}\right] = c
+                </me>
+                After getting a common denominator, this can be simplified to
+                <me>
+                  \frac{1}{\sqrt{y-\alpha}\sqrt{1+(y')^2}} = c.
+                </me>
+                
+              </p>
             </solution>
           </li>
         </ol>
@@ -453,6 +458,34 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Application to the brachistochrone problem</title>
     <p>
       For the special case of the brachistochrone problem the integrand <m>f(y, y')</m> and its partial derivatives are readily found to be
+      <men xml:id="eqn-3-12">
+        f=\sqrt{\frac{1+(y')^2}{y-\alpha}}, \quad
+        f_{y}=-\frac{1}{2} \sqrt{\frac{1+(y')^2}{(y-a)^{3}}}, \quad
+        f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{(y-\alpha)\left(1+(y')^2\right)}}
+      </men>
+      and the condition <xref ref="eqn-3-9"/> of the preceding section, which must hold along every minimizing arc <m>E_{12}</m>, can therefore be expressed in the form
+      <me>
+        \frac{y^{\prime}}{\sqrt{1+(y')^2}}=\sqrt{y-\alpha}\left\{c-\frac{1}{2} \int_{x_{1}}^{x} \sqrt{\frac{1+(y')^2}{(y-\alpha)^{3}}}\,dx\right\}
+      </me>
+      The second member of this equation, which we may denote by <m>\phi(x)</m>, is a continuous function of <m>x</m> since both <m>(y-\alpha)</m> and the integral in it are continuous along <m>E_{12}</m>. By solving the equation for <m>y'</m> we find that 
+      <me>
+        y'=\frac{\phi}{\sqrt{1-\phi^2}}
+      </me>
+      is also continuous. Turning again to the next to last equation with this result we see now that the second member <m>\phi(x)</m> of that equation has also a continuous derivative, since when <m>y</m> is continuous and has a continuous derivative the same is true of both <m>(y-\alpha)</m> and the integral occurring in it. Hence <m>y'</m> in the last equation must have a continuous derivative and we find the following result:
+    </p>
+    <p>
+      <em>For the brachistochrone problem a minimizing arc <m>E_{12}</m> lying entirely below the line <m>y = \alpha</m> can have no corners and must have continuous curvature. Analytically stated, this means that the derivatives <m>y'(x)</m>, <m>y''(x)</m> exist and are continuous along <m>E_{12}</m>.</em>
+    </p>
+    <aside>
+      In other words, <m>y\in C^2</m>.
+    </aside>
+    <p>
+      Since we now know that the second derivative <m>y''(x)</m> exists along the minimizing arc we can be sure that the equation  <m>f=y'f_{y'} = \text{constant}</m> deduced in the preceding section also holds along it. When the values of <m>f</m> and its derivative <m>f_{y'}</m> for the brachistochrone problem are substituted from <xref ref="eqn-3-12"/> this equation becomes
+      <men xml:id="eqn-3-13">
+        f-y'f_{y'} = \frac{1}{\sqrt{y-\alpha}\sqrt{1+(y')^2}} = \frac{1}{\sqrt{2b}},
+      </men>
+      the value of the constant being chosen for convenience in the form <m>1/\sqrt{2b}</m>.
+      
     </p>
   </section>
 </chapter>
