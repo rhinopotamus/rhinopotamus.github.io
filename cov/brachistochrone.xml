@@ -76,6 +76,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
           </li>
           <li>
             <p>
+              the distance <m>s</m> that the point <m>P</m> has actually traveled so far;
+            </p>
+          </li>
+          <li>
+            <p>
               a tangent line to the curve <m>C</m> at the point <m>P</m>;
             </p>
           </li>
@@ -242,7 +247,37 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       <men xml:id="eqn-3-7">
         I(a)=\int_{x_{1}}^{x_{2}} f\left(y+a\eta, y^{\prime}+a \eta^{\prime}\right)\, d x
       </men>
-      of the integral <m>I</m> along the arcs of the family <xref ref="eqn-3-6"/> the particular value <m>I(0)</m>, which is the value along <m>E_{12}</m>, must be a minimum, and we have therefore the necessary condition <m>I'(0)=0</m>. The value of the derivative <m>I'(0)</m> found by differentiating equation <xref ref="eqn-3-7"/> with respect to <m>a</m> and then setting <m>a=0</m>, is
+      of the integral <m>I</m> along the arcs of the family <xref ref="eqn-3-6"/> the particular value <m>I(0)</m>, which is the value along <m>E_{12}</m>, must be a minimum, and we have therefore the necessary condition <m>I'(0)=0</m>. 
+    </p>
+    <activity xml:id="activity-y-yprime">
+      <p>
+        This is about to be a lot like what we did in <xref ref="sec-first-necessary"/>. 
+        <ol>
+          <li>
+            <p>
+              How is equation <xref ref="eqn-3-7"/> similar to equation <xref ref="eqn-iofa"/>? How is it different?
+            </p>
+          </li>
+          <li>
+            <p>
+              We'll need to use the Leibniz rule like we did in <xref ref="act-diff-under-int"/>, but this time, we need to use the <url href="https://activecalculus.org/multi/S-10-5-Chain-Rule.html">multivariable chain rule</url>. Draw a tree diagram representing the intermediate relationships between <m>f</m> and <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use your tree diagram, and the chain rule ideas from steps 3, 4, and 5 in <xref ref="act-diff-under-int"/>, to compute <m>\frac{\partial f}{\partial a}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Conclude by writing down a final expression for <m>I'(0)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
+    <p>
+      The value of the derivative <m>I'(0)</m> found by differentiating equation <xref ref="eqn-3-7"/> with respect to <m>a</m> and then setting <m>a=0</m>, is
       <men xml:id="eqn-3-8">
         I'(0)=\int_{x_1}^{x_2} \left[ f_y \eta + f_{y'} \eta' \right]\,dx,
       </men>
@@ -313,14 +348,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       The last equation may be readily deduced from equation <xref ref="eqn-3-9"/> by differentiation, since on a sub-arc of <m>E_{12}</m> where the tangent turns continuously the function <m>f_y</m> is continuous and the integral in <xref ref="eqn-3-9"/> has the derivative <m>f_y</m>.
     </p>
     <p>
-      The equation <xref ref="eqn-3-10"/> is the famous differential equation deduced by Euler in 1744 and called after him Euler's differential equation. Its solutions have been named <term>extremals</term> because they are the only curves which can give the integral <m>I</m> a maximum or a minimum, i.e., an extreme value. We shall in the following pages apply the term extremal only to those solutions <m>y(x)</m> which have continuously turning tangents and continuous second derivatives <m>y''(x)</m>.
+      The equation <xref ref="eqn-3-10"/> is the famous differential equation deduced by Euler in 1744 and called after him <term>Euler's differential equation</term>. Its solutions have been named <term>extremals</term> because they are the only curves which can give the integral <m>I</m> a maximum or a minimum, i.e., an extreme value. We shall in the following pages apply the term extremal only to those solutions <m>y(x)</m> which have continuously turning tangents and continuous second derivatives <m>y''(x)</m>.
       <aside>
         In more modern language, we're going to insist that <m>y(x)</m> is a function of class <m>C^2</m>.
       </aside>
     </p>
     <remark xml:id="remark-euler">
       <p>
-        Most authors write Euler's equation, also sometimes called the Euler-Lagrange equation, in a slightly different form. Assuming that <m>y \in C^2</m> (that is, <m>y''(x)</m> is continuous):
+        Most authors write Euler's equation, also sometimes called the <term>Euler-Lagrange equation</term>, in a slightly different form. Assuming that <m>y \in C^2</m> (that is, <m>y''(x)</m> is continuous):
         <me>
           \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0.
         </me>
@@ -330,7 +365,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </me>
         so that <m>f(x,y,y') = \sqrt{1+(y')^2}</m>.
       </p>
-    </remark>    
+    </remark>
+
+    <activity xml:id="activity-euler-beltrami">
+      <p>
+        The Euler-Lagrange equation involves differentiating <m>f_{y'}</m> with respect to <m>x</m>. Let's assume that we can take as many derivatives as we need -- in particular, let's assume that <m>y \in C^2</m> -- and compute this derivative to see if something simpler happens in the particular case where the integrand is of the form <m>f(y, y')</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Suppose you have some function <m>g(y, y'),</m> where <m>y</m> and <m>y'</m> are functions of <m>x</m>. Draw a tree diagram representing the relationships between <m>g</m>, <m>y</m>, <m>y'</m>, and <m>x</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the multivariable chain rule to write down an expression for <m>\dfrac{dg}{dx}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            In our case, <m>f_{y'}</m> -- or, in Leibniz notation, <m>\dfrac{df}{dy'}</m> -- is really just a function of <m>y</m> and <m>y'</m>, so it can play the role of <m>g</m> in the previous step. Use your result to write down an expression for <m>\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Compute <m>\dfrac{d}{dx}\left(f-y'\dfrac{\partial f}{\partial y'}\right)</m>. You'll need the product rule, the chain rule, and the result of the previous step.
+          </p>
+        </li>
+      </ol>
+      <solution>
+        <p>
+          See <xref ref="remark-beltrami"/>.
+        </p>
+      </solution>
+    </activity>    
 
     <p>
       We have not so far made any assumption concerning the existence of a second derivative <m>y''(x)</m> along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <xref ref="eqn-3-10"/> and obtain
@@ -347,7 +415,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
       </men>
     </p>
 
-    <remark>
+    <remark xml:id="remark-beltrami">
       <p>
         For me, these equations are hard to read in the subscript notation. Here they are in Leibniz notation instead, with some more parentheses added for clarity.
         <me>
