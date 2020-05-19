@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<section xml:id="sec-application-brachistochrone" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Application to the brachistochrone problem</title>
+    <p>
+      For the special case of the brachistochrone problem the integrand <m>f(y, y')</m> and its partial derivatives are readily found to be
+      <men xml:id="eqn-3-12">
+        f=\sqrt{\frac{1+(y')^2}{y-\alpha}}, \quad
+        f_{y}=-\frac{1}{2} \sqrt{\frac{1+(y')^2}{(y-a)^{3}}}, \quad
+        f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{(y-\alpha)\left(1+(y')^2\right)}}
+      </men>
+      and the condition <xref ref="eqn-3-9"/> of the preceding section, which must hold along every minimizing arc <m>E_{12}</m>, can therefore be expressed in the form
+      <me>
+        \frac{y^{\prime}}{\sqrt{1+(y')^2}}=\sqrt{y-\alpha}\left\{c-\frac{1}{2} \int_{x_{1}}^{x} \sqrt{\frac{1+(y')^2}{(y-\alpha)^{3}}}\,dx\right\}
+      </me>
+      The second member of this equation, which we may denote by <m>\phi(x)</m>, is a continuous function of <m>x</m> since both <m>(y-\alpha)</m> and the integral in it are continuous along <m>E_{12}</m>. By solving the equation for <m>y'</m> we find that 
+      <me>
+        y'=\frac{\phi}{\sqrt{1-\phi^2}}
+      </me>
+      is also continuous. Turning again to the next to last equation with this result we see now that the second member <m>\phi(x)</m> of that equation has also a continuous derivative, since when <m>y</m> is continuous and has a continuous derivative the same is true of both <m>(y-\alpha)</m> and the integral occurring in it. Hence <m>y'</m> in the last equation must have a continuous derivative and we find the following result:
+    </p>
+    <p>
+      <em>For the brachistochrone problem a minimizing arc <m>E_{12}</m> lying entirely below the line <m>y = \alpha</m> can have no corners and must have continuous curvature. Analytically stated, this means that the derivatives <m>y'(x)</m>, <m>y''(x)</m> exist and are continuous along <m>E_{12}</m>.</em>
+    </p>
+    <aside>
+      In other words, <m>y\in C^2</m>.
+    </aside>
+    <p>
+      Since we now know that the second derivative <m>y''(x)</m> exists along the minimizing arc we can be sure that the equation  <m>f=y'f_{y'} = \text{constant}</m> deduced in the preceding section also holds along it. When the values of <m>f</m> and its derivative <m>f_{y'}</m> for the brachistochrone problem are substituted from <xref ref="eqn-3-12"/> this equation becomes
+      <men xml:id="eqn-3-13">
+        f-y'f_{y'} = \frac{1}{\sqrt{y-\alpha}\sqrt{1+(y')^2}} = \frac{1}{\sqrt{2b}},
+      </men>
+      the value of the constant being chosen for convenience in the form <m>1/\sqrt{2b}</m>.
+    </p>
+    <remark>
+      <p>
+        The next paragraph is going to perform several dirty tricks. I wrote <url href="https://sbagleyteaches.wordpress.com/2020/05/15/a-really-dirty-trick/">a little blog post</url> about why they make sense.
+      </p>
+    </remark>
+    <p>
+      The curves which satisfy the differential equation <xref ref="eqn-3-13"/> may be found in the customary manner by solving the equation for <m>y' = \frac{dy}{dx}</m> and separating the variables, but we shall find them more easily if we profit by the experience of others and introduce a new variable <m>u</m> defined by the equation
+      <men xml:id="eqn-3-14">
+        y' = -\tan \frac{u}{2} = -\frac{\sin u}{1+\cos u}.
+      </men>
+       From the differential equation <xref ref="eqn-3-13"/> it follows then, with the help of some simple trigonometry, that along a minimizing arc <m>E_{12}</m> we must have
+       <md>
+          <mrow>y-\alpha=\frac{2 b}{1+(y')^{2}}=2 b \cos ^{2} \frac{u}{2}=b(1+\cos u),</mrow> 
+          <mrow>\frac{d x}{d u}=\frac{d x}{d y} \frac{d y}{d u}=2 b \cos ^{2} \frac{u}{2}=b(1+\cos u),</mrow>
+          <mrow>x=a+b(u+\sin u),</mrow>
+       </md>
+       where the last equation is found from the next to last by an integration and <m>a</m> is the new constant so introduced. It will be shown in the next section that curves which satisfy the first and third of these equations are the cycloids described in the following theorem:
+    </p>
+    <theorem xml:id="thm-cycloid">
+      <statement>
+        <p>
+          A curve down which a particle, started with the initial velocity <m>v_1</m> at the point 1, will fall in the shortest time to a second point 2 is necessarily an arc having equations of the form
+          <men xml:id="eqn-3-15">
+            x-a = b(u + \sin u), \quad y-\alpha = b(1+\cos u).
+          </men>
+          These represent the locus of a point fixed on the circumference of a circle of radius <m>b</m> as the circle rolls on the lower side of the line 
+          <me>y = \alpha = y_1 - \frac{v_1^2}{2g}. </me>
+          Such a curve is called a <term>cycloid</term>.
+        </p>
+      </statement>
+    </theorem>
+    
+  </section>

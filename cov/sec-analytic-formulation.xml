@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<section xml:id="sec-analytic-formulation" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>The analytic formulation of the problem</title>
+<p>
+    In order to discuss intelligently the problem of the brachistochrone we should first deduce for ourselves the integral which represents the time required by a particle to fall under the action of gravity down an arbitrarily chosen curve joining two fixed points 1 and 2. It is agreed that the initial velocity <m>v_1</m> at the point 1 is given in advance, and that the particle is to fall without friction on the curve and without resistance in the surrounding medium. If the effects of friction or a resisting medium are to be taken into account the brachistochrone problem becomes a much more complicated one.
+</p>
+<activity>
+    <p>
+    I'm hiding the diagram included in the textbook under a little foldy thing. I encourage you to draw your own diagram first, based on the instructions in the next paragraph, and <em>then</em> compare your diagram to the one in the book. (This will actually help you make sense of the book's diagram when you see it, because there's some things that aren't super clear.) Label the following:
+    <ul>
+        <li>
+        <p>
+            the curve of descent <m>C</m> connecting point 1 and point 2;
+        </p>
+        </li>
+        <li>
+        <p>
+            a moving particle <m>P</m> on the curve <m>C</m>;
+        </p>
+        </li>
+        <li>
+        <p>
+            the distance <m>s</m> that the point <m>P</m> has actually traveled so far;
+        </p>
+        </li>
+        <li>
+        <p>
+            a tangent line to the curve <m>C</m> at the point <m>P</m>;
+        </p>
+        </li>
+        <li>
+        <p>
+            the vertical and horizontal components of that tangent line;
+        </p>
+        </li>
+        <li>
+        <p>
+            the angle <m>\tau</m> between the horizontal and the tangent line; and
+        </p>
+        </li>
+        <li>
+        <p>
+            the downward force of gravity <m>mg</m>.
+        </p>
+        </li>
+    </ul>
+    </p>
+    <solution>
+    <figure xml:id="fig-12">
+        <image xml:id="img-12" source="images/fig-12.png">
+        <description>Diagram of a point moving along a curve under the force of gravity.</description>
+        </image>
+    </figure>
+    </solution>
+</activity>
+
+<p>
+    Let <m>m</m> be the mass of the moving particle <m>P</m> in <xref ref="fig-12"/> and <m>s</m> the distance through which it has fallen from the point 1 along the curve of descent <m>C</m> in the time <m>t</m>. In order to make our analysis more convenient we may take the positive <m>y</m>-axis vertically downward, as shown in the figure.
+    <aside>
+    I always think this is hilarious for some reason. I think I'll try defying gravity!
+    </aside>
+</p>
+<p>
+    The vertical force of gravity acting upon <m>P</m> is the product of the mass <m>m</m> by the gravitational acceleration <m>g</m>, and the only force acting upon <m>P</m> in the direction of the tangent line to the curve is the projection <m>mg \sin \tau</m> of this vertical gravitational force upon that line. But the force along the tangent may also be computed as the product <m>m \frac{d^2s}{dt^2}</m> of the mass of the particle by its acceleration along the curve. Equating these two values we find the equation
+    <me>
+    \frac{d^2s}{dt^2} = g \sin \tau = g \frac{dy}{ds},
+    </me>
+    in which a common factor <m>m</m> has been discarded and use has been made of the well-known calculus formula <m>\sin \tau = \frac{dy}{ds}</m>.
+</p>
+<activity>
+    <p>
+    That's not a well-known formula to me! Draw yourself a little triangle with angle <m>\tau</m> and sides <m>\Delta s</m> and <m>\Delta y</m>. Use this to conclude <m>\sin \tau = \frac{dy}{ds}</m> in the limit.
+    </p>
+</activity>
+<p>
+    To integrate this equation we follow a customary procedure and multiply each side by <m>2 \frac{ds}{dt}</m>. The antiderivatives of the two sides are then easily found, 
+</p>
+<activity>
+    <p>
+    This is honestly just rude because these antiderivatives do take a little work.
+    </p>
+    <ol>
+    <li>
+        <p>
+        Start by writing down the two sides of this equation:
+        <me>
+            \frac{d^2s}{dt^2} = g \frac{dy}{ds}
+        </me>
+        Multiply both sides by <m>2 \frac{ds}{dt}</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+        On the RHS, use the chain rule to simplify <m>\frac{dy}{ds} \frac{ds}{dt}</m>. Then integrate with respect to <m>t</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+        On the LHS, some more work is necessary. What does <m>\frac{ds}{dt}</m> mean in physical terms? How about <m>\frac{d^2s}{dt^2}</m>? Replace these two things with letters better representing their physical meaning.
+        </p>
+        <solution>
+        <p>
+            <m>\frac{ds}{dt}</m> means velocity, and <m>\frac{d^2s}{dt^2}</m> means acceleration.
+        </p>
+        </solution>
+    </li>
+    <li>
+        <p>
+        Integrate the LHS with respect to <m>t</m>. You'll need to do a <m>u</m>-substitution. What's a smart choice for <m>u</m>?
+        </p>
+        <solution>
+        <p>
+            <me>
+            \int 2av\, dt.
+            </me>
+            If I choose <m>u = v</m>, then <m>du = a\, dt</m>, so the integral becomes
+            <me>
+            \int 2u\, du = u^2 = v^2 = \left(\frac{ds}{dt}\right)^2.
+            </me>
+        </p>
+        </solution>
+    </li>
+    </ol>
+</activity>
+<p>
+    and since they can differ only by a constant we have
+    <men xml:id="eqn-3-1">
+    \left(\frac{ds}{dt}\right)^2 = 2gy+c.
+    </men>
+    The value of the constant <m>c</m> can be determined if we remember that the values of <m>y</m> and <m>v = \frac{ds}{dt}</m> at the initial point 1 at the fall are <m>y_1</m> and <m>v_1</m>, respectively, so that for <m>t=0</m> the last equation gives
+    <me>
+    v_1^2 = 2gy_1 + c.
+    </me>
+    With the help of the value of <m>c</m> from this equation, and the notation
+    <men xml:id="eqn-3-2">
+    \alpha = y_1 - \frac{v_1^2}{2g},
+    </men>
+    equation <xref ref="eqn-3-1"/> becomes
+    <men xml:id="eqn-3-3">
+    \left(\frac{ds}{dt}\right)^2 = 2gy-2gy_1 + v_1^2 = 2g(y-\alpha).
+    </men>
+    An integration now gives the following result which we have been seeking:
+</p>
+<theorem xml:id="thm-brachistochrone-time">
+    <statement>
+    <p>
+        The time <m>T</m> required by a particle starting with the initial velocity <m>v_1</m> to fall from a point 1 to a point 2 along a curve is given by the integrals
+        <men xml:id="eqn-3-4">
+        T = \frac{1}{\sqrt{2g}}\int_o^l \frac{ds}{\sqrt{y-\alpha}}=\frac{1}{\sqrt{2g}} \int_{x_1}^{x_2} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx
+        </men>
+    </p>
+    </statement>
+</theorem>
+<remark>
+    <p>
+    It's worth pointing out that this is also a functional, because the value of this integral depends on the function (or parametrically-defined curve) you're using to connect point 1 to point 2.
+    </p>
+</remark>
+<p>
+    It is clear that an arc which minimizes one of the integrals <xref ref="eqn-3-4"/> expressing <m>T</m> will also minimize that integral when the factor <m>\frac{1}{\sqrt{2g}}</m> is omitted, and vice versa. Let us therefore use the notations
+    <men xml:id="eqn-3-5">
+    I=\int_{x_{2}}^{x_{3}} f\left(y, y^{\prime}\right) dx, \quad f\left(y, y^{\prime}\right)=\sqrt{\frac{1+(y')^2}{y-\alpha}}
+    </men>
+    for our integral which we seek to minimize and its integrand. Since the value of the function <m>f(y, y')</m> is infinite when <m>y = \alpha</m> and imaginary when <m>y\lt \alpha</m> we must confine our curves to the portion of the plane which lies below the line <m>y=\alpha</m> in <xref ref="fig-12"/>. This is not really a restriction of the problem since the equation <m>v^2=\left(\frac{ds}{dt}\right)^2 = 2g(y-\alpha)</m> deduced above shows that a particle started on a curve with the velocity <m>v_1</m> at the point 1 will always come to rest if it reaches the altitude <m>y=\alpha</m> on the curve, and it can never rise above that altitude. For the present we shall restrict our curves to lie in the half-plane <m>y\gt \alpha</m>. In a later section of this chapter we shall see what happens when curves are permitted which have points in common with the line <m>y=\alpha</m>.
+</p>
+<remark>
+    <p>
+    Be careful here to remember that we've set up our axes such that the positive <m>y</m>-axis points <em>down</em>.
+    </p>
+</remark>
+<p>
+    In our study of the shortest-distance problems in the last chapter the arcs to be considered were taken in the form <m>y=y(x) (x_1 \leq x \leq x_2)</m> with <m>y(x)</m> continuous on the interval <m>x_1 \leq x \leq x_2</m>, and the interval could furthermore be subdivided into parts on each of which the derivative <m>y'(x)</m> is continuous. An <em>admissible arc</em> for the brachistochrone problem will always be understood to have these properties besides the additional one that it lies entirely in the half-plane <m>y\gt a</m>. For an admissible function, however, we retain always the definition given in <xref ref="sec-shortest-arc"/>. Our problem is then to find among the admissible arcs joining the points 1 and 2, one which minimizes the integral <m>I</m>.
+</p>
+</section>
