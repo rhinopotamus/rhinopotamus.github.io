@@ -164,6 +164,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 </remark>
 
 <activity xml:id="activity-euler-beltrami">
+    <title>UPDATED DIRECTIONS</title>
+    
+    
     <p>
     The Euler-Lagrange equation involves differentiating <m>f_{y'}</m> with respect to <m>x</m>. Let's assume that we can take as many derivatives as we need -- in particular, let's assume that <m>y \in C^2</m> -- and compute this derivative to see if something simpler happens in the particular case where the integrand is of the form <m>f(y, y')</m>.
     </p>
@@ -180,12 +183,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </li>
     <li>
         <p>
-        In our case, <m>f_{y'}</m> -- or, in Leibniz notation, <m>\dfrac{df}{dy'}</m> -- is really just a function of <m>y</m> and <m>y'</m>, so it can play the role of <m>g</m> in the previous step. Use your result to write down an expression for <m>\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}</m>.
+        In our case, <m>f_{y'}</m> -- or, in Leibniz notation, <m>\dfrac{df}{dy'}</m> -- is really just a function of <m>y</m> and <m>y'</m>, so it can play the role of <m>g</m> in the previous step. <em>To help you understand what the book says in the next paragraph,</em> use your result to write down an expression for <m>\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}</m>.
         </p>
     </li>
     <li>
         <p>
-        Compute <m>\dfrac{d}{dx}\left(f-y'\dfrac{\partial f}{\partial y'}\right)</m>. You'll need the product rule, the chain rule, and the result of the previous step.
+        Compute <m>\dfrac{d}{dx}\left(f-y'\dfrac{\partial f}{\partial y'}\right)</m>. Use the chain rule to write out <m>\dfrac{df}{dx}</m>. Contrary to how the book is going to do it in the next paragraph, <alert>don't write out</alert> <m>\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}</m>! Simplify a little; you should in particular be able to factor out <m>y'</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            <em>(New step)</em> Apply the Euler-Lagrange equation to your result. What can you conclude about <m>f-y'\dfrac{\partial f}{\partial y'}</m>?
         </p>
     </li>
     </ol>

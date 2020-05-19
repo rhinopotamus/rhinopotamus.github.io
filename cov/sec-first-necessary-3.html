@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-19T14:13:16-06:00    *-->
+<!--*    on 2020-05-19T16:30:49-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -225,16 +225,17 @@ I = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx
 \end{equation*}
 </div>
 <p data-braille="continuation">so that \(f(x,y,y') = \sqrt{1+(y')^2}\text{.}\)</p></article><article class="activity project-like" id="activity-euler-beltrami"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">UPDATED DIRECTIONS.</span>
 </h6>
 <p id="p-189">The Euler-Lagrange equation involves differentiating \(f_{y'}\) with respect to \(x\text{.}\) Let's assume that we can take as many derivatives as we need -- in particular, let's assume that \(y \in C^2\) -- and compute this derivative to see if something simpler happens in the particular case where the integrand is of the form \(f(y, y')\text{.}\)</p>
 <ol class="decimal">
 <li id="li-67"><p id="p-190">Suppose you have some function \(g(y, y'),\) where \(y\) and \(y'\) are functions of \(x\text{.}\) Draw a tree diagram representing the relationships between \(g\text{,}\) \(y\text{,}\) \(y'\text{,}\) and \(x\text{.}\)</p></li>
 <li id="li-68"><p id="p-191">Use the multivariable chain rule to write down an expression for \(\dfrac{dg}{dx}\text{.}\)</p></li>
-<li id="li-69"><p id="p-192">In our case, \(f_{y'}\) -- or, in Leibniz notation, \(\dfrac{df}{dy'}\) -- is really just a function of \(y\) and \(y'\text{,}\) so it can play the role of \(g\) in the previous step. Use your result to write down an expression for \(\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
-<li id="li-70"><p id="p-193">Compute \(\dfrac{d}{dx}\left(f-y'\dfrac{\partial f}{\partial y'}\right)\text{.}\) You'll need the product rule, the chain rule, and the result of the previous step.</p></li>
+<li id="li-69"><p id="p-192">In our case, \(f_{y'}\) -- or, in Leibniz notation, \(\dfrac{df}{dy'}\) -- is really just a function of \(y\) and \(y'\text{,}\) so it can play the role of \(g\) in the previous step. <em class="emphasis">To help you understand what the book says in the next paragraph,</em> use your result to write down an expression for \(\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
+<li id="li-70"><p id="p-193">Compute \(\dfrac{d}{dx}\left(f-y'\dfrac{\partial f}{\partial y'}\right)\text{.}\) Use the chain rule to write out \(\dfrac{df}{dx}\text{.}\) Contrary to how the book is going to do it in the next paragraph, <em class="alert">don't write out</em> \(\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}\text{!}\) Simplify a little; you should in particular be able to factor out \(y'\text{.}\)</p></li>
+<li id="li-71"><p id="p-194"><em class="emphasis">(New step)</em> Apply the Euler-Lagrange equation to your result. What can you conclude about \(f-y'\dfrac{\partial f}{\partial y'}\text{?}\)</p></li>
 </ol>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><p id="p-194">See <a class="xref" data-knowl="./knowl/remark-beltrami.html" title="Remark 3.3.3">Remark 3.3.3</a>.</p></div></div></article><p id="p-195">We have not so far made any assumption concerning the existence of a second derivative \(y''(x)\) along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <a class="xref" data-knowl="./knowl/eqn-3-10.html" title="Equation 3.3.5">(3.3.5)</a> and obtain</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><p id="p-195">See <a class="xref" data-knowl="./knowl/remark-beltrami.html" title="Remark 3.3.3">Remark 3.3.3</a>.</p></div></div></article><p id="p-196">We have not so far made any assumption concerning the existence of a second derivative \(y''(x)\) along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <a class="xref" data-knowl="./knowl/eqn-3-10.html" title="Equation 3.3.5">(3.3.5)</a> and obtain</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{d x} f_{y^{\prime}}-f_{y}=f_{y^{\prime} y} y^{\prime}+f_{y^{\prime} y^{\prime}} y^{\prime \prime}-f_{y}=0
@@ -255,7 +256,7 @@ f - y'f_{y'} = \text{constant.}\label{eqn-3-11}\tag{3.3.6}
 <article class="remark remark-like" id="remark-beltrami"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-196">For me, these equations are hard to read in the subscript notation. Here they are in Leibniz notation instead, with some more parentheses added for clarity.</p>
+<p id="p-197">For me, these equations are hard to read in the subscript notation. Here they are in Leibniz notation instead, with some more parentheses added for clarity.</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dx} \left( \frac{\partial f}{\partial y'}\right) - \frac{\partial f}{\partial y} = 
@@ -278,7 +279,7 @@ y'\left[\frac{\partial f}{\partial y} - \frac{\partial}{\partial y }\left(\frac{
 f - y' \frac{\partial f}{\partial y'} = \text{constant.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The last equation here is called the <dfn class="terminology">Beltrami identity</dfn>; it's a special case of the Euler-Lagrange equation. <em class="alert">Note well</em> that these equations only work when \(x\) doesn't appear in the integrand of the functional -- that is, when the integrand is of the form \(f(y, y')\text{.}\)</p></article><p id="p-197">The reasoning by means of which equation <a class="xref" data-knowl="./knowl/eqn-3-11.html" title="Equation 3.3.6">(3.3.6)</a> has been derived is valid not only for the particular integrand function</p>
+<p data-braille="continuation">The last equation here is called the <dfn class="terminology">Beltrami identity</dfn>; it's a special case of the Euler-Lagrange equation. <em class="alert">Note well</em> that these equations only work when \(x\) doesn't appear in the integrand of the functional -- that is, when the integrand is of the form \(f(y, y')\text{.}\)</p></article><p id="p-198">The reasoning by means of which equation <a class="xref" data-knowl="./knowl/eqn-3-11.html" title="Equation 3.3.6">(3.3.6)</a> has been derived is valid not only for the particular integrand function</p>
 <div class="displaymath">
 \begin{equation*}
 f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
@@ -288,29 +289,29 @@ f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
 <article class="activity project-like" id="activity-beltrami-arclength"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-198">The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length, which we considered using other methods in <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>.</p>
+<p id="p-199">The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length, which we considered using other methods in <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>.</p>
 <ol class="decimal">
-<li id="li-71">
-<p id="p-199">Apply Euler's equation \(\displaystyle \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0\) to the arc length integrand \(f(y, y') = \sqrt{1+(y')^2}\text{:}\)</p>
+<li id="li-72">
+<p id="p-200">Apply Euler's equation \(\displaystyle \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0\) to the arc length integrand \(f(y, y') = \sqrt{1+(y')^2}\text{:}\)</p>
 <ol class="lower-alpha">
-<li id="li-72"><p id="p-200">Compute \(\dfrac{\partial f}{\partial y}\text{.}\)</p></li>
-<li id="li-73"><p id="p-201">Compute \(\dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
-<li id="li-74"><p id="p-202">Compute \(\dfrac{d}{dx}\left(\dfrac{\partial f}{\partial y'}\right)\text{.}\) (Yikes!)</p></li>
-<li id="li-75"><p id="p-203">Combine the pieces appropriately.</p></li>
+<li id="li-73"><p id="p-201">Compute \(\dfrac{\partial f}{\partial y}\text{.}\)</p></li>
+<li id="li-74"><p id="p-202">Compute \(\dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
+<li id="li-75"><p id="p-203">Compute \(\dfrac{d}{dx}\left(\dfrac{\partial f}{\partial y'}\right)\text{.}\) (Yikes!)</p></li>
+<li id="li-76"><p id="p-204">Combine the pieces appropriately.</p></li>
 </ol>
 </li>
-<li id="li-76"><p id="p-204">Now try the Beltrami identity \(f-y'\frac{\partial f}{\partial y'} = c\text{.}\) You've already computed all the pieces you need.</p></li>
+<li id="li-77"><p id="p-205">Now try the Beltrami identity \(f-y'\frac{\partial f}{\partial y'} = c\text{.}\) You've already computed all the pieces you need.</p></li>
 </ol></article><article class="activity project-like" id="activity-euler-brachistochrone"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-205">Assuming \(y\in C^2\) (which is true for reasons we'll get to in the next section), we can apply the Beltrami identity <a class="xref" data-knowl="./knowl/eqn-3-11.html" title="Equation 3.3.6">(3.3.6)</a> to the brachistochrone problem, since \(x\) doesn't appear in the integrand.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a></p>
+<p id="p-206">Assuming \(y\in C^2\) (which is true for reasons we'll get to in the next section), we can apply the Beltrami identity <a class="xref" data-knowl="./knowl/eqn-3-11.html" title="Equation 3.3.6">(3.3.6)</a> to the brachistochrone problem, since \(x\) doesn't appear in the integrand.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a></p>
 <ol class="decimal">
-<li id="li-77"><p id="p-206">Write down \(f(y, y')\text{.}\)</p></li>
-<li id="li-78"><p id="p-207">Compute \(\dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
-<li id="li-79">
-<p id="p-208">Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. (If you get a common denominator, you can simplify a little.)</p>
+<li id="li-78"><p id="p-207">Write down \(f(y, y')\text{.}\)</p></li>
+<li id="li-79"><p id="p-208">Compute \(\dfrac{\partial f}{\partial y'}\text{.}\)</p></li>
+<li id="li-80">
+<p id="p-209">Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. (If you get a common denominator, you can simplify a little.)</p>
 <a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like">
-<div class="displaymath" id="p-209">
+<div class="displaymath" id="p-210">
 \begin{equation*}
 \sqrt{\frac{1+(y')^2}{y-\alpha}} - y'\cdot \left[\frac{y'}{\sqrt{y-\alpha}\sqrt{1+(y')^2}}\right] = c
 \end{equation*}
