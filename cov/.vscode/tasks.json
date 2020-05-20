@@ -6,7 +6,7 @@
         {
             "label": "xsltproc",
             "type": "shell",
-            "command": "xsltproc -xinclude C:/Users/calibaan/mathbook/xsl/mathbook-html.xsl var-book.xml",
+            "command": "xsltproc -xinclude C:/Users/calibaan/mathbook/xsl/mathbook-html.xsl ./source/var-book.xml",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
