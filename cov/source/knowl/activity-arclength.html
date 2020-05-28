@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-28T10:50:10-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="activity project-like"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
+</h6>
+<p>Where on earth did that integral come from? Let's figure it out, because it's a good example of the <dfn class="terminology">slice-approximate-integrate paradigm</dfn> that guides a lot of the integrals we'll be writing down in this course, and this integral in particular is one that will come up a lot for us.</p>
+<ol class="decimal">
+<li><p>Draw yourself a reasonably wiggly function \(y=y(x)\) whose length you'd like to calculate. Label the beginning point \((x_1, y(x_1))\text{,}\) and label the ending point \((x_2, y(x_2))\text{.}\) Draw a few other points on the function at regularly-spaced intervals.</p></li>
+<li><p>It's easy to calculate the length of a straight line, so let's <em class="emphasis">slice</em> the wiggly function into a bunch of pieces and <em class="emphasis">approximate</em> each piece by a straight line. Connect the points you drew in step 1 with straight line segments, and convince yourself that the line segments are a reasonably good wrong answer to the length of the corresponding wiggly piece.</p></li>
+<li><p>Draw a zoomed-in picture of just one line segment. Pretend that this is the hypotenuse of a right triangle with horizontal and vertical legs. Label each leg as either \(\Delta x\) or \(\Delta y\text{.}\)</p></li>
+<li><p>Use the Pythagorean theorem to calculate the length of the line segment, which we'll call \(L_{\textrm{slice}}.\)</p></li>
+<li>
+<p>So that our expression can be the summand in a Riemann sum, we'd really like it to be of the form (stuff)\(\cdot\Delta x\text{.}\) It's not in that form yet, so to get closer, multiply \(L_{\textrm{slice}}\) by \(\frac{\Delta x}{\Delta x}\text{.}\) This is legit because it doesn't change the value of \(L_{\textrm{slice}}.\) Explain why not.</p>
+<a class="original" data-knowl="./knowl/solution-1-hidden.html" title="Solution 5.1"><span class="type">Solution</span></a>
+</li>
+<li>
+<p>Factor the \(\Delta x\) in the denominator into the square root, distribute, and simplify. What happens as \(n\to\infty\text{,}\) or, in other words, as \(\Delta x \to 0?\)</p>
+<a class="original" data-knowl="./knowl/solution-2-hidden.html" title="Solution 6.1"><span class="type">Solution</span></a>
+</li>
+<li>
+<p>We've sliced, we've approximated, and now it's time to <em class="emphasis">integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let \(n\to\infty\) to obtain an expression for the actual arc length of the wiggly function. <em class="emphasis">Be sure to involve \(x_1\) and \(x_2\text{!}\)</em></p>
+<a class="original" data-knowl="./knowl/solution-3-hidden.html" title="Solution 7.1"><span class="type">Solution</span></a>
+</li>
+</ol></article><span class="incontext"><a href="sec-two-problems.html#activity-arclength">in-context</a></span>
+</body>
+</html>

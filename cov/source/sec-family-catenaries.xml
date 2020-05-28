@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<section xml:id="sec-family-catenaries" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The one-parameter family of catenaries through a point</title>
+  <p>Our next step is to determine the number and the character of the catenaries <xref ref="eqn-4-5"/> which pass through the two given points 1 and 2. The plan is to find the equation of the one-parameter family of these catenaries passing through the point 1, and then to determine how many of them pass through the second point 2. The equation
+  <m>y_1 = b \cosh \frac{x_1-a}{b}</m>
+  is the condition that the catenary <xref ref="eqn-4-5"/> shall pass through the point 1. It is satisfied, as one readily verifies, when <m>a</m> and <m>b</m> are expressed in terms of a new parameter <m>\alpha</m> in the form
+  <men xml:id="eqn-4-6">
+    a=x_{1}-y_{1} \frac{\alpha}{\cosh \alpha}, \quad b=\frac{y_{1}}{\cosh \alpha},
+  </men>
+  and the family of catenaries through the point 1 is therefore
+  <men xml:id="eqn-4-7">
+    y=\frac{y_{1}}{\cosh\alpha} \cosh\left(\alpha+\frac{x-x_{1}}{y_{1}} \cosh \alpha \right)=y(x, \alpha),
+  </men>
+  where <m>y(x, \alpha)</m> is simply a convenient symbol for the more complicated expression preceding it.  
+  </p>
+  <p>
+    In deducing the properties of the one-parameter family of catenaries through the point 1, we shall need the first and second derivatives with respect to <m>x</m> and <m>\alpha</m> of the function <m>y(x, \alpha)</m> defined in <xref ref="eqn-4-7"/>. Derivatives with respect to <m>x</m> will be denoted by primes and with respect to <m>\alpha</m> by subscripts, while the subscript 1 will be used to designate values of <m>x, y, y'</m> at the point 1. If we remember the formulas
+    <me>
+      \frac{d}{du} \cosh u = \sinh u, \quad \frac{d}{du} \sinh u = \cosh u
+    </me>
+    mentioned above, we find readily the values
+    <mdn xml:id="eqn-4-8">
+      <mrow> y  \amp= \frac{y_1}{\cosh \alpha} \cosh\left(\alpha + \frac{x - x_1}{y_1} \cosh \alpha \right) = y (x, \alpha) </mrow>
+      <mrow> y' \amp= \sinh \left(\alpha + \frac{x-x_1}{y_1} \cosh\alpha\right), \quad y_1' = \sinh \alpha </mrow>
+      <mrow> y_\alpha \amp= \frac{y' \cdot y_1'}{\cosh \alpha} \left(x - \frac{y}{y'} - x_1 + \frac{y_1}{y_1'}\right),  </mrow>
+    </mdn>
+    where in calculating the last derivative hyperbolic sines and cosines have been replaced except in one instance by their values in terms of <m>y, y', y_1 , y_1'</m> from the first three equations.
+  </p>
+</section>

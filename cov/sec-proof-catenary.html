@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-28T12:31:25-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Var The proof that the minimizing arc is a catenary</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="var-book.html"><span class="title">Calculus of Variations</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-preliminary-remarks.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="surfaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-family-catenaries.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-preliminary-remarks.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="surfaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-family-catenaries.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="typical.html" data-scroll="typical"><span class="codenumber">1</span> <span class="title">Typical Problems of the Calculus of Variations</span></a><ul>
+<li><a href="sec-invention-of-calculus.html" data-scroll="sec-invention-of-calculus">The invention of the calculus</a></li>
+<li><a href="sec-maxima-and-minima.html" data-scroll="sec-maxima-and-minima">Maxima and minima</a></li>
+<li><a href="sec-two-problems.html" data-scroll="sec-two-problems">Two problems of the calculus of variations which may be simply formulated</a></li>
+<li><a href="sec-problem-newton.html" data-scroll="sec-problem-newton">The problem of Newton</a></li>
+<li><a href="sec-brachistochrone.html" data-scroll="sec-brachistochrone">The brachistochrone problem</a></li>
+<li><a href="sec-more-general.html" data-scroll="sec-more-general">A more general problem</a></li>
+<li><a href="sec-other-problems.html" data-scroll="sec-other-problems">Other problems of the calculus of variations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="shortest.html" data-scroll="shortest"><span class="codenumber">2</span> <span class="title">Shortest Distances</span></a><ul>
+<li><a href="sec-shortest-arc.html" data-scroll="sec-shortest-arc">The shortest arc joining two points</a></li>
+<li><a href="sec-first-necessary.html" data-scroll="sec-first-necessary">A first necessary condition</a></li>
+<li><a href="sec-fundamental-lemma.html" data-scroll="sec-fundamental-lemma">A fundamental lemma</a></li>
+<li><a href="sec-straight-line.html" data-scroll="sec-straight-line">Proof that the straight line is shortest</a></li>
+<li><a href="sec-auxiliary-formulas.html" data-scroll="sec-auxiliary-formulas">Two important auxiliary formulas</a></li>
+<li><a href="sec-field.html" data-scroll="sec-field">The notion of a field and a second sufficiency proof</a></li>
+<li><a href="sec-shortest-curve.html" data-scroll="sec-shortest-curve">The shortest arc joining a point to a curve</a></li>
+<li><a href="sec-shortest-ellipse.html" data-scroll="sec-shortest-ellipse">The shortest arc joining a point to an ellipse</a></li>
+<li><a href="sec-two-curves.html" data-scroll="sec-two-curves">The shortest arc joining two curves</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
+<li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
+<li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
+<li><a href="sec-first-necessary-3.html" data-scroll="sec-first-necessary-3">A first necessary condition</a></li>
+<li><a href="sec-application-brachistochrone.html" data-scroll="sec-application-brachistochrone">Application to the brachistochrone problem</a></li>
+<li><a href="sec-cycloids.html" data-scroll="sec-cycloids">Cycloids</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="surfaces.html" data-scroll="surfaces"><span class="codenumber">4</span> <span class="title">Surfaces of revolution of minimum area</span></a><ul>
+<li><a href="sec-preliminary-remarks.html" data-scroll="sec-preliminary-remarks">Preliminary remarks concerning the problem</a></li>
+<li><a href="sec-proof-catenary.html" data-scroll="sec-proof-catenary" class="active">The proof that the minimizing arc is a catenary</a></li>
+<li><a href="sec-family-catenaries.html" data-scroll="sec-family-catenaries">The one-parameter family of catenaries through a point</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-proof-catenary"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">The proof that the minimizing arc is a catenary</span>
+</h2>
+<a href="sec-proof-catenary.html" class="permalink">¶</a><p id="p-233">As we have already noted in <a href="sec-two-problems.html" class="internal" title="Section 1.3: Two problems of the calculus of variations which may be simply formulated">Section 1.3</a>, the integral which we shall have to minimize for the problem of determining a surface of revolution of minimum area is</p>
+<div class="displaymath">
+\begin{equation*}
+I=\int_{x_1}^{x_2} f(y, y')\,dx
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(f(y, y')\) now has the value</p>
+<div class="displaymath">
+\begin{equation}
+f(y, y') = y\sqrt{1+(y')^2}.\label{eqn-4-2}\tag{4.2.1}
+\end{equation}
+</div>
+<p data-braille="continuation">The curves to be studied for this problem must all lie in the upper half-plane \(y\geq 0\) since on an arc with portions below the \(x\)-axis the value of the integral \(I\) is the difference of the areas generated by the segments above and the segments below the axis, while we are wishing to consider the sum of those areas. If an arc has segments below the \(x\)-axis it may always be replaced by one above the axis which will generate the same surface, as is clear from <a class="xref" data-knowl="./knowl/fig-4-26.html" title="Figure 4.2.1">Figure 4.2.1</a>. Besides the restriction \(y\geq 0\) our curves \(y=y(x)\) we shall, as in the two preceding examples, assume that all the curves \(y=y(x)\) considered are continuous and have tangents which turn continuously except possibly at a finite number of corners. Let us call curves of this sort in the upper half-plane <dfn class="terminology">admissible curves</dfn>. <aside class="aside aside-like" id="aside-9">That is, we're assuming \(y(x)\) is piecewise \(C^1\text{.}\)</aside> <figure class="figure figure-like" id="fig-4-26"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="./images/fig-4-26.png" style="width: 100%; height: auto;" alt="Any portion of the curve below the x-axis may be reflected over the x-axis without changing the area of the surface of revolution."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-234">Our problem is then to determine among all admissible arcs joining two given points 1 and 2 one which minimizes the integral \(I\text{.}\)</p>
+<p id="p-235">The necessary conditions deduced in <a href="sec-first-necessary-3.html" class="internal" title="Section 3.3: A first necessary condition">Section 3.3</a> apply without alteration to our present problem. The minimizing arcs must be solutions of the equation</p>
+<div class="displaymath">
+\begin{equation*}
+f_{y^{\prime}}=\int_{x_{1}}^{x} f_{y}\,dx+c
+\end{equation*}
+</div>
+<p data-braille="continuation">which for the special function <a class="xref" data-knowl="./knowl/eqn-4-2.html" title="Equation 4.2.1">(4.2.1)</a> takes the form</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{y\cdot y^{\prime}}{\sqrt{1+(y')^2}}=\int_{x_{i}}^{x} \sqrt{1+(y')^2}\,dx+c=s+c
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(s\) is the length of the minimizing arc measured from 1 to the point whose abscissa is \(x\text{.}\) At a point of the arc where \(y&gt;0\) this equation can be solved for \(y'\text{,}\) giving</p>
+<div class="displaymath">
+\begin{equation}
+y^{\prime}=\frac{s+c}{\sqrt{y^{2}-(s+c)^{2}}}\label{eqn-4-3}\tag{4.2.2}
+\end{equation}
+</div>
+<p data-braille="continuation">and we see at once that at such a point \(y'\) is continuous since \(y\) and \(s\) both have this property. But if \(y'\) is continuous then \(y\) and \(s\) both have continuous derivatives and the equation <a class="xref" data-knowl="./knowl/eqn-4-3.html" title="Equation 4.2.2">(4.2.2)</a> shows again that \(y'\) must also have a continuous derivative At all points above the \(x\)-axis our minimizing arc has therefore continuous curvature and no corners.</p>
+<p id="p-236">If we know that along a minimizing arc there is a continuous derivative \(y''\) then as in <a href="sec-first-necessary-3.html" class="internal" title="Section 3.3: A first necessary condition">Section 3.3</a> Euler's equation has the consequence \(f-y' f_{y'} = \textrm{constant,}\) <aside class="aside aside-like" id="aside-10">The Beltrami identity.</aside> which for the special function <a class="xref" data-knowl="./knowl/eqn-4-2.html" title="Equation 4.2.1">(4.2.1)</a> takes the form</p>
+<div class="displaymath">
+\begin{equation}
+\frac{y}{\sqrt{1+(y')^2}} = b.\label{eqn-4-4}\tag{4.2.3}
+\end{equation}
+</div>By solving this equation for \(y'\) and integrating we see that the solutions of Euler's equation also satisfy the two equations<div class="displaymath">
+\begin{equation*}
+\frac{d y}{\sqrt{\left(\frac{y}{b}\right)^{2}-1}}=d x, \quad b \log \left(\frac{y}{b}+\sqrt{\left(\frac{y}{b}\right)^{2}-1}\right)=x-a,
+\end{equation*}
+</div>and it follows readily by solving the last one for \(y\) that the extremals for our problem are the catenaries<div class="displaymath">
+\begin{equation}
+y = \frac{b}{2} \left[\exp\left(\frac{x-a}{b}\right) + \exp\left(-\frac{x-a}{b}\right)\right] = b \cosh \frac{x-a}{b}.\label{eqn-4-5}\tag{4.2.4}
+\end{equation}
+</div>We use here and in the following pages the customary symbols \(\cosh u, \sinh u\) for the hyperbolic cosine and the hyperbolic sine of \(u\) defined by the equations<div class="displaymath">
+\begin{equation*}
+\cosh u = \frac{e^u + e^{-u}}{2}, \quad \sinh u = \frac{e^u - e^{-u}}{2}.
+\end{equation*}
+</div>No elaborate properties of these functions will be needed, but it will be helpful later if we notice, while these formulas are before us, that each of them has the other as its derivative. <article class="remark remark-like" id="remark-cosh-sinh"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-237">Here I've made a deliberate break from the book's notation. In the original text, these two functions are denoted \(\operatorname{ch} u\) and \(\operatorname{sh} u\text{.}\) While these names are still occasionally found in modern literature, I find them to be really old-fashioned, so I've replaced them throughout with the much more common \(\cosh u\) and \(\sinh u\text{.}\)</p></article><p id="p-238">When we know that the extremals are the catenaries of <a class="xref" data-knowl="./knowl/fig-4-24.html" title="Figure 4.1.2">Figure 4.1.2</a>, we see at once that a minimizing arc \(y=y(x)\) with corners is impossible since the corners would have to be on the \(x\)-axis, as has already been indicated, and the parts of the minimizing arc above the axis would have to be segments of catenaries which have no points in common with the axis. We have justified, therefore, the following conclusion:</p>
+<article class="theorem theorem-like" id="thm-4-catenary"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-239">If 1 and 2 are two points in the half-plane \(y&gt;0\) then an admissible arc \(y=y(x)\) joining them and generating a surface of revolution of minimum area must be a single arc without corners of one of the catenaries</p>
+<div class="displaymath">
+\begin{equation*}
+y = \frac{b}{2} \left[\exp\left(\frac{x-a}{b}\right) + \exp\left(-\frac{x-a}{b}\right)\right] = b \cosh \frac{x-a}{b}.
+\end{equation*}
+</div>
+<p data-braille="continuation">(See also <a class="xref" data-knowl="./knowl/eqn-4-5.html" title="Equation 4.2.4">(4.2.4)</a>.)</p></article></section></div></main>
+</div>
+</body>
+</html>
