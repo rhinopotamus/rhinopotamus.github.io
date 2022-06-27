@@ -20,7 +20,7 @@
 </style>
 
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="cQ416h10ykxyATockJwf70z1qQty/NDjgrbVwqSNO3MLWZey3iXP+wlNcGqccK3lXxGJycGc+oVgXSNBx/cOHg==" />
+<meta name="csrf-token" content="IPskgNId9k0NNxrMe9Akjne+E5PKTXKsBKmcSMtbnFdarIbYEUzz+nZ7ULp3PJaEZFozUXktWMrmQmrLqCGpOg==" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue"">
@@ -152,20 +152,29 @@ the maximum of a finite set</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 446.46px; left: 0px; top: 210px;" data-name="text-0b5813" data-block-id="7e3ca1457dcaec06280d123020c34f5d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 70%;">
 <ol>
-	<li class="fragment" data-fragment-index="0">The sequence lies inside a closed interval \(I_1 = [c_1, d_1]\). Why?</li>
-	<li class="fragment" data-fragment-index="1">Split \(I_1\) in half. One of the halves must contain \(\infty\)-many sequence points. (Why?)</li>
-	<li class="fragment" data-fragment-index="2">Call this half \(I_2 = [c_2, d_2]\). Repeat. Produce a bunch of intervals \(I_1, I_2, \ldots, I_k, \ldots \). Claim: \(I_{k+1} \subset I_k\). (Why?)</li>
-	<li class="fragment" data-fragment-index="3">Observation: Each interval is half the length of the one before. Produce a formula for the length of \(I_k\).</li>
-	<li class="fragment" data-fragment-index="4">In each \(I_k\), choose a sequence point and call it \(a_{n_k}\). (Why can we do this for sure?)</li>
+	<li class="fragment" data-fragment-index="0">The sequence lies inside a closed interval \(I_1 = [c_1, d_1]\). <span style="color:#800080">(Why?)</span>
+</li>
+	<li class="fragment" data-fragment-index="1">Split \(I_1\) in half. One of the halves must contain \(\infty\)-many sequence points. <span style="color:#800080">(Why?)</span>
+</li>
+	<li class="fragment" data-fragment-index="2">Call this half \(I_2 = [c_2, d_2]\). Repeat. Produce a bunch of intervals \(I_1, I_2, \ldots, I_k, \ldots \). Claim: \(I_{k+1} \subset I_k\). <span style="color:#800080">(Why?)</span>
+</li>
+	<li class="fragment" data-fragment-index="3">Observation: Each interval is half the length of the one before. <span style="color:#800080">Produce a formula for the length of \(I_k\).</span>
+</li>
+	<li class="fragment" data-fragment-index="4">In each \(I_k\), choose a sequence point and call it \(a_{n_k}\). <span style="color:#800080">(Why can we do this for sure?)</span>
+</li>
 	<li class="fragment" data-fragment-index="5">Produce the subsequence \((a_{n_k}) = (a_{n_1}, a_{n_2}, a_{n_3}, \ldots)\). Goal: Show this subsequence converges.</li>
 </ol>
 </div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 210px;" data-block-id="c8f190985d5c55a8d4b08850ae6c7316" data-name="text-aa914a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 70%;">
-<ol start = "7">
-	<li class="fragment" data-fragment-index="6">Create a "helper sequence" \((c_k)\), the lower endpoints of all the intervals \(I_k = [c_k, d_k]\). This sequence is monotonically increasing and bounded above. Why?</li>
-	<li class="fragment" data-fragment-index="7">Therefore, \((c_k)\) converges, say to the number \(C\). Why, and what can we say about \(C\)?</li>
-	<li class="fragment" data-fragment-index="8">Each \(a_{n_k}\) is pretty darn close to the corresponding \(c_k\). Why, and how close exactly?</li>
-	<li class="fragment" data-fragment-index="9">Claim: \((a_{n_k}) \to C\). Idea: Each \(a_{n_k}\) is close to \(c_k\), and \(c_k\) should be close to \(C\). Can we thus say how close \(a_{n_k}\) is to \(C\)?</li>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 210px;" data-block-id="c8f190985d5c55a8d4b08850ae6c7316" data-name="text-aa914a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 70%;" data-has-custom-html="">
+<ol>
+	<li class="fragment" data-fragment-index="6">Create a "helper sequence" \((c_k)\), the lower endpoints of all the intervals \(I_k = [c_k, d_k]\). This sequence is monotonically increasing and bounded above. <span style="color:#800080">(Why?)</span>
+</li>
+	<li class="fragment" data-fragment-index="7">Therefore, \((c_k)\) converges, say to the number \(C\). <span style="color:#800080">(Why, and what can we say about \(C\)?)</span>
+</li>
+	<li class="fragment" data-fragment-index="8">Each \(a_{n_k}\) is pretty darn close to the corresponding \(c_k\). <span style="color:#800080">(Why, and how close exactly?)</span>
+</li>
+	<li class="fragment" data-fragment-index="9">Claim: \((a_{n_k}) \to C\). Idea: Each \(a_{n_k}\) is close to \(c_k\), and \(c_k\) should be close to \(C\). <span style="color:#800080">Can we thus say how close \(a_{n_k}\) is to \(C\)?</span>
+</li>
 </ol>
 </div></div></section>
 			</div>
@@ -173,7 +182,7 @@ the maximum of a finite set</h2>
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":"created","profile_layout":"grid"},"email":"orangefish@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":446533,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2420901,"slug":"day-4","title":"Day 5","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2022-06-24T17:31:50.534Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/1846e3e87872f45f94c87d63581027ff/thumb.jpg?1656364325","view_count":0,"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":9,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1656370755874,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
+	var SLConfig = {"current_user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":"created","profile_layout":"grid"},"email":"orangefish@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":446533,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2420901,"slug":"day-4","title":"Day 5","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2022-06-24T17:31:50.534Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/1846e3e87872f45f94c87d63581027ff/thumb.jpg?1656364325","view_count":0,"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":9,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1656371384487,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
 
 		<script>
