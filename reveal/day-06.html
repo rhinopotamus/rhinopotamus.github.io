@@ -20,7 +20,7 @@
 </style>
 
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="DEvKYO/V/mqcW8XfLG1ycU0qgJg0de+E3cM84Yxy7DATTDUoga6u6PstqHoRAu8UQzF5zwcXrjiIOzpXDr/Ukw==" />
+<meta name="csrf-token" content="e3aQFp9Ppm+Gl1GsjeOKGeZs8syEjmqob5ae4I4/Lo9kcW9e8TT27eHhPAmwjBd86HcLm7fsKxQ6bphWDPIWLA==" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue"">
@@ -84,23 +84,28 @@
 
 <h2>proving and negating</h2>
 </div></div>
-<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; width: 800px; left: 80px; top: 350px;" data-name="table-d5390b" data-block-id="dd045bab5de5356a14d2340d219329a2"><div class="sl-block-content" style="z-index: 11;"><table><tbody>
+<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; width: 800px; left: 80px; top: 350px;" data-name="table-d5390b" data-block-id="dd045bab5de5356a14d2340d219329a2"><div class="sl-block-content" style="z-index: 11; font-size: 70%;"><table><tbody>
 <tr>
-<th style="width: 359px;">Quantifier</th>
+<th style="width: 257px;">Quantifier</th>
 <th>Proving</th>
 <th>Negating</th>
 </tr>
 <tr>
-<td style="width: 359px;">∀: for all, every, "universally quantified"</td>
-<td></td>
-<td></td>
+<td style="width: 257px;">∀: for all, every, "universally quantified"</td>
+<td>Do all the possible cases<br>
+Pick an arbitrary one and work in general</td>
+<td>Find one that doesn't work (a counterexample)</td>
 </tr>
 <tr>
-<td style="width: 359px;">∃: there exists, "existentially quantified"</td>
-<td></td>
-<td></td>
+<td style="width: 257px;">∃: there exists, "existentially quantified"</td>
+<td>Find one, build one, define one, check a candidate<br>
+Contradiction to not-existing</td>
+<td>Show that all of them don't work</td>
 </tr>
-</tbody></table></div></div></section><section data-id="02b8fe5d7590dcad482f309b9b65afba"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="b8ead7b3e7bfd7a5a29a58f7ae9c2d65"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</tbody></table></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 630px;" data-name="text-570a26" data-block-id="525d28924e9f77baa821c89bdd1f8fd5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>See slide 21 of <a href="https://docs.google.com/presentation/d/1iFp1x51U3QTnyox9cKLKLRQDy0HUvAB2pg8u5X8Dc50/edit?usp=sharing" target="_blank">this presentation</a></p>
+</div></div></section><section data-id="02b8fe5d7590dcad482f309b9b65afba"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="b8ead7b3e7bfd7a5a29a58f7ae9c2d65"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Bounded sequences</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 280px;" data-name="text-7150ab" data-block-id="54edf1afc190b6d02557d18a86c7c163"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
@@ -168,7 +173,7 @@ then it converges.</p>
 </ol>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 480px; left: 480px; top: 210px;" data-block-id="c8f190985d5c55a8d4b08850ae6c7316" data-name="text-aa914a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 70%;" data-has-custom-html="">
-<ol>
+<ol start="7">
 	<li class="fragment" data-fragment-index="6">Create a "helper sequence" \((c_k)\), the lower endpoints of all the intervals \(I_k = [c_k, d_k]\). This sequence is monotonically increasing and bounded above. <span style="color:#800080">(Why?)</span>
 </li>
 	<li class="fragment" data-fragment-index="7">Therefore, \((c_k)\) converges, say to the number \(C\). <span style="color:#800080">(Why, and what can we say about \(C\)?)</span>
@@ -178,7 +183,7 @@ then it converges.</p>
 	<li class="fragment" data-fragment-index="9">Claim: \((a_{n_k}) \to C\). Idea: Each \(a_{n_k}\) is close to \(c_k\), and \(c_k\) should be close to \(C\). <span style="color:#800080">Can we thus say how close \(a_{n_k}\) is to \(C\)?</span>
 </li>
 </ol>
-</div></div></section><section data-id="48941c76b44f1c59e4dbf45ee61cb31d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="56b7a3996eecf09ca4bab7d7b6fcd1ea"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section data-id="48941c76b44f1c59e4dbf45ee61cb31d" data-visibility="hidden"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="56b7a3996eecf09ca4bab7d7b6fcd1ea"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>A technique we'll use a lot</h2>
 
 <p>(I actually don't care much about this theorem result)</p>
@@ -204,7 +209,7 @@ then it converges.</p>
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":"created","profile_layout":"grid"},"email":"orangefish@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":634224,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2423874,"slug":"day-5","title":"Day 6!","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2022-06-30T16:35:49.460Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/c642a5ab7e3a77ca2ca8574cb550fdb9/thumb.jpg?1656610386","view_count":0,"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":11,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1656614651891,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
+	var SLConfig = {"current_user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":"created","profile_layout":"grid"},"email":"orangefish@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":634224,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2423874,"slug":"day-5","title":"Day 6!","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2022-06-30T16:35:49.460Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/c642a5ab7e3a77ca2ca8574cb550fdb9/thumb.jpg?1656610386","view_count":0,"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":11,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1656629604918,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":2162804,"username":"spencerbagley","name":"Spencer Bagley","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjsIWcE-bATqcwxcuBfZb84I2ggFdWCzWs76JtlG2Q=s96-c","account_type":"default","team_id":null,"settings":{"id":52547373,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
 
 		<script>
