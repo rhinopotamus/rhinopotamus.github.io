@@ -1,9 +1,18 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "It's my new jekyll blog!"
 date:   2023-01-19 14:36:50 -0700
 categories: jekyll update
+katex: True
 ---
+Here is some kind of intro post for this jekyll blog. Mostly it is the boilerplate that comes with a fresh jekyll install, which I am keeping around for my own reference.
+
+A big thing I wanted to change was to enable katex. I gotta be able to type latex directly into markdown, and katex is faster than mathjax. So: I followed the katex setup described in [this blog](https://gendignoux.com/blog/2020/05/23/katex.html). And look how nice it works: $$a^2 + b^2 = c^2$$ 
+
+Boilerplate language below:
+
+***
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
