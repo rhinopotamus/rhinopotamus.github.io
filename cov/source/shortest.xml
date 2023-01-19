@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="shortest" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<title>Shortest Distances</title>
+
+  <section xml:id="sec-shortest-arc">
+    <title>The shortest arc joining two points</title>
+
+    <p> Problems of determining shortest distances furnish a useful elementary introduction to the theory of the calculus of variations because the properties characterizing their solutions are familiar ones which illustrate very well many of the general principles common to all of the problems suggested in the preceding chapter. If we can for the moment eradicate from our minds all that we know about straight lines and shortest distances we shall have the pleasure of rediscovering well-known theorems by methods which will be helpful in solving more complicated problems. </p>
+
+    <p>Let us begin with the simplest case of all, the problem of determining the shortest arc joining two given points. The integral to be minimized, which we have already seen in <xref ref="sec-two-problems"/>, may be written in the form
+    <men xml:id="eqn-shortest">
+      I=\int_{x_1}^{x_2} f(y')\,dx
+    </men>
+    if we use the notation <m>f(y')=\sqrt{1+(y')^2}</m>, and the arcs <m>y=y(x)\,\,(x_1\leq x\leq x_2)</m> whose lengths are to be compared with each other will always be understood to be continuous and to consist of a finite number of arcs on each of which the tangent turns continuously, as indicated in <xref ref="fig-piecewise-smooth"/>.</p> 
+
+    <figure xml:id="fig-piecewise-smooth">
+      <image source="images/fig-piecewise-smooth.png" >
+        <description>A piecewise-differentiable arc connecting points 1 and 2.</description>
+      </image>
+    </figure>
+    
+    <p>Analytically this means that on the interval <m>x_1\leq x\leq x_2</m> the function <m>y(x)</m> is continuous and that the interval can be subdivided into parts on each of which <m>y(x)</m> has a continuous derivative. Let us agree to call such functions <term>admissible functions</term> and the arcs which they define <term>admissible arcs</term>. Our problem is then to find among all admissible arcs joining two given points 1 and 2 one which makes the integral <m>I</m> a minimum. </p>
+
+    <activity xml:id="activity-admissible">
+      <title>Admissible arcs, smoothness, and classes of functions</title>
+      <p>
+        The idea of <em>smoothness</em>, which generalizes differentiability, is one that comes up a lot in analysis. We can categorize functions into several different <em>differentiability classes</em> based on how many continuous derivatives they have over some domain.
+        <ol>
+          <li>
+            <p>
+              The first two classes are called <m>C^0</m> and <m>C^1</m>. <m>C^0</m> consists of all the <em>continuous</em> functions, and <m>C^1</m> is the class of <em>differentiable</em> functions whose derivative is continuous. Give an example of a function in <m>C^0</m> that isn't in <m>C^1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              You may have noticed that in the definition of admissible functions above, we're allowing some cusps, as long as the function is <em>mostly</em> differentiable. This condition is more commonly referred to as being <em>piecewise differentiable</em> or <em>piecewise <m>C^1</m></em>. Give an example of a function that's <em>not</em> in <m>C^1</m>, but <em>is</em> piecewise <m>C^1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The very nicest functions (and, tbh, most of the ones we care about in everyday life) have infintely many derivatives. These are called <em>smooth</em> functions, and they belong to the class <m>C^\infty</m>. Give three examples of functions in <m>C^\infty</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    
+    </activity>
+
+  </section>
+
+  <section xml:id="sec-first-necessary">
+    <title>A first necessary condition</title>
+    
+    <p>Let it be granted that a particular admissible arc <m>E_{12}</m> with the equation
+    <me>
+      y=y(x)\quad (x_1\leq x\leq x_2)
+    </me>
+    furnishes the solution of our problem, and let us then seek to find the properties which distinguish it from the other admissible arcs joining points 1 and 2. If we select arbitrarily an admissible function <m>\eta(x)</m> satisfying the conditions <m>\eta(x_1) = \eta(x_2) = 0</m>, the equation 
+    <men xml:id="eqn-variation">
+      y=y(x)+a \eta(x)\quad (x_1\leq x\leq x_2),
+    </men>
+
+    involving the arbitrary constant <m>a</m>, represents a one-parameter family of curves which includes the arc <m>E_{12}</m> for the special value <m>a=0</m>, and all of the curves of the family pass through the end-points 1 and 2 of <m>E_{12}</m>.
+    </p>
+
+    <remark xml:id="remark-var-wiggle">
+      <title>Variations and wiggles</title>
+      <p>
+        Admissible functions like <m>\eta(x)</m> as described in <xref ref="eqn-variation"/> are called by other authors <term>variations</term> -- hence, the "calculus of variations". Think of starting with <m>y(x)</m> and "wiggling" it by <m>\eta(x)</m> -- I'm thus going to call anything that looks like <m>y=y(x)+a \eta(x)</m> a <em>wiggle</em> of <m>y</m>. That is, any member of this "one-parameter family of curves" is a wiggle of the original function <m>y(x)</m>.
+      </p>
+      <p>
+        We insist that <m>\eta(x_1) = \eta(x_2) = 0</m> so that the starting and ending points don't get wiggled away from where they're supposed to be, so that any other wiggle is some other admissible arc joining points 1 and 2. You can "scale up" the amount of wiggle by multiplying <m>\eta(x)</m> by some constant <m>a</m>. Note in particular that: 
+        <ul>
+          <li>
+            <p>
+              For any constant <m>a</m>, the function <m>a\cdot\eta(x)</m> is just a vertical stretch of <m>\eta(x)</m> by a factor of <m>a</m>, and is therefore itself a variation.
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>a=0</m>, the amount of wiggle is 0, and so the wiggle <m>y(x)+a \eta(x)</m> is just the original function <m>y(x)</m>.
+            </p>
+          </li>
+        </ul>
+        
+      </p>
+      
+    </remark>
+
+    <p>
+    The value of the integral <m>I</m> taken along an arc of the family depends upon the value of <m>a</m> and may be represented by the symbol
+    <men xml:id="eqn-iofa">
+      I(a)=\int_{x_1}^{x_2} f(y'+a \eta')\, dx.
+    </men>
+    Along the initial arc <m>E_{12}</m> the integral has the value <m>I(0)</m>, and if this is to be a minimum when compared with the values of the integral along all other admissible arcs joining 1 with 2 it must in particular be a minimum when compared with the values <m>I(a)</m> along the arcs of the family <xref ref="eqn-variation"/>.  Hence according to the criterion for a minimum of a function given in <xref ref="sec-maxima-and-minima"/> we must have <m>I'(0) = 0</m>.
+    </p>
+
+    <p>
+    It should perhaps be emphasized here that the method of the calculus of variations, as it has been developed in the past, consists essentially of three parts; first, the deduction of necessary conditions which characterize a minimizing arc; second, the proof that these conditions, or others obtained from them by slight modifications, are sufficient to insure the minimum sought; and third, the search for an arc which satisfies the sufficient conditions. For the deduction of necessary conditions the value of the integral <m>I</m> along the minimizing arc can be compared with its values along any special admissible arcs which may be convenient for the purposes of the proof in question, for example along those of the family <xref ref="eqn-variation"/> described above, but the sufficiency proofs must be made with respect to all admissible arcs joining the points 1 and 2. The third part of the problem, the determination of an arc satisfying the sufficient conditions, is frequently the most difficult of all, and is the part for which fewest methods of a general character are known. For shortest-distance problems fortunately this determination is usually easy.
+    </p>
+
+    <activity xml:id="act-diff-under-int">
+      <p>
+        This next result is a doozy, and it uses an important technique with which you're probably not especially familiar: <term>differentiation under the integral sign</term>
+        <fn>For more on this, see <url href="https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf">this interesting article</url> and its references.</fn>. Here's a little activity to walk you through what's going on here.
+        <ol>
+          <li>
+            <p>
+              Convince yourself that <m>I(a)</m> as given in <xref ref="eqn-iofa"/> is indeed a function of <m>a</m>, and thus it's reasonable for us to compute <m>\frac{dI}{da}</m>. Also, convince yourself that <m>y'+a\eta'</m> is a function of both <m>x</m> and <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Here's where "differentiation under the integral sign" comes in: according to something called Leibniz's rule, as long as our functions are "nice enough" (which they are), 
+              <me>
+                \frac{d}{da} \int_{x_1}^{x_2} F(x, a)\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} F(x,a)\, dx.
+              </me>
+              Apply Leibniz's rule to write down an expression for <m>\frac{dI}{da}</m> in <xref ref="eqn-iofa"/>.
+            </p>
+            <solution>
+              <me>
+                \frac{d}{da} \int_{x_1}^{x_2} f(y'+a\eta')\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} f(y'+a\eta')\, dx.
+              </me>
+            </solution>
+          </li>
+          <li>
+            <p>
+              We're going to need the chain rule to deal with the integrand on the RHS. In particular, it'll be helpful for us to think about the chain rule in Leibniz notation (he's just popping up all over today!):
+              <me>
+                \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u} \cdot \frac{\partial u}{\partial a}.
+              </me>
+              Explain why this version of the chain rule is equivalent to the usual understanding: "first take the derivative of the outside stuff, leaving the inside stuff alone, then multiply by the derivative of the inside stuff."
+            </p>
+          </li>
+          <li>
+            <p>
+              What's something good you can label as <m>u</m> in your expression for <m>\frac{dI}{da}</m>? What's <m>\frac{\partial u}{\partial a}</m>, and so what's <m>\frac{\partial f}{\partial a}</m>?
+            </p>
+            <solution>
+            <p>
+              <m>u</m> should be the inside stuff, <m>u=y'+a\eta'</m>. Therefore, 
+                <me>
+                  \frac{\partial u}{\partial a} = \eta' \textrm{,  so  } \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\cdot \eta'.
+                </me>
+            </p>
+            </solution>
+          </li>
+          <li>
+            <p>
+              We mostly care about <m>I(a)</m> and <m>I'(a)</m> when <m>a=0</m> -- that is, when there's zero variation on the original curve <m>y(x)</m>. If <m>a=0</m>, then what's <m>u</m>? Use this to rewrite your integrand <m>\frac{\partial f}{\partial a}</m>.
+            </p>
+            <solution>
+              <p>
+                If <m>a=0</m>, then <m>u = y'+0\cdot\eta' = y'</m>. Therefore, we can rewrite our integrand to remove the convenience variable <m>u</m> that we kinda don't care about anyway:
+                <me>
+                  \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\cdot \eta' = \frac{\partial f}{\partial y'}\cdot \eta'.
+                </me>
+              </p>
+            </solution>
+          </li>
+          <li>
+            <p>
+              Conclude by writing down a final expression for <m>I'(0)</m>.
+            </p>
+            <solution>
+              <me>
+                I'(0) = \int_{x_1}^{x_2} \frac{\partial}{\partial y'}f(y') \cdot \eta'\, dx.
+              </me>
+              
+            </solution>
+          </li>
+        </ol>
+      </p>
+    </activity>
+
+    <p>
+      By differentiating the expression <xref ref="eqn-iofa"/> with respect to <m>a</m> and then setting <m>a=0</m> the value of <m>I'(0)</m> is readily seen to be 
+      <men xml:id="eqn-iprime0">
+        I'(0) = \int_{x_1}^{x_2} f_{y'} \eta'\,dx,
+      </men>
+      where for convenience we use the notation <m>f_{y'}</m> for the derivative of the integrand <m>f(y')</m> with respect to <m>y'</m>. It will always be understood that the argument in <m>f</m> and its derivatives is the function <m>y'(x)</m> belonging to the arc <m>E_{12}</m> unless some other is expressly indicated, as is done, for example, in the formula <xref ref="eqn-iofa"/>.
+    </p>
+
+    <p>
+      What now are the conclusions which can be drawn from the necessity of the condition <m>I'(0)=0</m>? The answer to this question is to be found in the lemma of the following section which will be frequently applied in later chapters as well as in the solution of the shortest-distance problems to which this chapter is devoted.
+    </p>
+  </section>
+
+<section xml:id="sec-fundamental-lemma">
+  <title>A fundamental lemma</title>
+  
+  <p>
+     In the integrand of the integral <xref ref="eqn-iprime0"/> the coefficient of <m>\eta'</m> is really a function of <m>x</m>, since the derivative <m>f_{y'}</m> contains as its argument the slope <m>y'(x)</m> of the arc <m>E_{12}</m>, and we may denote this coefficient by <m>M(x)</m>. It should be noted that the function <m>M(x)</m> is continuous except possibly at the values of <m>x</m> defining the corners of the arc <m>E_{12}</m> where the slope <m>y'(x)</m> changes abruptly. At those points of the curve it has two values, one corresponding to the backward and one to the forward slope. The lemma which we wish to prove is then as follows:
+  </p>
+  <lemma xml:id="lemma-fundamental">
+    <title>The Fundamental Lemma</title>
+    <statement>
+      <p>
+        Let <m>M(x)</m> be a function of the kind described above, continuous on the interval <m>x_1\leq x \leq x_2</m>, or else such that the interval can be subdivided into a finite number of parts on each of which <m>M(x)</m> is continuous. If the integral
+        <me>
+          \int_{x_1}^{x_2} M(x)\eta'(x)\,dx
+        </me>
+        vanishes for every admissible function <m>\eta(x)</m> such that <m>\eta(x_1)=\eta(x_2)=0</m>, then <m>M(x)</m> is necessarily a constant.
+      </p>
+    </statement>
+  </lemma>
+  <remark xml:id="remark-fun-lemma">
+    <p>
+    I want to restate this lemma just slightly so it's clearer what it's saying. Suppose that:
+    <ul>
+      <li>
+        <p>
+          <m>M(x)</m> is a piecewise-differentiable function
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\eta(x)</m> is a variation
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\displaystyle \int_{x_1}^{x_2} M(x)\eta'(x)\,dx = 0</m>, <em>no matter which variation <m>\eta(x)</m> you choose!</em>
+        </p>
+      </li>
+    </ul>
+    Then we get to conclude that <m>M(x)</m> is in fact a constant function.
+    </p>
+    <p>
+      Just for one more layer of emphasis here: <alert>IF!!!!!</alert> the three things in bullets, <alert>THEN!!!!</alert> <m>M(x)</m> is constant.
+    </p>
+  </remark>
+  <activity xml:id="activity-fun-proof">
+    Before we see the proof itself, let's build up to it by working through some of the trickier parts.
+    <ol>
+      <li>
+        <p>
+          Suppose <m>C</m> is just some constant, and remember that <m>\eta(x)</m> is supposed to be a variation in the sense of <xref ref="remark-var-wiggle"/>. Compute <m>\int_{x_1}^{x_2} C\cdot\eta'(x)\,dx.</m>
+        </p>
+        <solution>
+          <me>
+            \int_{x_1}^{x_2} C\cdot\eta'\,dx = C \cdot \eta(x) \large\vert_{x_1}^{x_2} = C \cdot (\eta(x_2) - \eta(x_1)) = C\cdot(0-0) = 0.
+          </me>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>\displaystyle \eta^*(x) = \left(\int_{x_1}^x M(t)\,dt\right) - C\cdot(x-x_1)</m>. As you may suspect since I used the letter <m>\eta</m>, I'd really like it if <m>\eta^*(x)</m> was a variation. Compute <m>\eta^*(x_1)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Is there a value of <m>C</m> (which is supposed to be a constant) such that <m>\eta^*(x_2)=0</m>? (Hint: <m>\int_{x_1}^{x_2} M(t)\,dt</m> is just some area or other.)
+        </p>
+      </li>
+      <li>
+        <p>
+          Compute the derivative of this particular variation <m>\eta^*(x)</m>. (You'll need the fundamental theorem of calculus.)
+        </p>
+      </li>
+      <li>
+        <p>
+          Finally, and changing gears a little, think of some function <m>f(x)</m>. What can you tell me about <m>\int_a^b \left[f(x)\right]^2\,dx</m>? Is it positive or negative? Can it ever be zero?
+        </p>
+      </li>
+    </ol>
+  </activity>
+  <p>
+    To see that this is so we note first that the vanishing of the integral of the lemma implies also the equation 
+    <men xml:id="eqn-5">
+      \int_{x_1}^{x_2} \left[M(x)-C\right]\eta'(x)\,dx = 0
+    </men>
+    for every constant <m>C</m>, since all the functions <m>\eta(x)</m> to be considered have <m>\eta(x_1)=\eta(x_2)=0</m>. The particular function <m>\eta(x)</m> defined by the equation 
+    <men xml:id="eqn-6">
+      \eta(x) = \int_{x_1}^x M(x)\,dx - C\cdot(x-x_1)
+    </men>
+    evidently has the value zero at <m>x=x_1</m> and it will vanish again at <m>x=x_2</m> if, as we shall suppose, <m>C</m> is the constant value satisfying the condition 
+    <me>
+      0=\int_{x_1}^{x_2} M(x)\,dx - C\cdot(x_2-x_1).
+    </me>
+    The function <m>\eta(x)</m> defined by <xref ref="eqn-6"/> with this value of <m>C</m> inserted is now one of those which must satisfy <xref ref="eqn-5"/>. Its derivative is <m>\eta'(x)=M(x)-C</m> except at points where <m>M(x)</m> is discontinuous, since the derivative of an integral with respect to its upper limit is the value of the integrand at that limit whenever the integrand is continuous at the limit. For the special function <m>\eta(x)</m>, therefore, <xref ref="eqn-5"/> takes the form 
+    <me>
+      \int_{x_1}^{x_2} \left[M(x)-C\right]^2\,dx =0
+    </me>
+    and our lemma is an immediate consequence since this equation can be true only if <m>M(x) \equiv C</m>.
+  </p>
+
+  <activity xml:id="activity-fun-lemma2">
+    <p>
+      We're going to deduce another form of the fundamental lemma that will come in handy. It's weird to me that in the original version of the fundamental lemma (<xref ref="lemma-fundamental"/>), there's an <m>\eta'(x)</m> instead of an <m>\eta(x)</m>. So, consider the very similar integral 
+      <me>
+        \int_{x_1}^{x_2} m(x) \eta(x)\, dx,
+      </me>
+      and suppose the same hypotheses as in the original version: <m>m(x)</m> is piecewise continuous, <m>\eta(x)</m> is a variation, and the value of this integral is 0 no matter which <m>\eta(x)</m> you choose.
+    </p>
+    <ol>
+      <li>
+        <p>
+          Whenever I see something that looks like the integral of a product, I immediately start thinking about <url href="https://activecalculus.org/single/sec-5-4-parts.html">integration by parts</url> (which is, after all, the integral version of the product rule). Choose a <m>u</m> and a <m>dv</m> that will get you something that looks like the integral in the original version. Why are your choices good?
+        </p>
+        <solution>
+          <p>
+            <m>u = \eta(x)</m> will produce <m>du = \eta'(x)\, dx</m>, which definitely appears in the original version, and <m>dv = m(x)\,dx</m> will produce... well, I'm not sure, because I don't exactly know what <m>m(x)</m> is, but let's just say that the antiderivative of <m>m(x)</m> is <m>\int m(x)\, dx = M(x)</m>.
+          </p>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Now go ahead and use integration by parts. Careful: this is a <url href="https://activecalculus.org/single/sec-5-4-parts.html#Bzw"><em>definite</em> integral</url>. (Hint: What's <m>\eta(x_1)</m> and <m>\eta(x_2)</m>?)
+        </p>
+        <solution>
+          <md>
+            <mrow> \int_{x_1}^{x_2} m(x) \eta(x)\, dx \amp= \eta(x) M(x) \bigg\vert_{x_1}^{x_2} - \int_{x_1}^{x_2} M(x) \eta'(x)\,dx </mrow>
+            <mrow>  \amp = (\eta(x_2) M(x_2) - \eta(x_1) M(x_1)) - \int_{x_1}^{x_2} M(x) \eta'(x)\,dx </mrow>
+            <mrow>  \amp = - \int_{x_1}^{x_2} M(x) \eta'(x)\,dx.</mrow>
+          </md>
+        </solution>
+      </li>
+      <li>
+        <p>
+          The value of your integral is supposed to be 0, by supposition. If you've chosen your parts wisely, you're in a situation where you can invoke <xref ref="lemma-fundamental"/>. What can you conclude about <m>m(x)</m>?
+        </p>
+        <solution>
+          <p>
+            Since <m>\displaystyle 0 = - \int_{x_1}^{x_2} M(x) \eta'(x)\,dx</m>, <xref ref="lemma-fundamental"/> implies that <m>M(x)</m> is a constant. Since <m>M(x)</m> was the antiderivative of <m>m(x)</m>, we can conclude that <m>m(x) \equiv 0</m> -- that is, that <m>m(x)</m> is the constant function 0.
+          </p>
+        </solution>
+      </li>
+    </ol>
+  </activity>
+
+  
+</section>
+
+<section xml:id="sec-straight-line">
+  <title>Proof that the straight line is shortest</title>
+  <p>
+    In the equation <m>y=y(x)+a\eta(x)</m> of the family of curves passing through the points 1 and 2 the function <m>\eta(x)</m> was entirely arbitrary except for the restrictions that it should be admissible and satisfy the relations <m>\eta(x_1)=\eta(x_2)=0</m>, and we have seen that the expression <xref ref="eqn-iprime0"/> for <m>I'(0)</m> must vanish for every such family. The lemma of the preceding section is therefore applicable and it tells us that along the minimizing arc <m>E_{12}</m> an equation
+    <aside>
+      Take the derivative of the arc length formula <m>\sqrt{1+(y')^2}</m> with respect to <m>y'</m>. 
+    </aside>
+    <me>
+      f_{y^{\prime}}=\frac{y^{\prime}}{\sqrt{1+\left(y'\right)^2}}=C
+    </me>
+    must hold, where <m>C</m> is a constant. If we solve this equation for <m>y'</m> we see that <m>y'</m> is also a constant along <m>E_{12}</m> and that the only possible minimizing arc is therefore a single straight-line segment without corners joining the point 1 with the point 2.
+  </p>
+
+  <p>
+    The property just deduced for the shortest arc has so far only been proved to be necessary for a minimum. We have not yet demonstrated conclusively that the straight-line segment <m>E_{12}</m> joining 1 and 2 is actually shorter than every other admissible arc joining these points. In order to actually establish this fact let us now use <m>\eta(x)</m>
+     to denote the increment which must be added to the ordinate <fn>This is an old-school word for <m>y</m>-value. </fn> of <m>E_{12}</m> at the value <m>x</m> in order to get the ordinate of an arbitrarily selected admissible arc <m>C_{12}</m> joining 1 with 2, so that the equation of <m>C_{12}</m> will be
+     <aside>
+      In other words, <m>C_{12}</m> is a wiggle of <m>E_{12}</m>, and <m>\eta(x)</m> is the variation between <m>E_{12}</m> and <m>C_{12}</m>.
+    </aside>
+    <me>
+      y=y(x)+\eta(x) \quad (x_1\leq x \leq x_2).
+    </me>
+  </p>
+  <activity xml:id="activity-taylor">
+    Okay, so the book is about to invoke some pretty deep results from <url href="https://activecalculus.org/single/sec-8-5-taylor.html">Taylor series</url>, and doesn't do much to explain them. Here's some stuff to help you figure out what's going on.
+    <ol>
+      <li>
+        <p>
+          Write down the first few terms of the Taylor series expansion for a generic function <m>f(x)</m> centered at <m>x=x_0</m>. What's <m>x_0</m>? What's <m>x</m>?
+        </p>
+        <solution>
+          <me>
+            f(x)=f(a) + f'(x_0)(x-a) + \frac{1}{2} f''(x_0) (x-x_0)^2 + \frac{1}{3!} f^{(3)}(x_0) (x-x_0)^3 + \ldots
+          </me>
+          <p>
+            In this expansion, <m>x_0</m> is some fixed value in the domain. Usually it's some "easy point" where we know a lot of information about <m>f</m> and its derivatives. For instance, if our function was <m>f(x)=\sqrt{x}</m>, some examples of "easy points" might be 36, 81, or 121. 
+          </p>
+          <p>
+            <m>x</m>, on the other hand, is some honestly variable value in the domain. Usually it's some value close to <m>x_0</m>, but it's "harder" than <m>x_0</m>. Returning to the example of the function <m>f(x)=\sqrt{x}</m>, we might use the "easy point" <m>x_0=36</m> to help us figure out the value of the function at the harder point <m>x=38</m>.
+          </p>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Consider the difference between the lengths of <m>C_{12}</m> and <m>E_{12}</m>:
+          <me>
+            I\left(C_{12}\right)-I\left(E_{12}\right) = \int_{x_{1}}^{x_{1}}\left[f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right]\, dx
+          </me>
+          In this expression, we have <m>f(y')</m> and <m>f(y'+\eta')</m> running around. Which of these do you think might be like <m>f(x)</m> and which of these do you think might be like <m>f(x_0)</m> in the Taylor setup?
+        </p>
+        <solution>
+          <p>
+            I think <m>y'</m> is going to be like <m>x_0</m>, because it's the "easy point" that we already know something about, and <m>y'+\eta'</m> is going to be the "nearby point" that's "harder."
+          </p>
+        </solution>
+      </li>
+      <li>
+        <p>
+          You might be familiar with the idea of the <url href="https://activecalculus.org/single/sec-8-5-taylor.html#tmd">Lagrange error bound</url>, which describes how big the error in using the <m>n</m>th Taylor polynomial to calculate <m>f(x)</m> might be. There's a <url href="https://en.wikipedia.org/wiki/Taylor%27s_theorem#Explicit_formulas_for_the_remainder">slightly different version of this same idea</url> which gives a more exact value of the remainder (ie. the error):
+          <me>
+            R_n(x)=\frac{1}{(n+1)!} f^{(n+1)}(\xi) (x-x_0)^{n+1}
+          </me>
+          for some value <m>\xi</m> between <m>x</m> and <m>x_0</m>. 
+        </p>
+        <p>
+          We're going to use this in the case where <m>n=1</m> -- that is, we're interested in the remainder after approximating <m>f</m> with just its linear approximation. Write out the formula above in the case where <m>n=1</m>.
+        </p>
+        <solution>
+          <me>
+            R_1(x)=\frac{1}{2} f''(\xi) (x-x_0)^2.
+          </me>
+        </solution>
+      </li>
+      <li>
+        <p>
+          In this formula for <m>R_1(x)</m>, substitute in what you decided for <m>x</m> and <m>x_0</m> in step 2. Simplify a little.
+        </p>
+        <solution>
+          <me>
+            R_1(y'+\eta') = \frac{1}{2} f''(\xi) [(y'+\eta')-y']^2 = \frac{1}{2} f''(\xi) (\eta')^2.
+          </me>
+        </solution>
+      </li>
+      <li>
+        <p>
+          Now we just have to think hard about <m>\xi</m>, which is supposed to be somewhere between <m>x</m> and <m>x_0</m>. In our case, that's somewhere between <m>y'+\eta'</m> and <m>y'</m>. The book is about to say that <m>\xi = y'+\theta\cdot\eta'</m>, where <m>\theta</m> is some number between 0 and 1. Why does this make sense?
+        </p>
+      </li>
+    </ol>
+  </activity>
+  <p>
+    The difference between the lengths of <m>C_{12}</m> and <m>E_{12}</m> can now be expressed with the help of Taylor's formula in the form
+    <md>
+      <mrow> I\left(C_{12}\right)-I\left(E_{12}\right) \amp= \int_{x_{1}}^{x_{1}}\left\{f\left(y^{\prime}+\eta^{\prime}\right)-f\left(y^{\prime}\right)\right\}\, dx </mrow>
+      <mrow>  \amp=\int_{x_{1}}^{x_{2}} f_{y^{\prime}} \eta^{\prime} d x+\frac{1}{2} \int_{x_{1}}^{x_{2}} f_{y^{\prime} y^{\prime}}\left(y^{\prime}+\theta \eta^{\prime}\right) (\eta')^2\, dx </mrow>
+    </md>
+    where <m>I(C_{12})</m> and <m>I(E_{12})</m> are the values of the integral <m>I</m> along the two arcs; <m>f_{y'y'}</m> is the second derivative of the function <m>f</m> with respect to <m>y'</m>; and <m>\theta</m> is the value between 0 and 1 introduced by Taylor's formula. The next to last integral vanishes since <m>f_{y'}</m> is a constant along <m>E_{12}</m> and since the difference <m>\eta(x)</m> of the ordinates of two arcs <m>C_{12}</m> and <m>E_{12}</m> with the same end-points must vanish at <m>x_1</m> and <m>x_2</m>. Furthermore the last integral is never negative since the second derivative 
+    <me>f_{y'y'} = \frac{1}{\left(1+\left(y'\right)^2\right)^{3/2}}</me> 
+    is always positive. We see therefore that <m>I(C_{12})-I(E_{12})</m> is greater than zero unless <m>\eta'(x)</m> vanishes identically, in which case <m>\eta'(x)</m> itself would have everywhere the constant value zero which it has at <m>x_1</m> and <m>x_2</m>, and <m>C_{12}</m> would coincide with <m>E_{12}</m>.
+  </p>
+
+  <p>
+    <em>It has been proved therefore that the shortest arc from the point 1 to the point 2 is necessarily the straight-line segment joining those points, and that this segment is actually shorter than every other admissible arc with the same endpoints.</em>
+  </p>
+
+  <remark xml:id="remark-necessary-sufficient-2"> 
+    <title>Necessary and sufficient conditions</title>
+    <p>
+      Here's the logic of what we just did: first we showed that if we had a minimizing arc <m>E_{12}</m>, then it was <em>necessary</em> for <m>E_{12}</m> to be a straight line -- that is, "if minimizing arc, then straight line." 
+    </p>
+    <p>
+      Then we showed that if <m>C_{12}</m> was any other admissible arc (which we can think of as some variation of <m>E_{12}</m>), then it was definitely longer than <m>E_{12}</m>, unless the variation was 0. That is, we showed "if straight line, then minimizing arc" -- if we want <m>E_{12}</m> to be a minimizing arc, then it is <em>sufficient</em> for <m>E_{12}</m> to be a straight line.
+    </p>
+    <p>
+      For a little reminder about all of this "necessary" and "sufficient" business, please reference the earlier discussion in <xref ref="remark-necessary-sufficient"/>.
+    </p>
+  </remark>
+
+  <p>
+    One should notice the rôle which the positive sign of the derivative <m>f_{y'y'}</m> has played in the determination of the minimum property. If the sign of this derivative had been negative the difference <m>I(C_{12})-I(E_{12})</m> would have been negative and <m>I(E_{12})</m> would have been a maximum instead of a minimum. This is an analogue of the criterion mentioned in <xref ref="sec-maxima-and-minima"/> for the simpler theory of maxima and minima of functions of a single variable. 
+  </p>
+</section>
+
+<section xml:id="sec-auxiliary-formulas">
+  <title>Two important auxiliary formulas</title>
+  <p>
+    The type of proof used in the preceding section to show that the straight line joining 1 with 2 is shorter than every other admissible arc joining those two points is a very special one, not applicable in general to problems of the calculus of variations whose integrals <m>I</m> have integrands containing one or both of the variables <m>x</m> and <m>y</m> as well as <m>y'</m>. It will be well worth while, therefore, to consider a second form of proof which will extend somewhat the results already found for the problem of finding the shortest distance between two points, and which will be applicable not only to the problems of shortest distances considered in this chapter but also to those which we shall study later.
+  </p>
+
+  <figure xml:id="fig-5">
+    <image xml:id="img-E34" source="images/fig-E34.png">
+    </image>
+  </figure>
+
+  <p>
+    We shall need first of all two special cases of more general formulas which are frequently applied in succeeding pages. Let <m>E_{34}</m> be a straight-line segment of variable length which moves so that its end-points describe simultaneously the two curves <m>C</m> and <m>D</m> shown in <xref ref="fig-5"/>, and let the equations of these curves in parametric form be
+    <md>
+      <mrow> (C) \quad x \amp=x_3(t), y=y_3(t), </mrow>
+      <mrow> (D) \quad x \amp=x_4(t), y=y_4(t). </mrow>
+    </md>
+    The length
+    <me> I=\sqrt{\left(x_{4}-x_{3}\right)^{2}+\left(y_{4}-y_{3}\right)^{2}} </me> 
+    of the segment <m>E_{34}</m> has the <url href="https://activecalculus.org/multi/S-10-4-Linearization.html">differential </url>
+    <me>dI=\frac{\left(x_{4}-x_{3}\right)\left(d x_{4}-d x_{3}\right)+\left(y_{4}-y_{3}\right)\left(d y_{4}-d y_{3}\right)}{\sqrt{\left(x_{4}-x_{3}\right)^{2}+\left(y_{4}-y_{3}\right)^{2}}}
+    </me>
+    When the notation
+    <me>
+      p=\frac{y_4-y_3}{x_4-x_3}
+    </me>
+    is used to denote the slope of the line <m>E_{34}</m> this result may be expressed in the more convenient formula of the following theorem:
+  </p>
+  
+  <theorem>
+    <statement>
+      <p>
+         If a straight-line segment <m>E_{34}</m> moves so that its end-points 3 and 4 describe simultaneously two curves <m>C</m> and <m>D</m>, as shown in <xref ref="fig-5"/>, then the length <m>I</m> of <m>E_{34}</m> has the differential
+         <men xml:id="eqn-dI">
+           dI\left(E_{34}\right)=\left.\frac{dx+p\,dy}{\sqrt{1+p^{2}}}\right|^4_{3}
+         </men>
+         where the vertical bar indicates that the value of the preceding expression at the point 3 is to be subtracted from its value at the point 4. In this formula the differentials <m>dx, dy</m> at the points 3 and 4 are those belonging to <m>C</m> and <m>D</m>, while <m>p</m> is the slope of the segment <m>E_{34}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We shall need frequently to integrate the expression in the second member of <xref ref="eqn-dI"/> along curves such as <m>C</m> and <m>D</m>. This is evidently justifiable along <m>C</m>, for example, since the slope 
+    <m>
+      p=(y_4-y_3)/(x_4-x_3)
+    </m> 
+    is a function of <m>t</m> and since the differentials <m>dx, dy</m> can be calculated in terms of <m>t</m> and <m>dt</m> from the equations of <m>C</m>, so that the expression takes the form of a function of <m>t</m> multiplied by <m>dt</m>. The integral <m>I^*</m> defined by the formula
+    <men xml:id="eqn-i-star">
+      I^* = \int \frac{dx+p\,dy}{\sqrt{1+p^{2}}}
+    </men>
+    will also be well defined along an arbitrary curve <m>C</m> when <m>p</m> is a function of <m>x</m> and <m>y</m>, provided that we agree to calculate the value of <m>I^*</m> by substituting for <m>x, y, dx, dy</m> the expressions for these variables in terms of <m>t</m> and <m>dt</m> obtained from the parametric equations of <m>C</m>.
+  </p>
+
+  <p>
+    Let <m>t_3</m> and <m>t_5</m> be two parameter values which define points 3 and 5 on <m>C</m>, and which at the same time define two corresponding points 4 and 6 on <m>D</m>, as in <xref ref="fig-5"/>. If we integrate the formula <xref ref="eqn-dI"/> with respect to <m>t</m> from <m>t_3</m> to <m>t_5</m> and use the notation <m>I^*</m> just introduced for the integral of its second member, we find as a further result:
+  </p>
+  
+  <theorem>
+    <statement>
+      <p>
+        The difference of the lengths <m>I(E_{34})</m> and <m>I(E_{56})</m> of the moving segment in two positions <m>E_{34}</m> and <m>E_{56}</m> is given by the formula 
+        <men xml:id="eqn-8">
+          I(E_{56}) - I(E_{34}) = I^*(D_{46}) - I^*(C_{35}).
+        </men>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    This and the formula <xref ref="eqn-dI"/> are the two important ones for which we have been seeking. It is evident that they will still hold in even simpler form when one of the curves <m>C</m> or <m>D</m> degenerates into a point, since along such a degenerate curve the differentials <m>dx</m> and <m>dy</m> are zero. 
+  </p>  
+  
+  <p>
+    The integrand of the integral <m>I^*</m> has a simple geometrical interpretation at the points of the curve <m>C</m> along which it is taken. At the point <m>(x, y) </m>of the curve <m>C</m> in <xref ref="fig-5"/>, for example, the angles between the <m>x</m>-axis and the tangents to <m>C</m> and <m>E</m> have, respectively, the cosines and sines
+    <me>
+      \frac{x^{\prime}}{\sqrt{(x')^2 + (y')^2}}, \frac{y^{\prime}}{\sqrt{(x')^2 + (y')^2}} ; \quad \frac{1}{\sqrt{1+p^{2}}}, \quad \frac{p}{\sqrt{1+p^{2}}}
+    </me>
+    Since the angle <m>\theta</m> between these tangents, and the element of length <m>ds</m> on <m>C</m>, are defined by the equations
+    <men xml:id="eqn-9">
+      \cos \theta=\frac{x^{\prime}+p y^{\prime}}{\sqrt{\left(1+p^{2}\right)\left((x')^2 + (y')^2\right)}}, \quad ds=\sqrt{(x')^2 + (y')^2}\, dt
+    </men>
+    it follows that the integral <m>I^*</m> can also be expressed in the convenient form
+    <men xml:id="eqn-10">
+      I^{*}=\int \frac{d x+p\,d y}{\sqrt{1+p^{2}}}=\int \cos \theta\, ds.
+    </men>
+    
+    
+  </p>
+</section>
+  
+<section xml:id="sec-field">
+  <title>The notion of a field and a second sufficiency proof</title>
+  <p>
+    We have seen in <xref ref="sec-shortest-arc"/> that necessary conditions on the shortest arc may be deduced by comparing it with other admissible arcs of special types, but that a particular line can be proved to be actually the shortest only by comparing it with all of the admissible arcs joining the same two end-points. The sufficiency proof of this section is valid not only for the arcs which we have named admissible but also for arcs with equations in the parametric form
+    <men xml:id="eqn-11">
+      x=(t),\quad y=y(t) \quad (t_3 \leq t \leq t_5).
+    </men>
+    We suppose always that the functions <m>x(t)</m> and <m>y(t)</m> are continuous, and that the interval <m>[t_3, t_5]</m> can be subdivided into one or more parts on each of which <m>x(t)</m> and <m>y(t)</m> have continuous derivatives such that <m>(x')^2+(y')^2 \neq 0</m>. The curve represented is then continuous and has a continuously turning tangent except possibly at a finite number of corners. A much larger variety of curves can be represented by such parametric equations than by an equation of the form <m>y=y(x)</m> because the parametric representation lays no restriction upon the slope of the curve or the number of points of the curve which may lie upon a single ordinate, while for an admissible arc <m>y=y(x)</m> the slope must always be finite and the number of points on each ordinate at most one.
+  </p>
+  <remark> <p>What's going on here is we're broadening our class of admissible arcs to include not just the graphs of <em>functions</em> of the form <m>y=y(x)</m>, which must in particular pass the vertical line test, but also parametrically-defined curves. (You might know these as "space curves" or "<url href="https://activecalculus.org/multi/S-9-6-Vector-Valued-Functions.html">vector-valued functions</url>.") We're still going to insist that they are piecewise smooth in the sense of <xref ref="activity-admissible"/> from earlier.</p>
+  <p>
+    The condition that <m>(x')^2+(y')^2 \neq 0</m> just says that the tangent vector is never zero. That is, if a point is traversing the curve according to the equations given, it never just <em>stops</em> along the way. This isn't much of a concession; given any graph you'd want to draw, you can always find a way to parameterize it so that the point never has to stop.
+  </p>
+  </remark>
+  <p>
+    The mathematician who first made satisfactory sufficiency proofs in the calculus of variations was <url href="https://en.wikipedia.org/wiki/Karl_Weierstrass">Weierstrass</url>, and the ingenious device which he used in his proofs is called a field. 
+    <aside>
+      This is definitely not the same kind of field we study in abstract algebra.
+    </aside>
+    For the problems which we are considering in this chapter a field <m>F</m> is a region of the <m>xy</m>-plane with which there is associated a one-parameter family of straight-line segments all of which intersect a fixed curve <m>D</m>, and which have the further property that through each point <m>(x, y)</m> of <m>F</m> there passes one and but one of the segments. The curve <m>D</m> may be either inside the field, or outside as illustrated in <xref ref="fig-5"/>, and as a special case it may degenerate into a single fixed point.
+  </p>
+  <activity>
+    <title>Explore this definition</title>
+    <p>
+      Whenever you encounter a new definition in a math textbook, it's a good idea to dig in and explore. Here are some questions that will be helpful in your exploration. Not every question applies to every situation, and there are certainly other questions you might consider asking.
+      <ol>
+        <li>
+          <p>
+            What are the important parts of this definition? 
+          </p>
+        </li>
+        <li>
+          <p>
+            Can you draw a picture or diagram to help you understand this definition?
+          </p>
+        </li>
+        <li>
+          <p>
+            What's an example of something that satisfies this definition? What's a non-example? (The next paragraph will be helpful, but try to think of other examples besides those given in the book.)
+          </p>
+        </li>
+        <li>
+          <p>
+            If you're lucky enough to be reading a definition where some examples are immediately given, explore these examples. Draw pictures of the examples, and understand why they are examples. (Same deal for non-examples, if any.)
+          </p>
+        </li>
+      </ol>
+    </p>
+  </activity>
+  <p>
+    The whole plane is a field when covered by a system of parallel lines, the curve <m>D</m> being in this case any straight line or curve which intersects all of the parallels. The plane with the exception of a single point 0 is a field when covered by the rays through 0, and 0 is a degenerate curve <m>D</m>. The tangents to a circle do not cover a field since through each point outside of the circle there pass two tangents, and through a point inside the circle there is none. If, however, we cut off half of each tangent at its contact point with the circle, leaving only a one-parameter family of half-rays all pointing in the same direction around the circle, then the exterior of the circle is a field simply covered by the family of half-rays.
+  </p>
+  <p>
+    At every point <m>(x, y)</m> of a field <m>F</m> the straight line of the field has a slope <m>p(x, y)</m>, the function so defined being called the slope-function of the field. The integral <m>I^*</m> (from equation <xref ref="eqn-i-star"/>) with this slope-function in place of <m>p</m> in its integrand has a definite value along every arc <m>C_{35}</m> in the field having equations of the form <xref ref="eqn-11"/>, as we have seen on page 25. We can prove with the help of the formulas of the last section that the integral <m>I^*</m> associated in this way with a field has the two following useful properties:
+    <theorem xml:id="thm-i-star-field">
+      <statement>
+        <p>
+          <ul>
+            <li>
+              <p>
+                The values of <m>I^*</m> are the same along all curves <m>C_{35}</m> in the field F having the same end-points 3 and 5.
+              </p>
+            </li>
+            <li>
+              <p>
+                Furthermore along each segment of one of the straight lines of the field the value of <m>I^*</m> is equal to the length of the segment.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </theorem>
+  </p>
+  <p>
+     To prove the first of these statements we may consider the curve <m>C_{35}</m> shown in the field of <m>F</m> of <xref ref="fig-5"/>. Through every point <m>(x, y)</m> of this curve there passes, by hypothesis, a straight line of the field <m>F</m> intersecting <m>D</m>, and the formula <xref ref="eqn-8"/>, applied to the one-parameter family of straight-line segments so determined by the points of <m>C_{35}</m>, gives
+     <me>
+       I^{*}\left(C_{35}\right)=I^{*}\left(D_{46}\right)-I\left(E_{56}\right)+I\left(E_{34}\right).
+     </me>
+     The values of the terms on the right are completely determined when the points 3 and 5 in the field are given, and are entirely independent of the form of the curve <m>C_{35}</m> joining these two points. This shows that the value <m>I^*(C_{35})</m> is the same for all arcs <m>C_{35}</m> in the field joining the same two end-points, as stated in the theorem.
+  </p>
+  <p>
+    The second property of the theorem follows from the fact that along a straight-line segment of the field the differentials <m>dx</m> and <m>dy</m> satisfy the equation <m>dy=p\,dx</m>, and the integrand of <m>I^*</m> reduces therefore to <m>\sqrt{1+p^2}\,dx</m> which is the integrand of the length integral.
+  </p>
+  <p>
+    We now have the mechanism necessary for the sufficiency proof which was the objective of this section. We wish to show that a straight-line segment <m>E_{12}</m> joining a pair of points 1 and 2 is shorter than every other arc joining these points. For that purpose let us consider the field formed by covering the whole <m>xy</m>-plane by the lines parallel to <m>E_{12}</m>. When <m>C_{12}</m> is an arc joining 1 with 2 in this field and defined by equations in the parametric form <xref ref="eqn-11"/> the properties just deduced for the integral <m>I*</m> give
+    <me>
+      I\left(E_{12}\right)=I^{*}\left(E_{12}\right)=I^{*}\left(C_{12}\right)=\int_{s_{1}}^{s_2} \cos \theta\, ds,
+    </me>
+  </p>
+  <activity>
+    Explain to yourself, from left to right, why each of these equalities holds.
+  </activity>
+  <p>
+    and the difference between the values of <m>I</m> along <m>C_{12}</m> and <m>E_{12}</m> is therefore
+    <me>
+      I\left(C_{12}\right)-I\left(E_{12}\right)=\int_{s_{1}}^{s_{2}}(1-\cos \theta) \, ds \geq 0.
+    </me>
+    The equality sign can hold only if <m>C_{12}</m> coincides with <m>E_{12}</m>. For when the integral in the last equation is zero we must have <m>\cos\theta = 1</m> at every point of <m>C_{12}</m>, from which it follows that <m>C_{12}</m> is tangent at every point to a straight line of the field and satisfies the equation <m>dy = p\, dx</m>. Such a differential equation can have but one solution through the initial point 1 and that solution is <m>E_{12}</m>. We have proved therefore that the length <m>I(C_{12})</m> of <m>C_{12}</m> is always greater than that of <m>E_{12}</m> unless <m>C_{12}</m> is coincident with <m>E_{12}</m>.
+  </p>
+  <p>
+    We may emphasize again here that the sufficiency proof just given is considerably more inclusive than that of <xref ref="sec-straight-line"/>, since it clearly shows that a straight line joining the points 1 and 2 is not only shorter than all other admissible arcs <m>y=y(x)</m> joining these points but also shorter than every other curve with the same end-points defined by equations in the parametric form <xref ref="eqn-11"/>.
+  </p>
+</section>
+
+<section xml:id="sec-shortest-curve">
+  <title>The shortest arc joining a point to a curve</title>
+  
+</section>
+
+<section xml:id="sec-shortest-ellipse">
+  <title>The shortest arc joining a point to an ellipse</title>
+
+</section>
+
+<section xml:id="sec-two-curves">
+  <title>The shortest arc joining two curves</title>
+  
+</section>
+</chapter>

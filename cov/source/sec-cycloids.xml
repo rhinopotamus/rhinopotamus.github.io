@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<section xml:id="sec-cycloids" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Cycloids</title>
+<p>
+  The fact that the equations <xref ref="eqn-3-15"/> represent a cycloid of the kind described in the theorem is easily proved. For let a circle of radius <m>b</m> begin to roll on the line <m>y=\alpha</m> at the point whose co-ordinates are <m>(a, \alpha)</m>, as shown in <xref ref="fig-3-13"/>. After a turn through an angle of <m>u</m> radians the point of tangency is at a distance <m>bu</m> from <m>(a, \alpha)</m>, and the point which was the lowest in the circle has rotated to the point <m>(x, y)</m>. The values of <m>x</m> and <m>y</m> may now be readily calculated in terms of <m>u</m> from the figure, and they are found to be those given by equations <xref ref="eqn-3-15"/>.
+
+  <figure xml:id="fig-3-13">
+    <image source="./images/fig-3-13.png">
+      <description>A cycloid centered at <m>(a, \alpha)</m>.</description>
+    </image>
+  </figure>
+</p>
+<p>
+  The fact that the curve of quickest descent must be a cycloid is the famous result discovered by James and John Bernoulli in 1697 and announced at approximately the same time by a number of other mathematicians. The cycloid and its remarkable properties had been the subject of much study in the seventeenth century. Huygens (1629-95) in particular had shown that the evolute of a cycloid <m>CC'</m> shown in <xref ref="fig-3-14"/> is a second cycloid of exactly the same size situated in the position which is dotted in the figure, and further that the time of descent of a particle starting at rest at the point <m>C</m> and falling along the cycloid to the lowest point <m>B</m> is the same no matter what the position of the starting-point <m>C</m> on the cycloid arc may be. We know from the string property of an evolute, proved on page 32 of the last chapter, that if a pendulum of length <m>4b</m> is so suspended at <m>A</m> that the string is compelled to wrap itself around the dotted evolute, then the pendulum bob will oscillate on an arc <m>CC'</m> of the cycloid. From the isochronous property of Huygens it follows that the period of oscillation will be the same no matter how great or how small the amplitude of the oscillation from <m>C</m> to <m>C'</m> may be. This has been considered a very important discovery for the clockmaker, though one rarely finds apparatus on his mantel which is built upon this principle.
+
+  <figure xml:id="fig-3-14">
+    <image source="./images/fig-3-14.png">
+      <description>A cycloid and its evolute.</description>
+    </image>
+  </figure>
+</p>
+
+<p>
+  These and other properties of the cycloid were well known before the end of the seventeenth century. That the cycloid should also be the solution of the brachistochrone problem was regarded with wonder and admiration by the Bernoulli brothers. Somewhat freely translated the comment of John was "With justice we admire Huygens because he first discovered that a heavy particle falls on a cycloid in the same time always, no matter what the starting-point may be. But you will be petrified with astonishment when I say that exactly this same cycloid, the tautochrone of Huygens, is the brachistochrone which we are seeking." And with rhetorically sustained enthusiasm James remarks "Thus for this curve, which has been investigated by so many mathematicians that apparently nothing further concerning it could remain to be discovered, we find a new property, as it were an indication of its desire that no obligation might be incurred to future centuries but that it might attain the pinnacle of perfection at the end of the present one at whose beginning its birth was celebrated and among whose researches there have fallen to its lot the discovery of all of its mensurable properties and many other beautiful characteristics." 
+</p>
+<p>
+  At the present time our mathematics is usually less emotionally expressed, but in thought at least we can share the pleasure of the brothers in their interesting discovery. It is clear when we think intuitively about the brachistochrone, that the straight line could hardly have been expected to be the curve of quickest descent because it is evident that a particle should fall more rapidly on a curve which begins more steeply and imparts a higher velocity at the beginning of the fall. But just what degree of initial steepness is desirable in order to avoid too gradual a slope near the end of the fall could hardly have been foreseen.
+
+  Hi!
+</p>
+</section>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<chapter xml:id="typical" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<title>Typical Problems of the Calculus of Variations</title>
+
+  <section xml:id="sec-invention-of-calculus">
+    <title>The invention of the calculus</title>
+
+      <p>When the student of mathematics pauses to look back upon the achievements of mathematicians of the past he must be impressed with the fact that the seventeenth century was a most impor tant epoch in the development of modern mathematical analysis, since to the mathematicians of that period we owe the invention of the differential and integral calculus. At first the calculus theory, if indeed at that time it could be called such, consisted of isolated and some what crude methods of solving special problems. In the domain of what we now call the integral calculus, for example, an Italian mathematician named Cavalieri (1598-1647) devised early in the seventeenth century a summation process, called the method of indivisibles, by means of which he was able to calculate correctly many areas and volumes. His justification of his device was so incomplete logically, however, that even in those relatively uncritical times his contemporaries were doubtful and dissatisfied. Somewhat later two French mathematicians, Roberval (1602-75) and Pascal (1623-62), and the Englishman Wallis (1616-1703), improved the method and made it more like the summation processes of the integral calculus of today. In the case of the differential calculus we find that before the final quarter of the seventeenth century Descartes (1596-1650), Roberval, and Fermat (1601-65) in France, and Barrow (1630-77) in England, all had methods of constructing tangents to curves which were pointing the way toward the solution of the fundamental problem of the differential calculus as we formulate it today, namely, that of determining the slope of the tangent at a point of a curve. </p>
+
+      <p>At this important stage there appeared upon the scene two men of extraordinary mathematical insight, Newton (1642-1727) in England, and Leibniz (1646-1716) in Germany, who from two somewhat different standpoints carried forward the theory and applications of the calculus with great strides. It is a mistake, though we often find it an easy convenience, to regard these two great thinkers as having invented the calculus out of a clear sky. Newton was in fact a close student of the work of Wallis, and a pupil of Barrow whom he succeeded as professor of mathematics at Cambridge, while we know that Leibniz visited Paris and London early in his career and that he there became acquainted with the most advanced mathematics of his day. No one could successfully contest the fact, however, that these two men were the most able spokesmen and investigators of the seventeenth-century school of mathematicians to which we owe the gradual evolution of the calculus. </p>
+
+      <p>In spite of the great abilities of Newton and Leibniz the underlying principles of the calculus as exposed by them seem to us from our modern viewpoint, as indeed to their contemporaries and immediate successors, some what vague and confusing. The difficulty lies in the lack of clearness at that early time, and for more than a century thereafter, in the conceptions of infinitesimals and limits upon which the calculus rests, a difficulty which has been overcome only by the systematic study of the theory of limits inaugurated by Cauchy (1789-1857) and continued by Weierstrass (1815-97), Riemann (1826-66), and many others. </p>
+
+  </section>
+
+  <section xml:id="sec-maxima-and-minima">
+    <title>Maxima and minima</title>
+
+    <p>Among the earliest problems which attracted the attention of students of the calculus were those which require the determination of a maximum or a minimum. Fermat had devised as early as 1629 a procedure applicable to such problems, depending upon principles which in essence, though not in notation, were those of the modern differential calculus. Somewhat nearer to the type of reasoning now in common use are the methods which Newton and Leibniz applied to the determination of maxima and minima, methods which are also characteristic of their two conceptions of the fundamental principles of the differential calculus. Newton argued, in a paper written in 1671 but first published in 1736, that a variable is increasing when its rate of change is positive, and decreasing when its rate is negative, so that at a maximum or a minimum the rate must be zero. Leibniz, on the other hand, in a paper which he published in 1684, conceived the problem geometrically. At a maximum or a minimum point of a curve the tangent must be horizontal and the slope of the tangent zero.</p>
+
+    <p>At the present time we know well that from a purely analytical standpoint these two methods are identical. The derivative <men xml:id="eq-diffq">f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}</men> of a function <m>f(x)</m> represents both the rate of change of <m>f(x)</m> with respect to <m>x</m> and the slope of the tangent at a point on the graph of <m>f(x)</m>.
+    For in the first place the fraction in the second member of <xref ref="eq-diffq" /> is the average rate of change of <m>f(x)</m> with respect to <m>x</m> on the interval from <m>x</m> to <m>x + \Delta x</m>, and its limit as the interval is shortened is therefore rightly called the rate of change of <m>f(x)</m> at the initial value <m>x</m> of the interval.
+    In the second place this same quotient is the slope of the secant <m>PQ</m> in <xref ref="fig-1-1" />, and its limit is the slope of the tangent at <m>P</m>. Thus by the reasoning of either Newton or Leibnitz we know that the maxima and minima of <m>f(x)</m> occur at the values of <m>x</m> where the derivative <m>f'(x)</m> is zero.
+    </p>
+
+    <figure xml:id="fig-1-1">
+      <image source="images/fig-1-1.png" />
+    </figure>
+
+    <p>It was not easy for the seventeenth-century mathematician to deduce this simple criterion that the derivative <m>f'(x)</m> must vanish at a maximum or a minimum of <m>f(x)</m>. He was immersed in the study of special problems rather than general theories, and had no well-established limiting processes or calculus notations to assist him. It was still more difficult for him to advance one step farther to the realization of the significance of the second derivative <m>f''(x)</m> in distinguishing between maximum and minimum values. Leibniz in his paper of 1684 was the first to give the criterion. In present-day parlance we say that <m>f'(a) = 0, \, f''(a) \geq 0</m> are necessary conditions for the value <m>f(a)</m> to be a minimum, while the conditions <m>f'(a) = 0, \, f''(a) \gt 0</m> are sufficient to insure a minimum. For a maximum the inequality signs must be changed in sense.</p>
+
+    <remark xml:id="remark-necessary-sufficient">
+      <p>
+        The words "necessary" and "sufficient" are used a lot in mathematics, though they are perhaps a little old-fashioned. The statement "<m>P</m> is sufficient for <m>Q</m>" means "if <m>P</m> then <m>Q</m>", or <m>P \to Q</m>. The statement "<m>P</m> is necessary for <m>Q</m>" means "if <m>Q</m> then <m>P</m>", or <m>Q\to P</m>. If <m>P</m> is both necessary and sufficient for <m>Q</m>, then you're living in if-and-only-if land: that is, <m>P</m> and <m>Q</m> are logically equivalent, or <m>P\leftrightarrow Q</m>.
+      </p>
+      <p>
+        Here's an example that will help you think about this: Let's consider the relationship between squares and rectangles. 
+        <ul>
+          <li>
+            <p>
+              If we knew a shape was a square, we would definitely know it was a rectangle -- that is, "the shape is a square" is enough information to let you conclude that "the shape is a rectangle". So, "square" is <em>sufficient</em> for "rectangle". 
+            </p>
+          </li>
+          <li>
+            <p>
+              If we knew the shape was a rectangle, we couldn't a priori be sure that it was a square, because there are rectangles that aren't squares. So, "rectangle" is <em>not</em> sufficient for "square".
+            </p>
+          </li>
+          <li>
+            <p>
+              However, if the shape <em>wasn't</em> a rectangle, then it definitely wouldn't be a square. Therefore, "rectangle" is <em>necessary</em> for "square".
+            </p>
+          </li>
+          <li>
+            <p>
+              But the opposite isn't true. If the shape wasn't a square, it might still be a rectangle. (It might also be a triangle or a hexagon or whatever, of course.) So "square" is <em>not</em> necessary for "rectangle".
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Don't be worried if you have to think hard about this every time you see these words. I do too; I had to think really carefully while writing this whole remark. :)
+      </p>
+    </remark>
+
+    <activity xml:id="activity-necessary-sufficient">
+      <p>
+        As the book is about to say, for the problem of determining a minimum of a function, "it will be noted that the conditions just stated as necessary for a minimum are not identical with those which are sufficient."
+        <ol>
+          <li>
+            <p>
+              What's the difference between the necessary condition and the sufficient condition? I claim that one condition is "stronger" in some sense; which is it?
+            </p>
+          </li>
+          <li>
+            <p>
+              If the conditions <m>f'(a) = 0, \, f''(a) \geq 0</m> are, as claimed, necessary but not sufficient for <m>f(a)</m> to be a minimum, then there must be some function where those conditions hold but you don't have a minimum. Give me an example of such a function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Write a sentence or two explaining why the necessary condition isn't sufficient, and how we have to "strengthen" it a little to get a sufficient condition.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </activity>
+
+    <p>It will be noted that the conditions just stated as necessary for a minimum are not identical with those which are sufficient. We shall see in Chapter V that a similar undesirable and much more baffling discrepancy occurs in the calculus of variations. For the simple problem of minimizing a function <m>f(x)</m> the doubtful intermediate case when <m>f'(a)</m> and <m>f''(a)</m> are both zero was discussed by Maclaurin (1698-1746) who showed how higher derivatives may be used to obtain criteria which are both necessary and sufficient. For the calculus of variations the corresponding problem offers great difficulty and has never been completely solved.</p>
+
+
+  </section>
+
+  <section xml:id="sec-two-problems">
+    <title>Two problems of the calculus of variations which may be simply formulated</title>
+
+    <p>When one realizes the difficulty with which the late seventeenth-century school of mathematicians established the first fundamental principles of the calculus and their applications to such elementary problems in maxima and minima as the one which has just been described, it is remarkable that they should have conceived or attempted to solve with their relatively crude analytical machinery the far more difficult maximum and minimum problems of the calculus of variations which were at first proposed. It is an interesting fact that these early problems were not by any means the least complicated ones of the calculus of variations, and we shall do well therefore to introduce ourselves to the subject by looking first at two others which are easier to describe to one who has not already amused himself by browsing in this domain of mathematics.</p>
+
+    <p>The simplest of all the problems of the calculus of variations is doubtless that of determining the shortest arc joining two given points. The co-ordinates of these points will always be denoted by <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m> and we may designate the points themselves when convenient simply by the numerals 1 and 2. If the equation of an arc is taken in the form
+    <me>y=y(x) \quad (x_1\leq x \leq x_2)</me>
+    then the conditions that it shall pass through the two given points are
+    <men xml:id="eq-cond">y(x_1)=y_1, \quad y(x_2) = y_2,</men>
+    and we know from the calculus that the length of the arc is given by the integral
+    <me>I=\int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx, </me>
+    where in the evaluation of the integral <m>y'</m> is to be replaced by the derivative <m>y'(x)</m> of the function <m>y(x)</m> defining the arc. There is an infinity of curves <m>y = y(x)</m> joining the points 1 and 2. The problem of finding the shortest one is equivalent analytically to that of finding in the class of functions <m>y(x)</m> satisfying the conditions <xref ref="eq-cond" /> one which makes the integral <m>I</m> a minimum.
+    </p>
+
+    <remark xml:id="remark-functional">
+      <p>
+        The value of the integral given above clearly depends on what function <m>y(x)</m> you choose, but will give you a unique output for any function you input. It's thus an example of a <term>functional</term> -- that is, a function whose inputs are functions and whose outputs are numbers. Using the notation introduced in <xref ref="activity-admissible"/>, we might write that a functional is a function from a class of functions to the real numbers:
+        <me>
+          I:C^1\to\mathbb{R}.
+        </me>
+        Many authors insist on writing functionals with brackets instead of parentheses around their arguments, so you might commonly see someone write something like
+        <me>
+          I[y] = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx.
+        </me>
+         Broadly speaking, the calculus of variations is all about finding the maxima and/or minima of functionals.
+      </p>
+    </remark>
+
+    <activity xml:id="activity-arclength"> 
+      <p>
+        Where on earth did that integral come from? Let's figure it out, because it's a good example of the <term>slice-approximate-integrate paradigm</term> that guides a lot of the integrals we'll be writing down in this course, and this integral in particular is one that will come up a lot for us.
+        <ol>
+          <li>
+            <p>
+              Draw yourself a reasonably wiggly function <m>y=y(x)</m> whose length you'd like to calculate. Label the beginning point <m>(x_1, y(x_1))</m>, and label the ending point <m>(x_2, y(x_2))</m>. Draw a few other points on the function at regularly-spaced intervals. 
+            </p>
+          </li>
+          <li>
+            <p>
+              It's easy to calculate the length of a straight line, so let's <em>slice</em> the wiggly function into a bunch of pieces and <em>approximate</em> each piece by a straight line. Connect the points you drew in step 1 with straight line segments, and convince yourself that the line segments are a reasonably good wrong answer to the length of the corresponding wiggly piece.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw a zoomed-in picture of just one line segment. Pretend that this is the hypotenuse of a right triangle with horizontal and vertical legs. Label each leg as either <m>\Delta x</m> or <m>\Delta y</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the Pythagorean theorem to calculate the length of the line segment, which we'll call <m>L_{\textrm{slice}}.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              So that our expression can be the summand in a Riemann sum, we'd really like it to be of the form (stuff)<m>\cdot\Delta x</m>. It's not in that form yet, so to get closer, multiply <m>L_{\textrm{slice}}</m> by <m>\frac{\Delta x}{\Delta x}</m>. This is legit because it doesn't change the value of <m>L_{\textrm{slice}}.</m> Explain why not.
+            </p>
+            <solution>
+              <p>
+                <m>\frac{\Delta x}{\Delta x}</m> is just a <m>1</m> with a cheap disguise on, and multiplying by <m>1</m> doesn't change anything at all. Multiplying by a fancy <m>1</m> (as well as adding a fancy <m>0</m>) is a favorite trick of mathematicians.
+                <image xml:id="img-1-groucho" source="images/disguised-1.png">
+                  <description>A 1 with a cheap disguise on.</description>
+                </image> 
+              </p>
+            </solution>
+          </li>
+
+          <li>
+            <p>
+              Factor the <m>\Delta x</m> in the denominator into the square root, distribute, and simplify. What happens as <m>n\to\infty</m>, or, in other words, as <m>\Delta x \to 0?</m>
+            </p>
+            <solution>
+            <p>
+              <me>
+                L_{\textrm{slice}} = \sqrt{1+\left(\frac{\Delta y}{\Delta x}\right)^2} \Delta x.
+              </me>
+              In the limit, <m>\frac{\Delta y}{\Delta x}</m> becomes <m>y'(x)</m>, so this is equivalent to <m>\sqrt{1+\left(y'(x)\right)^2} \Delta x</m>.
+            </p>
+            </solution>
+          </li>
+
+          <li>
+            <p>
+              We've sliced, we've approximated, and now it's time to <em>integrate</em>. We've written down an expression for the length of one slice. Take the Riemann sum of all these slices and let <m>n\to\infty</m> to obtain an expression for the actual arc length of the wiggly function. <em>Be sure to involve <m>x_1</m> and <m>x_2</m>!</em>
+            </p>
+            <solution>
+              <me>
+                I = \int_{x_1}^{x_2} \sqrt{1+\left(y'(x)\right)^2}\,dx.
+              </me>
+            </solution>
+          </li>
+        </ol>
+      </p>
+      
+    </activity>
+
+    <p>In the more elementary minimum problem of <xref ref="sec-maxima-and-minima"/> a function <m>f(x)</m> is given and a value <m>x = a</m> is sought for which the corresponding value <m>f(a)</m> is a minimum. In the shortest-distance problem the integral <m>I</m> takes the place of <m>f(x)</m>, and instead of a value <m>x = a</m> making <m>f(a)</m> a minimum we seek to find an arc <m>E_{12}</m> joining the points 1 and 2 which shall minimize <m>I</m>. The analogy between the two problems is more perspicuous if we think of the length <m>I</m> as a function <m>I(E_{12})</m> whose value is uniquely determined when the arc <m>E_{12}</m> is given, just as <m>f(x)</m> in the former case was a function of the variable <m>x</m>.</p>
+
+    <p>There is a second problem of the calculus of variations, of a geometrical-mechanical type, which the principles of the calculus readily enable us to express also in analytic form. When a wire circle is dipped in a soap solution and withdrawn, a circular disk of soap film bounded by the circle is formed. If a second smaller circle is made to touch this disk and then moved away the two circles will be joined by a surface of film which is a surface of revolution in the particular case when the circles are parallel and have their centers on the same axis perpendicular to their planes. The form of this surface is shown in Figure 2. It is provable by the principles of mechanics, as one may readily surmise intuitively from the elastic properties of a soap film, that the surface of revolution so formed must be one of minimum area, and the problem of determining the shape of the film is equivalent therefore to that of determining such a minimum surface of revolution passing through two circles whose relative positions are supposed to be given as indicated in the figure.</p>
+
+    <figure xml:id="fig-1-2">
+      <image source="images/fig-1-2.png" />
+    </figure>
+
+    <p>In order to phrase this problem analytically let the common axis of the two circles be taken as the <m>x</m>-axis, and let the points where the circles intersect an <m>xy</m>-plane through that axis be 1 and 2. If the meridian curve of the surface in the <m>xy</m>-plane has an equation <m>y=y(x)</m> then the calculus formula for the area of the surface is <m>2\pi</m> times the value of the integral 
+    <aside>
+      Kudos to Jordan Contreras for spotting a typo in this equation; the <m>y</m> outside the radical was missing.
+    </aside>
+    <me>
+      I=\int_{x_1}^{x_2} y \sqrt{1+(y')^2}\,dx. 
+    </me>
+    The problem of determining the form of the soap film surface between the two circles is analytically that of finding in the class of arcs <m>y=y(x)</m> whose ends are at the points 1 and 2 one which minimizes the last-written integral <m>I</m>. 
+    </p>
+    <activity xml:id="activity-soap-film">
+      <p>
+        Explain why the integral above is correct. I suggest a similar slice-approximate-integrate approach as we took in <xref ref="activity-arclength"/>.
+      </p>
+    </activity>
+
+  </section>
+
+  <section xml:id="sec-problem-newton">
+    <title>The problem of Newton</title>
+
+    <p>It was remarked above that the earliest problems of the calculus of variations were not by any means the simplest. In his Principia (1686) Newton states without proof certain conditions which must be satisfied by a surface of revolution which is so formed that it will encounter a minimum resistance when moved in the direction of its axis through a resisting medium. A particular case of the problem of finding such a surface is the well-known one of determining the form of a projectile which for a specified initial velocity will give the longest range. In practical ballistics it turns out that one of the most difficult parts of the investigation of this question lies in the experimental determination of the retardation law for bodies moving in the air at high rates of speed. Newton assumed a relatively simple law of resistance for bodies moving in a resisting medium which does not agree well with our experience with bodies moving in the air, but on the basis of which he was able to find a condition characterizing the meridian curves of the surfaces of revolution which encounter minimum resistance. From a letter written by Newton to Professor David Gregory, probably in 1694, Bolza has reconstructed in most interesting fashion the arguments which Newton used in attaining his results.</p>
+
+    <p>It is sufficient for the purposes of this introductory chapter to say that when the surface is generated by rotating about the <m>x</m>-axis an arc with an equation of the form <m>y = y(x)</m> the resistance experienced by the surface when moved in the direction of the <m>x</m>-axis will, except for a constant factor, be</p>
+    <me>
+      I=\int_{x_{1}}^{x_{2}} \frac{y (y')^3}{1+(y')^2}\,dx.
+    </me>
+    
+    <p>Newton's problem in analytical form is then that of determining among all the arcs <m>y = y(x)</m> joining two given points 1 and 2 one which makes this integral a minimum. We could equally well of course ask to determine the curve so that the resistance should be a maximum. If the law of resistance of Newton is replaced by another the methods which we now know of attacking the problem will still be applicable, though the results may be different, as a number of writers have shown.</p>
+  </section>
+
+  <section xml:id="sec-brachistochrone">
+    <title>The brachistochrone problem</title>
+    <p>Newton's problem, published in the Principia in 1686, lay apparently unnoticed for more than a decade before a new interest aroused by a second and more famous problem of the calculus of variations caused it to be studied again. It is not surprising that this happened because Newton's description of his results is very informal and concise. He gave no hint of a larger class of similar questions, and no suggestion of a method of solution which might have been applicable to such a class. To discover the beginnings of active research in the calculus of variations we must turn therefore to other writers. In the period which followed the discovery and publication of the calculus methods of Newton and Leibnitz two of the most prominent and successful researchers in the new analysis were the Swiss mathematicians James Bernoulli (1654-1705), professor of mathematics at the University of Basle, and his brother John (1667-1748). The younger brother was a student of the elder, and among those students he was in later years by far the most distinguished on account of his varied and successful researches. He studied with James until the year 1690 when he forsook Basle for travel and the study of mathematics in France. Shortly after his return he accepted in 1695 a professorship at the University of Groningen, and in 1705, upon the death of James Bernoulli, he returned to Basle to spend the remainder of his life as professor of mathematics in his native city. In the years just preceding 1695 a rivalry sprang up between the two brothers the reason for which is not well understood. It was at times amusingly undignified, and from the scientific standpoint unjustifiable, since both brothers were with somewhat different temperaments remarkably able and worthy of respect. Whatever may have been the cause of their dissension it is at any rate true that the friction between them gave an unusual impetus and zest to the beginnings of the calculus of variations. In June, 1696, John Bernoulli proposed his now famous brachistochrone problem, and publicly incited the mathematicians of the world to give it their consideration, according to a custom which was common at the time. We know that the problem aroused great interest and that Newton, Leibniz, and l'Hospital (1661-1704), besides the brothers Bernoulli, found the correct solution.</p>
+
+    <figure xml:id="fig-brachistochrone">
+      <image source="images/fig-brachistochrone.png" />        
+
+    </figure>
+
+    <p>The problem of the brachistochrone (<foreign xml:lang="el">βραχιστος</foreign> (brachistos) = shortest, <foreign xml:lang="el">χρονος </foreign> (chronos) = time) is that of determining a path down which a particle will fall from one given point to another in the shortest time. Let the <m>y</m>-axis for convenience be taken vertically downward, as in <xref ref="fig-brachistochrone"/>, the two fixed points being 1 and 2. The initial velocity <m>v_1</m> at the point 1 is supposed to be given. In Chapter III we shall see that for a curve defined by an equation of the form <m>y=y(x)</m> the time of descent from 1 to 2 is <m>\frac{1}{\sqrt{2g}}</m> times the value of the integral 
+    <me>
+      I=\int_{x_{1}}^{x_{2}} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\, ,
+    </me>
+     where <m>g</m> is the gravitational constant and <m>\alpha</m> has the constant value <m>\alpha = y_1-\frac{v_1^2}{2g}</m>. The problem of the brachistochrone is then to find among the curves <m>y=y(x)</m> which pass through two points 1 and 2 one which minimizes the integral <m>I</m>. </p>
+
+     <p>The only discussions of the problem which were published in full in response to John Bernoulli's invitation were those of the Bernoulli brothers themselves, in May, 1697, and they are in many respects characteristic of their authors. John's paper is to this day most elegant and satisfactory reading. He saw that the curve of quickest descent is identical with the path of a ray of light in a medium with a suitably selected variable index of refraction, and a known property of such paths enabled him to attain very quickly and easily a solution. His method can be applied, however, to only a restricted class of similar questions. The solution of James was more laborious, and to us much less attractive, since it was couched in the language of the relatively clumsy geometrical analysis which preceded the invention of the calculus and which was commonly used for some time thereafter. But his method was a more general one than that of his younger brother and was the first step in a long series of researches which has led to the theory of the calculus of variations as we know it today.</p>
+
+     <p>At the close of his paper James invited mathematicians in general to consider a much more difficult problem of the calculus of variations which he had devised, and he offered to John in particular a money prize of fifty ducats for a satisfactory solution. As it turned out, however, the ducats were saved, for although John claimed to have done so he did not as a matter of fact succeed in his attacks upon the problem, and after a rather bitter discussion which dragged on for a number of years James finally published his own solution in 1701. The two papers of 1697 and 1701 of James Bernoulli were the starting-point for the researches of Euler (1707-83), a native of Basle and pupil of John Bernoulli, one of the greatest of the world's mathematicians. It is to Euler that we owe the first important result in the modern theory of the calculus of variations, as we shall see in later chapters.</p>
+
+     <p>It is fair to say that the theory of the calculus of variations had its beginning in the interesting brachistochrone problem of John Bernoulli. One should not infer from this remark that no problems of the calculus of variations were known earlier, for we have seen already that Newton had proposed such a problem and described a characteristic property of its solution. Furthermore the brachistochrone problem itself was more or less definitely in the mind of Galileo (1564-1642) in 1630 and 1638 when he compared the time of fall of a particle along an arc of a vertical circle with those along polygons inscribed in the arc. He seems to conclude that the time of descent on a circular arc is shorter than the times on all other paths joining its endpoints, but his proof does not justify this result. Nowadays we know that the solution curve is neither a circle nor a straight line but a cycloid, as will be proved in Chapter III. A still older problem of the calculus of variations is the isoperimetric problem of the ancient Greeks described in <xref ref="sec-other-problems"/> below. None of these, however, could rightly be regarded as the starting-point of the theory of the calculus of variations, for in the early references to them there were no indications of other problems of similar type, or of methods of solution possessing generality of application.</p>
+  </section>
+
+  <section xml:id="sec-more-general">
+    <title>A more general problem</title>
+
+    <p> With the exception of the integral in Newton's problem those which have been mentioned in the preceding sections all have the form
+    <men xml:id="eqn-gen-form1">
+      I=\int_{x_{1}}^{x_{2}} n(x, y) \sqrt{1+(y')^2}\, dx\, ,
+    </men>
+    and we might propose to ourselves to find among the curves <m>y=y(x)</m> joining two given points one which minimizes this integral <m>I</m>. This problem also has a physical interpretation. For suppose that in a plane transparent medium the velocity of light varies from point to point, and that at an arbitrary point <m>(x, y)</m> it has the value <m>v(x, y)</m>. The index of refraction at that point has by definition the value <m>n(x, y) = \frac{c}{v(x,y)}</m>, where <m>c</m> is a constant, and the time <m>dt</m> taken by a disturbance to travel along an arc of length <m>ds</m> through the point <m>(x, y)</m> with the velocity <m>v(x, y)</m> is approximately
+    <me>
+      dt=\frac{ds}{v(x, y)}=\frac{1}{c} n(x, y) \sqrt{1+(y')^2}\,dx\, .
+    </me>
+    We see readily by an integration that the integral <m>I</m> is proportional to the time taken by a disturbance to traverse the arc <m>y=y(x)</m> joining the two given points 1 and 2. Now it has been verified physically that the path of a ray of light in a medium in which the velocity of light varies from point to point is always one on which the time-integral <m>I</m> is, for short arcs at least, a minimum, so that our problem of minimizing <m>I</m> is that of determining the paths of rays of light in a plane medium whose variable index of refraction is <m>n(x, y)</m>.
+    </p>
+
+    <p>John Bernoulli noted that the time of descent of a particle down a curve <m>y=y(x)</m>, and the time of passage of a ray along the same curve in a medium with the index of refraction <m>n(x,y)=\frac{c}{\sqrt{y-a}}</m>, are, except for a constant factor, given by the same integral <xref ref="eqn-gen-form1"/> with this index substituted. He knew furthermore that when a ray of light passes from one medium to another the sines of the angles of incidence and refraction at the bounding surface are proportional to the indices of refraction in the two media, and by thinking of his medium as made up of very thin horizontal layers with different indices he was able to deduce the form of the curve of quickest descent.</p>
+
+    <p>The integral <xref ref="eqn-gen-form1"/> still does not include that of Newton's problem as a special case, though it is general enough to so include most of the classical special problems of the calculus of variations in the plane. It will be quite as easy for us, however, to consider an integral of the form 
+    <men xml:id="eqn-gen-form">
+      I=\int_{x_{1}}^{x_{2}} f\left(x, y, y^{\prime}\right)\,dx\, ,
+    </men>
+    
+    having an integrand which is an arbitrary function of the three variables <m>x, y, y'</m>, as we shall do in Chapter V. Among all the arcs <m>y=y(x)</m> joining two given points 1 and 2 we shall seek one which minimizes the integral <xref ref="eqn-gen-form"/>, This is a problem of sufficient generality to include all of those hitherto stated as special cases.</p>
+  </section>
+
+  <section xml:id="sec-other-problems">
+    <title>Other problems of the calculus of variations</title>
+
+    <p>It would be a mistake to infer that the category of questions to which the calculus of variations is devoted is exhausted even by the quite general problem proposed in the last section. We can vary the problem there described by seeking a minimizing curve among those joining a fixed point and a fixed curve or two fixed curves, instead of two fixed points, or in many other ways. </p>
+  
+    <p>The famous old isoperimetric problem of the ancients was that of finding a simply closed curve of given length which incloses the largest area. The solution is a circle, though it is not any too easy to prove that this is so. Analytically the problem may be formulated as that of finding an arc with equations in the parametric form
+    <me>
+      x=x(t),\quad y=y(t)\quad (t_1\leq t\leq t_2)
+    </me>
+    satisfying the conditions
+    <me>
+      x(t_1)=x(t_2),\quad y(t_1)=y(t_2)
+    </me>
+    but not otherwise intersecting itself, giving the length integral
+    <me>
+      \int_{t_1}^{t_2} \sqrt{(x')^2+(y')^2}\, dt
+    </me>
+    a fixed value <m>l</m>, and maximizing the area integral
+    <aside>
+      The fact that this integral gives the area is a consequence of Green's theorem.
+    </aside>
+    <me>
+      \frac{1}{2}\int_{t_1}^{t_2} (xy' - x'y)\, dt.
+    </me>
+    
+    The problems of the calculus of variations for which one or more integrals are to be given fixed values, while another is to be made a minimum or maximum, are called, after this one, isoperimetric problems. The problem proposed by James Bernoulli in 1697 was the earliest isoperimetric problem after that of the ancient Greeks.
+    </p>
+
+    <p>It will not be possible for us in the limited space of the following pages to examine in detail more than the simpler non-isoperimetric problems, though there are many other types besides those which have already been mentioned.</p>
+
+    <p>The theory of the calculus of variations has been extensively developed but not so widely applied to special cases, very few of the particular problems having been exhaustively investigated. In the following Chapters II-IV three of the special problems mentioned in the preceding pages which have been studied in detail will be discussed, and in Chapter V some of the results for the more general problem formulated in Section 6 are collected, with a brief historical sketch of the progress of the theory from the time of the Bernoullis to the present.</p>
+  </section>
+
+  
+</chapter>

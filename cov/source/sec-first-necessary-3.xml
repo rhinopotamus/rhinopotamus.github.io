@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<section xml:id="sec-first-necessary-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>A first necessary condition</title>
+<p>
+    As in our study of the problems of determining shortest distances let us suppose that a particular admissible arc <m>E_{12}</m> with the equation
+    <me>
+    y=y(x)\quad (x_1 \leq x \leq x_2)
+    </me>
+    actually furnishes a minimum for the integral <m>I</m>, and let us then seek to determine its properties. If <m>\eta(x)</m> is an admissible function having <m>\eta(x_1) = \eta(x_2) =0</m> then the family of arcs 
+    <men xml:id="eqn-3-6">
+    y=y(x)+a\eta(x)\quad (x_1 \leq x \leq x_2)
+    </men> 
+    contains <m>E_{12}</m> for the parameter value <m>a=0</m>, and for small values of <m>a</m> consists entirely of admissible arcs passing through the points 1 and 2. We must not let <m>a</m> be too large, as otherwise the corresponding curve of the family might lie partly above the line <m>y = \alpha</m>.
+</p>
+<p>
+    Among the values
+    <men xml:id="eqn-3-7">
+    I(a)=\int_{x_{1}}^{x_{2}} f\left(y+a\eta, y^{\prime}+a \eta^{\prime}\right)\, d x
+    </men>
+    of the integral <m>I</m> along the arcs of the family <xref ref="eqn-3-6"/> the particular value <m>I(0)</m>, which is the value along <m>E_{12}</m>, must be a minimum, and we have therefore the necessary condition <m>I'(0)=0</m>. 
+</p>
+<activity xml:id="activity-y-yprime">
+    <p>
+    This is about to be a lot like what we did in <xref ref="sec-first-necessary"/>. 
+    <ol>
+        <li>
+        <p>
+            How is equation <xref ref="eqn-3-7"/> similar to equation <xref ref="eqn-iofa"/>? How is it different?
+        </p>
+        </li>
+        <li>
+        <p>
+            We'll need to use the Leibniz rule like we did in <xref ref="act-diff-under-int"/>, but this time, we need to use the <url href="https://activecalculus.org/multi/S-10-5-Chain-Rule.html">multivariable chain rule</url>. Draw a tree diagram representing the intermediate relationships between <m>f</m> and <m>a</m>.
+        </p>
+        </li>
+        <li>
+        <p>
+            Use your tree diagram, and the chain rule ideas from steps 3, 4, and 5 in <xref ref="act-diff-under-int"/>, to compute <m>\frac{\partial f}{\partial a}</m>.
+        </p>
+        </li>
+        <li>
+        <p>
+            Conclude by writing down a final expression for <m>I'(0)</m>.
+        </p>
+        </li>
+    </ol>
+    </p>
+</activity>
+<p>
+    The value of the derivative <m>I'(0)</m> found by differentiating equation <xref ref="eqn-3-7"/> with respect to <m>a</m> and then setting <m>a=0</m>, is
+    <men xml:id="eqn-3-8">
+    I'(0)=\int_{x_1}^{x_2} \left[ f_y \eta + f_{y'} \eta' \right]\,dx,
+    </men>
+    where <m>f_y</m> and <m>f_{y'}</m> are the partial derivatives of <m>f(y, y')</m> with the arguments <m>y, y'</m> belonging to the minimizing arc <m>E_{12}</m>. 
+</p>
+<activity>
+    <p>There's two ways to achieve the next important result. The book suggests one way, and I'll suggest another. The subscripts here are going to get a little hairy, so I suggest rewriting <xref ref="eqn-3-8"/>in Leibniz notation:
+    <me>
+    I'(0)=\int_{x_1}^{x_2} \left[ \frac{\partial f}{\partial y} \eta + \frac{\partial f}{\partial y'} \eta' \right]\,dx
+    </me>
+    </p>
+    <ol>
+    <li>
+        <p>
+        Rewrite <xref ref="eqn-3-8"/> as the sum of two integrals. The second one, involving <m>\eta'</m>, is a natural candidate for integration by parts. Do that, then combine the two integrals again; you should now be able to factor out an <m>\eta</m>.
+        </p>
+        <solution>
+        <p>
+            <me>
+            I'(0) = \int_{x_1}^{x_2} \left[\frac{\partial f}{\partial y} - \frac{d}{dx}\frac{\partial f}{\partial y'}\right] \eta \, dx
+            </me>
+        </p>
+        </solution>
+    </li>
+    <li>
+        <p>
+        We know <m>I'(0) =0</m>, no matter which variation <m>\eta</m> you choose, so that means we can invoke the corollary to <xref ref="lemma-fundamental"/> that we proved in <xref ref="activity-fun-lemma2"/>. What can you conclude?
+        </p>
+    </li>
+    <li>
+        <p>
+        Another way you could rewrite <m>I'(0)</m> -- and the way the book does it -- is by messing with the first integral. Pretend it's not a definite integral for a hot second, and just use integration by parts to come up with an antiderivative. (Hint: Let <m>u = \eta</m>, and write down some reasonable thing for the antiderivative of <m>dv</m>, even though you don't know exactly what it is.)
+        </p>
+    </li>
+    <li>
+        <p>
+        Take the thing you found for the first integral and differentiate it <em>with respect to</em> <m>x</m>.
+        </p>
+    </li>
+    </ol>
+</activity>
+<p>
+    If we make use of the easily derived formula
+    <me>
+    \eta f_{y}=\frac{d}{dx}\left(\eta \int_{x_{1}}^{x} f_{y} \, dx\right)-\eta^{\prime} \int_{x_{1}}^{x} f_{y}\,dx
+    </me>
+    and the fact that <m>\eta(x_1) = \eta(x_2) = 0</m>, the expression <xref ref="eqn-3-8"/> takes the form
+    <me>
+    I^{\prime}(0)=\int_{x_{1}}^{x_{2}}\left\{f_{y^{\prime}}-\int_{x_{1}}^{x} f_{y} d x\right\} \eta^{\prime}\, dx.
+    </me>
+    This must vanish for every family of the form <xref ref="eqn-3-6"/>, i.e., for every admissible function <m>\eta(x)</m> having <m>\eta(x_1) = \eta(x_2) = 0</m>, and we find ourselves again in a position to make use of the fundamental lemma of <xref ref="sec-fundamental-lemma"/>. From that lemma it follows that:
+</p>
+<theorem xml:id="thm-euler">
+    <statement>
+    <p>
+        For every minimizing arc <m>E_{12}</m> there must exist a constant <m>c</m> such that the equation 
+        <men xml:id="eqn-3-9">
+        f_{y'}=\int_{x_1}^x f_y\, dx + c
+        </men>
+        holds at every point of <m>E_{12}.</m> On each sub-arc of <m>E_{12}</m> where the tangent turns continuously we must have
+        <men xml:id="eqn-3-10">
+        \frac{d}{dx} f_{y'} = f_y.
+        </men>
+    </p>
+    </statement>
+</theorem>
+<p>
+    The last equation may be readily deduced from equation <xref ref="eqn-3-9"/> by differentiation, since on a sub-arc of <m>E_{12}</m> where the tangent turns continuously the function <m>f_y</m> is continuous and the integral in <xref ref="eqn-3-9"/> has the derivative <m>f_y</m>.
+</p>
+<p>
+    The equation <xref ref="eqn-3-10"/> is the famous differential equation deduced by Euler in 1744 and called after him <term>Euler's differential equation</term>. Its solutions have been named <term>extremals</term> because they are the only curves which can give the integral <m>I</m> a maximum or a minimum, i.e., an extreme value. We shall in the following pages apply the term extremal only to those solutions <m>y(x)</m> which have continuously turning tangents and continuous second derivatives <m>y''(x)</m>.
+    <aside>
+    In more modern language, we're going to insist that <m>y(x)</m> is a function of class <m>C^2</m>.
+    </aside>
+</p>
+<remark xml:id="remark-euler">
+    <p>
+    Most authors write Euler's equation, also sometimes called the <term>Euler-Lagrange equation</term>, in a slightly different form. Assuming that <m>y \in C^2</m> (that is, <m>y''(x)</m> is continuous):
+    <me>
+        \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0.
+    </me>
+    <alert>Note well</alert> that the function <m>f</m> in this differential equation is in fact the integrand of whatever functional we're currently looking at (see the very general form <xref ref="eqn-gen-form"/> from <xref ref="sec-more-general"/>). For instance, in the arc length problem, the functional is
+    <me>
+        I = \int_{x_1}^{x_2} \sqrt{1+(y')^2}\,dx
+    </me>
+    so that <m>f(x,y,y') = \sqrt{1+(y')^2}</m>.
+    </p>
+</remark>
+
+<activity xml:id="activity-euler-beltrami">
+    <title>UPDATED DIRECTIONS</title>
+    
+    
+    <p>
+    The Euler-Lagrange equation involves differentiating <m>f_{y'}</m> with respect to <m>x</m>. Let's assume that we can take as many derivatives as we need -- in particular, let's assume that <m>y \in C^2</m> -- and compute this derivative to see if something simpler happens in the particular case where the integrand is of the form <m>f(y, y')</m>.
+    </p>
+    <ol>
+    <li>
+        <p>
+        Suppose you have some function <m>g(y, y'),</m> where <m>y</m> and <m>y'</m> are functions of <m>x</m>. Draw a tree diagram representing the relationships between <m>g</m>, <m>y</m>, <m>y'</m>, and <m>x</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+        Use the multivariable chain rule to write down an expression for <m>\dfrac{dg}{dx}</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+        In our case, <m>f_{y'}</m> -- or, in Leibniz notation, <m>\dfrac{df}{dy'}</m> -- is really just a function of <m>y</m> and <m>y'</m>, so it can play the role of <m>g</m> in the previous step. <em>To help you understand what the book says in the next paragraph,</em> use your result to write down an expression for <m>\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+        Compute <m>\dfrac{d}{dx}\left(f-y'\dfrac{\partial f}{\partial y'}\right)</m>. Use the chain rule to write out <m>\dfrac{df}{dx}</m>. Contrary to how the book is going to do it in the next paragraph, <alert>don't write out</alert> <m>\dfrac{d}{dx} \dfrac{\partial f}{\partial y'}</m>! Simplify a little; you should in particular be able to factor out <m>y'</m>.
+        </p>
+    </li>
+    <li>
+        <p>
+            <em>(New step)</em> Apply the Euler-Lagrange equation to your result. What can you conclude about <m>f-y'\dfrac{\partial f}{\partial y'}</m>?
+        </p>
+    </li>
+    </ol>
+    <solution>
+    <p>
+        See <xref ref="remark-beltrami"/>.
+    </p>
+    </solution>
+</activity>    
+
+<p>
+    We have not so far made any assumption concerning the existence of a second derivative <m>y''(x)</m> along our minimizing arc. When there is one, however, we can carry out the differentiations indicated in equation <xref ref="eqn-3-10"/> and obtain
+    <me>
+    \frac{d}{d x} f_{y^{\prime}}-f_{y}=f_{y^{\prime} y} y^{\prime}+f_{y^{\prime} y^{\prime}} y^{\prime \prime}-f_{y}=0
+    </me>
+    from which it follows that along a minimizing arc with a second derivative <m>y''(x)</m> we have
+    <me>
+    \frac{d}{d x}\left(f-y^{\prime} f_{y^{\prime}}\right)=y^{\prime}\left(f_{y}-f_{y^{\prime} y} y^{\prime}-f_{y^{\prime} y^{\prime}} y^{\prime \prime}\right)=0
+    </me>
+    and hence also
+    <men xml:id="eqn-3-11">
+    f - y'f_{y'} = \text{constant.}
+    </men>
+</p>
+
+<remark xml:id="remark-beltrami">
+    <p>
+    For me, these equations are hard to read in the subscript notation. Here they are in Leibniz notation instead, with some more parentheses added for clarity.
+    <me>
+        \frac{d}{dx} \left( \frac{\partial f}{\partial y'}\right) - \frac{\partial f}{\partial y} = 
+        \left[\frac{\partial}{\partial y } \left(\frac{\partial f}{\partial y'}\right) y' + 
+                \frac{\partial}{\partial y'} \left(\frac{\partial f}{\partial y'}\right) y'' \right] - \frac{\partial f}{\partial y} = 0 
+    </me>
+    Here's the second one:
+    <me>
+        \frac{d}{dx} \left( f - y' \frac{\partial f}{\partial y'}\right) = 
+        y'\left[\frac{\partial f}{\partial y} - \frac{\partial}{\partial y }\left(\frac{\partial f}{\partial y'}\right) y'
+                                                - \frac{\partial}{\partial y'}\left(\frac{\partial f}{\partial y'}\right) y''
+            \right] = 0
+    </me>
+    And since the only thing whose derivative is zero is a constant function, 
+    <me>
+        f - y' \frac{\partial f}{\partial y'} = \text{constant.}
+    </me>
+    The last equation here is called the <term>Beltrami identity</term>; it's a special case of the Euler-Lagrange equation. <alert>Note well</alert> that these equations only work when <m>x</m> doesn't appear in the integrand of the functional -- that is, when the integrand is of the form <m>f(y, y')</m>.
+    </p>
+</remark>
+
+<p>
+    The reasoning by means of which equation <xref ref="eqn-3-11"/> has been derived is valid not only for the particular integrand function
+    <me>
+    f(y, y') = \sqrt{\frac{1+(y')^2}{y-\alpha}}
+    </me>
+    of the brachistochrone problem but also for an arbitrary function <m>f(y, y')</m> of the two variables <m>y</m> and <m>y'</m> which with its derivatives has suitable continuity properties. One can further verify readily that the proofs of equations <xref ref="eqn-3-9"/> and <xref ref="eqn-3-10"/> hold without alteration not only for this case but also for the still more general integral <m>I</m> to be studied in Chapter V for which the integrand is assumed to be a function <m>f(x, y, y')</m> of the three variables <m>x, y, y'</m>. It is evident, therefore, that the results of this section have great generality and that they may be applied to a wide variety of problems in the calculus of variations. <alert>One should note that</alert> equation <xref ref="eqn-3-11"/> cannot be expected to hold when <m>x</m> occurs in the integrand function, since in the differentiations made to obtain it the function <m>f</m> was supposed to contain only the variables <m>y</m> and <m>y'</m>.
+</p>
+
+<activity xml:id="activity-beltrami-arclength">
+    <p>
+    The fun thing about special cases is that things are generally way simpler. Let's see how this works in the case of minimizing arc length, which we considered using other methods in <xref ref="sec-straight-line"/>.
+    <ol>
+        <li>
+        <p>
+            Apply Euler's equation <m>\displaystyle \frac{\partial f}{\partial y} - \frac{d}{dx} \left(\frac{\partial f}{\partial y'}\right)=0</m> to the arc length integrand <m>f(y, y') = \sqrt{1+(y')^2}</m>:
+            <ol>
+            <li>
+                <p>
+                Compute <m>\dfrac{\partial f}{\partial y}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                Compute <m>\dfrac{\partial f}{\partial y'}</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                Compute <m>\dfrac{d}{dx}\left(\dfrac{\partial f}{\partial y'}\right)</m>. (Yikes!)
+                </p>
+            </li>
+            <li>
+                <p>
+                Combine the pieces appropriately.
+                </p>
+            </li>
+            </ol>
+        </p>
+        </li>
+        <li>
+        <p>
+            Now try the Beltrami identity <m>f-y'\frac{\partial f}{\partial y'} = c</m>. You've already computed all the pieces you need.
+        </p>
+        </li>
+    </ol>
+    </p>
+</activity>
+
+<activity xml:id="activity-euler-brachistochrone">
+    <p>
+    Assuming <m>y\in C^2</m> (which is true for reasons we'll get to in the next section), we can apply the Beltrami identity <xref ref="eqn-3-11"/> to the brachistochrone problem, since <m>x</m> doesn't appear in the integrand.<fn>We could also apply the Euler formula directly but it gets real messy, so we may as well use our nicer version. Try it out if you don't believe me; the issue is that <m>\frac{d}{dx}\left(\frac{\partial f}{\partial y'}\right)</m> has like three different terms in it.</fn>
+    <ol>
+        <li>
+        <p>
+            Write down <m>f(y, y')</m>.
+        </p>
+        </li>
+        <li>
+        <p>
+            Compute <m>\dfrac{\partial f}{\partial y'}</m>.
+        </p>
+        </li>
+        <li>
+        <p>
+            Assemble the pieces to produce a differential equation that the brachistochrone curve must satisfy. (If you get a common denominator, you can simplify a little.)
+        </p>
+        <solution>
+            <p>
+            <me>
+                \sqrt{\frac{1+(y')^2}{y-\alpha}} - y'\cdot \left[\frac{y'}{\sqrt{y-\alpha}\sqrt{1+(y')^2}}\right] = c
+            </me>
+            After getting a common denominator, this can be simplified to
+            <me>
+                \frac{1}{\sqrt{y-\alpha}\sqrt{1+(y')^2}} = c.
+            </me>
+            
+            </p>
+        </solution>
+        </li>
+    </ol>
+    </p>
+</activity>
+</section>

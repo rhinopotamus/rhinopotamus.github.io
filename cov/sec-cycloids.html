@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-28T12:31:24-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Var Cycloids</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="var-book.html"><span class="title">Calculus of Variations</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-application-brachistochrone.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="brachistochrone.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="surfaces.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-application-brachistochrone.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="brachistochrone.html" title="Up">Up</a><a class="next-button button toolbar-item" href="surfaces.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="typical.html" data-scroll="typical"><span class="codenumber">1</span> <span class="title">Typical Problems of the Calculus of Variations</span></a><ul>
+<li><a href="sec-invention-of-calculus.html" data-scroll="sec-invention-of-calculus">The invention of the calculus</a></li>
+<li><a href="sec-maxima-and-minima.html" data-scroll="sec-maxima-and-minima">Maxima and minima</a></li>
+<li><a href="sec-two-problems.html" data-scroll="sec-two-problems">Two problems of the calculus of variations which may be simply formulated</a></li>
+<li><a href="sec-problem-newton.html" data-scroll="sec-problem-newton">The problem of Newton</a></li>
+<li><a href="sec-brachistochrone.html" data-scroll="sec-brachistochrone">The brachistochrone problem</a></li>
+<li><a href="sec-more-general.html" data-scroll="sec-more-general">A more general problem</a></li>
+<li><a href="sec-other-problems.html" data-scroll="sec-other-problems">Other problems of the calculus of variations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="shortest.html" data-scroll="shortest"><span class="codenumber">2</span> <span class="title">Shortest Distances</span></a><ul>
+<li><a href="sec-shortest-arc.html" data-scroll="sec-shortest-arc">The shortest arc joining two points</a></li>
+<li><a href="sec-first-necessary.html" data-scroll="sec-first-necessary">A first necessary condition</a></li>
+<li><a href="sec-fundamental-lemma.html" data-scroll="sec-fundamental-lemma">A fundamental lemma</a></li>
+<li><a href="sec-straight-line.html" data-scroll="sec-straight-line">Proof that the straight line is shortest</a></li>
+<li><a href="sec-auxiliary-formulas.html" data-scroll="sec-auxiliary-formulas">Two important auxiliary formulas</a></li>
+<li><a href="sec-field.html" data-scroll="sec-field">The notion of a field and a second sufficiency proof</a></li>
+<li><a href="sec-shortest-curve.html" data-scroll="sec-shortest-curve">The shortest arc joining a point to a curve</a></li>
+<li><a href="sec-shortest-ellipse.html" data-scroll="sec-shortest-ellipse">The shortest arc joining a point to an ellipse</a></li>
+<li><a href="sec-two-curves.html" data-scroll="sec-two-curves">The shortest arc joining two curves</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
+<li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
+<li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation">The analytic formulation of the problem</a></li>
+<li><a href="sec-first-necessary-3.html" data-scroll="sec-first-necessary-3">A first necessary condition</a></li>
+<li><a href="sec-application-brachistochrone.html" data-scroll="sec-application-brachistochrone">Application to the brachistochrone problem</a></li>
+<li><a href="sec-cycloids.html" data-scroll="sec-cycloids" class="active">Cycloids</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="surfaces.html" data-scroll="surfaces"><span class="codenumber">4</span> <span class="title">Surfaces of revolution of minimum area</span></a><ul>
+<li><a href="sec-preliminary-remarks.html" data-scroll="sec-preliminary-remarks">Preliminary remarks concerning the problem</a></li>
+<li><a href="sec-proof-catenary.html" data-scroll="sec-proof-catenary">The proof that the minimizing arc is a catenary</a></li>
+<li><a href="sec-family-catenaries.html" data-scroll="sec-family-catenaries">The one-parameter family of catenaries through a point</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-cycloids"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Cycloids</span>
+</h2>
+<a href="sec-cycloids.html" class="permalink">¶</a><p id="p-217">The fact that the equations <a class="xref" data-knowl="./knowl/eqn-3-15.html" title="Equation 3.4.4">(3.4.4)</a> represent a cycloid of the kind described in the theorem is easily proved. For let a circle of radius \(b\) begin to roll on the line \(y=\alpha\) at the point whose co-ordinates are \((a, \alpha)\text{,}\) as shown in <a class="xref" data-knowl="./knowl/fig-3-13.html" title="Figure 3.5.1">Figure 3.5.1</a>. After a turn through an angle of \(u\) radians the point of tangency is at a distance \(bu\) from \((a, \alpha)\text{,}\) and the point which was the lowest in the circle has rotated to the point \((x, y)\text{.}\) The values of \(x\) and \(y\) may now be readily calculated in terms of \(u\) from the figure, and they are found to be those given by equations <a class="xref" data-knowl="./knowl/eqn-3-15.html" title="Equation 3.4.4">(3.4.4)</a>. <figure class="figure figure-like" id="fig-3-13"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="./images/fig-3-13.png" style="width: 100%; height: auto;" alt="A cycloid centered at \((a, \alpha)\text{.}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-218">The fact that the curve of quickest descent must be a cycloid is the famous result discovered by James and John Bernoulli in 1697 and announced at approximately the same time by a number of other mathematicians. The cycloid and its remarkable properties had been the subject of much study in the seventeenth century. Huygens (1629-95) in particular had shown that the evolute of a cycloid \(CC'\) shown in <a class="xref" data-knowl="./knowl/fig-3-14.html" title="Figure 3.5.2">Figure 3.5.2</a> is a second cycloid of exactly the same size situated in the position which is dotted in the figure, and further that the time of descent of a particle starting at rest at the point \(C\) and falling along the cycloid to the lowest point \(B\) is the same no matter what the position of the starting-point \(C\) on the cycloid arc may be. We know from the string property of an evolute, proved on page 32 of the last chapter, that if a pendulum of length \(4b\) is so suspended at \(A\) that the string is compelled to wrap itself around the dotted evolute, then the pendulum bob will oscillate on an arc \(CC'\) of the cycloid. From the isochronous property of Huygens it follows that the period of oscillation will be the same no matter how great or how small the amplitude of the oscillation from \(C\) to \(C'\) may be. This has been considered a very important discovery for the clockmaker, though one rarely finds apparatus on his mantel which is built upon this principle. <figure class="figure figure-like" id="fig-3-14"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="./images/fig-3-14.png" style="width: 100%; height: auto;" alt="A cycloid and its evolute."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p>
+<p id="p-219">These and other properties of the cycloid were well known before the end of the seventeenth century. That the cycloid should also be the solution of the brachistochrone problem was regarded with wonder and admiration by the Bernoulli brothers. Somewhat freely translated the comment of John was "With justice we admire Huygens because he first discovered that a heavy particle falls on a cycloid in the same time always, no matter what the starting-point may be. But you will be petrified with astonishment when I say that exactly this same cycloid, the tautochrone of Huygens, is the brachistochrone which we are seeking." And with rhetorically sustained enthusiasm James remarks "Thus for this curve, which has been investigated by so many mathematicians that apparently nothing further concerning it could remain to be discovered, we find a new property, as it were an indication of its desire that no obligation might be incurred to future centuries but that it might attain the pinnacle of perfection at the end of the present one at whose beginning its birth was celebrated and among whose researches there have fallen to its lot the discovery of all of its mensurable properties and many other beautiful characteristics."</p>
+<p id="p-220">At the present time our mathematics is usually less emotionally expressed, but in thought at least we can share the pleasure of the brothers in their interesting discovery. It is clear when we think intuitively about the brachistochrone, that the straight line could hardly have been expected to be the curve of quickest descent because it is evident that a particle should fall more rapidly on a curve which begins more steeply and imparts a higher velocity at the beginning of the fall. But just what degree of initial steepness is desirable in order to avoid too gradual a slope near the end of the fall could hardly have been foreseen. Hi!</p></section></div></main>
+</div>
+</body>
+</html>

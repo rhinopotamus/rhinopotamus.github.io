@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-28T12:31:24-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Var The analytic formulation of the problem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="" target="_blank"><img src="images/cover.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="var-book.html"><span class="title">Calculus of Variations</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-brachistochrone-overview.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="brachistochrone.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-first-necessary-3.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-brachistochrone-overview.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="brachistochrone.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-first-necessary-3.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="typical.html" data-scroll="typical"><span class="codenumber">1</span> <span class="title">Typical Problems of the Calculus of Variations</span></a><ul>
+<li><a href="sec-invention-of-calculus.html" data-scroll="sec-invention-of-calculus">The invention of the calculus</a></li>
+<li><a href="sec-maxima-and-minima.html" data-scroll="sec-maxima-and-minima">Maxima and minima</a></li>
+<li><a href="sec-two-problems.html" data-scroll="sec-two-problems">Two problems of the calculus of variations which may be simply formulated</a></li>
+<li><a href="sec-problem-newton.html" data-scroll="sec-problem-newton">The problem of Newton</a></li>
+<li><a href="sec-brachistochrone.html" data-scroll="sec-brachistochrone">The brachistochrone problem</a></li>
+<li><a href="sec-more-general.html" data-scroll="sec-more-general">A more general problem</a></li>
+<li><a href="sec-other-problems.html" data-scroll="sec-other-problems">Other problems of the calculus of variations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="shortest.html" data-scroll="shortest"><span class="codenumber">2</span> <span class="title">Shortest Distances</span></a><ul>
+<li><a href="sec-shortest-arc.html" data-scroll="sec-shortest-arc">The shortest arc joining two points</a></li>
+<li><a href="sec-first-necessary.html" data-scroll="sec-first-necessary">A first necessary condition</a></li>
+<li><a href="sec-fundamental-lemma.html" data-scroll="sec-fundamental-lemma">A fundamental lemma</a></li>
+<li><a href="sec-straight-line.html" data-scroll="sec-straight-line">Proof that the straight line is shortest</a></li>
+<li><a href="sec-auxiliary-formulas.html" data-scroll="sec-auxiliary-formulas">Two important auxiliary formulas</a></li>
+<li><a href="sec-field.html" data-scroll="sec-field">The notion of a field and a second sufficiency proof</a></li>
+<li><a href="sec-shortest-curve.html" data-scroll="sec-shortest-curve">The shortest arc joining a point to a curve</a></li>
+<li><a href="sec-shortest-ellipse.html" data-scroll="sec-shortest-ellipse">The shortest arc joining a point to an ellipse</a></li>
+<li><a href="sec-two-curves.html" data-scroll="sec-two-curves">The shortest arc joining two curves</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="brachistochrone.html" data-scroll="brachistochrone"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a><ul>
+<li><a href="sec-brachistochrone-overview.html" data-scroll="sec-brachistochrone-overview">The brachistochrone problem: its significance as an illustration</a></li>
+<li><a href="sec-analytic-formulation.html" data-scroll="sec-analytic-formulation" class="active">The analytic formulation of the problem</a></li>
+<li><a href="sec-first-necessary-3.html" data-scroll="sec-first-necessary-3">A first necessary condition</a></li>
+<li><a href="sec-application-brachistochrone.html" data-scroll="sec-application-brachistochrone">Application to the brachistochrone problem</a></li>
+<li><a href="sec-cycloids.html" data-scroll="sec-cycloids">Cycloids</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="surfaces.html" data-scroll="surfaces"><span class="codenumber">4</span> <span class="title">Surfaces of revolution of minimum area</span></a><ul>
+<li><a href="sec-preliminary-remarks.html" data-scroll="sec-preliminary-remarks">Preliminary remarks concerning the problem</a></li>
+<li><a href="sec-proof-catenary.html" data-scroll="sec-proof-catenary">The proof that the minimizing arc is a catenary</a></li>
+<li><a href="sec-family-catenaries.html" data-scroll="sec-family-catenaries">The one-parameter family of catenaries through a point</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-analytic-formulation"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">The analytic formulation of the problem</span>
+</h2>
+<a href="sec-analytic-formulation.html" class="permalink">¶</a><p id="p-144">In order to discuss intelligently the problem of the brachistochrone we should first deduce for ourselves the integral which represents the time required by a particle to fall under the action of gravity down an arbitrarily chosen curve joining two fixed points 1 and 2. It is agreed that the initial velocity \(v_1\) at the point 1 is given in advance, and that the particle is to fall without friction on the curve and without resistance in the surrounding medium. If the effects of friction or a resisting medium are to be taken into account the brachistochrone problem becomes a much more complicated one.</p>
+<article class="activity project-like" id="activity-11"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-145">I'm hiding the diagram included in the textbook under a little foldy thing. I encourage you to draw your own diagram first, based on the instructions in the next paragraph, and <em class="emphasis">then</em> compare your diagram to the one in the book. (This will actually help you make sense of the book's diagram when you see it, because there's some things that aren't super clear.) Label the following:</p>
+<ul class="disc">
+<li id="li-48"><p id="p-146">the curve of descent \(C\) connecting point 1 and point 2;</p></li>
+<li id="li-49"><p id="p-147">a moving particle \(P\) on the curve \(C\text{;}\)</p></li>
+<li id="li-50"><p id="p-148">the distance \(s\) that the point \(P\) has actually traveled so far;</p></li>
+<li id="li-51"><p id="p-149">a tangent line to the curve \(C\) at the point \(P\text{;}\)</p></li>
+<li id="li-52"><p id="p-150">the vertical and horizontal components of that tangent line;</p></li>
+<li id="li-53"><p id="p-151">the angle \(\tau\) between the horizontal and the tangent line; and</p></li>
+<li id="li-54"><p id="p-152">the downward force of gravity \(mg\text{.}\)</p></li>
+</ul>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><figure class="figure figure-like" id="fig-12"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/fig-12.png" style="width: 100%; height: auto;" alt="Diagram of a point moving along a curve under the force of gravity."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div></div></article><p id="p-153">Let \(m\) be the mass of the moving particle \(P\) in <a class="xref" data-knowl="./knowl/fig-12.html" title="Figure 3.2.1">Figure 3.2.1</a> and \(s\) the distance through which it has fallen from the point 1 along the curve of descent \(C\) in the time \(t\text{.}\) In order to make our analysis more convenient we may take the positive \(y\)-axis vertically downward, as shown in the figure. <aside class="aside aside-like" id="aside-6">I always think this is hilarious for some reason. I think I'll try defying gravity!</aside></p>
+<p id="p-154">The vertical force of gravity acting upon \(P\) is the product of the mass \(m\) by the gravitational acceleration \(g\text{,}\) and the only force acting upon \(P\) in the direction of the tangent line to the curve is the projection \(mg \sin \tau\) of this vertical gravitational force upon that line. But the force along the tangent may also be computed as the product \(m \frac{d^2s}{dt^2}\) of the mass of the particle by its acceleration along the curve. Equating these two values we find the equation</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d^2s}{dt^2} = g \sin \tau = g \frac{dy}{ds},
+\end{equation*}
+</div>
+<p data-braille="continuation">in which a common factor \(m\) has been discarded and use has been made of the well-known calculus formula \(\sin \tau = \frac{dy}{ds}\text{.}\)</p>
+<article class="activity project-like" id="activity-12"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-155">That's not a well-known formula to me! Draw yourself a little triangle with angle \(\tau\) and sides \(\Delta s\) and \(\Delta y\text{.}\) Use this to conclude \(\sin \tau = \frac{dy}{ds}\) in the limit.</p></article><p id="p-156">To integrate this equation we follow a customary procedure and multiply each side by \(2 \frac{ds}{dt}\text{.}\) The antiderivatives of the two sides are then easily found,</p>
+<article class="activity project-like" id="activity-13"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-157">This is honestly just rude because these antiderivatives do take a little work.</p>
+<ol class="decimal">
+<li id="li-55">
+<p id="p-158">Start by writing down the two sides of this equation:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d^2s}{dt^2} = g \frac{dy}{ds}
+\end{equation*}
+</div>
+<p data-braille="continuation">Multiply both sides by \(2 \frac{ds}{dt}\text{.}\)</p>
+</li>
+<li id="li-56"><p id="p-159">On the RHS, use the chain rule to simplify \(\frac{dy}{ds} \frac{ds}{dt}\text{.}\) Then integrate with respect to \(t\text{.}\)</p></li>
+<li id="li-57">
+<p id="p-160">On the LHS, some more work is necessary. What does \(\frac{ds}{dt}\) mean in physical terms? How about \(\frac{d^2s}{dt^2}\text{?}\) Replace these two things with letters better representing their physical meaning.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><p id="p-161">\(\frac{ds}{dt}\) means velocity, and \(\frac{d^2s}{dt^2}\) means acceleration.</p></div></div>
+</li>
+<li id="li-58">
+<p id="p-162">Integrate the LHS with respect to \(t\text{.}\) You'll need to do a \(u\)-substitution. What's a smart choice for \(u\text{?}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
+<div class="displaymath" id="p-163">
+\begin{equation*}
+\int 2av\, dt.
+\end{equation*}
+</div>
+<p data-braille="continuation">If I choose \(u = v\text{,}\) then \(du = a\, dt\text{,}\) so the integral becomes</p>
+<div class="displaymath">
+\begin{equation*}
+\int 2u\, du = u^2 = v^2 = \left(\frac{ds}{dt}\right)^2.
+\end{equation*}
+</div>
+</div></div>
+</li>
+</ol></article><p id="p-164">and since they can differ only by a constant we have</p>
+<div class="displaymath">
+\begin{equation}
+\left(\frac{ds}{dt}\right)^2 = 2gy+c.\label{eqn-3-1}\tag{3.2.1}
+\end{equation}
+</div>
+<p data-braille="continuation">The value of the constant \(c\) can be determined if we remember that the values of \(y\) and \(v = \frac{ds}{dt}\) at the initial point 1 at the fall are \(y_1\) and \(v_1\text{,}\) respectively, so that for \(t=0\) the last equation gives</p>
+<div class="displaymath">
+\begin{equation*}
+v_1^2 = 2gy_1 + c.
+\end{equation*}
+</div>
+<p data-braille="continuation">With the help of the value of \(c\) from this equation, and the notation</p>
+<div class="displaymath">
+\begin{equation}
+\alpha = y_1 - \frac{v_1^2}{2g},\label{eqn-3-2}\tag{3.2.2}
+\end{equation}
+</div>
+<p data-braille="continuation">equation <a class="xref" data-knowl="./knowl/eqn-3-1.html" title="Equation 3.2.1">(3.2.1)</a> becomes</p>
+<div class="displaymath">
+\begin{equation}
+\left(\frac{ds}{dt}\right)^2 = 2gy-2gy_1 + v_1^2 = 2g(y-\alpha).\label{eqn-3-3}\tag{3.2.3}
+\end{equation}
+</div>
+<p data-braille="continuation">An integration now gives the following result which we have been seeking:</p>
+<article class="theorem theorem-like" id="thm-brachistochrone-time"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-165">The time \(T\) required by a particle starting with the initial velocity \(v_1\) to fall from a point 1 to a point 2 along a curve is given by the integrals</p>
+<div class="displaymath">
+\begin{equation}
+T = \frac{1}{\sqrt{2g}}\int_o^l \frac{ds}{\sqrt{y-\alpha}}=\frac{1}{\sqrt{2g}} \int_{x_1}^{x_2} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\label{eqn-3-4}\tag{3.2.4}
+\end{equation}
+</div></article><article class="remark remark-like" id="remark-7"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-166">It's worth pointing out that this is also a functional, because the value of this integral depends on the function (or parametrically-defined curve) you're using to connect point 1 to point 2.</p></article><p id="p-167">It is clear that an arc which minimizes one of the integrals <a class="xref" data-knowl="./knowl/eqn-3-4.html" title="Equation 3.2.4">(3.2.4)</a> expressing \(T\) will also minimize that integral when the factor \(\frac{1}{\sqrt{2g}}\) is omitted, and vice versa. Let us therefore use the notations</p>
+<div class="displaymath">
+\begin{equation}
+I=\int_{x_{2}}^{x_{3}} f\left(y, y^{\prime}\right) dx, \quad f\left(y, y^{\prime}\right)=\sqrt{\frac{1+(y')^2}{y-\alpha}}\label{eqn-3-5}\tag{3.2.5}
+\end{equation}
+</div>
+<p data-braille="continuation">for our integral which we seek to minimize and its integrand. Since the value of the function \(f(y, y')\) is infinite when \(y = \alpha\) and imaginary when \(y\lt \alpha\) we must confine our curves to the portion of the plane which lies below the line \(y=\alpha\) in <a class="xref" data-knowl="./knowl/fig-12.html" title="Figure 3.2.1">Figure 3.2.1</a>. This is not really a restriction of the problem since the equation \(v^2=\left(\frac{ds}{dt}\right)^2 = 2g(y-\alpha)\) deduced above shows that a particle started on a curve with the velocity \(v_1\) at the point 1 will always come to rest if it reaches the altitude \(y=\alpha\) on the curve, and it can never rise above that altitude. For the present we shall restrict our curves to lie in the half-plane \(y\gt \alpha\text{.}\) In a later section of this chapter we shall see what happens when curves are permitted which have points in common with the line \(y=\alpha\text{.}\)</p>
+<article class="remark remark-like" id="remark-8"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-168">Be careful here to remember that we've set up our axes such that the positive \(y\)-axis points <em class="emphasis">down</em>.</p></article><p id="p-169">In our study of the shortest-distance problems in the last chapter the arcs to be considered were taken in the form \(y=y(x) (x_1 \leq x \leq x_2)\) with \(y(x)\) continuous on the interval \(x_1 \leq x \leq x_2\text{,}\) and the interval could furthermore be subdivided into parts on each of which the derivative \(y'(x)\) is continuous. An <em class="emphasis">admissible arc</em> for the brachistochrone problem will always be understood to have these properties besides the additional one that it lies entirely in the half-plane \(y\gt a\text{.}\) For an admissible function, however, we retain always the definition given in <a href="sec-shortest-arc.html" class="internal" title="Section 2.1: The shortest arc joining two points">Section 2.1</a>. Our problem is then to find among the admissible arcs joining the points 1 and 2, one which minimizes the integral \(I\text{.}\)</p></section></div></main>
+</div>
+</body>
+</html>

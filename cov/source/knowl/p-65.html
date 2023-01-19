@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-05-28T10:50:11-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>This next result is a doozy, and it uses an important technique with which you're probably not especially familiar: <dfn class="terminology">differentiation under the integral sign</dfn> <a class="fn-knowl" data-knowl="./knowl/fn-1-hidden.html" title="Footnote 2.2.1"><sup> 1 </sup></a>. Here's a little activity to walk you through what's going on here.</p>
+<ol class="decimal">
+<li><p>Convince yourself that \(I(a)\) as given in <a class="xref" data-knowl="./knowl/eqn-iofa.html" title="Equation 2.2.2">(2.2.2)</a> is indeed a function of \(a\text{,}\) and thus it's reasonable for us to compute \(\frac{dI}{da}\text{.}\) Also, convince yourself that \(y'+a\eta'\) is a function of both \(x\) and \(a\text{.}\)</p></li>
+<li>
+<p>Here's where "differentiation under the integral sign" comes in: according to something called Leibniz's rule, as long as our functions are "nice enough" (which they are),</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{da} \int_{x_1}^{x_2} F(x, a)\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} F(x,a)\, dx.
+\end{equation*}
+</div>
+<p data-braille="continuation">Apply Leibniz's rule to write down an expression for \(\frac{dI}{da}\) in <a class="xref" data-knowl="./knowl/eqn-iofa.html" title="Equation 2.2.2">(2.2.2)</a>.</p>
+<a class="original" data-knowl="./knowl/solution-4-hidden.html" title="Solution 2.1"><span class="type">Solution</span></a>
+</li>
+<li>
+<p>We're going to need the chain rule to deal with the integrand on the RHS. In particular, it'll be helpful for us to think about the chain rule in Leibniz notation (he's just popping up all over today!):</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\partial f}{\partial a} = \frac{\partial f}{\partial u} \cdot \frac{\partial u}{\partial a}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Explain why this version of the chain rule is equivalent to the usual understanding: "first take the derivative of the outside stuff, leaving the inside stuff alone, then multiply by the derivative of the inside stuff."</p>
+</li>
+<li>
+<p>What's something good you can label as \(u\) in your expression for \(\frac{dI}{da}\text{?}\) What's \(\frac{\partial u}{\partial a}\text{,}\) and so what's \(\frac{\partial f}{\partial a}\text{?}\)</p>
+<a class="original" data-knowl="./knowl/solution-5-hidden.html" title="Solution 4.1"><span class="type">Solution</span></a>
+</li>
+<li>
+<p>We mostly care about \(I(a)\) and \(I'(a)\) when \(a=0\) -- that is, when there's zero variation on the original curve \(y(x)\text{.}\) If \(a=0\text{,}\) then what's \(u\text{?}\) Use this to rewrite your integrand \(\frac{\partial f}{\partial a}\text{.}\)</p>
+<a class="original" data-knowl="./knowl/solution-6-hidden.html" title="Solution 5.1"><span class="type">Solution</span></a>
+</li>
+<li>
+<p>Conclude by writing down a final expression for \(I'(0)\text{.}\)</p>
+<a class="original" data-knowl="./knowl/solution-7-hidden.html" title="Solution 6.1"><span class="type">Solution</span></a>
+</li>
+</ol>
+<span class="incontext"><a href="sec-first-necessary.html#p-65">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<!-- This file was originally part of the book     -->
+<!-- (as copied on 2015/07/12)                     -->
+<!--                                               -->
+<!--   Abstract Algebra: Theory and Applications   -->
+<!--                                               -->
+<!-- Copyright (C) 1997-2014  Thomas W. Judson     -->
+
+<section xml:id="sec-preliminary-remarks" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Preliminary remarks concerning the problem</title>
+  <p>
+    The problem of determining a surface of revolution of minimum area, like the brachistochrone problem, was one of the earliest considered by students of the calculus of variations, and it is one of those which have been most thoroughly studied. It is in many respects the most satisfactory illustration which we have of the principles of the general theory of the calculus of variations in the plane. In spite of the fact that it was proposed early in the seventeenth century and has been restudied at frequent intervals since that time, one finds nevertheless that new results of interest and importance concerning it have been found in very recent years. 
+  </p>
+  <p>
+    In the following pages it will be shown first of all that a plane curve <m>y=y(x)</m> which joins two given points and generates by rotation about the <m>x</m>-axis a surface of revolution of minimum area, must be an arc of a catenary with an equation of the form 
+    <men xml:id="eqn-4-1">
+      y=\frac{b}{2} \left[ e^{\frac{x-a}{b}} + e^{-\frac{x-a}{b}}\right].
+    </men>
+    <remark xml:id="remark-exp">
+      <p>
+        Fractions in exponents get really tiny and really hard to read. Using the alternative notation <m>\exp(x) = e^x</m>, this is easier to comprehend:
+      </p>
+      <me>
+        y = \frac{b}{2} \left[\exp\left(\frac{x-a}{b}\right) + \exp\left(-\frac{x-a}{b}\right)\right]
+      </me>
+    </remark>
+    The shape of one of these catenaries is shown in <xref ref="fig-4-24"/>, but they vary considerably in appearance. One can realize these differences experimentally by hanging a chain on two pegs. When the pegs are near together the chain hangs in a catenary which is narrow and vertical, and when the pegs are far apart the curve is broad and flat. The curve in the figure is of an intermediate type.
+  </p>
+  <figure xml:id="fig-4-24">
+    <image source="./images/fig-4-24.png">
+      <description>A catenary curve.</description>
+    </image>
+  </figure>
+  <activity xml:id="activity-explore-catenary">
+    <p>
+      One can also realize these differences virtually by playing with sliders in <url href="https://www.desmos.com/calculator">Desmos</url>, an excellent free online graphing software. 
+      <ol>
+        <li>
+          <p>
+            In Desmos, enter <c>f(x) = b/2 (exp((x-a)/b)+exp(-(x-a)/b))</c>; you will be prompted to add sliders for <m>a</m> and <m>b</m>. Do so. Set the lower limit for the slider for <m>b</m> by clicking on the <m>-10</m> at the left edge of the slider, then typing in <m>0.1</m> instead.
+          </p>
+        </li>
+        <li>
+          <p>
+            Describe how changing the value of <m>a</m> impacts the graph of the catenary.
+          </p>
+        </li>
+        <li>
+          <p>
+            Describe how changing the value of <m>b</m> impacts the graph of the catenary.
+          </p>
+        </li>
+      </ol>
+      You can also use <url href="https://www.desmos.com/calculator/nzztqyyupt">this pre-prepared worksheet</url>.
+    </p> 
+  </activity>
+  <p>
+    If it is admitted that when two points 1 and 2 in the plane are given, a minimizing curve of the form <m>y=y(x)</m> joining them must be one of the catenaries <xref ref="eqn-4-1"/>, then it devolves upon us at once to find out if the two points can be joined by such a curve. The analytical discussion of this problem involves computations which will be indicated in a later section, but if we are willing to forego proofs for the moment it will be easy to describe the results geometrically. In the two-parameter family of catenaries <xref ref="eqn-4-1"/> those which pass through the point 1 form a one-parameter family of curves such that one of them passes through 1 in every direction, and this one-parameter family has an envelope <m>G</m> as shown in <xref ref="fig-4-25"/>. It will be proved, as may also easily be inferred intuitively from the figure, that when the initial slope of the catenary at 1 is made to increase from minus infinity to plus infinity the intersection of the catenary with the ordinate through 2 first descends from infinity to the point 3 and then ascends to infinity again. When the intersection reaches a point 2 above the envelope on its downward journey it belongs to a catenary arc which touches <m>G</m> between 1 and 2, and when it reaches 2 going upward it belongs to a catenary having no such contact point. We see readily then that every point 2 above the envelope G is joined to 1 by two catenaries of the family <xref ref="eqn-4-1"/> only one of which touches the envelope <m>G</m>; a point 2 on <m>G</m> has only one catenary joining it to 1; and a point 2 below <m>G</m> has none. This is a situation very different from the corresponding one for the brachistochrone problem, where there was always a unique cycloid joining two given points, and it is one of the reasons why the catenary problem is so much more typical of the results which may in general be expected for problems of the calculus of variations in the plane.
+  </p>
+  <figure xml:id="fig-4-25">
+    <image source="./images/fig-4-25.png">
+      <description>A family of catenary curves and their envelope G.</description>
+    </image>
+  </figure>
+  <p>
+    The point 3 where one of the catenaries <m>E</m> touches the envelope <m>G</m>, in <xref ref="fig-4-25"/>, is called the point conjugate to 1 on <m>E</m>. We shall see in a later section that if 4 is a second such contact point on the envelope <m>G</m>, as shown in the figure, then the surface of revolution generated by the composite arc <m>E_{14}+G_{43}</m> is always equal to that generated by <m>E_{13}</m>. This is a very interesting analogue of the string property of the evolute of a curve, and is another instance of the envelope theorem which was justified by Darboux, Zermelo, and Kneser. By means of it we shall be able to prove Jacobi's necessary condition which says that a catenary arc <m>E_{132}</m> having on it a point 3 conjugate to 1 can never furnish a surface of revolution of minimum area. As we have hitherto seen, the problems of the two preceding chapters required no application of Jacobi's necessary condition for the case when the two end-points of the minimizing curve were given in advance. It was for this case, however, that Jacobi originally stated his remarkable condition which distinguishes the calculus of variations in such a striking way from the ordinary theory of maxima and minima of functions of one or more variables.
+  </p>
+  <p>
+     After seeing that one of the catenaries joining 1 with 2 can never be a solution of our problem, it becomes a matter of some importance to be able to prove that the remaining one, <m>E_{12}</m>, does furnish a minimum of some sort. This will be done by the method of Weierstrass which has already been explained for the problems of the preceding chapter. There is always a neighborhood of <m>E_{12}</m> in which all other arcs joining 1 with 2 generate larger surfaces of revolution than that generated by <m>E_{12}</m> itself.
+  </p>
+  <p>
+    The results which have so far been described evidently leave us in some doubt as to what happens when the point 2 lies on or below the envelope <m>G</m>. When 2 is on <m>G</m>, Jacobi's condition says that the unique catenary arc joining 1 with 2 cannot possibly furnish a minimum surface of revolution, and when 2 is below <m>G</m> there is no catenary of the family <xref ref="eqn-4-1"/> whatsoever joining 1 with 2. When 2 is on or below <m>G</m> there is in fact no curve represented by an equation of the form <m>y=y(x)</m> which generates a minimum surface of revolution. We shall see that the minimum surface is in this case furnished by the broken line consisting of the two ordinates of the points 1 and 2 and the segment of the <m>x</m>-axis between them. It is called the Goldschmidt discontinuous solution of the problem, after the man who first discovered it in 1831, discontinuous because its tangent turns discontinuously at its two corners on the <m>x</m>-axis.
+  </p>
+  <p>
+    It will be proved that the Goldschmidt discontinuous solution, like the minimizing catenary described above, always generates a smaller surface of revolution than those generated by other curves joining its end-points and lying in a sufficiently small neighborhood of it. When the point 2 is above the envelope <m>G</m> both the catenary solution and the discontinuous solution are present, and Dr. H. F. MacNeish showed in 1905 how one may distinguish the one of them which generates the smaller surface. Professor Mary E. Sinclair has proved that the smaller one is also smaller than the surfaces of revolution generated by all other curves of a very general type joining the points 1 and 2. The methods of proving these statements in the following pages are somewhat different from the ones used by these writers, but the results established are identical with theirs.
+  </p>
+</section>

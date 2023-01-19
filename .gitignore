@@ -3,3 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+cov/original-book.pdf
+cov/original-text.mhtml
+cov/original-text.html
