@@ -35,21 +35,15 @@ Here's the trick: Note that if $u = 1-t^2$, then $t^2 = 1-u$, so $t^3 = t(1-u)$.
 $$
 \begin{align*}
 \int \frac13 t^3\ \frac{1}{\sqrt{1-t^2}}\ dt 
-&= \frac13\int t\ (1-u)\ \frac{1}{\sqrt{u}} \ \frac{du}{-2t} \\
-&= -\frac16 \int u^{-1/2} - u^{1/2}\ du \\
-&= -\frac13\sqrt{1-t^2} + \frac19(1-t^2)^{3/2}.
+&= \frac13\int t\ (1-u)\ \frac{1}{\sqrt{u}} \ \frac{du}{-2t}.
 \end{align*}
 $$
 
-Assembling the entire integration by parts situation:
-
-$$
-\int t^2 \arcsin t \ dt = \frac13 t^3 \arcsin t + \frac13\sqrt{1-t^2} - \frac19(1-t^2)^{3/2} + C.
-$$
+Fill in the details from here; it's a good time. Don't forget to assemble the whole integration by parts business.
 
 ## Way 2: $u = t^3$,  $dv = \arcsin t\ dt$
 
-There are actually two tricks this time. The first trick is only somewhat tricky, and it's to integrate $dv$ through a clever use of integration by parts. We're going to pick $u = \arcsin(t)$ and $dv = 1\ dt$:
+There are actually two tricks this time. The first trick is only somewhat tricky, and it's to integrate $dv$ through a clever use of integration by parts. (It's similar to how we figure out $\int\ln t\ dt$, if you know that trick.) We're going to pick $u = \arcsin(t)$ and $dv = 1\ dt$:
 
 $$ 
 \begin{array}{ll}
@@ -86,15 +80,12 @@ $$
 Here comes the second trick: What we're interested in is $\int  t^2 \arcsin t\ dt$, which we can treat as an unknown. I've got 1 of 'em on the LHS, and -2 of 'em on the RHS. Why don't we just add the ones on the RHS over to the LHS?
 
 $$
-\begin{align*}
-3 \int t^2\arcsin t \ dt &= t^3 \arcsin t + t^2\sqrt{1-t^2} + \int -2t\sqrt{1-t^2}\ dt \\
-&= t^3 \arcsin t + t^2\sqrt{1-t^2} + \int \sqrt{u}\ du \\
-&= t^3 \arcsin t + t^2 \sqrt{1-t^2} + \frac23 (1-t^2)^{3/2} \\
-\int t^2\arcsin t \ dt &= \frac13 t^3 \arcsin t + \frac13 t^2 \sqrt{1-t^2} + \frac29 (1-t^2)^{3/2} + C.
-\end{align*}
+3 \int t^2\arcsin t \ dt = t^3 \arcsin t + t^2\sqrt{1-t^2} + \int -2t\sqrt{1-t^2}\ dt 
 $$
 
-## Your turn for some algebra
+I'll let you take it from there.
+
+## Lastly, some algebra
 
 The astute reader will notice that the two results are slightly different. Do some algebra to convince yourself that they're actually equivalent. (Sometimes when this happens, you need the two constants of integration to be different; graph them in Desmos or your favorite plotting software to see if you think this is the case this time.)
 
