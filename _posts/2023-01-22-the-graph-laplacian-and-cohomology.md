@@ -43,6 +43,8 @@ Any time a calculation turns out this terrible and requires this many weird tric
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">OKAY SO let&#39;s say L is the Laplacian matrix of a graph G, and f is some function from V(G) to R. It&#39;s true that &lt;f, Lf&gt; = sum (f(u)² - f(v)²), where the sum is over all the pairs of adjacent vertices u and v. Is there a *good* way to see this?</p>&mdash; Dr Spencer Bagley 🏳️‍🌈 (@sbagley) <a href="https://twitter.com/sbagley/status/1615462883571421186?ref_src=twsrc%5Etfw">January 17, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+(Please ignore the typos, lol.)
+
 The consensus of a couple of my smart twitter pals was that you have better luck if you think of $L$ not as $D-A$ -- which was, ultimately, the choice that led to every other bad thing in that calculation above -- but instead as $B B^T$. But who is this mysterious $B$, you ask? Good question.
 
 $B$ is the *incidence matrix*. The rows of $B$ are indexed by the vertices of $G$, and the columns of $B$ are indexed by the edges of $G$. Put some kind of orientation on all the edges; I don't care what it is. Then:
