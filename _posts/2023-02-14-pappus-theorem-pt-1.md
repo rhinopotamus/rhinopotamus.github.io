@@ -8,7 +8,7 @@ katex: True
 
 In my Calculus II class, we were talking about solids of revolution, and how calculus allows us to pretty easily solve a suite of problems that the Greek philosopher-mathematicians spent a lot of time thinking about (mostly because it was economically useful to have accurate computations of the volumes of pithoi and amphorae, both of which are solids of revolution). I mentioned something about how Archimedes had solved a special case (the volume of a paraboloid), and that there was some other guy who did something cool in this regard, but I couldn't pull the name immediately.
 
-The other guy is Pappus of Alexandria, and in modern language, Pappus's theorem[^1] goes like this: Say you have a plane figure $F$ which you are revolving around an external axis. The volume $V$ of the solid thus swept out is equal to the product of the area $A$ of $F$ and the distance $d$ traveled by the centroid of $F$: 
+The other guy is Pappus of Alexandria, and in modern language, Pappus's theorem[^1] goes like this: Say you have a plane figure $F$ which you are revolving around an external axis. The volume $V$ of the solid thus swept out is equal to the product of the area $A$ of $F$ and the distance $d$ traveled by the centroid (aka center of gravity) of $F$: 
 
 $$V = A\cdot d.$$
 
