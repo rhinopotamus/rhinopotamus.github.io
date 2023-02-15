@@ -13,7 +13,7 @@ $$V = A\cdot d.$$
 
 In historical context this is maybe one of the crowning achievements of any Greek geometer not named Euclid. With the tools of calculus, this becomes a pretty straightforward problem that you could reasonably give to an undergraduate. In particular:
 
-# There's a special case that's straightforward
+## There's a special case that's straightforward
 
 Say that your setup is like this:
 
@@ -23,7 +23,7 @@ Say that your setup is like this:
 
  We're going to calculate the volume in some reasonable way (ie. the method of shells), and we're going to calculate the product of the area of the region and the distance traveled by the centroid, and show that those are the same.
 
- ## Calculating the volume
+### Calculating the volume
 
 The method of shells gives you a straightforward way to calculate the volume of the solid of revolution: Draw a vertical slice of this region and revolve it around the axis $x=c$. What you get is something like the skin of a tin can. The height of that slice is $f(x) -g(x)$, the thickness is $\Delta x$, and the circumference is $2\pi r$, where $r$ is the (horizontal) distance between the slice location and the center of revolution $c$. Looking at this picture will show you that $r = c-x$:
 
@@ -35,7 +35,7 @@ Imagine cutting this big tin can open and unrolling it so it lies flat. You ther
 
 $$V = \int_{x=a}^b 2\pi [c-x][f(x)-g(x)]\ dx.$$
 
-## Finding $A\cdot d$
+### Finding area times distance
 
 Now let's make sure that Pappus's formula works out to the same thing. We'll need to find the centroid, but we don't care about the $y$-coordinate of the centroid because it won't be moving in the $y$ direction and we only care about the distance it travels.
 
@@ -64,7 +64,7 @@ Yay, $A\cdot d$ is indeed equal to $V$ that we calculated by other means.
 
 That was a fair amount of work, but I think you could reasonably give this to an undergrad somewhere in the middle of a second-semester calculus class. Which is cool! It's kind of amazing that the machinery of calculus is so powerful that we can give it to a teenager and they can achieve something that was the crown jewel of Greek geometry. 
 
-# However, 
+## However, 
 
 that is certainly not how Pappus did it (he did not have the machinery of calculus), nor how he even stated the theorem. So what was his whole deal?
 
