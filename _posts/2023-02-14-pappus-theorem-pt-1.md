@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Pappus's theorem"
+title: "Pappus's theorem"
 tags: math calculus 
+image: https://rhinopotamus.github.io/images/pappus-2.png
 katex: True
 ---
 
