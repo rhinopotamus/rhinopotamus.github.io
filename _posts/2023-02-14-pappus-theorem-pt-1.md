@@ -40,11 +40,11 @@ $$V = \int_{x=a}^b 2\pi [c-x][f(x)-g(x)]\ dx.$$
 
 Now let's make sure that Pappus's formula works out to the same thing. We'll need to find the centroid, but we don't care about the $y$-coordinate of the centroid because it won't be moving in the $y$ direction and we only care about the distance it travels.
 
-The centroid of a system of point masses is the weighted average of their locations, with weights given by, uh, their weights:
+The centroid of a system of point masses is the weighted average of their locations, with weights given by, uh, their weights:[^2]
 
 $$\overline{x} = \frac{\sum x_i w_i}{\sum w_i}$$
 
-Let's think about discretizing our region by, again, cutting it into vertical strips.[^2] To calculate the weight of such a strip, I probably want to multiply a density by an area; I don't have a given density here so I'm going to act like it's 1 (in whatever silly units) and just say that the weight of a strip is basically its area. A strip is approximately a rectangle, so its area is height times width: $A_\text{strip} = [f(x)-g(x)]\Delta x$. Passing to integrals, 
+Let's think about discretizing our region by, again, cutting it into vertical strips.[^3] To calculate the weight of such a strip, I probably want to multiply a density by an area; I don't have a given density here so I'm going to act like it's 1 (in whatever silly units) and just say that the weight of a strip is basically its area. A strip is approximately a rectangle, so its area is height times width: $A_\text{strip} = [f(x)-g(x)]\Delta x$. Passing to integrals, 
 
 $$\overline{x} = \frac{\int_{x=a}^b x[f(x)-g(x)]\ dx}{\int_{x=a}^b[f(x)-g(x)]\ dx}. $$
 
@@ -73,4 +73,7 @@ Watch for Part 2 of this series of posts!
 
 [^1]: I should be slightly more careful and call this Pappus's *centroid* theorem, because there's [another pretty useful theorem due to Pappus](https://en.wikipedia.org/wiki/Pappus%27s_hexagon_theorem) that comes up in geometry.
 
-[^2]: If I was being very careful I would write this as a double integral, but I'm going to handwave this by again noting that I only care about the $x$-coordinate.
+[^2]: If you don't believe this and you are a physics person, write out the equation that says that the total torque about $\overline{x}$ should be 0: $\sum w_i (x_i - \overline{x}) = 0$. Then solve for $\overline{x}$.
+
+
+[^3]: If I was being very careful I would write this as a double integral, but I'm going to handwave this by again noting that I only care about the $x$-coordinate.
