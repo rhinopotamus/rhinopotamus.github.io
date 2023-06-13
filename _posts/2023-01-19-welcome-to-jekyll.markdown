@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "It's my new jekyll blog!"
+title:  "My new jekyll blog!"
 date:   2023-01-19 14:36:50 -0700
 categories: jekyll update
 katex: True
