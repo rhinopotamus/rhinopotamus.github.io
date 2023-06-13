@@ -1,0 +1,9 @@
+<div class ="image-gallery">
+    {% for name in filenames %}
+        <div class="box">
+            <a href="images/{{ name }}">
+                <img src="thumbs/{{ name }} " alt="{{ name }}"  class="img-gallery" />
+            </a>
+        </div>
+    {% endfor %}
+</div>
