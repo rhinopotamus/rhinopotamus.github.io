@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "MathFest in Tampa: Upholding Our Values"
-subtitle: "test of subtitle"
 tags: mathfest tampa
 katex: True
 ---
