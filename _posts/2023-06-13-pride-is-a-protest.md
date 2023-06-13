@@ -2,6 +2,7 @@
 layout: post
 title:  "Pride is a protest"
 subtitle: "And it always has been"
+image: https://rhinopotamus.github.io/images/sign-1.png
 tags: pride
 ---
 
