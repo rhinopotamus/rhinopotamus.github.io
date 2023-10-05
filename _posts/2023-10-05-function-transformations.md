@@ -6,10 +6,10 @@ katex: True
 ---
 
 $$
-\newcommand{\oldx}{{\color{red} \text{old }x}}
-\newcommand{\oldy}{{\color{red} \text{old }y}}
-\newcommand{\newx}{{\color{blue} \text{new }x}}
-\newcommand{\newy}{{\color{blue} \text{new }y}}
+\newcommand{\oldx}{\textcolor{red}{\text{old }x}}
+\newcommand{\oldy}{\textcolor{red}{\text{old }y}}
+\newcommand{\newx}{\textcolor{blue}{\text{new }x}}
+\newcommand{\newy}{\textcolor{blue}{\text{new }y}}
 $$
 
 This is one of the most annoying things to teach in any functions-based class: Supposing $a, b > 0$, why does the transformation 
