@@ -41,6 +41,9 @@ $$
 So now grab the entire argument of $f$ -- the *entire input* of $f$ -- and label it as $\textcolor{red}{\text{old }x}$:
 
 $$
+f(\underbrace{\textcolor{blue}{\text{new }x} + 2}_{\textcolor{red}{\text{old }x}})
+$$
+$$
 \textcolor{blue}{\text{new }x} + 2 = \textcolor{red}{\text{old }x}
 $$
 
@@ -49,7 +52,10 @@ This says that if you knew the $\textcolor{blue}{\text{new }x}$, you could add 2
 Now that we've thought about $x$'s, let's think about $y$'s. Remember that $g(\textcolor{blue}{\text{new }x})$ = $\textcolor{blue}{\text{new }y}$, and $f(\textcolor{red}{\text{old }x})=\textcolor{red}{\text{old }y}$:
 
 $$
-\textcolor{blue}{\text{new }y} = \textcolor{red}{\text{old }y} + 1
+\begin{align*}
+\underbrace{g(\textcolor{blue}{\text{new }x})}_{\textcolor{blue}{\text{new }y}} &= \underbrace{f(\overbrace{\textcolor{blue}{\text{new }x} + 2}^{\textcolor{red}{\text{old }x}})}_{\textcolor{red}{\text{old }y}} + 1 \\
+\textcolor{blue}{\text{new }y} &= \textcolor{red}{\text{old }y} + 1
+\end{align*}
 $$
 
 This says that if you knew the $\textcolor{red}{\text{old }y}$, you could add 1 to get the $\textcolor{blue}{\text{new }y}$ -- in other words, *$\textcolor{blue}{\text{new }y}$'s are 1 up from $\textcolor{red}{\text{old }y}$'s*. Equivalently, if you knew the $\textcolor{blue}{\text{new }y}$ and wanted the $\textcolor{red}{\text{old }y}$, you would have to subtract 1 -- that is, $\textcolor{blue}{\text{new }y} - 1 = \textcolor{red}{\text{old }y}$. In other words, *$\textcolor{red}{\text{old }y}$'s are 1 down from $\textcolor{blue}{\text{new }y}$'s*.
