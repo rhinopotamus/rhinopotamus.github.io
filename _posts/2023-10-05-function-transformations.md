@@ -43,6 +43,7 @@ So now grab the entire argument of $f$ -- the *entire input* of $f$ -- and label
 $$
 f(\underbrace{\textcolor{blue}{\text{new }x} + 2}_{\textcolor{red}{\text{old }x}})
 $$
+
 $$
 \textcolor{blue}{\text{new }x} + 2 = \textcolor{red}{\text{old }x}
 $$
