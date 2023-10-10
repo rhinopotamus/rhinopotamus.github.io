@@ -48,7 +48,11 @@ $$
 \textcolor{blue}{\text{new }x} + 2 = \textcolor{red}{\text{old }x}
 $$
 
-This says that if you knew the $\textcolor{blue}{\text{new }x}$, you could add 2 to get the $\textcolor{red}{\text{old }x}$ -- in other words, *$\textcolor{red}{\text{old }x}$'s are 2 to the right of $\textcolor{blue}{\text{new }x}$'s*. Equivalently, if you knew the $\textcolor{red}{\text{old }x}$ and wanted the $\textcolor{blue}{\text{new }x}$, you would have to subtract 2 -- that is, $\textcolor{red}{\text{old }x} - 2 = \textcolor{blue}{\text{new }x}$. In other words, *$\textcolor{blue}{\text{new }x}$'s are 2 to the left of $\textcolor{red}{\text{old }x}$'s*.
+This says that if you knew the $\textcolor{blue}{\text{new }x}$, you could add 2 to get the $\textcolor{red}{\text{old }x}$ -- in other words, *$\textcolor{red}{\text{old }x}$'s are 2 to the right of $\textcolor{blue}{\text{new }x}$'s*. Equivalently, if you knew the $\textcolor{red}{\text{old }x}$ and wanted the $\textcolor{blue}{\text{new }x}$, you would have to subtract 2 -- that is, 
+
+$$\textcolor{blue}{\text{new }x} = \textcolor{red}{\text{old }x} - 2.$$ 
+
+In other words, *$\textcolor{blue}{\text{new }x}$'s are 2 to the left of $\textcolor{red}{\text{old }x}$'s*.
 
 Now that we've thought about $x$'s, let's think about $y$'s. Remember that $g(\textcolor{blue}{\text{new }x})$ = $\textcolor{blue}{\text{new }y}$, and $f(\textcolor{red}{\text{old }x})=\textcolor{red}{\text{old }y}$:
 
@@ -59,7 +63,11 @@ $$
 \end{align*}
 $$
 
-This says that if you knew the $\textcolor{red}{\text{old }y}$, you could add 1 to get the $\textcolor{blue}{\text{new }y}$ -- in other words, *$\textcolor{blue}{\text{new }y}$'s are 1 up from $\textcolor{red}{\text{old }y}$'s*. Equivalently, if you knew the $\textcolor{blue}{\text{new }y}$ and wanted the $\textcolor{red}{\text{old }y}$, you would have to subtract 1 -- that is, $\textcolor{blue}{\text{new }y} - 1 = \textcolor{red}{\text{old }y}$. In other words, *$\textcolor{red}{\text{old }y}$'s are 1 down from $\textcolor{blue}{\text{new }y}$'s*.
+This says that if you knew the $\textcolor{red}{\text{old }y}$, you could add 1 to get the $\textcolor{blue}{\text{new }y}$ -- in other words, *$\textcolor{blue}{\text{new }y}$'s are 1 up from $\textcolor{red}{\text{old }y}$'s*. Equivalently, if you knew the $\textcolor{blue}{\text{new }y}$ and wanted the $\textcolor{red}{\text{old }y}$, you would have to subtract 1 -- that is, 
+
+$$\textcolor{blue}{\text{new }y} - 1 = \textcolor{red}{\text{old }y}.$$ 
+
+In other words, *$\textcolor{red}{\text{old }y}$'s are 1 down from $\textcolor{blue}{\text{new }y}$'s*.
 
 Here's the punchline: Subtracting from $x$ inside the argument of the original function is something you do to $\textcolor{blue}{\text{new }x}$. Adding to the output of $f$ is something you do to $\textcolor{red}{\text{old }y}$. This is why these two things behave in the opposite directions!
 
