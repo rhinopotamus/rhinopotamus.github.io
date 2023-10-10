@@ -22,7 +22,11 @@ And yes, I am going to use those colors throughout this blog; in class I used tw
 
 ## Old and new labels in action
 
-Let's look at a concrete example to see what this labeling wins us. Suppose that $$y = g(x) = f(x+2)+1.$$ In the illustration below, I've chosen $f(x) = x^2$ just for concreteness, but the following will work with any choice of $f$.
+Let's look at a concrete example to see what this labeling wins us. Suppose that
+
+ $$y = g(x) = f(x+2)+1.$$ 
+ 
+ In the illustration below, I've chosen $f(x) = x^2$ just for concreteness, but the following will work with any choice of $f$.
 
 Old $f$           |  New $g$
 :-------------------------:|:-------------------------:
