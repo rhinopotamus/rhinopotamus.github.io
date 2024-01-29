@@ -30,3 +30,7 @@ Pride is a protest and always has been. The first pride march was a riot, involv
 I'd like more institutions to take the Disney track and actually go to bat against fascist laws. I'd like more corporations to make financial decisions based on the climate of the states they operate in. I'd like to see CEOs and university presidents testifying in state houses against anti-LGBTQ+ and anti-trans legislation. 
 
 However, in the meantime, I guess I'll just tie my bear flag around my shoulders and hoist a sign myself.
+
+******
+
+Very belated update (January 29, 2024): Today I happened to find out that there's a shiny marcomm video of our presence in the pride march on our university website. [My sign is visible for a little under half a second.](https://youtu.be/oy0fzfpm5jk?si=uRvctKjEvYrhJEP8&t=25)
