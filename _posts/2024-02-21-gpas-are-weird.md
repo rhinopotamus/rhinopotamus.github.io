@@ -81,11 +81,13 @@ The upshot of this is that *averages are only meaningful within interval scales*
 
 The meaningful measure of central tendency within ordinal scales, which grade points are, is the *median*. This makes sense because all you have to do to figure out the median is to sort, which we can certainly do. 
 
-## Summary and extremely tongue-in-cheek conclusion
+## Summary
 
 In order to calculate an average of some values, the values must be on an interval scale. Even if everybody used percentages to calculate letter grades, which isn't the case, and even if everybody did this in the "usual" way, which also isn't the case, the differences between grade points aren't consistent with the differences between percentages, so grade points can't be considered an interval scale. Thus it's not sensible to take averages of grade points. 
 
 Extremely tongue-in-cheek conclusion: Replace GPA with GPM.
+
+----
 
 [^1]: The center of mass of a system of point masses in one dimension. If you don't want to say a bunch of physics words about net torque, you can instead think of this as a weighted average of the locations of the masses with weights given by each mass. 
 
