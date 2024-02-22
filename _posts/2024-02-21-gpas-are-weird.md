@@ -2,6 +2,7 @@
 layout: post
 title:  "GPAs are weird"
 tags: math grading 
+image: https://rhinopotamus.github.io/images/gpa-exit-quiz-thumb.png
 katex: True
 ---
 
