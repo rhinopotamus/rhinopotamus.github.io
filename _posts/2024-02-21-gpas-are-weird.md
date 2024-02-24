@@ -10,7 +10,7 @@ The other day in class we were talking about something having to do with weighte
 
 ![Canvas quiz question: "Ask me one question." The student has written, "What is your opinion on GPA? You mentioned your opinion breifly." I have replied: "Oh friend, you absolutely do not know the pandora's box you are cracking open, lol"](/images/gpa-exit-quiz.png)
 
-I thought it would be fun to write a brief blog post summarizing something I said in my response to the question. All philosophical disagreements aside (and I have plenty of those), there is a *specific mathematical / statistical* reason why the GPA calculation is flawed. 
+I thought it would be fun to write a blog post digging deeper into something I said in my response to the question. All philosophical disagreements aside (and I have plenty of those), there is a *specific mathematical / statistical* reason why the GPA calculation is flawed. 
 
 ## Levels of measurement
 
@@ -70,7 +70,7 @@ I'm therefore concluding that *grade points do not form an interval scale*. Sure
 
 ## What can you do within different levels of measurement?
 
-The interesting thing about levels of measurement is that the properties of each level constrain the mathematical operations you can do with the values you measure:
+The interesting thing about levels of measurement is that the properties of each level constrain the mathematical operations you can do with the values you measure.
 - Within a nominal scale, you can say that two things are equal or not -- that is, you have the operations = and ≠.
 - Within an ordinal scale, you get to play with =, ≠, <, and >.
 - Within an interval scale, you can add + and - to your toolbox.
@@ -92,10 +92,10 @@ Extremely tongue-in-cheek conclusion: Replace GPA with GPM.
 
 [^1]: The center of mass of a system of point masses in one dimension. If you don't want to say a bunch of physics words about net torque, you can instead think of this as a weighted average of the locations of the masses with weights given by each mass. 
 
-[^2]: Scare quotes because this word is doing some heavy lifting: there are some differences here depending on the particulars of school policy. Some schools like mine allow for a D- with a grade point value of 0.7; others do not. Some schools allow for an A+ with a grade point value of 4.3; others like mine do not. I'm ignoring these subtleties in favor of pointing out a more obvious problem.
+[^2]: Scare quotes because this word is doing some heavy lifting: there are some differences here depending on the particulars of school policy. Some schools like mine allow for a D- with a grade point value of 0.7; others do not. Some schools allow for an A+ with a grade point value of 4.3; others like mine do not. I'm ignoring these subtleties in favor of pointing out a more fundamental problem.
 
-[^3]: Of course we immediately run into an issue that thirds don't have nice decimal equivalents, and we thus round to the nearest tenth; in practice this means that we round up for minus grades and down for plus grades. We run into a similar issue in the percentage table. This is also a problem, but it's not the biggest one.
+[^3]: Of course we immediately run into an issue that thirds don't have nice decimal equivalents, and we thus round to the nearest tenth; in practice this means that we round up for minus grades and down for plus grades. We run into a similar issue in the percentage table. This is also a problem, but it's not the fundamental one.
 
-[^4]: Even *scarier* scare quotes here because this word is doing even *heavier* lifting. Every syllabus author has the prerogative to set their own grading scheme, and lots do, which of course compounds the problem I'm about to articulate. The scheme I'm choosing to examine here is at least quite common; it is in particular the one built by default into Canvas.
+[^4]: Even *scarier* scare quotes here because this word is doing even *heavier* lifting. Every syllabus author has the prerogative to set their own grading scheme, and lots do, which of course compounds the fundamental problem I'm about to articulate. The scheme I'm choosing to examine here is at least quite common; it is in particular the one built by default into Canvas.
 
 [^5]: Specifically, the arithmetic mean. I don't know anybody who is calculating GPA using the geometric mean, and if I did, I would yell at them.
