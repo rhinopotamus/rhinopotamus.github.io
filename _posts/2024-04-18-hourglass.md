@@ -12,7 +12,7 @@ If I ask you what shape an hourglass is, there is a very specific shape that lea
 
 For Physics Reasons (TM), fluids[^1] will flow more quickly out of a more full container than they will out of an emptier container, so if we want the level of the fluid to drop consistently, we need the sides to taper in to compensate. 
 
-Exactly how much taper do we need? WHat shape, in fact, is an hourglass? Turns out this is a fun question to explore with just a little calculus.
+Exactly how much taper do we need? What shape, in fact, is an hourglass? Turns out this is a fun question to explore with just a little calculus.
 
 ## Solids of revolution
 
