@@ -124,7 +124,15 @@ $$
 
 Therefore, we have to have $n=399$, and remember that we started counting at zero -- we have to add up *four hundred* of these damn things in order to even be sure that our first two decimal places are right!![^1]
 
+I guess we're still stuck in black-and-white infomercial territory:
+
+![a woman struggling heroically to wrap up leftovers with plastic wrap](/images/saran-wrap.gif)
+
 ### Why is this *so bad*?
+
+Before we try anything else, we should understand the problem:
+
+![Ms. Frizzle saying "if at first you don't succeed..."](/images/frizzle-1.jpg){width=50%} ![Ms. Frizzle saying "... find out why"](/images/frizzle-2.jpg){width=50%}
 
 I wasn't just talking about convergence behavior above for reasons of nitpickery (although I am not immune to such impulses). This is actually the precise reason why this series converges so slowly: we are as far away from the center of convergence as it is possible to be and still converge. From this lens, *of course* we're converging super slow: we have some sense that the goodness of an approximation is controlled both by the degree of the approximation and by the distance away from the center.
 
