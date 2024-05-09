@@ -136,6 +136,6 @@ Before we try anything else, we should understand the problem:
 
 I wasn't just talking about convergence behavior above for reasons of nitpickery (although I am not immune to such impulses). This is actually the precise reason why this series converges so slowly. Remember that our interval of convergence was $-1 \leq x \leq 1$, and we are in fact dealing with $x=1$. Therefore, we are as far away from the center of convergence as it is possible to be and still converge. From this lens, *of course* we're converging super slow: we have some sense that the goodness of an approximation is controlled both by the degree of the approximation and by the distance away from the center.
 
-This also gives me an idea for how to improve this process for approximating π: maybe there's a better point, further inside the interval of convergence, where we'll get faster convergence behavior. Hmm...
+This also gives me an idea for how to improve this process for approximating π: maybe there's a better point, further inside the interval of convergence, where we'll get faster convergence behavior. [Hmm...]({% 2024-05-09-approximating-pi-pt-2 %})
 
 [^1]: Remember that in practice our error is usually a bit more than half as much as the error bound predicts. If you look at a spreadsheet you'll see that indeed our approximation to π starts consistently rounding to 3.14 around n = 293. 

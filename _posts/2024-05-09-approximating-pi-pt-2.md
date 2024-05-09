@@ -6,7 +6,7 @@ image: https://rhinopotamus.github.io/images/tfd-pi.gif
 katex: True
 ---
 
-[Last time we met](2024-05-08-approximating-pi), we found a Taylor series for the arctangent function, and we used the fact that π = 4 arctan(1) to find approximations to π. Unfortunately, this representation had really poor convergence behavior, because 1 is way the hell out at the edge of the interval of convergence for this series. I'm loath to abandon a fun trick, though; is there a way we can iterate on this idea?
+[Last time we met]({% 2024-05-08-approximating-pi %}), we found a Taylor series for the arctangent function, and we used the fact that π = 4 arctan(1) to find approximations to π. Unfortunately, this representation had really poor convergence behavior, because 1 is way the hell out at the edge of the interval of convergence for this series. I'm loath to abandon a fun trick, though; is there a way we can iterate on this idea?
 
 ## Approximating π better
 
