@@ -30,7 +30,7 @@ $$
 
 ### The alternating series error bound
 
-Happily, this is still an alternating series, so we can still use the alternating series error bound $\lvert S - S_n\rvert < a_{n+1}$ to easily find reasonably tight[^2] bounds on the truncation error. In this case, we find that:
+Happily, this is still an alternating series, so we can still use the alternating series error bound to easily find reasonably tight[^2] bounds on the truncation error. In this case, we find that:
 
 $$|\pi - S_n| < \dfrac{2\sqrt{3}}{3^{n+1}\cdot(2n+3)}$$
 
