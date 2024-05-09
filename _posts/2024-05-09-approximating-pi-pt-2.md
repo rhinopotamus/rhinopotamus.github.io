@@ -2,7 +2,7 @@
 layout: post
 title:  "Approximating π, part 2"
 tags: math calculus
-image: https://rhinopotamus.github.io/images/tfd-pi.gif
+image: https://rhinopotamus.github.io/images/unit-circle.png
 katex: True
 ---
 
