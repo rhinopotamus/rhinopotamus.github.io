@@ -30,15 +30,34 @@ bluesky_username: sbagley.bsky.social
 show_excerpts: True
 
 # Build settings
-theme: minima
+# theme: minima 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 #  - jekyll-latex
+
+remote_theme: jekyll/minima
+
+minima:
+  # Minima skin selection.
+  # Available skins are:
+  skin: solarized
+  
+  # Minima date format.
+  # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
+  #date_format: "%b-%d-%Y"
+
+  # Generate social links in footer.
+  social_links:
+    - { platform: github,         user_url: "https://github.com/rhinopotamus" }
+    - { platform: bluesky,         user_url: "https://bsky.app/profile/sbagley.bsky.social" }
 
 # Some crap about katex
 markdown: kramdown
 kramdown:
    math_engine: katex
+   smart_quotes: ["apos", "apos", "ldquo", "rdquo"]
 
 
 # Exclude from processing.
