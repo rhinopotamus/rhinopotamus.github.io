@@ -86,7 +86,7 @@ Because I was flying by the seat of my pants here, I had to improvise what the d
 
 This activity was really fun, and in particular we had a great discussion about one group's wrong-on-purpose sentence: "The integral of the derivative is the original function." The reason this sentence is wrong is precisely the *first* moral of the FTC, which I was very stoked to see emerge from an activity that I wanted to hit the *second* moral of the FTC. 
 
-This activity also set the stage for the wrap-up discussion: at the beginning of class, a student asked, "what's the difference between 'integral' and 'antiderivative'?" I told them that I wanted them to re-ask the question at the end, and then we had a nice discussion about definte vs indefinite integrals, which leads nicely into next week's classes about $u$-substitution and integration by parts.
+This activity also set the stage for the wrap-up discussion: at the beginning of class, a student asked, "what's the difference between 'integral' and 'antiderivative'?" I told them that I wanted them to re-ask the question at the end, and then we had a nice discussion about definite vs indefinite integrals, which leads nicely into next week's classes about $u$-substitution and integration by parts.
 
 ## Lessons for next time
 
