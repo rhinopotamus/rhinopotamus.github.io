@@ -44,7 +44,7 @@ If you accept that you might suck at proofs, then you can ask yourself a bunch o
 
 Repeatedly (perpetually!) asking yourself these questions is how you get good at proofs. It is a hallmark of expertise; it is what differentiates a novice prover from an expert. And you can't get there without first sucking, and then embracing the suck.
 
-![the bright-side-dark-side bus meme, but both people are captioned "I suck at proofs"](../images/i-suck-at-proofs.jpg)
+![the bright-side-dark-side bus meme, but both people are captioned "I suck at proofs"](/images/i-suck-at-proofs.jpg)
 
 With love and confidence in your proof-writing abilities,
 
