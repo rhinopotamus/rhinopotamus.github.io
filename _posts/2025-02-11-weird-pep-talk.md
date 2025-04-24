@@ -1,3 +1,5 @@
+(I needed to give this weird pep talk to a class of people learning to write proofs. I was originally going to write it as a Canvas announcement but then decided it'd be nice to be able to reference it elsewhere more easily.)
+
 Hi algebraists,
 
 I am sensing that it may be the time in the semester for me to deliver the following very strange pep talk. At first, it is not going to sound much like a pep talk, but bear with me, because it'll come back around. The pep talk consists of three parts:
