@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "LLM policy"
+tags: teaching
+---
+
 At the end of the term here, I'm making a few edits / updates to my syllabus policy on the use of LLMs etc., and I decided to post it in some place that's easily shareable.
 
 ## Use of LLMs, “AI,” search engines, etc.
