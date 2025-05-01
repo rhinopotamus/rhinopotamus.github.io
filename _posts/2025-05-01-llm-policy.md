@@ -16,6 +16,7 @@ My job as a teacher is to inquire into your thinking, so that I can help you lea
 Therefore, if you submit work that was produced by any kind of computer:
 - you haven't done your job, because you haven't produced a record of *your* thinking, and
 - I cannot do my job, because I don't have access to what *you* think. (Indeed, I find it personally insulting if you ask me to read and respond to something that nobody wrote.)
+
 Relatedly, you can certainly use a search engine to look up a reasonable answer to any question that is ever posed in this course, and you could certainly submit whatever you find as if it was your work. Again, in this case, you haven't done your job and it's impossible for me to do mine.
 
 This policy needs teeth, even though I'm not interested in being a detective or a cop (again, neither of those things is actually what my job is). Here is how this policy is enforced:
