@@ -28,7 +28,7 @@ It'll be helpful to establish a couple of lemmas to streamline the presentation 
     - the index of the normalizer of the Sylow $p$-subgroup, and thus
     - a divisor of $m$.
 
-This is a key piece of machinery for any kind of "classify all subgroups of order $n$" kind of argument. The proof of each part is basically, think of a cute group action and show that it works nicely for groups of prime power order.
+This is a key piece of machinery for any kind of "classify all groups of order $n$" kind of argument. The proof of each part is basically, think of a cute group action and show that it works nicely for groups of prime power order.
 
 **$AB$ lemma**: Let $A, B \leq G$. If $A\unlhd G$, then $AB := \{ab\mid a\in A, b\in B\}$ is a subgroup of $G$, and $|AB| = \dfrac{|A|\cdot|B|}{|A\cap B|}.$
 
