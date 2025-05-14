@@ -26,7 +26,7 @@ This is sort of the biggest and most powerful of all the "downward" theorems. Ju
 
 *Idea of proof*: Let $G$ act on the cosets of $H$ by multiplication; let $K$ be the kernel of the action; look at the lattice of $G/K$; use the correspondence theorem to see that $[H:K] = 1$. Love a good group action; love the correspondence theorem.
 
-**I need to think of a cute name for this one**: If $G/Z(G)$ is cyclic, then $G$ is abelian, and thus $G/Z(G)$ is trivial. Immediate corollaries:
+**Vanishing quotient theorem**: If $G/Z(G)$ is cyclic, then $G$ is abelian, and thus $G/Z(G)$ is trivial. Immediate corollaries:
 - $G/Z(G)$ can't be nontrivial cyclic.
 - $Z(G)$ can't have prime index.
 
