@@ -28,14 +28,40 @@ But now take a look at the consequences of what we've just proved. Since $G$ is 
 
 To think our way through this proof, we had to believe implicitly that $x$ was some *non-central* element of $G$, so that we could think about which implicitly *non-identity* coset of $Z$ it lived in, so that we could use the structure of the implicitly *non-trivial* quotient group, so that we could say $x = g^n z$. But all of that was kinda wrong!!!
 
-This is why, [thanks to Andrew Stacy](https://bsky.app/profile/mathforge.org/post/3lorf74l6qk2u), I now refer to this as the "vanishing quotient theorem:" if $G/Z(G)$ is cyclic, then it vanishes.
+This is why, [thanks to Andrew Stacy](https://bsky.app/profile/mathforge.org/post/3lorf74l6qk2u), I now refer to this as the "vanishing quotient theorem:" if $G/Z(G)$ is cyclic, then it vanishes, from the sole pressure of your thinking upon it.
 
 ## $pqr$-groups
 
-Here's another thing I've been playing around with lately. Suppose $|G| = pqr$, where $p<q<r$ are primes. There's lots you can say about the structure of such a group, but here's one thing whose proof is weird: the $r$-Sylow subgroup of $G$ is normal.
+Here's another thing I've been playing around with lately. Suppose $|G| = pqr$, where $p<q<r$ are primes. There's lots you can say about the structure of such a group, but here's a particular chain of implication that is weird in the same way: let's see what we can learn about the $r$-Sylow subgroup.
 
-*Proof*: Let $R$ be an $r$-Sylow subgroup of $G$, and suppose that $R$ is not normal. Possible values of $n_r$ are $1$, $p$, $q$, or $pq$. $1$ is out because $R$'s not normal. $p$ and $q$ are both out because they're too small to be $1 \mod r$. Therefore $n_r = pq$.
+Specifically: Let $R$ be an $r$-Sylow subgroup of $G$.Possible values of $n_r$ are $1$, $p$, $q$, or $pq$. $p$ and $q$ are both out because they're too small to be $1 \mod r$. Case 1: $R$ is normal, boring. Case 2: Let's see what happens if $n_r = pq$.
 
 Well, that takes up a hell of a lot of the space in $G$; specifically, there are $pq(r-1)$ elements of order $r$. This only leaves room for exactly one $p$-Sylow subgroup $P$, and exactly one $q$-Sylow subgroup $Q$; therefore, both $P$ and $Q$ must be normal in $G$. 
 
-Since $Q\triangleleft G$, $QR \lt G$, and since $Q\cap R = 1$, $|QR| = qr$. Therefore, $[G:QR] = p$, and since $p$ is the smallest prime dividing $|G|$, $QR$ must be normal in $G$ by the small-index lemma.
+Since $Q\triangleleft G$, the set $QR := \{qr \mid q\in Q, r\in R\}$ is a subgroup of $G$, and since $Q\cap R = 1$, $|QR| = qr$. Therefore, $[G:QR] = p$, and since $p$ is the smallest prime dividing $|G|$, $QR$ must be normal in $G$ by the small-index lemma.
+
+Let's now think more about the subgroup $QR$. Since $|QR| = q\cdot r$, $QR$ has a normal $r$-Sylow subgroup. ($n_r$ within $QR$ can only be $1$ or $q$ and $q$ is too small.) Indeed, $R$ is characteristic in $QR$, since it's the unique subgroup of order $r$. 
+
+Therefore, since $R \operatorname{char} RQ \triangleleft G$, $R$ is normal in $G$. \qed
+
+That's a fine enough proof, and we used a lot of interesting facts along the way, but let me summarize the chain of implication to point out that something weird happened: 
+
+$R$ not normal → $P$, $Q$ normal → $QR$ is a subgroup (and since $[G:QR] = p$, $QR$ is normal) → $R$ is an $r$-Sylow subgroup of $QR$ → $R$ is normal in $QR$ → $R$ is characteristic in $QR$ → $R$ is normal in $G$
+
+In fewer words: "Suppose that $R$ is not normal in $G$. Surprise, $R$ is normal after all!"
+
+## The things in these proofs are weird
+
+So, a reasonable complaint about me calling this thing about $pqr$-groups the same kind of weirdness as the proof of the vanishing quotient theorem is that this one is ultimately "just" a proof by contradiction. If one was being very punctilious, one might write the statement of the theorem as "$R$ is normal in $G$", begin the proof with "suppose not; then $n_r = pq$," and end the proof with "therefore $n_r = 1$, which is a contradiction." Okay, sure; this is now a pretty textbook proof-by-contradiction setup.
+
+But the reason I *didn't* originally frame the theorem this way is because I *didn't* originally encounter this line of reasoning in such a pure form. In real life, I really did stumble into this from saying "hey, what do $pqr$-groups look like?". 
+
+And further, even a textbook proof by contradiction is weird. Ben Blum-Smith writes in the aforementioned blog post that mathematical objects have a peculiar ontology:
+
+> The place where this is easiest to see is in proofs by contradiction. When you read a proof by contradiction, you are spending time with objects that you expect will eventually be revealed *never to have existed*, and you expect this revelation to furthermore tell you that *it was impossible that they had ever existed*. That’s bizarro science fiction on its face.
+
+The objects in the proof of the vanishing quotient theorem are at least as weird. We had to assume that they were "generic particulars," with nothing specific to distinguish them from any ol' element, but then they turned out to be very specific indeed. The "generic" integer $n$ in $x=g^n z$? It was secretly impossible for it to be anything but 0. That $g$ whose coset $gZ$ was a generator for $G/Z$? Actually just the identity. Those implicitly possibly-non-central elements of $G$? Actually central after all.
+
+All this is very weird! It should actually be amazing that all of us mathematicians have developed the capacity to work with these objects as if they were sensible, well-behaved things like the number 2 or the area of a circle[^1]. And when students find these things difficult, we should remember that they very much are.
+
+[^1]: This is a joke.
