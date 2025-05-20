@@ -16,7 +16,7 @@ In this post, I'm reflecting on Ben Blum-Smith's classic [the things in proofs a
 
 Here's a weird chain of implication I ran into. Suppose $\vert G\vert  = pqr$, where $p<q<r$ are primes. Let's see what we can learn about its $r$-Sylow subgroup(s).
 
-Let $R$ be an $r$-Sylow subgroup of $G$. Possible values of $n_r$ (the number of $r$-Sylow subgroups in $G$) are $1$, $p$, $q$, or $pq$. $p$ and $q$ are both out because they're too small to be $1\!\! \mod r$. Case 1: $R$ is normal, okay, neat. Case 2: Let's see what happens if $n_r = pq$.
+Let $R$ be an $r$-Sylow subgroup of $G$. Possible values of $n_r$ (the number of $r$-Sylow subgroups in $G$) are $1$, $p$, $q$, or $pq$. $p$ and $q$ are both out because they're too small to be $1 \mod r$. Case 1: $R$ is normal, okay, neat. Case 2: Let's see what happens if $n_r = pq$.
 
 Well, that takes up a hell of a lot of the space in $G$; specifically, there are $pq(r-1)$ elements of order $r$. This only leaves room for exactly one $p$-Sylow subgroup $P$, and exactly one $q$-Sylow subgroup $Q$; therefore, both $P$ and $Q$ must be normal in $G$. 
 
