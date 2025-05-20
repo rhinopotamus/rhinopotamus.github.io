@@ -41,7 +41,7 @@ remote_theme: jekyll/minima
 minima:
   # Minima skin selection.
   # Available skins are:
-  skin: solarized
+  skin: solarized-dark
   
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
