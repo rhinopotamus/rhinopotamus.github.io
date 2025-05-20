@@ -6,10 +6,9 @@ katex: true
 ---
 
 This post is part of a three-post set 
-([1]({% link _posts\2025-05-20-weird-proofs.md %}) 
- [2]({% link _posts\2025-05-20-up-and-down.md %})
- [3]({% link _posts\2025-05-20-pqr-groups.md %})
-)
+([1]({% post_url 2025-05-20-weird-proofs %}) 
+ [2]({% post_url 2025-05-20-up-and-down %})
+ [3]({% post_url 2025-05-20-pqr-groups %}))
 about groups of order $pqr$, where $p<q<r$ are prime. 
 While thinking about such $pqr$-groups, I've collected a bunch of theorems and lemmas into a little mental toolbox. An interesting commonality between a lot of these tools is that they tell us about the relationship between various different animals in the subgroup lattice; an interesting *difference* is that some of them go "upwards," some of them go "downwards,"[^1] and some of them even go "sideways."
 
@@ -17,7 +16,7 @@ While thinking about such $pqr$-groups, I've collected a bunch of theorems and l
 
 Here are some theorems that go "down" the subgroup lattice: given information about a group (or subgroup), what can you say about its subgroups?
 
-**Sylow theorems** : Let $G$ be a finite group and let $p^n$ be the highest power of $p$ dividing $|G|$, so that $|G| = p^n \cdot m$, where $m$ is relatively prime to $p$. Then:
+**Sylow theorems** : Let $G$ be a finite group and let $p^n$ be the highest power of $p$ dividing $\vert G\vert $, so that $\vert G\vert  = p^n \cdot m$, where $m$ is relatively prime to $p$. Then:
 1. There exists a subgroup of $G$ of order $p^n$, which is called a *Sylow $p$-subgroup*.
     - Furthermore, there also exist subgroups of order $p^m$ for all $m<n$, and they are "nested" in a "$p$-group tower" with the Sylow $p$-subgroup(s) at the top.
 2. Any two Sylow $p$-subgroups are conjugate and thus isomorphic; there is thus a single conjugacy class of Sylow $p$-subgroups.
@@ -28,7 +27,7 @@ Here are some theorems that go "down" the subgroup lattice: given information ab
 
 This is sort of the biggest and most powerful of all the "downward" theorems. Just by knowing the prime factorization of the order of a group, you know the whole bottom of the subgroup lattice is populated by $p$-subgroup towers each capped off by one conjugacy class of maximal $p$-subgroups.
 
-**Small-index lemma**: If $p$ is the smallest prime dividing $|G|$, and $H\leq G$ such that $[G:H] = p$, then $H \unlhd G$. (A familiar corollary is that any subgroup of index 2 must be normal.)
+**Small-index lemma**: If $p$ is the smallest prime dividing $\vert G\vert $, and $H\leq G$ such that $[G:H] = p$, then $H \unlhd G$. (A familiar corollary is that any subgroup of index 2 must be normal.)
 
 *Idea of proof*: Let $G$ act on the cosets of $H$ by multiplication; let $K$ be the kernel of the action; look at the lattice of $G/K$; use the correspondence theorem to see that $[H:K] = 1$. Love a good group action; love the correspondence theorem.
 
@@ -36,7 +35,7 @@ This is sort of the biggest and most powerful of all the "downward" theorems. Ju
 - $G/Z(G)$ can't be nontrivial cyclic.
 - $Z(G)$ can't have prime index.
 
-The moral of this result is that $Z(G)$ can't be too high in the subgroup lattice (unless of course it is $G$ itself!). The upper reaches of the subgroup lattice are populated by things of small index; the smallest indices you can get are prime divisors of $|G|$; if $Z(G)$ was up there then its quotient would be $\mathbb{Z}_p$. So this one makes for "downward pressure" on the location of $Z(G)$.
+The moral of this result is that $Z(G)$ can't be too high in the subgroup lattice (unless of course it is $G$ itself!). The upper reaches of the subgroup lattice are populated by things of small index; the smallest indices you can get are prime divisors of $\vert G\vert $; if $Z(G)$ was up there then its quotient would be $\mathbb{Z}_p$. So this one makes for "downward pressure" on the location of $Z(G)$.
 
 **Normal-parent lemma**: Suppose that $H\leq N \unlhd G$. If $\newcommand\cl{\operatorname{cl}} K\in \cl_G(H)$, then $K \leq N$. ("Conjugacy classes stay within normal parents.")
 
@@ -46,7 +45,7 @@ The moral of this result is that $Z(G)$ can't be too high in the subgroup lattic
 
 Here are some theorems that go "up" the subgroup lattice: given information about a subgroup (or *some* subgroups), what can you say about its parents?
 
-**$AB$ lemma**: Let $A, B \leq G$. If $B\unlhd G$, then $AB := \{ab\mid a\in A, b\in B\}$ is a subgroup of $G$, and $|AB| = \dfrac{|A|\cdot|B|}{|A\cap B|}.$
+**$AB$ lemma**: Let $A, B \leq G$. If $B\unlhd G$, then $AB := \{ab\mid a\in A, b\in B\}$ is a subgroup of $G$, and $\vert AB\vert  = \dfrac{\vert A\vert \cdot\vert B\vert }{\vert A\cap B\vert }.$
 
 Further, $B$ doesn't have to be fully normal in $G$; you can weaken this hypothesis to say that $B$ is normalized by $A$, ie., $A\leq N_G(B)$. In this case, we can further conclude that $B \triangleleft AB$.
 
@@ -60,7 +59,7 @@ To my point about going upwards, note that both $A$ and $B$ are subgroups of $AB
 
 The next one is a good friend of the normalizer lemma:
 
-**Class lemma**: Let $H\leq G$. Then $|\cl_G(H)| = [G: N_G(H)]$ ("the number of conjugate subgroups of $H$ is the same as the index of its normalizer").
+**Class lemma**: Let $H\leq G$. Then $\vert \cl_G(H)\vert  = [G: N_G(H)]$ ("the number of conjugate subgroups of $H$ is the same as the index of its normalizer").
 
 *Idea of proof*: This is a direct consequence of the orbit-stabilizer theorem, but you can also prove it directly by establishing a bijection between conjugates of $H$ and cosets of its normalizer.
 
@@ -70,7 +69,7 @@ The normalizer lemma and the class lemma pair nicely together, particularly in a
 
 Here are some theorems that talk about how things propagate "across" the subgroup lattice to inform you about the properties of other sbugroups of the same order.
 
-**Class multiplication lemma**: Say that $H \leq K \leq G$. Then $|\cl_G(H)| = |\cl_K(H)| \cdot |\cl_G(K)|.$ (The size of conjugacy classes multiplies how you wish it would.)
+**Class multiplication lemma**: Say that $H \leq K \leq G$. Then $\vert \cl_G(H)\vert  = \vert \cl_K(H)\vert  \cdot \vert \cl_G(K)\vert .$ (The size of conjugacy classes multiplies how you wish it would.)
 
 *Tongue-in-cheek proof*: Conjugation is an isomorphism. \qed
 

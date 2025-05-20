@@ -6,10 +6,9 @@ katex: true
 ---
 
 This post is part of a three-post set 
-([1]({% link _posts\2025-05-20-weird-proofs.md %}) 
- [2]({% link _posts\2025-05-20-up-and-down.md %})
- [3]({% link _posts\2025-05-20-pqr-groups.md %})
-)
+([1]({% post_url 2025-05-20-weird-proofs %}) 
+ [2]({% post_url 2025-05-20-up-and-down %})
+ [3]({% post_url 2025-05-20-pqr-groups %}))
 about groups of order $pqr$, where $p<q<r$ are prime. 
 While designing final exam questions for my group theory class, I was [playing around with groups of order 42](https://bsky.app/profile/sbagley.bsky.social/post/3lojgjg6x6k2t), for [no particular reason](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#_The_Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_is_42), and then [a friend noticed something interesting](https://bsky.app/profile/visualalgebra.bsky.social/post/3lojmnaokxs2l) that I wanted to try to prove more generally. Here's a complete writeup of this proof. Is it the most beautiful and elegant proof? Certainly not; you can directly quote some results about [groups of square-free order being supersolvable](https://en.wikipedia.org/wiki/Supersolvable_group), but I think this approach is pedagogically useful.
 
@@ -51,7 +50,7 @@ Since $Q < QR$, $Q$ is in fact a $q$-Sylow subgroup of $QR$! Therefore, within $
 
 But wait, could it be the case that $n_q = r$ within $QR$, but then when we go back out to the big group, $n_q = pr$? Turns out that no, because $QR$ is normal, so the normal-parent lemma tells us that $Q$'s whole conjugacy class (in $G$!) consists of subgroups of $QR$. Further, the Sylow theorems tell us that all the $q$-Sylow subgroups come in just one conjugacy class. 
 
-So, even when we pass back out to the big group $G$, $n_q = 1$, in which case $Q$ is normal and $PQ$ is a subgroup of $G$, or $n_q = r$, in which case we can apply the class lemma to say that's the index of its normalizer $N_G(Q)$, so the order of the normalizer is $|G| / r = pq$. Yay, either way, we get a group of order $pq$, and we've completed Part 1 of the theorem.
+So, even when we pass back out to the big group $G$, $n_q = 1$, in which case $Q$ is normal and $PQ$ is a subgroup of $G$, or $n_q = r$, in which case we can apply the class lemma to say that's the index of its normalizer $N_G(Q)$, so the order of the normalizer is $\vert G\vert  / r = pq$. Yay, either way, we get a group of order $pq$, and we've completed Part 1 of the theorem.
 
 **Part 4**: There is just one conjugacy class of subgroups of each order.
 

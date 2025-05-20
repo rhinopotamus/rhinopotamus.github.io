@@ -6,24 +6,23 @@ katex: true
 ---
 
 This post is part of a three-post set 
-([1]({% link _posts\2025-05-20-weird-proofs.md %}) 
- [2]({% link _posts\2025-05-20-up-and-down.md %})
- [3]({% link _posts\2025-05-20-pqr-groups.md %})
-)
+([1]({% post_url 2025-05-20-weird-proofs %}) 
+ [2]({% post_url 2025-05-20-up-and-down %})
+ [3]({% post_url 2025-05-20-pqr-groups %}))
 about groups of order $pqr$, where $p<q<r$ are prime.  
 In this post, I'm reflecting on Ben Blum-Smith's classic [the things in proofs are weird](https://blogs.ams.org/matheducation/2020/05/20/the-things-in-proofs-are-weird-a-thought-on-student-difficulties/). I encountered such a proof while thinking about $pqr$-groups, and an even weirder one earlier in the semester.
 
 ## A theorem about $pqr$-groups
 
-Here's a weird chain of implication I ran into. Suppose $|G| = pqr$, where $p<q<r$ are primes. Let's see what we can learn about its $r$-Sylow subgroup(s).
+Here's a weird chain of implication I ran into. Suppose $\vert G\vert  = pqr$, where $p<q<r$ are primes. Let's see what we can learn about its $r$-Sylow subgroup(s).
 
 Let $R$ be an $r$-Sylow subgroup of $G$. Possible values of $n_r$ are $1$, $p$, $q$, or $pq$. $p$ and $q$ are both out because they're too small to be $1 \mod r$. Case 1: $R$ is normal, okay, neat. Case 2: Let's see what happens if $n_r = pq$.
 
 Well, that takes up a hell of a lot of the space in $G$; specifically, there are $pq(r-1)$ elements of order $r$. This only leaves room for exactly one $p$-Sylow subgroup $P$, and exactly one $q$-Sylow subgroup $Q$; therefore, both $P$ and $Q$ must be normal in $G$. 
 
-Since $Q\triangleleft G$, the set $QR := \{qr \mid q\in Q, r\in R\}$ is a subgroup of $G$, and since $Q\cap R = 1$, $|QR| = qr$. Therefore, $[G:QR] = p$, and since $p$ is the smallest prime dividing $|G|$, $QR$ must be normal in $G$ by the small-index lemma.
+Since $Q\triangleleft G$, the set $QR := \{qr \mid q\in Q, r\in R\}$ is a subgroup of $G$, and since $Q\cap R = 1$, $\vert QR\vert  = qr$. Therefore, $[G:QR] = p$, and since $p$ is the smallest prime dividing $\vert G\vert $, $QR$ must be normal in $G$ by the small-index lemma.
 
-Let's now zoom in on the subgroup $QR$. Since $r$ divides $|QR|$, $QR$ has an $r$-Sylow subgroup; indeed, our original guy $R$ must be such a thing. $n_r$ within $QR$ can only be $1$ or $q$, and $q$ is too small, so $R$ is normal in $QR$. Further, $R$ is characteristic in $QR$, since it's the unique subgroup of order $r$. 
+Let's now zoom in on the subgroup $QR$. Since $r$ divides $\vert QR\vert $, $QR$ has an $r$-Sylow subgroup; indeed, our original guy $R$ must be such a thing. $n_r$ within $QR$ can only be $1$ or $q$, and $q$ is too small, so $R$ is normal in $QR$. Further, $R$ is characteristic in $QR$, since it's the unique subgroup of order $r$. 
 
 Therefore, since $R \operatorname{char} QR \triangleleft G$, $R$ is normal in $G$ (indeed, characteristic in $G$). \qed
 
