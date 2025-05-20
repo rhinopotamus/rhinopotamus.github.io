@@ -37,7 +37,7 @@ This is sort of the biggest and most powerful of all the "downward" theorems. Ju
 
 The moral of this result is that $Z(G)$ can't be too high in the subgroup lattice (unless of course it is $G$ itself!). The upper reaches of the subgroup lattice are populated by things of small index; the smallest indices you can get are prime divisors of $\vert G\vert $; if $Z(G)$ was up there then its quotient would be $\mathbb{Z}_p$. So this one makes for "downward pressure" on the location of $Z(G)$.
 
-**Normal-parent lemma**: Suppose that $H\leq N \unlhd G$. If $\newcommand\cl{\operatorname{cl}} K\in \cl_G(H)$, then $K \leq N$. ("Conjugacy classes stay within normal parents.")
+**Normal-parent lemma**: Suppose that $H\leq N \unlhd G$. If $K\in \operatorname{cl}_G(H)$, then $K \leq N$. ("Conjugacy classes stay within normal parents.")
 
 *Proof*: Pick some $x\in G$ and consider the conjugate subgroup $\newcommand\inv{^{-1}} xHx\inv$. We'd like to show that this is a subgroup of $N$. Pick some $h\in H$; where does it go when you conjugate? Well, since $H \leq N$, $h$ is an element of $N$, so $xhx\inv$ is an element of $xNx\inv$, but hey, that's just $N$ again. 
 
@@ -59,7 +59,7 @@ To my point about going upwards, note that both $A$ and $B$ are subgroups of $AB
 
 The next one is a good friend of the normalizer lemma:
 
-**Class lemma**: Let $H\leq G$. Then $\vert \cl_G(H)\vert  = [G: N_G(H)]$ ("the number of conjugate subgroups of $H$ is the same as the index of its normalizer").
+**Class lemma**: Let $H\leq G$. Then $\vert \operatorname{cl}_G(H)\vert  = [G: N_G(H)]$ ("the number of conjugate subgroups of $H$ is the same as the index of its normalizer").
 
 *Idea of proof*: This is a direct consequence of the orbit-stabilizer theorem, but you can also prove it directly by establishing a bijection between conjugates of $H$ and cosets of its normalizer.
 
@@ -69,7 +69,7 @@ The normalizer lemma and the class lemma pair nicely together, particularly in a
 
 Here are some theorems that talk about how things propagate "across" the subgroup lattice to inform you about the properties of other sbugroups of the same order.
 
-**Class multiplication lemma**: Say that $H \leq K \leq G$. Then $\vert \cl_G(H)\vert  = \vert \cl_K(H)\vert  \cdot \vert \cl_G(K)\vert .$ (The size of conjugacy classes multiplies how you wish it would.)
+**Class multiplication lemma**: Say that $H \leq K \leq G$. Then $\vert \operatorname{cl}_G(H)\vert  = \vert \operatorname{cl}_K(H)\vert  \cdot \vert \operatorname{cl}_G(K)\vert .$ (The size of conjugacy classes multiplies how you wish it would.)
 
 *Tongue-in-cheek proof*: Conjugation is an isomorphism. \qed
 

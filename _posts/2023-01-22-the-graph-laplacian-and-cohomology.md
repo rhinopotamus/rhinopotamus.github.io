@@ -21,7 +21,7 @@ $$
 \frac{\langle f, Lf \rangle}{\langle f, f \rangle} = \frac{\displaystyle\sum_{(u, v) \in E}(f(u)-f(v))^2}{\displaystyle\sum_v f(v)^2 d_v}
 $$
 
-We wanted to better understand this calculation, because the Rayleigh quotient is important for picking out eigenvalues of $$L$$. The denominator ends up being straightforward, but in the numerator, I dragged us lengthwise through the following honestly horrific calculation, which you should not look very hard at other than to note that it involves double sums, index gymnastics, overly-clever relabeling, and every other bad thing.
+We wanted to better understand this calculation, because the Rayleigh quotient is important for picking out eigenvalues of $L$. The denominator ends up being straightforward, but in the numerator, I dragged us lengthwise through the following honestly horrific calculation, which you should not look very hard at other than to note that it involves double sums, index gymnastics, overly-clever relabeling, and every other bad thing.
 
 $$
 \begin{align*}
