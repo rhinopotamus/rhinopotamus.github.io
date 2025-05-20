@@ -24,7 +24,7 @@ The interesting thing about the number 42, in this context, is that it's the pro
 
 ### Lemmas
 
-The post about going up and down the subgroup lattice contains a bunch of lemmas that I'm stapling together to streamline the presentation of this proof; it's fun to notice just how many times the proof uses each of these.
+The post about [going up and down the subgroup lattice]({% post_url 2025-05-20-up-and-down %}) contains a bunch of lemmas that I'm stapling together to streamline the presentation of this proof; it's fun to notice just how many times the proof uses each of these.
 
 I'll just add one more thing here that I don't really think of as either "upwards" or "downwards" (or indeed "sideways"):
 
@@ -36,7 +36,7 @@ I'll just add one more thing here that I don't really think of as either "upward
 
 Let $P$ be a Sylow $p$-subgroup of $G$, and $Q$ and $R$ similar. 
 
-**Part 2** (yes, this is before Part 1, deal with it): As established in the post about weird proofs, $R$ is normal (characteristic!) in $G$. 
+**Part 2** (yes, this is before Part 1, deal with it): As established in [the post about weird proofs]({% post_url 2025-05-20-weird-proofs %}), $R$ is normal (characteristic!) in $G$. 
 
 **Part 1:** $G$ has subgroups of every possible order, ie., $p$, $q$, $r$, $pq$, $pr$, and $qr$. 
 
