@@ -1,11 +1,17 @@
 ---
 layout: post
 title:  "Up and down the subgroup lattice"
-tags: teaching math
+tags: teaching math pqr
 katex: true
 ---
 
-I've been thinking a lot about a fun problem in group theory lately, and I've thus collected a bunch of theorems and lemmas into a little mental toolbox. An interesting commonality between a lot of these tools is that they tell us about the relationship between various different animals in the subgroup lattice; an interesting difference is that some of them go "upwards" and some of them go "downwards."[^1]
+This post is part of a three-post set 
+([1]({% link _posts\2025-05-20-weird-proofs.md %}) 
+ [2]({% link _posts\2025-05-20-up-and-down.md %})
+ [3]({% link _posts\2025-05-20-pqr-groups.md %})
+)
+about groups of order $pqr$, where $p<q<r$ are prime. 
+While thinking about such $pqr$-groups, I've collected a bunch of theorems and lemmas into a little mental toolbox. An interesting commonality between a lot of these tools is that they tell us about the relationship between various different animals in the subgroup lattice; an interesting *difference* is that some of them go "upwards," some of them go "downwards,"[^1] and some of them even go "sideways."
 
 ## Downwards
 
@@ -40,11 +46,13 @@ The moral of this result is that $Z(G)$ can't be too high in the subgroup lattic
 
 Here are some theorems that go "up" the subgroup lattice: given information about a subgroup (or *some* subgroups), what can you say about its parents?
 
-**$AB$ lemma**: Let $A, B \leq G$. If $A\unlhd G$, then $AB := \{ab\mid a\in A, b\in B\}$ is a subgroup of $G$, and $|AB| = \dfrac{|A|\cdot|B|}{|A\cap B|}.$
+**$AB$ lemma**: Let $A, B \leq G$. If $B\unlhd G$, then $AB := \{ab\mid a\in A, b\in B\}$ is a subgroup of $G$, and $|AB| = \dfrac{|A|\cdot|B|}{|A\cap B|}.$
 
-To my point about going upwards, note that both $A$ and $B$ are subgroups of $AB$, so $AB$ lives somewhere "above" both $A$ and $B$ in the subgroup lattice. Also worth noting that $A$ doesn't have to be fully normal in $G$; you can weaken this hypothesis to say that $A$ is normalized by $B$, ie., $B\leq N_G(A)$.
+Further, $B$ doesn't have to be fully normal in $G$; you can weaken this hypothesis to say that $B$ is normalized by $A$, ie., $A\leq N_G(B)$. In this case, we can further conclude that $B \triangleleft AB$.
 
-*Idea of proof*: This is a pretty straightforward exercise in verifying that something is a subgroup. A key idea is that normal subgroups are "almost central" -- since $bA = Ab$, $b\cdot a = a' \cdot b$, even if $ba \neq ab$. This means that the multiplication within $AB$ works how you want it to.
+To my point about going upwards, note that both $A$ and $B$ are subgroups of $AB$, so $AB$ lives somewhere "above" both $A$ and $B$ in the subgroup lattice.
+
+*Idea of proof*: This is a pretty straightforward exercise in verifying that something is a subgroup. A key idea is that normal subgroups are "almost central" -- since $aB = Ba$, $a \cdot b = b' \cdot a$, even if $ab \neq ba$. This means that the multiplication within $AB$ works how you want it to.
 
 **Normalizer lemma**: $H\leq N_G(H) \leq G$ ("the normalizer of $H$ lives somewhere above $H$ in the subgroup lattice"), and thus $[G:H] = [G:N_G(H)]\cdot [N_G(H):G]$.
 
@@ -60,21 +68,25 @@ The normalizer lemma and the class lemma pair nicely together, particularly in a
 
 ## Sideways
 
+Here are some theorems that talk about how things propagate "across" the subgroup lattice to inform you about the properties of other sbugroups of the same order.
+
 **Class multiplication lemma**: Say that $H \leq K \leq G$. Then $|\cl_G(H)| = |\cl_K(H)| \cdot |\cl_G(K)|.$ (The size of conjugacy classes multiplies how you wish it would.)
 
 *Tongue-in-cheek proof*: Conjugation is an isomorphism. \qed
 
-*Slightly more detailed proof*: For each $x\in G$, let $\phi_x(g) = xgx\inv$ be conjugation by $x$; this is an isomorphism. Say that $K' = xKx\inv = \phi_x(K)$. Since $\phi_x$ is an isomorphism, it sends subgroups to subgroups, so $\phi_x(H) \leq K'$. Therefore, within each distinct conjugate of $K$, there is an isomorphic image of $H$, say $H'$.
-
-What's more, since $\phi_x$ is a homomorphism, it respects conjugation. Suppose that $H_k= kHk\inv$ is a conjugate of $H$ within $K$. Then $\phi_x(H_k) = \phi_x(kHk\inv) = \phi_x(k)\ \phi_x(H)\ \phi_x(k)\inv = \phi_x(k)\ H'\ \phi_x(k)\inv$, so the image of $H_k$ is a conjugate within $K'$ of the image of $H$. 
-
-So, below every conjugate of $K$, there's a fresh copy of the entire ($K$-)conjugacy class of its subgroup $H$. And, crucially, there's no other $G$-conjugates of $H$, because any $G$-conjugate of $H$ has to be some subgroup of a $G$-conjugate of $K$. And we're done!
+*Slightly more detailed proof*: Below every conjugate of $K$, there's an exact copy of the entire subgroup lattice of $K$ ("isomorphisms send subgroups to subgroups"). In particular, there's an exact copy of the entire ($K$-)conjugacy class of its subgroup $H$ ("isomorphisms send conjugates to conjugates"). And, crucially, there's no other $G$-conjugates of $H$, because any $G$-conjugate of $H$ has to be some subgroup of a $G$-conjugate of $K$. And we're done!
 
 (Btw, the "normal parent lemma" from earlier is a direct corollary of this one.)
 
+**Correspondence Theorem** (aka the $n$-th isomorphism theorem, where $n$ is either 2, 3, or 4 depending on which book you are looking at): Suppose that $N \unlhd G$. There is a **correspondence** between subgroups of $G/N$ and subgroups of $G$ that contain $N$, under which everything you want to be true is in fact true.
+
+*Idea of proof*: The canonical quotient map $\pi: G \to G/N$ ends up respecting pretty much every property you can think of.
+
+Why am I calling this one "sideways"? Precisely because you can take what you know about the lattice of $G/N$ and pull it back across ("sideways") to the portion of the lattice of $G$ that lives above $N$. 
+
 ## Lasers
 
-Up-down-up-down -> very powerful results
+Sometimes, by combining upwards and downwards theorems in a clever way, you can end up with really powerful results. Reminds me of a laser: each time your argument bounces back and forth, it gains power.
 
 
 [^1]: If you have an opinion about "downward" vs. "downwards," that is very nice but I don't actually care. <3
