@@ -42,7 +42,8 @@ As I'm giving this explanation, I can tell that the student is interested and tr
 
 I can tell because at this point the student goes, "So it's like the opposite." Yes! Like, the imaginary opposite. Okay, so now check out this cool thing that happens when you multiply z by zbar: the cross-terms cancel, the i squares out to -1, and you get u^2 + v^2. (15/n)
 
-Here's why that quantity is cool, is because if you think of the complex number as a vector, you can see that's the square of the length of the vector, which we call the modulus. And now, annoyingly, we use the same |•| notation for modulus that we use for absolute value. (16/n)
+Here's why that quantity is cool, is because if you think of the complex number as a vector, you can see that's the square of the length of the vector, which we call the modulus. And now, annoyingly, we use the same 
+\|•\| notation for modulus that we use for absolute value. (16/n)
 
 The student now realizes the issue. (17/n)
 
