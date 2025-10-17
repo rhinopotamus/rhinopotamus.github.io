@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An old thread from Twitter about "cheating""
+title:  "An old thread from Twitter about \"cheating\""
 tags: math teaching 
 ---
 
