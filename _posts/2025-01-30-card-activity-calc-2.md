@@ -97,6 +97,7 @@ I told my people at the outset of this activity that I had *just* thought of it 
 
 If you try this in your class, I'd be interested in hearing what modifications you make, and how it goes!
 
+---
 
 [^1]: The "almost" here is an acknowledgement that the derivative kills additive constants, and therefore the integral must produce a *family* of antiderivatives that differ by additive constants. In other words, the derivative has a nontrivial kernel, so by Noether's isomorphism theorem, functions that are derivatives are actually (isomorphic images of) *cosets* of functions.[^2]
 
