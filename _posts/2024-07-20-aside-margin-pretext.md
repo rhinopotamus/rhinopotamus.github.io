@@ -62,5 +62,6 @@ A couple of things to say about this.
 
 - I was pulling out my hair for a while until I finally figured out that `xelatex` and `pdflatex` [behave slightly differently](https://bsky.app/profile/sbagley.bsky.social/post/3kxjtu5ccab25) in how they place a `\marginnote`. Add `latex-engine="pdflatex"` to `project.ptx` in whatever targets use latex.
 
+---
 
 [^1]: Much to everyone's disappointment, that's New T Color Box, not Newt Color Box.

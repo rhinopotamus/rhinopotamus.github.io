@@ -74,6 +74,8 @@ $$
 
 And if you don't think that kicks ass, then you can get the hell out of my face.
 
+---
+
 [tc-book]: https://www.amazon.com/When-Linear-Anneli-Mathematical-Library/dp/0883856492
 [fan-chung-ch1]: https://mathweb.ucsd.edu/~fan/research/cb/ch1.pdf
 [^1]: NB that things are set up a little differently there, using the normalized Laplacian, but this Rayleigh quotient calculation works out the same way.

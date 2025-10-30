@@ -98,5 +98,6 @@ Why am I calling this one "sideways"? Precisely because you can take what you kn
 
 Sometimes, by combining upwards and downwards theorems in a clever way, you can end up with really powerful results. Reminds me of a laser: each time your argument bounces back and forth, it gains power.
 
+---
 
 [^1]: If you have an opinion about "downward" vs. "downwards," that is very nice but I don't actually care. <3

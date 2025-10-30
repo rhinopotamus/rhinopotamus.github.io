@@ -62,6 +62,8 @@ If you are designing an hourglass, you probably want the sand level to fall at a
 
 Conclude that $r$ is proportional to $h^{1/4}$.
 
+---
+
 [^1]: Technically the sands of an hourglass are not quiiite a fluid (and neither are the days of our lives), but this is a good enough approximation for most purposes. A similar device that uses actual water instead of sand is called a clespydra.
 
 [^2]: Fight me.

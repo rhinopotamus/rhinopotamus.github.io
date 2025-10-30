@@ -75,4 +75,6 @@ The objects in this proof are *so* weird. We had to assume that they were "gener
 
 All this is very weird! It should actually be amazing that all of us mathematicians have developed the capacity to work with these implicitly-generic-but-actually-special objects as if they were sensible, well-behaved things like the number 2 or the area of a circle[^1]. It should be even more amazing to us that this weirdness emerges from a pretty elementary proof of a pretty elementary theorem. And when students find these things difficult, we should remember that they very much are.
 
+---
+
 [^1]: This is a joke.

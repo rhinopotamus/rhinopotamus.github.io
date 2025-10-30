@@ -45,5 +45,6 @@ MathFest 2023 will be in Florida. (MathFest 2024 will be in Indiana; I could wri
 
 Note: Many thanks to Brian Katz for valuable feedback on drafts of this piece.
 
+---
 
 [^1]: Look for a future blog here responding in particular to the well-intentioned remarks from Hortensia Soto, MAA President.

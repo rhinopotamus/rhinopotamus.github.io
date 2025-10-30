@@ -81,6 +81,7 @@ I'm going to hit publish on this whole project now, but I do have a couple of id
 - None of these posts contain any pictures, which is a damn shame bc subgroup lattices have been instrumental in my thought process. I intend to fix this.
 - I think you could build a fun problem sequence out of this, to run alongside a couple weeks of an algebra course. All the lemmas are pretty accessible and touch on a surprising variety of stuff. I might try my hand at this.
 
+---
 
 [^1]: A key part of the D&F argument relies on something that is not true for general $pqr$ (indeed, it's not true for 42). It took me an embarassingly long time to disentangle this.
 

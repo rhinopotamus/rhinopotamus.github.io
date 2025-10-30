@@ -70,6 +70,8 @@ as a way to approximate the transcendental number π, we used the irrational num
 
 ![the oh-you dog meme with pi and the square root of 3 looking at each other](/images/pi-sqrt-3-oh-you.png)
 
+---
+
 [^1]: Because that is who I am as a person.
 
 [^2]: In practice, the bounds you get from this technique tend to be off by a bit more than a factor of 2. Do you see why?

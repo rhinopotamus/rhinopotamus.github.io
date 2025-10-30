@@ -138,4 +138,6 @@ I wasn't just talking about convergence behavior above for reasons of nitpickery
 
 This also gives me an idea for how to improve this process for approximating π: maybe there's a better point, further inside the interval of convergence, where we'll get faster convergence behavior. [Hmm...]({% post_url 2024-05-09-approximating-pi-pt-2 %})
 
+---
+
 [^1]: Remember that in practice our error is usually a bit more than half as much as the error bound predicts. If you look at a spreadsheet you'll see that indeed our approximation to π starts consistently rounding to 3.14 around n = 293. 

@@ -71,6 +71,8 @@ that is certainly not how Pappus did it (he did not have the machinery of calcul
 
 Watch for Part 2 of this series of posts!
 
+---
+
 [^1]: I should be slightly more careful and call this Pappus's *centroid* theorem, because there's [another pretty useful theorem due to Pappus](https://en.wikipedia.org/wiki/Pappus%27s_hexagon_theorem) that comes up in geometry.
 
 [^2]: If you don't believe this and you are a physics person, write out the equation that says that the total torque about $\overline{x}$ should be 0: $\sum w_i (x_i - \overline{x}) = 0$. Then solve for $\overline{x}$.

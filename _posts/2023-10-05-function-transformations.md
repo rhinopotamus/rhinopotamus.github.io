@@ -113,4 +113,6 @@ I think the biggest conceptual hurdle -- based on running this by one class of s
 
 Use new and old labels to convince yourself why $2f(x)$ is a vertical stretch and $f(2x)$ is a horizontal compression.
 
+---
+
 [^1]: I considered using subscripts here -- $x_\text{old}$, $y_\text{new}$, etc. -- but ultimately decided against them on the grounds that my students hate subscripts, lol.
