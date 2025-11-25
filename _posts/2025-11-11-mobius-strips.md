@@ -98,6 +98,8 @@ A common question that mathematicians ask is: What if we do this again, but a li
     - What's the absolute widest you could possibly do? (You will have to crease the paper flat.)
     - Does your answer change if your paper is longer?
     - Okay, so what's the exact ratio of width to length that is the widest possible? (I think this question is accessible to a middle-school geometry class!)
+- What happens if you chain two strips together and then cut one of them down the middle?
+    - (I literally do not know the answer to this question.)
 
 
 
