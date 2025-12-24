@@ -17,7 +17,7 @@ One student submitted a beautifully-written and entirely correct proof. Unfortun
 
 SANDWICH BREAK (4/n) 
 
-![a cartoon sandwich with a big smile dancing happily on a plate](/images/sandwich-break.gif)
+![a cartoon sandwich with a big smile dancing happily on a plate](/images/sandwich-break.png)
 
 Anyway, so you can totally clock the issue from a mile away, because the proof for complex numbers involves multiplying (a+b) by its conjugate, which is represented with a bar over the quantity. (5/n)
 
