@@ -50,8 +50,14 @@ minima:
 
   # Generate social links in footer.
   social_links:
-    - { platform: github,         user_url: "https://github.com/rhinopotamus" }
-    - { platform: bluesky,         user_url: "https://bsky.app/profile/sbagley.bsky.social" }
+    - tile: Github
+      icon: github
+      url: "https://github.com/rhinopotamus"
+    - title: Bluesky
+      icon: bluesky
+      url: "https://bsky.app/profile/sbagley.bsky.social"
+    #- { platform: github,         user_url: "https://github.com/rhinopotamus" }
+    #- { platform: bluesky,         user_url: "https://bsky.app/profile/sbagley.bsky.social" }
 
 # Some crap about katex
 markdown: kramdown
