@@ -5,9 +5,10 @@ categories:
 - Spencer ex San Diego
 ---
 
-[caption id="attachment\_770" align="alignright" width="300"]![12094765_10100426807356721_7029880423960183185_o](https://sbagleysd.wordpress.com/wp-content/uploads/2016/03/12094765_10100426807356721_7029880423960183185_o.jpg?w=600) Burger in progress.[/caption]
-
 So at one of our [favorite restaurants](http://pourhousecolorado.com/), they have a burger called the Bolo Burger. It's a lovely Southwesternish burger with cream cheese and ham and lots of peppers. It's really good, so I decided to kinda copy it but with my own modifications. Here is my not-exactly-a-recipe!
+
+![12094765_10100426807356721_7029880423960183185_o](https://sbagleysd.wordpress.com/wp-content/uploads/2016/03/12094765_10100426807356721_7029880423960183185_o.jpg?w=600)
+
 
 You will need:
 * n burgers worth of beef

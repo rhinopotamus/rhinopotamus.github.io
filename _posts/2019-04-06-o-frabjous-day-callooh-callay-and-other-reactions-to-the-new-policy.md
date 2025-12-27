@@ -32,8 +32,8 @@ Thank you, but who I am is not a "challenge of mortality." (Also, and I don't re
 
 
 And, let's just all stipulate, an extended period of zero discussion of any kind with actual LGBT+ people. Because, here's the thing about this new reversal of the policy, about which all of us LGBT+ people are supposed to be so happy, and that will supposedly allow us to feel good about everything and reunite with the church -- here's just the real crux of the matter:
-This policy is not about us
----------------------------
+
+### This policy is not about us
 
 
 This policy is about **our children** -- you know, those hypothetical children that very many of us do not have and will never have. And, to me, that's why it feels like **such**a slap in the face when it's sold to us as something that is for us and about us. The church's view on LGBT+ people has not changed one iota. We are still in the grip of Satan himself when we choose to live openly and honestly as who we are. We are still putting our immortal souls in mortal danger when we choose to love who we love. We are still committing a sin most grievous when we have sex -- even within the bonds of a loving marriage. Nothing has changed here, and I'm not holding my breath that anything ever will.
@@ -41,20 +41,20 @@ This policy is about **our children** -- you know, those hypothetical children t
 It's a double slap in the face precisely because many of us probably will never have children -- at least not without going to great and expensive lengths to have them. Adoption is expensive. IVF is expensive. Surrogacy is problematic at best. To those of us who will never have children, it feels like this new policy is once more throwing that painful fact directly in our face. "We'll never fully accept you, you serious transgressors, you deviant sinners, but your kids are sure welcome!! 🌟🎊🎇🎁🎆💫🎉✨ Oh, you don't have any and never will? Well they're welcome anyway, yay!!!!"
 
 So, no. This policy is not about us, and so you'll forgive us for not celebrating. What's more:
-This policy is not for us
--------------------------
+
+### This policy is not for us
+
 
 
 This is because the church itself is not for us. The church was built by straight people for themselves. The most foundational doctrines of the church deny our existence. Our continued inclusion in it, and the degree to which we are ever welcomed, are tenuous at best, as they've made abundantly clear multiple times. Our status has not changed here, and it probably never will, because if it did, the church would have to admit that they were wrong and have been wrong for a long damn time, and that's not something that the church is built to do.
 
 That's why I'm not celebrating this reversal of policy, three whole years after it was first announced. That's why I'm not celebrating this "positive and inspiring instruction," because it is not all that positive, and it feels neither inspiring nor inspired. That's why I'm not celebrating the church's progress:
-This is not progress
---------------------
 
+### This is not progress
 
 Here, let Malcolm X tell you something about progress.
 
-[youtube https://www.youtube.com/watch?v=XiSiHRNQlQo&w=560&h=315]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XiSiHRNQlQo?si=OgmRymwJPzdsoOGV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 If there is ever going to be progress, the church is going to have to own up to the hurt it has caused. In fact, the church is going to have to own up to the **suicides** it has caused. There's a reason why [Utah's teen suicide rate is so high that literally the governor had to do something about it](https://www.sltrib.com/news/health/2018/01/17/utah-launches-youth-suicide-task-force-as-state-officials-reveal-a-2017-spike-to-44-suicide-deaths-among-10-to-17-year-olds/). There's a reason why the rate of LGBT+ teen homelessness in Utah is [double the national average](http://www.slcpl.org/files/board/voapresentation102317.pdf). There's a party line in this church, people toe it, and then other people die.
 
@@ -63,11 +63,12 @@ I want to be clear: progress **is** possible. [Adopting inclusive policies redu
 But instead, here's what the church did: its lobbyists released a lukewarm message that it is "[not opposed](https://www.sltrib.com/news/politics/2019/01/24/lds-church-lobbyist-says/)" to a stronger hate-crimes bill. It announced "positive and inspiring instruction" that demonstrates that it cares more about the hypothetical, probably-straight children of LGBT+ people than about LGBT+ people themselves. It has does nothing to change the ecclesiastical status or cultural perception of LGBT+ people. It has done nothing else. The church has done **so little**, yet has expected **so much** in the way of celebratory back-patting. I won't participate.
 
 Don't expect me to celebrate your ~\*~\*~"progress"~\*~\*~ when people are dying because of the policies and doctrines that you are choosing to leave in place.
-Now what?
----------
+
+### Now what?
 
 
 I don't know. I keep thinking I'm done being hurt by the church, but then every time they blunder their probably-well-intentioned way into yet another hurtful announcement, old wounds get reopened. Maybe someday I'll heal. I just know better, at this point, than to think that the church will ever help.
+
 ### Further light and knowledge
 
 

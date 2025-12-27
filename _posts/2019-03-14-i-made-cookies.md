@@ -5,8 +5,6 @@ categories:
 - Spencer ex San Diego
 ---
 
-https://www.instagram.com/p/BvA4X-ihmLL/
-
 They are cakey and extremely chocolaty, being constructed with both cocoa powder and melted chocolate, and they have some of that good good Mexican hot chocolate flavor. I modified [this recipe](https://hostthetoast.com/death-by-chocolate-chunk-cookies/). I'm not going to tell you a long story about them because you just want to see the recipe. Yields 3 dozen.
 * 1 stick unsalted butter
 * 4 oz bar unsweetened chocolate

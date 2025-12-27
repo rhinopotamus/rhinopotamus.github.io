@@ -8,7 +8,11 @@ categories:
 - spider web
 ---
 
-[![spider_web](http://sbagleysd.wordpress.com/wp-content/uploads/2013/04/spider_web.jpg?w=300)](http://sbagleysd.wordpress.com/wp-content/uploads/2013/04/spider_web.jpg)So here I am, taking the trash out. I have the trash bag in one hand and the recycle bin in the other. I am cheerfully walking along when suddenly *spider web across my forehead.* There is nothing I can do except curse under my breath and furiously wrinkle my forehead until I get to the gate and can drop a bag and manically scrub my face like a nervous promgoer fighting off acne.
+So here I am, taking the trash out. I have the trash bag in one hand and the recycle bin in the other. I am cheerfully walking along when suddenly *spider web across my forehead.* 
+
+[![spider_web](http://sbagleysd.wordpress.com/wp-content/uploads/2013/04/spider_web.jpg?w=300)](http://sbagleysd.wordpress.com/wp-content/uploads/2013/04/spider_web.jpg)
+
+There is nothing I can do except curse under my breath and furiously wrinkle my forehead until I get to the gate and can drop a bag and manically scrub my face like a nervous promgoer fighting off acne.
 
 I hate spider webs. It's funny, because I don't really have a problem with spiders. Spiders are pretty rad. They eat annoying bugs and don't eat my plants. If I see one inside, I will usually gently move it outside where it belongs. (If it is a particularly venomous variety I reserve the right to murder it without any semblance of mercy.) They largely leave me alone and I largely leave them alone.
 

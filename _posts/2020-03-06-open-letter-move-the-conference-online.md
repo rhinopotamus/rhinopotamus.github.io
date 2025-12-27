@@ -23,7 +23,7 @@ There has been some discussion of putting it to a vote. I think this is a good w
 ### We should do it now
 
 
-The longer we wait, the more people firm up their plans, the more people register, the more contracts we sign, the more plane tickets people buy, and the more money everyone is out. What's more, the longer we wait, the less time we have to plan for something different. **Let's pull the trigger and let's do it today.**It's the responsible choice, and we are responsible.
+The longer we wait, the more people firm up their plans, the more people register, the more contracts we sign, the more plane tickets people buy, and the more money everyone is out. What's more, the longer we wait, the less time we have to plan for something different. **Let's pull the trigger and let's do it today.** It's the responsible choice, and we are responsible.
 ### This is of course a bummer...
 
 
@@ -57,7 +57,7 @@ There is a biweekly MIT seminar, the [Electronic Seminar on Mathematics Educatio
 
 Our colleagues at the University of Utah are currently running a seminar on [mathematics education and teaching.](http://www.math.utah.edu/seminars/mathed/) They invited a speaker to present by Zoom because she is pregnant and doesn't want to travel. By all accounts this went great. Another speaker will be presenting via telepresence in April. If Utah is doing it, why can't we?
 
-People are worried about glitchy connections and lag and delay. I'm saying that (a) these problems are way less present now than they were even five years ago, and (b) I'd much rather deal with those problems than with **people maybe dying**from COVID-19.
+People are worried about glitchy connections and lag and delay. I'm saying that (a) these problems are way less present now than they were even five years ago, and (b) I'd much rather deal with those problems than with **people maybe dying** from COVID-19.
 ### Decision errors
 
 
@@ -73,11 +73,14 @@ Let's move this conference online. Let's take the opportunity to experiment and 
 
 I bet we can still deliver an exciting, stimulating, scientifically meaningful conference, all online, for less total cost to the section (we're not paying for space or for coffee) and to the attendees (they won't be paying for a hotel). I bet we can learn some interesting lessons that can improve academic conferences for years to come. I bet that all of us smart academic types can put our heads together and come up with interesting solutions to problems that extend way beyond our particular situation.
 
-But most importantly, the counter-bet is way less tenable.The counter-bet is a wager that COVID-19 won't reach Utah by March 27, and the chips on the table are, and I promise I am not being dramatic, **people's lives**. If we bet wrong, **people might die.**That's not a bet I'm willing to make.
+But most importantly, the counter-bet is way less tenable. The counter-bet is a wager that COVID-19 won't reach Utah by March 27, and the chips on the table are, and I promise I am not being dramatic, **people's lives**. If we bet wrong, **people might die.** That's not a bet I'm willing to make.
 
 So: Let's be responsible, and let's try something cool. **Let's move this conference online, and let's do it today.**
 
 Thanks for reading!
+
 Spencer Bagley
+
 Assistant Professor, Mathematics
+
 Westminster College

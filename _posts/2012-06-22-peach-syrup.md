@@ -24,7 +24,7 @@ Pour the syrup into glass jars, or whatever. It keeps well in the freezer, but s
 
 This recipe makes about this much golden, delicious goodness:
 
-[![](http://sbagleysd.wordpress.com/wp-content/uploads/2012/06/2012-06-22-16-09-26.jpg?w=300 "2012-06-22 16.09.26")](http://sbagleysd.wordpress.com/2012/06/22/peach-syrup/2012-06-22-16-09-26/)
+[![](http://sbagleysd.wordpress.com/wp-content/uploads/2012/06/2012-06-22-16-09-26.jpg?w=300)](http://sbagleysd.wordpress.com/2012/06/22/peach-syrup/2012-06-22-16-09-26/)
 
 Those are pint jars. Note that I lost a bit of syrup to the boiling-over I warned you about earlier; your second pint will probably be a bit fuller than mine.
 

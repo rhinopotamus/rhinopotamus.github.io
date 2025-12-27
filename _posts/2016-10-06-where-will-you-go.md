@@ -5,7 +5,9 @@ categories:
 - Spencer ex San Diego
 ---
 
-Dear Elder M. Russell Ballard (mind if I call you M.?),![14517419_10157664759235226_4734882149788132991_n](https://sbagleysd.wordpress.com/wp-content/uploads/2016/10/14517419_10157664759235226_4734882149788132991_n.jpg?w=300)
+Dear Elder M. Russell Ballard (mind if I call you M.?),
+
+![14517419_10157664759235226_4734882149788132991_n](https://sbagleysd.wordpress.com/wp-content/uploads/2016/10/14517419_10157664759235226_4734882149788132991_n.jpg?w=300)
 
 This past weekend you delivered a talk in General Conference directed toward those who are struggling with their faith and considering leaving the church. You seemed to earnestly seek to understand our experiences. A bunch of people have started to reply to you, on various [blogs](http://zelphontheshelf.com/answering-elder-ballard-why-and-where-we-go/) and [Facebooks](https://www.facebook.com/john.bonner1/posts/10155309253024942?pnref=story) and [Twitters](https://twitter.com/hashtag/WhereWillYouGo?src=hash) and so forth. I decided I would add my voice to the growing chorus, even though I doubt that you will ever see this. (I may also doubt the sincerity of your desire to understand us, but I'll keep those doubts to myself.)
 
@@ -61,7 +63,7 @@ If you wonder what I believe in now, M., I'll tell you: I believe in myself. I b
 
 I'm in charge now, M. It has been a long and difficult road, but I am in the driver's seat. This has been difficult, but ultimately, I emerged from the night that covered me. My soul, it turns out, if there is such a thing as a soul, is unconquerable. I've been wounded to the core, bludgeoned and bloodied, but now I do not bow my head to anyone, because I do not have to. I, by myself, because of who I am, am good enough. Despite the fact that I don't believe I know, anymore, what happens after death, the menace of the years holds no power to make me afraid.
 
-*I*am the master of my fate, M. *I*am the captain of my soul.
+*I* am the master of my fate, M. *I* am the captain of my soul.
 
  
 

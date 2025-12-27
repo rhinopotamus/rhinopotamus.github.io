@@ -6,13 +6,15 @@ categories:
 - food
 ---
 
-[![Image](http://sbagleysd.wordpress.com/wp-content/uploads/2013/01/52502_853938503521_2011583330_o.jpg?w=710)](http://sbagleysd.wordpress.com/wp-content/uploads/2013/01/52502_853938503521_2011583330_o.jpg)
-
 I love spicy chocolate things. I don't know why it works so well, but it does. Lindt, for instance, makes a dark chocolate bar with chili mixed in, and Chuao, a San Diego local chocolatier, makes this thing called a Spicy Maya dark chocolate bar that has cinnamon, pasilla, and cayenne. (Also, there's a coffee shop on UCSD campus that makes Spicy Maya hot chocolate, and it is just as good as it sounds like it should be.)
 
-Anyway, these cakes are kinda like that: dark chocolate with chipotle mixed in. The word "cake" is almost a misnomer; it's really more like a custard, and you even bake it in a bain-marie. I would call that a hot-water bath, but I made them for a pretentious party, so the French name works better. The recipe originally comes from [here](http://www.epicurious.com/recipes/food/views/Boca-Negra-Chocolate-Chipotle-Cakes-109233 "Epicurious - Boca Negra Chocolate Chipotle Cakes") (ooh, look, Epicurious, how pretentious!), but I've made a few modifications, primarily in the method of spice addition.
+[![Image](http://sbagleysd.wordpress.com/wp-content/uploads/2013/01/52502_853938503521_2011583330_o.jpg?w=710)](http://sbagleysd.wordpress.com/wp-content/uploads/2013/01/52502_853938503521_2011583330_o.jpg)
 
-*Ingredients*:
+
+
+Anyway, these cakes are kinda like that: dark chocolate with chipotle mixed in. The word "cake" is almost a misnomer; it's really more like a custard, and you even bake it in a bain-marie. I would call that a hot-water bath, but I made them for a pretentious party, so the French name works better. The recipe originally comes from [here](https://www.epicurious.com/recipes/food/views/boca-negra-chocolate-chipotle-cakes-109233) (ooh, look, Epicurious, how pretentious!), but I've made a few modifications, primarily in the method of spice addition.
+
+*Ingredience*:
 * 1 cup sugar
 * 6 T orange juice (about two oranges' worth if you're going for fresh-squeezed)
 * 10 oz dark chocolate, chopped

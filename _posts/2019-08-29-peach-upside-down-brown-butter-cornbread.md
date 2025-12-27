@@ -5,9 +5,8 @@ categories:
 - Spencer ex San Diego
 ---
 
-https://www.instagram.com/p/B1vBFSHJJ4Q/
-
 It's the beginning of the college football season, I'm going to my brother's house tonight to watch the game, so I wanted to make something good. I love peaches and I love cake but sometimes cakes are too sweet. So, I thought cornbread might be nice, because it's sweet but not too sweet. I hacked together the following recipe by combining the [Serious Eats brown-butter cornbread recipe](https://www.seriouseats.com/recipes/2015/01/moist-and-tender-brown-butter-cornbread-recipe.html) with a sort of generic upside-down cake method.
+
 ### Ingredients
 
 

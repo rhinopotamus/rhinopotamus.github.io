@@ -21,4 +21,4 @@ Depending on the humidity in the air, the water content in your starter, and the
 
 Bake hot - like at least 475°F. These freeze well if you par-bake them, and the dough will keep in the refrigerator for a couple of days (but beware of off-gassing!).
 
-EDIT: I've found that the dough behaves much nicer if you let it ferment in the refrigerator overnight. So, make the dough the day before you want pizza.
+EDIT: I've found that the dough behaves much nicer if you let it ferment in the refrigerator at least overnight. So, make the dough the day before you want pizza.

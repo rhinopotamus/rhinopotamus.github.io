@@ -5,9 +5,10 @@ categories:
 - Spencer ex San Diego
 ---
 
-[youtube https://www.youtube.com/watch?v=TKtPXO5iEnA&w=560&h=315]
-
 I don't know what this song is *supposed* to be about, but if this song is not about a gay Mormon becoming aware of his sexuality, attempting to deny it, struggling and failing to resist "temptation," looking for help in trying to live the straight life, hearing and attempting to follow (or cope with) well-meaning advice from more-or-less sympathetic people around him, and ultimately deciding to accept himself and make his own decisions, then I don't know what it is about. And that, my friends, is my story. Today, on National Coming Out Day, I'm going to tell you some of that story.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TKtPXO5iEnA?si=8P6ctWqQkzgZ676X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 > I'm sorry, mother / I'm sorry I let you down
 
