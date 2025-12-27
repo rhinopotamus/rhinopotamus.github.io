@@ -34,14 +34,39 @@ show_excerpts: True
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-#  - jekyll-latex
+gems:
+  - jekyll-paginate-v2
+exclude:
+  - Gemfile
+  - Gemfile.lock
 
+######################################################
+# Pagination settings
+######################################################
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  #title: ':title - page :num of :max'
+  title: 'Posts (page :num of :max)'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+######################################################
+# Theme settings
+######################################################
 remote_theme: jekyll/minima
 
 minima:
   # Minima skin selection.
   # Available skins are:
   skin: solarized-dark
+  nav_pages: 
+    - about.md
   
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
