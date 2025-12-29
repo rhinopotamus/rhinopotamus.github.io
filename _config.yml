@@ -57,6 +57,21 @@ pagination:
     after: 2
 
 ######################################################
+# Autopages settings
+######################################################
+autopages:
+  enabled: true
+  categories: 
+    enabled: true
+    layouts:
+      - autopage_category.html
+    title: ':cat'
+  tags:
+    enabled: false
+  collections:
+    enabled: false
+
+######################################################
 # Theme settings
 ######################################################
 remote_theme: jekyll/minima
@@ -67,6 +82,8 @@ minima:
   skin: solarized-dark
   nav_pages: 
     - about.md
+    - categories.html
+    - tags.html
   
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 

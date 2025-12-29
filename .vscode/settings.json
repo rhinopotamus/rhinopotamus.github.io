@@ -1,0 +1,8 @@
+{
+    "xml.fileAssociations": [
+        {
+            "pattern": "**/source/**.ptx",
+            "systemId": "/home/spencer/.vscode/extensions/oscarlevin.pretext-tools-0.34.0/assets/schema/pretext.rng"
+        }
+    ]
+}

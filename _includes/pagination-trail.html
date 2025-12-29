@@ -1,0 +1,137 @@
+<style>
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .pagination a,
+  .pagination span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #839496;
+      border-left: 0;
+  }
+  .pagination .active {
+      background: #073642;
+      pointer-events: none;
+  }
+  .pagination .active svg {
+      opacity: .3;
+  }
+  .pagination a:hover {
+      background: #073642;
+      cursor: pointer;
+  }
+  .pagination a:first-child,
+  .pagination span:first-child {
+      border-left: 1px solid #839496;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+  }
+  .pagination a:last-child,
+  .pagination span:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+  }
+</style>
+
+<!--
+Pagination links
+Source - https://stackoverflow.com/questions/67493944/add-ellipses-to-pagination-using-jekyll-paginate-v2
+Modified to use a case block for less liquid yelling
+-->
+
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&lt;</a>
+    {% else %}
+    <span class="active">x</span>
+    {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+    {% assign last_five = forloop.length | minus: 4 %}
+    {% assign last_page = forloop.length %}
+    {% if forloop.length > 5 %}
+        {% if paginator.page <= 5 %}
+            {% if forloop.index <= 5 %}
+                {% if forloop.first and page == paginator.page %}
+                    <span class="active">{{ page }}</span>
+                {% elsif forloop.first %}
+                    <a href="/">1</a>
+                {% elsif page == paginator.page %}
+                    <span class="active">{{ page }}</span>
+                {% else %}
+                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', '/' | append: page }}">{{ page }}</a>
+                {% endif %}
+            {% else %}
+                {% if paginator.page == 5 %}
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                {% endif %}
+                    <span>...</span>
+                    <a href="/page/{{ last_page }}/">{{ last_page }}</a>
+                {% break %}
+            {% endif %}
+        {% elsif paginator.page >= last_five %}
+            {% if forloop.index >= last_five %}
+                {% if forloop.index == last_five %}
+                    <a href="/">1</a>
+                    <span>...</span>
+                {% if page == last_five %}
+                    <a href="/page/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a>
+                {% endif %}
+                {% if page == paginator.page %}
+                    <span class="active">{{ page }}</span>
+                {% else %}
+                    <a href="/page/{{ page }}/">{{ page }}</a>
+                {% endif %}
+                {% elsif forloop.last and page == paginator.page %}
+                    <span class="active">{{ page }}</span>
+                {% elsif page == paginator.page %}
+                    <span class="active">{{ page }}</span>
+                {% else %}
+                    <a href="/page/{{ page }}/">{{ page }}</a>
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% if forloop.first %}
+                <a href="/">1</a>
+            {% endif %}
+            {% case forloop.index %}
+              {% when paginator.page | minus: 2 %}
+                  <span>...</span>
+                  <a href="/page/{{ page | minus: 2 }}/">{{ page | minus: 2 }}</a>
+              {% when paginator.page | minus: 1 %}
+                  <a href="/page/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a>
+              {% when paginator.page %}
+                  <span class="active">{{ page }}</span>
+              {% when paginator.page | plus: 1 %}
+                  <a href="/page/{{ page | plus: 1 }}/">{{ page | plus: 1 }}</a>
+              {% when paginator.page | plus: 2 %}
+                  <a href="/page/{{ page | plus: 2 }}/">{{ page | plus: 2 }}</a>
+                  <span>...</span>
+            {% endcase %}
+            {% if forloop.last %}
+                <a href="/page/{{ forloop.index }}/">{{ forloop.index }}</a>
+            {% endif %}
+          {% endif %}
+        {% else %}
+        {% if page == paginator.page %}
+            <span class="active">{{ page }}</span>
+        {% elsif page == 1 %}
+            <a href="/">{{ page }}</a>
+        {% else %}
+            <a href="/page/{{ page }}/">{{ page }}</a>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&gt;</a>
+    {% else %}
+    <span class="active">x</span>
+    {% endif %}
+</div>
+{% endif %}
