@@ -11,14 +11,14 @@ Today I have been playing around trying to justify an observation that we made i
 
 
 
-*Observation 1.* On a region where $ f$ has consistent concavity, the error from the trapezoid sum is about twice the error of the midpoint sum, and has the opposite sign. (In fancy symbols: $ E\_\text{trap} \approx -2\cdot E\_\text{mid}$.)
+*Observation 1.* On a region where $ f$ has consistent concavity, the error from the trapezoid sum is about twice the error of the midpoint sum, and has the opposite sign. (In fancy symbols: $ E_\text{trap} \approx -2\cdot E_\text{mid}$.)
 
 
 
 
-It's fairly easy to arrive at this observation by just doing a bunch of calculations. A fun activity for a Calculus II class is to reproduce [Table 5.6.5](https://activecalculus.org/single/sec-5-6-num-int.html#ixQ) from Active Calculus; if you divide-and-conquer across a couple different groups, you can do this pretty easily in 15 minutes with appropriate use of technology. Then you just look at the column of errors, and say, gee whiz, Observation 1.
+It's fairly easy to arrive at this observation by just doing a bunch of calculations. A fun activity for a Calculus II class is to reproduce [Table 5.6.5](https://activecalculus.org/single/sec-5-6-num-int.html#T-5-6-Ex2) from Active Calculus[^1]; if you divide-and-conquer across a couple different groups, you can do this pretty easily in 15 minutes with appropriate use of technology. Then you just look at the column of errors, and say, gee whiz, Observation 1.
 
-
+[^1]: If you are going to press on to Simpson's rule, you may want to replace $1-x^2$ by, say, $1-x^3$, because Simpson's rule is exact for quadratics.
 
 
 But then a student asked me why this is true. This was surprisingly tricky to run down. I scribbled about it for like three pages, most of which just ended up being, like, "let's do some calculus now; by talos that was just geometry!!" I think I now have a reasonably convincing justification that I can at least handwave to the student in question, without too much additional technology. (Note that we are at the beginning of Calculus II, so in particular I don't want to say the words "Taylor series" yet.)
@@ -42,15 +42,20 @@ Setup
 
 
 
-*Proof by picture.* This is [Figure 5.6.3](https://activecalculus.org/single/sec-5-6-num-int.html#jDj) from Active Calculus. For the sake of argument, I'm going to follow this figure throughout; notice that we can assume without loss of generality that the function is concave up. Say that the edges of the rectangles / trapezoids occur at $ x=a$ and $ x=b$.
+*Proof by picture.* This is [Figure 5.6.3](https://activecalculus.org/single/sec-5-6-num-int.html#F-5-6-MidVTrap) from Active Calculus. For the sake of argument, I'm going to follow this figure throughout; notice that we can assume without loss of generality that the function is concave up. Say that the edges of the rectangles / trapezoids occur at $ x=a$ and $ x=b$.
 
 
 
 
-![](https://activecalculus.org/single/external/images/5_6_MidVTrap.svg)
+<img src="https://activecalculus.org/single/external/images/5_6_MidVTrap.svg" style="background-color: #eee8d5;" alt="There are three adjacent images shown of the same function in the first quadrant: the function is positive, continuous, decreasing, and concave up on the interval of interest.
+In the leftmost image, a single trapezoid approximates the area under the curve. Because the function is concave up, the trapezoid lies slightly above the curve, so the trapezoid rule over-estimates the value of the corresponding definite integral.
+In the middle image, a single rectangle whose height is the function value at the midpoint of the interval is shown. Part of the rectangle falls below the curve, and part lies above. In this image, it’s unclear whether the midpoint rectangle over- or under-estimates the total area bounded by the function.
+In the third and final image, the horizontal line that forms the top of the midpoint rectangle is still shown, but that line is also rotated about the point where it intersects the graph of the function until the line segment is tangent to y=f(x). The resulting trapezoid has the same area as the original midpoint rectangle, by symmetry. In addition, since the function f is concave up, the tangent line lies below the curve, and this shows that the trapezoid whose area is equal to the midpoint rule rectangle’s area is an under-estimate of the corresponding definite integral." />
 
 
-If you want a little more symbolic convincing, write down the equation for this tangent line: $ L(x) = f\left(\frac{a+b}{2}\right) + f'\left(\frac{a+b}{2}\right)\left(x-\frac{a+b}{2}\right)$. Compute $ \int\_a^b L(x)\ dx$ and observe that you get the area of the midpoint rectangle.
+If you want a little more symbolic convincing, write down the equation for this tangent line: 
+$$ L(x) = f\left(\frac{a+b}{2}\right) + f'\left(\frac{a+b}{2}\right)\left(x-\frac{a+b}{2}\right). $$
+Compute $ \displaystyle\int_a^b L(x)\ dx$ and observe that you get the area of the midpoint rectangle.
 
 
 
@@ -65,7 +70,7 @@ If you want a little more symbolic convincing, write down the equation for this 
 
 
 
-*Justification.* The slope of this secant line is $ \dfrac{f(b)-f(a)}{b-a}$. This is in fact the [central difference approximation](https://activecalculus.org/single/sec-1-5-units.html#Opr) to the slope of the tangent line, $ f'\left(\frac{a+b}{2}\right)$.
+*Justification.* The slope of this secant line is $ \dfrac{f(b)-f(a)}{b-a}$. This is in fact the [central difference approximation](https://activecalculus.org/single/sec-1-5-units.html#def-1-5-central-difference) to the slope of the tangent line, $ f'\left(\frac{a+b}{2}\right)$.
 
 
 
@@ -75,17 +80,18 @@ If you want a little more symbolic convincing, write down the equation for this 
 
 
 
-### Idea of the proof
+Idea of the proof
+----
 
 
 
 
-With this setup stuff established, I can now say the following, which will give you some idea of what we're up to with the symbol-pushy stuff below. The idea is that since there's such a nice relationship between the trapezoid-rule trapezoid and the midpoint-rule trapezoid (they only differ by a little parallelogram!), we probably have a nice relationship between their errors. Meditate upon the following picture ([Figure 5.6.4](https://activecalculus.org/single/sec-5-6-num-int.html#PKs)) before proceeding. I'll just point out that the height of the parallelogram is $ \varepsilon$ and the width is $ (b-a)$.
+With this setup stuff established, I can now say the following, which will give you some idea of what we're up to with the symbol-pushy stuff below. The idea is that since there's such a nice relationship between the trapezoid-rule trapezoid and the midpoint-rule trapezoid (they only differ by a little parallelogram!), we probably have a nice relationship between their errors. Meditate upon the following picture ([Figure 5.6.4](https://activecalculus.org/single/sec-5-6-num-int.html#F-5-6-MidTrapError)) before proceeding. I'll just point out that the height of the parallelogram is $ \varepsilon$ and the width is $ (b-a)$.
 
 
 
 
-![](https://activecalculus.org/single/external/images/5_6_MidTrapError.svg)
+<img src="https://activecalculus.org/single/external/images/5_6_MidTrapError.svg" style="background-color: #eee8d5;" alt="This image juxtaposes the trapezoids from the first and third images in the preceding figure: the trapezoid with the same area as the midpoint rule rectangle lies below the concave up curve, while the trapezoid from the Trapezoid Rule lies above the curve. Moreover, the figure shows that there is more error in the Trapezoid Rule overestimate than there is error in the Midpoint Rule underestimate."/>
 
 
 Nitty-gritty details
@@ -109,12 +115,12 @@ I'm noticing that we haven't used our "consistent concavity" hypothesis yet. By 
 
 
 
-$ f'(x) = \int f''(x)\ dx \approx \int Q\ dx = Qx + C$
+$$ f'(x) = \int f''(x)\ dx \approx \int Q\ dx = Qx + C$$
 
 
 
 
-$ f(x) = \int f'(x) \ dx \approx \int Qx + C \ dx = \frac{Q}{2} x^2 + Cx + D$
+$$ f(x) = \int f'(x) \ dx \approx \int Qx + C \ dx = \frac{Q}{2} x^2 + Cx + D$$
 
 
 
@@ -124,7 +130,7 @@ Okay, but which quadratic? We may as well ask for the linear part of $ f(x)$ to 
 
 
 
-$ f(x) \approx \underbrace{\left[f\left(\tfrac{a+b}{2}\right) + f'\left(\tfrac{a+b}{2}\right)\left(x-\tfrac{a+b}{2}\right)\right]}\_{L(x)} + B \cdot \left(x-\tfrac{a+b}{2}\right)^2$
+$$ f(x) \approx \underbrace{\left[f\left(\tfrac{a+b}{2}\right) + f'\left(\tfrac{a+b}{2}\right)\left(x-\tfrac{a+b}{2}\right)\right]}_{L(x)} + B \cdot \left(x-\tfrac{a+b}{2}\right)^2$$
 
 
 
@@ -134,7 +140,8 @@ Soon we will learn the word "Taylor series" and this will seem more natural. For
 
 
 
-*Observation 7.* On this little subinterval, the error from the midpoint rule is $ E\_\text{mid} = \int\_a^b L(x) - f(x)\ dx = \int\_a^b -B\cdot \left(x-\tfrac{a+b}{2}\right)^2\ dx = \left[-\frac{B}{3} \left(x-\tfrac{a+b}{2}\right)^3 \right|\_a^b$.
+*Observation 7.* On this little subinterval, the error from the midpoint rule is 
+$$ E_\text{mid} = \int_a^b L(x) - f(x)\ dx = \int_a^b -B\cdot \left(x-\tfrac{a+b}{2}\right)^2\ dx = \left[-\frac{B}{3} \left(x-\tfrac{a+b}{2}\right)^3 \right]_a^b.$$
 
 
 
@@ -154,12 +161,17 @@ Notice, btw, that when the function is concave up, B is positive, so this value 
 
 
 
-*Observation 8.* The error from the trapezoid rule is $ E\_\text{trap} = \int\_a^b S(x) - f(x)\ dx.$ Using Observation 5, this is $ \int\_a^b \varepsilon + L(x) - f(x)\ dx = \int\_a^b \varepsilon \ dx + \int\_a^b L(x) - f(x)\ dx$. Integrating a constant is easy, and the second integral is the one we just did in Observation 7. So we can conclude that $ E\_\text{trap} = \varepsilon\cdot(b-a) + E\_\text{mid}$.
+*Observation 8.* The error from the trapezoid rule is $ E_\text{trap} = \int_a^b S(x) - f(x)\ dx.$ Using Observation 5, this is 
+
+$$ E_\text{trap} = \int_a^b \varepsilon + L(x) - f(x)\ dx = \int_a^b \varepsilon \ dx + \int_a^b L(x) - f(x)\ dx. $$
+
+Integrating a constant is easy, and the second integral is the one we just did in Observation 7. So we can conclude that 
+$$ E_\text{trap} = \varepsilon\cdot(b-a) + E_\text{mid}. $$
 
 
 
 
-(Looking back at the "idea of the proof" picture, $ \varepsilon \cdot (b-a)$ is the area of the parallelogram you have to stack on top of the midpoint-rule trapezoid to get the trapezoid-rule trapezoid. So this makes sense: if you take the whole parallelogram and subtract the pink parts $ E\_\text{mid}$, you ought to get the red part $ E\_\text{trap}$. Why does it say + above instead of -, you ask? Good question: because $ E\_\text{mid}$ is *negative*.)
+(Looking back at the "idea of the proof" picture, $ \varepsilon \cdot (b-a)$ is the area of the parallelogram you have to stack on top of the midpoint-rule trapezoid to get the trapezoid-rule trapezoid. So this makes sense: if you take the whole parallelogram and subtract the pink parts $ E_\text{mid}$, you ought to get the red part $ E_\text{trap}$. Why does it say + above instead of -, you ask? Good question: because $ E_\text{mid}$ is *negative*.)
 
 
 
@@ -175,12 +187,14 @@ The prestige
 
 
 
-*Observation 1, re-stated*: $ E\_\text{trap} \approx -2 E\_\text{mid}$.
+*Observation 1, re-stated*: $ E_\text{trap} \approx -2 E_\text{mid}$.
 
 
 
 
-*Proof.* Let's monkey around with this claim a bit. Since (by Observation 8) $ E\_\text{trap} = \varepsilon\cdot(b-a) + E\_\text{mid}$, this claim is equivalent to claiming that $ \varepsilon\cdot(b-a) + E\_\text{mid} \approx -2 E\_\text{mid}$, or that $ \varepsilon\cdot(b-a) \approx -3 E\_\text{mid}$. Then by Observation 7, $ E\_\text{mid} \approx -\frac{B}{12}(b-a)^3$, so the claim is that $ \varepsilon\cdot(b-a) \approx -3\cdot \left(-\frac{B}{12}(b-a)^3\right) = \frac{B}{4}(b-a)^3$. I'm going to divide out a $ (b-a)$ on both sides, and pull a 2 inside a parentheses, to arrive at:
+*Proof.* Let's monkey around with this claim a bit. Since (by Observation 8) $ E_\text{trap} = \varepsilon\cdot(b-a) + E_\text{mid}$, this claim is equivalent to claiming that $ \varepsilon\cdot(b-a) + E_\text{mid} \approx -2 E_\text{mid}$, or that $ \varepsilon\cdot(b-a) \approx -3 E_\text{mid}$. Then by Observation 7, $ E_\text{mid} \approx -\frac{B}{12}(b-a)^3$, so the claim is that 
+$$ \varepsilon\cdot(b-a) \approx -3\cdot \left(-\frac{B}{12}(b-a)^3\right) = \frac{B}{4}(b-a)^3. $$
+I'm going to divide out $ (b-a)$ on both sides, and pull a 2 inside a parentheses, to arrive at:
 
 
 
@@ -211,12 +225,12 @@ The moral of the story
 
 
 
-Let's return to [Figure 5.6.4](https://activecalculus.org/single/sec-5-6-num-int.html#PKs) and we can tell a more interesting story now:
+Let's return to [Figure 5.6.4](https://activecalculus.org/single/sec-5-6-num-int.html#F-5-6-MidTrapError) and we can tell a more interesting story now:
 
 
 
 
-![](https://activecalculus.org/single/external/images/5_6_MidTrapError.svg)
+<img src="https://activecalculus.org/single/external/images/5_6_MidTrapError.svg" style="background-color: #eee8d5;" alt="This image juxtaposes the trapezoids from the first and third images in the preceding figure: the trapezoid with the same area as the midpoint rule rectangle lies below the concave up curve, while the trapezoid from the Trapezoid Rule lies above the curve. Moreover, the figure shows that there is more error in the Trapezoid Rule overestimate than there is error in the Midpoint Rule underestimate."/>
 
 
 * Zooming in on the tangent line and the blue curve $ f$: This last claim is basically saying that the amount by which the tangent line undershoots the function is controlled by (1) the bendiness of the function and (2) the width of the (sub)interval we're looking at.
