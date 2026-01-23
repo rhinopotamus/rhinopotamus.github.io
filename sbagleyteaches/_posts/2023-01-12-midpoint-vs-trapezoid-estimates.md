@@ -18,7 +18,7 @@ Today I have been playing around trying to justify an observation that we made i
 
 It's fairly easy to arrive at this observation by just doing a bunch of calculations. A fun activity for a Calculus II class is to reproduce [Table 5.6.5](https://activecalculus.org/single/sec-5-6-num-int.html#T-5-6-Ex2) from Active Calculus[^1]; if you divide-and-conquer across a couple different groups, you can do this pretty easily in 15 minutes with appropriate use of technology. Then you just look at the column of errors, and say, gee whiz, Observation 1.
 
-[^1]: If you are going to press on to Simpson's rule, you may want to replace $1-x^2$ by, say, $1-x^3$, because Simpson's rule is exact for quadratics.
+[^1]: If you are going to press on to Simpson's rule, you may want to replace $1-x^2$ by, say, $1-x^4$, because Simpson's rule is exact for quadratics and cubics.
 
 
 But then a student asked me why this is true. This was surprisingly tricky to run down. I scribbled about it for like three pages, most of which just ended up being, like, "let's do some calculus now; by talos that was just geometry!!" I think I now have a reasonably convincing justification that I can at least handwave to the student in question, without too much additional technology. (Note that we are at the beginning of Calculus II, so in particular I don't want to say the words "Taylor series" yet.)
