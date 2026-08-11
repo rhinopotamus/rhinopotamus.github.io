@@ -25,7 +25,7 @@ In 2020, for reasons that are adequately explained by the phrase "in 2020," I wa
 
 ### LLMs
 
-[I've written before about this]({% post_url 2025-05-01-llm-policy}) but it sure hasn't gotten any better. And also I'm kinda thinking, [what if I just didn't](https://sonjadrimmer.com/blog-1/2026/4/17/you-do-not-need-an-ai-policy).
+[I've written before about this]({% post_url 2025-05-01-llm-policy %}) but it sure hasn't gotten any better. And also I'm kinda thinking, [what if I just didn't](https://sonjadrimmer.com/blog-1/2026/4/17/you-do-not-need-an-ai-policy).
 
 ### Assessment
 
