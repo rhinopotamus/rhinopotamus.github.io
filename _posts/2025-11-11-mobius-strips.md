@@ -10,7 +10,8 @@ So here at Westminster we do a "Spooky Science" community activity thing each ye
 
 You will need: 
 - A bunch of strips of paper
-    - A good size is to cut an 8.5" x 11" sheet of printer paper, or a 9" x 12" sheet of construction paper, into six strips.[^1]
+    - A good size is to cut an 8.5" x 11" sheet of printer paper, or a 9" x 12" sheet of construction paper, into six strips the long way.[^1]
+    - Rolls of receipt paper or adding machine paper is also a good choice.
 - Tape
     - I guess you could use glue sticks but I low-key wouldn't. I guarantee someone will glue the wrong side and get sticky everywhere.
 - Scissors
