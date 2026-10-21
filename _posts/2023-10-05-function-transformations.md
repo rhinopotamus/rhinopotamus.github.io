@@ -13,10 +13,10 @@ move the graph of $f$ to the *right* by $a$ and *up* by $b$, even though the sig
 ## The setup
 
 So let's say that we have an original function $y=f(x)$ and a new function $y=g(x)$ that is some transformation of $f$. The key to this explanation is that those $y$'s and $x$'s are *actually not the same!* I am instead going to label them as follows[^1]:
-- An input to $f$ is called $\textcolor{red}{\text{old }x}$.
-- An output of $f$ is called $\textcolor{red}{\text{old }y}$. In particular, $\textcolor{red}{\text{old }y} = f(\textcolor{red}{\text{old }x})$.
-- An input to $g$ is called $\textcolor{blue}{\text{new }x}$.
-- An output of $g$ is called $\textcolor{blue}{\text{new }y}$. In particular, $\textcolor{blue}{\text{new }y} = g(\textcolor{blue}{\text{new }x})$.
+- An input to $f$ is called $\textcolor{#dc322f}{\text{old }x}$.
+- An output of $f$ is called $\textcolor{#dc322f}{\text{old }y}$. In particular, $\textcolor{#dc322f}{\text{old }y} = f(\textcolor{#dc322f}{\text{old }x})$.
+- An input to $g$ is called $\textcolor{#268bd2}{\text{new }x}$.
+- An output of $g$ is called $\textcolor{#268bd2}{\text{new }y}$. In particular, $\textcolor{#268bd2}{\text{new }y} = g(\textcolor{#268bd2}{\text{new }x})$.
 
 And yes, I am going to use those colors throughout this blog; in class I used two different color whiteboard markers.
 
@@ -32,44 +32,44 @@ Old $f$           |  New $g$
 :-------------------------:|:-------------------------:
 ![A graph of f(x) = x^2, in red.](/images/old-f.png)  |  ![A graph of g(x) = f(x+2)+1, in blue.](/images/new-g.png)
 
-Let's apply our labels. The $y$ in $y = g(x) = f(x+2) +1$ is in fact a $\textcolor{blue}{\text{new }y}$, and the $x$ that's in the input of $g$ is in fact a $\textcolor{blue}{\text{new }x}$. The key thing to notice is that the $x$ inside the argument of $f$ is the same $x$ that's an input of $g$, so it *also* gets the $\textcolor{blue}{\text{new }x}$ label:
+Let's apply our labels. The $y$ in $y = g(x) = f(x+2) +1$ is in fact a $\textcolor{#268bd2}{\text{new }y}$, and the $x$ that's in the input of $g$ is in fact a $\textcolor{#268bd2}{\text{new }x}$. The key thing to notice is that the $x$ inside the argument of $f$ is the same $x$ that's an input of $g$, so it *also* gets the $\textcolor{#268bd2}{\text{new }x}$ label:
 
 $$
-\textcolor{blue}{\text{new }y} = g(\textcolor{blue}{\text{new }x}) = f(\textcolor{blue}{\text{new }x} + 2) + 1
+\textcolor{#268bd2}{\text{new }y} = g(\textcolor{#268bd2}{\text{new }x}) = f(\textcolor{#268bd2}{\text{new }x} + 2) + 1
 $$
 
-So now grab the entire argument of $f$ -- the *entire input* of $f$ -- and label it as $\textcolor{red}{\text{old }x}$:
+So now grab the entire argument of $f$ -- the *entire input* of $f$ -- and label it as $\textcolor{#dc322f}{\text{old }x}$:
 
 $$
-f(\underbrace{\textcolor{blue}{\text{new }x} + 2}_{\textcolor{red}{\text{old }x}})
+f(\underbrace{\textcolor{#268bd2}{\text{new }x} + 2}_{\textcolor{#dc322f}{\text{old }x}})
 $$
 
 $$
-\textcolor{blue}{\text{new }x} + 2 = \textcolor{red}{\text{old }x}
+\textcolor{#268bd2}{\text{new }x} + 2 = \textcolor{#dc322f}{\text{old }x}
 $$
 
-This says that if you knew the $\textcolor{blue}{\text{new }x}$, you could add 2 to get the $\textcolor{red}{\text{old }x}$ -- in other words, *$\textcolor{red}{\text{old }x}$'s are 2 to the right of $\textcolor{blue}{\text{new }x}$'s*. Equivalently, if you knew the $\textcolor{red}{\text{old }x}$ and wanted the $\textcolor{blue}{\text{new }x}$, you would have to subtract 2 -- that is, 
+This says that if you knew the $\textcolor{#268bd2}{\text{new }x}$, you could add 2 to get the $\textcolor{#dc322f}{\text{old }x}$ -- in other words, *$\textcolor{#dc322f}{\text{old }x}$'s are 2 to the right of $\textcolor{#268bd2}{\text{new }x}$'s*. Equivalently, if you knew the $\textcolor{#dc322f}{\text{old }x}$ and wanted the $\textcolor{#268bd2}{\text{new }x}$, you would have to subtract 2 -- that is, 
 
-$$\textcolor{blue}{\text{new }x} = \textcolor{red}{\text{old }x} - 2.$$ 
+$$\textcolor{#268bd2}{\text{new }x} = \textcolor{#dc322f}{\text{old }x} - 2.$$ 
 
-In other words, *$\textcolor{blue}{\text{new }x}$'s are 2 to the left of $\textcolor{red}{\text{old }x}$'s*.
+In other words, *$\textcolor{#268bd2}{\text{new }x}$'s are 2 to the left of $\textcolor{#dc322f}{\text{old }x}$'s*.
 
-Now that we've thought about $x$'s, let's think about $y$'s. Remember that $g(\textcolor{blue}{\text{new }x})$ = $\textcolor{blue}{\text{new }y}$, and $f(\textcolor{red}{\text{old }x})=\textcolor{red}{\text{old }y}$:
+Now that we've thought about $x$'s, let's think about $y$'s. Remember that $g(\textcolor{#268bd2}{\text{new }x})$ = $\textcolor{#268bd2}{\text{new }y}$, and $f(\textcolor{#dc322f}{\text{old }x})=\textcolor{#dc322f}{\text{old }y}$:
 
 $$
 \begin{align*}
-\underbrace{g(\textcolor{blue}{\text{new }x})}_{\textcolor{blue}{\text{new }y}} &= \underbrace{f(\overbrace{\textcolor{blue}{\text{new }x} + 2}^{\textcolor{red}{\text{old }x}})}_{\textcolor{red}{\text{old }y}} + 1 \\
-\textcolor{blue}{\text{new }y} &= \textcolor{red}{\text{old }y} + 1
+\underbrace{g(\textcolor{#268bd2}{\text{new }x})}_{\textcolor{#268bd2}{\text{new }y}} &= \underbrace{f(\overbrace{\textcolor{#268bd2}{\text{new }x} + 2}^{\textcolor{#dc322f}{\text{old }x}})}_{\textcolor{#dc322f}{\text{old }y}} + 1 \\
+\textcolor{#268bd2}{\text{new }y} &= \textcolor{#dc322f}{\text{old }y} + 1
 \end{align*}
 $$
 
-This says that if you knew the $\textcolor{red}{\text{old }y}$, you could add 1 to get the $\textcolor{blue}{\text{new }y}$ -- in other words, *$\textcolor{blue}{\text{new }y}$'s are 1 up from $\textcolor{red}{\text{old }y}$'s*. Equivalently, if you knew the $\textcolor{blue}{\text{new }y}$ and wanted the $\textcolor{red}{\text{old }y}$, you would have to subtract 1 -- that is, 
+This says that if you knew the $\textcolor{#dc322f}{\text{old }y}$, you could add 1 to get the $\textcolor{#268bd2}{\text{new }y}$ -- in other words, *$\textcolor{#268bd2}{\text{new }y}$'s are 1 up from $\textcolor{#dc322f}{\text{old }y}$'s*. Equivalently, if you knew the $\textcolor{#268bd2}{\text{new }y}$ and wanted the $\textcolor{#dc322f}{\text{old }y}$, you would have to subtract 1 -- that is, 
 
-$$\textcolor{blue}{\text{new }y} - 1 = \textcolor{red}{\text{old }y}.$$ 
+$$\textcolor{#268bd2}{\text{new }y} - 1 = \textcolor{#dc322f}{\text{old }y}.$$ 
 
-In other words, *$\textcolor{red}{\text{old }y}$'s are 1 down from $\textcolor{blue}{\text{new }y}$'s*.
+In other words, *$\textcolor{#dc322f}{\text{old }y}$'s are 1 down from $\textcolor{#268bd2}{\text{new }y}$'s*.
 
-Here's the punchline: Subtracting from $x$ inside the argument of the original function is something you do to $\textcolor{blue}{\text{new }x}$. Adding to the output of $f$ is something you do to $\textcolor{red}{\text{old }y}$. This is why these two things behave in the opposite directions!
+Here's the punchline: Subtracting from $x$ inside the argument of the original function is something you do to $\textcolor{#268bd2}{\text{new }x}$. Adding to the output of $f$ is something you do to $\textcolor{#dc322f}{\text{old }y}$. This is why these two things behave in the opposite directions!
 
 ## Rule of Four
 
@@ -83,19 +83,19 @@ The above explanation relies pretty heavily on algebraic and graphical represent
 
 $$
 \begin{array}{r|rrrrr}
-\textcolor{red}{\text{old }x} & -2 & -1 & 0 & 1 & 2 \\\hline
-\textcolor{red}{\text{old }y} = f(\textcolor{red}{\text{old }x}) & 4  & 1  & 0 & 1 & 4
+\textcolor{#dc322f}{\text{old }x} & -2 & -1 & 0 & 1 & 2 \\\hline
+\textcolor{#dc322f}{\text{old }y} = f(\textcolor{#dc322f}{\text{old }x}) & 4  & 1  & 0 & 1 & 4
 \end{array}
 $$
 
 (Notice the "old" labels on $x$ and $y$.)
 
-Using the relationships $\textcolor{red}{\text{old }x} - 2 = \textcolor{blue}{\text{new }x}$ and $\textcolor{red}{\text{old }y} + 1 = \textcolor{blue}{\text{new }y}$, we can produce the following table of corresponding points on $g(x) = f(x+2) + 1$:
+Using the relationships $\textcolor{#dc322f}{\text{old }x} - 2 = \textcolor{#268bd2}{\text{new }x}$ and $\textcolor{#dc322f}{\text{old }y} + 1 = \textcolor{#268bd2}{\text{new }y}$, we can produce the following table of corresponding points on $g(x) = f(x+2) + 1$:
 
 $$
 \begin{array}{r|rrrrr}
-\textcolor{blue}{\text{new }x} & -4 & -3 & -2 & -1 & 0 \\\hline
-\textcolor{blue}{\text{new }y} = f(\textcolor{blue}{\text{new }x}) & 5  & 2  & 1 & 2 & 5
+\textcolor{#268bd2}{\text{new }x} & -4 & -3 & -2 & -1 & 0 \\\hline
+\textcolor{#268bd2}{\text{new }y} = f(\textcolor{#268bd2}{\text{new }x}) & 5  & 2  & 1 & 2 & 5
 \end{array}
 $$
 
@@ -105,9 +105,9 @@ I found that having students work through modifying the old table to produce the
 
 What I really like about this argument is that it illustrates that left vs. right and up vs. down are a matter of perspective. Sure, $f(x-2)$ produces a new graph who's 2 to the *right* of original $f$, but equivalently, original $f$ is 2 to the *left* of the new graph. Sure, $f(x) - 3$ produces a new graph who's 3 *down* from original $f$, but equivalently, original $f$ is 3 *up* from the new graph.
 
-Another thing I really like about this argument is that it emphasizes what you might call the Fundamental Principle of Functions: *functions relate inputs to outputs*. A key idea in the above argument is that $\textcolor{blue}{\text{new }y} = g(\textcolor{blue}{\text{new }x})$ -- that is, that $\textcolor{blue}{\text{new }y}$ really does come from applying the function $g$ to the input $\textcolor{blue}{\text{new }x}$.
+Another thing I really like about this argument is that it emphasizes what you might call the Fundamental Principle of Functions: *functions relate inputs to outputs*. A key idea in the above argument is that $\textcolor{#268bd2}{\text{new }y} = g(\textcolor{#268bd2}{\text{new }x})$ -- that is, that $\textcolor{#268bd2}{\text{new }y}$ really does come from applying the function $g$ to the input $\textcolor{#268bd2}{\text{new }x}$.
 
-I think the biggest conceptual hurdle -- based on running this by one class of students, so take this with an appropriately-sized nugget of salt -- is that we must relabel the *entire* argument of $f$ as $\textcolor{red}{\text{old }x}$. This is somehow crucial, because it establishes the relationship between $\textcolor{red}{\text{old }x}$ and $\textcolor{blue}{\text{new }x}$, and it's also tricky. It's especially tricky if you are not doing a horizontal transformation. For instance, consider $y=g(x) = f(x) - 3$; with labels, this becomes $\textcolor{blue}{\text{new }y} = g(\textcolor{blue}{\text{new }x}) = f(\textcolor{blue}{\text{new }x}) - 3 $. It is tricky to notice that since nothing has happened to $\textcolor{blue}{\text{new }x}$ inside the argument of $f$, that $\textcolor{red}{\text{old }x} = \textcolor{blue}{\text{new }x}$ -- that is, that $\textcolor{blue}{\text{new }x}$ and $\textcolor{red}{\text{old }x}$ are the same. 
+I think the biggest conceptual hurdle -- based on running this by one class of students, so take this with an appropriately-sized nugget of salt -- is that we must relabel the *entire* argument of $f$ as $\textcolor{#dc322f}{\text{old }x}$. This is somehow crucial, because it establishes the relationship between $\textcolor{#dc322f}{\text{old }x}$ and $\textcolor{#268bd2}{\text{new }x}$, and it's also tricky. It's especially tricky if you are not doing a horizontal transformation. For instance, consider $y=g(x) = f(x) - 3$; with labels, this becomes $\textcolor{#268bd2}{\text{new }y} = g(\textcolor{#268bd2}{\text{new }x}) = f(\textcolor{#268bd2}{\text{new }x}) - 3 $. It is tricky to notice that since nothing has happened to $\textcolor{#268bd2}{\text{new }x}$ inside the argument of $f$, that $\textcolor{#dc322f}{\text{old }x} = \textcolor{#268bd2}{\text{new }x}$ -- that is, that $\textcolor{#268bd2}{\text{new }x}$ and $\textcolor{#dc322f}{\text{old }x}$ are the same. 
 
 ## Exercise
 
